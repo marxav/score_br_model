@@ -3,8 +3,8 @@
 ## Goal
 * This project is a quick and dirty project aiming at evaluating some large language models (LLMs) able to translate Breton language into French language.
 * To do so, it compares the semantic distance of a breton sentence translated in French with a target translation.
-* The semantic distance is based on cosine similarity between the Camenbert vector emmbedding of the target french sentence and the vector emmbedding of the french sentence translated by the model.
-* Currently, only two models can be tested: the latest OpenAI *gpt-3.5-turbo* and *gpt-4-turbo*.
+* The semantic distance is based on cosine similarity between the CamenBERT vector embeddings of the french target sentence and of the french sentence translated by an LLM.
+* Currently, only two LLMs can be tested: the latest OpenAI *gpt-3.5-turbo* and *gpt-4-turbo*.
 
 ## Requirements
 * Ubuntu OS
