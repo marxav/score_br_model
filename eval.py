@@ -84,8 +84,8 @@ def get_data(config):
         for index, row in df.iterrows():
             # Example texts
             print(row)
-            text_br = text_br + row['Brezhoneg']
-            text_fr_target = text_fr_target + row['Français']
+            text_br = text_br + row['br']
+            text_fr_target = text_fr_target + row['fr']
         
     return text_br, text_fr_target
 
