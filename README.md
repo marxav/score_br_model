@@ -24,7 +24,7 @@
 * python eval.py samples.tsv 
 
 ## More info
-* The input file is either a *.tsv file (e.g. [samples.tsv](samples.tsv)). The *.tsv must contain two columns named 'Brezhoneg' and 'Français' and the columns must be separated by a tab (i.e. '\t').  
+* The input file is either a *.tsv file (e.g. [samples.tsv](samples.tsv)). The *.tsv must contain two columns named 'br' and 'fr' and the columns must be separated by a tab (i.e. '\t').  
 * Alternatively, the input_file is a *_br.txt file containing only breton sentences (e.g. [tregor_2110_br.txt](tregor_2110_br.txt)). In this case, another file *_fr.txt file containing only french sentences (i.e. the corresponding target sentences) (e.g. [tregor_2110_fr.txt](tregor_2110_fr.txt)); note that this second file must contain exactly the same number of sentences than the first *_br.tsv file.
 * Running the eval.py creates 2 files 
   * A log file containing all translations and scores;
