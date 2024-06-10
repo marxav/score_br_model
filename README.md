@@ -30,8 +30,8 @@
   * A log file containing all translations and scores;
   * A result file containing the summary of scores.  
     * For example: 
-    * [2024-06-10_14:51:03_samples_logs.tsv](2024-06-10_14:51:03_samples_logs.tsv)
-    * [2024-06-10_14:51:03_samples_logs.tsv](2024-06-10_14:51:03_samples_logs.tsv)
+    * [2024-06-10_14:51:03_samples_logs.tsv](2024-06-10_14%3A51%3A03_samples_logs.tsv)
+    * [2024-06-10_14:51:03_samples_res.tsv](2024-06-10_14%3A51%3A03_samples_res.tsv)
   * To better view these 2 output files, you can use a jupyter notebook.
     * For example: 
     * [samples_logs_and_results.ipynb](samples_logs_and_results.ipynb).
