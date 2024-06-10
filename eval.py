@@ -51,9 +51,9 @@ translation_models = [
 config = {
    'translation_models': translation_models,
    'datetime': datetime.now().strftime("%Y-%m-%d_%H:%M:%S"),
-   'log_file_postfix': 'logs.csv',
-   'res_file_postix': 'res.csv',
-   'input_file': 'samples.csv'
+   'log_file_postfix': 'logs.tsv',
+   'res_file_postix': 'res.tsv',
+   'input_file': 'samples.tsv'
 }
 
 def get_data(config):
@@ -75,7 +75,7 @@ def get_data(config):
             text_fr_target = file.read()
     else:
         if not os.path.isfile(input_file):
-            print(f'warning: did not found the CSV input file')
+            print(f'warning: did not found the tsv input file')
         
         text_br = ''
         text_fr_target = ''
@@ -142,13 +142,13 @@ def test_models(config, verbose=True):
         print('------------------------')  
 
     # prepare label for logs and results
-    if config['input_file'].endswith('.csv'):
-        label = config['input_file'].replace('.csv', '')
+    if config['input_file'].endswith('.tsv'):
+        label = config['input_file'].replace('.tsv', '')
     elif config['input_file'].endswith('.txt'):
         label = config['input_file'].replace('.txt', '')
     else:
         label = config['input_file']
-        print(f"warning: input_file {config['input_file']} does not finish with .csv or .txt")
+        print(f"warning: input_file {config['input_file']} does not finish with .tsv or .txt")
             
 
     df_results = pd.DataFrame()
@@ -182,8 +182,8 @@ def test_models(config, verbose=True):
         df_result = pd.DataFrame([result])
         df_results = pd.concat([df_results, df_result], ignore_index=True)
 
-    # write logs in a CSV file
-    # put 'fr_target' as the 2nd column in the CSV file
+    # write logs in a tsv file
+    # put 'fr_target' as the 2nd column in the tsv file
     #columns = list(df_detailss.columns)
     #columns.remove('fr_target')
     #columns.insert(1, 'fr_target')
@@ -191,17 +191,17 @@ def test_models(config, verbose=True):
     log_filename = config['datetime'] + '_' + label + '_' + config['log_file_postfix']
     df_detailss.to_csv(log_filename, index=False, sep='\t')
 
-    # write global results in a CSV file
+    # write global results in a tsv file
     res_filename = config['datetime'] + '_' + label + '_' + config['res_file_postix']
     df_results.to_csv(res_filename, index=False, sep='\t')
 
     return df_results
 
 
-#config['input_file'] = 'samples.csv'
+#config['input_file'] = 'samples.tsv'
 #config['input_file'] = 'tregor_2110_br.txt'
 if len(sys.argv) < 2:
-    print('first argument requires an .csv or .txt input file.')
+    print('first argument requires an .tsv or .txt input file.')
     exit(-1)
 config['input_file'] = sys.argv[1]
 

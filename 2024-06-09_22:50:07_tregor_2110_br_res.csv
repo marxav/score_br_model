@@ -1,3 +1,0 @@
-datetime	model	score_mean	score_std	price	tokens	br_words_mean	br_words_std
-2024-06-09_22:50:07	gpt-3.5-turbo	0.96	0.02	0.05	59546	26.7	21.2
-2024-06-09_22:50:07	gpt-4-turbo-2024-04-09	0.98	0.01	0.56	60705	26.7	21.2

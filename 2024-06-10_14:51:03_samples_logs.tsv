@@ -1,0 +1,11 @@
+br	fr_target	fr_gpt-3.5-turbo	score_gpt-3.5-turbo	price_x	tokens_x	br_words	fr_gpt-4-turbo-2024-04-09	score_gpt-4-turbo-2024-04-09	price_y	tokens_y
+C'hoant am eus da zebriñ	J'ai envie de manger	J'ai envie de crier	0.9412038326263428	0.000261	276	5	J'ai envie de manger	1.0000003576278687	0.00261	276
+Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.8446411490440369	0.000261	276	4	 Il détient la vérité	0.9133601188659668	0.00261	276
+Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est toujours grand	0.9153085350990295	0.000261	276	5	 Le chien est assez grand	1.0000001192092896	0.00261	276
+Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne vous attendez pas à ce qu'il vous donne les réponses	0.9684884548187256	0.000261	276	10	 Ne vous attendez pas à ce que je vous donne les réponses	1.000000238418579	0.00261	276
+Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la maternité et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.9495752453804016	0.000261	276	14	 Les règles de la propreté et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.9654496312141418	0.00261	276
+ Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les garçons de Mari-Robin l'avaient emmenée à l'hôpital	0.9144909381866455	0.000261	276	9	 Les hommes de Mari-Robin l'avaient emmenée en prison	0.9296884536743164	0.00261	276
+E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était étouffée	0.9366620779037476	0.000261	276	5	 Sa voix était rauque	0.9317727088928223	0.00261	276
+Setu amañ ur pardon	En voilà une comédie	 Voici une excuse	0.9193427562713623	0.000261	276	4	 Voici une fête de pardon	0.9159625768661499	0.00261	276
+Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Sois noir, sois blanc, chaque chèvre aime sa montagne	0.8187214732170105	0.000261	276	10	 Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime sa montagne	0.9355130195617676	0.00261	276
+Echu eo	C'est fini	 C'est fini	1.0000001192092896	0.000261	276	2	 C'est fini	1.0000001192092896	0.00261	276

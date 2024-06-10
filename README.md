@@ -15,31 +15,31 @@
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* python -m pip install -r requirements.txt
+* pip install openai transformers torch sentencepiece pandas ipykernel
 * echo OPENAI_API_KEY=your-secret-key > .env
 
 ## Run
 * cd score_br_model
 * source env/bin/activate
-* python eval.py samples.csv 
+* python eval.py samples.tsv 
 
 ## More info
-* The input file is either a *.csv file (e.g. [samples.csv](samples.csv)). The *.csv must contain two columns named 'Brezhoneg' and 'Français' and the columns must be separated by a tab (i.e. '\t').  
-* Alternatively, the input_file is a *_br.txt file containing only breton sentences (e.g. [tregor_2110_br.txt](tregor_2110_br.txt)). In this case, another file *_fr.txt file containing only french sentences (i.e. the corresponding target sentences) (e.g. [tregor_2110_fr.txt](tregor_2110_fr.txt)); note that this second file must contain exactly the same number of sentences than the first *_br.csv file.
+* The input file is either a *.tsv file (e.g. [samples.tsv](samples.tsv)). The *.tsv must contain two columns named 'Brezhoneg' and 'Français' and the columns must be separated by a tab (i.e. '\t').  
+* Alternatively, the input_file is a *_br.txt file containing only breton sentences (e.g. [tregor_2110_br.txt](tregor_2110_br.txt)). In this case, another file *_fr.txt file containing only french sentences (i.e. the corresponding target sentences) (e.g. [tregor_2110_fr.txt](tregor_2110_fr.txt)); note that this second file must contain exactly the same number of sentences than the first *_br.tsv file.
 * Running the eval.py creates 2 files 
   * A log file containing all translations and scores;
   * A result file containing the summary of scores.  
     * For example: 
-    * [2024-06-09_22:49:46_samples_logs.csv](2024-06-09_22:49:46_samples_logs.csv).
-    * [2024-06-09_22:49:46_samples_res.csv](2024-06-09_22:49:46_samples_res.csv).
+    * [2024-06-10_14:51:03_samples_logs.tsv](2024-06-10_14:51:03_samples_logs.tsv)
+    * [2024-06-10_14:51:03_samples_logs.tsv](2024-06-10_14:51:03_samples_logs.tsv)
   * To better view these 2 output files, you can use a jupyter notebook.
     * For example: 
-    * [samples_csv_logs_and_results.ipynb](samples_csv_logs_and_results.ipynb).
+    * [samples_logs_and_results.ipynb](samples_logs_and_results.ipynb).
   
 ## Todo
 * Add evaluation scores for fr->br
 * Enhance the scoring metric(s)
-* Add more samples in samples.csv
+* Add more samples in samples.tsv
 * A leaderboard of the tested LLMs
 
 ## Acknowledgments
