@@ -1,9 +1,9 @@
 # score_br_model
 
 ## Goal
-* This project is a quick and dirty project aiming at evaluating some large language models (LLMs) able to translate Breton language into French language.
-* To do so, it compares the semantic distance of a breton sentence translated in French with a target translation.
-* The semantic distance is based on cosine similarity between the CamemBERT vector embeddings of the french target sentence and of the french sentence translated by an LLM.
+* This project is a quick and dirty project aiming at evaluating some large language models (LLMs) able to translate Breton language into French language ('br2fr' task), and vice versa ('fr2br' task).
+* To do so, it compares the semantic distance of a translation performed by an LLM with an expected translation (a.k.a. target translation).
+* The semantic distance is based on the proximity of OpenAI embeddings.
 * Currently, only two LLMs can be tested: the latest OpenAI *gpt-3.5-turbo* and *gpt-4-turbo*.
 
 ## Requirements
@@ -30,14 +30,13 @@
   * A log file containing all translations and scores;
   * A result file containing the summary of scores.  
     * For example: 
-    * [2024-06-10_14:51:03_samples_logs.tsv](2024-06-10_14%3A51%3A03_samples_logs.tsv)
-    * [2024-06-10_14:51:03_samples_res.tsv](2024-06-10_14%3A51%3A03_samples_res.tsv)
+    * [samples_logs.tsv](samples_logs.tsv)
+    * [samples_res.tsv](samples_res.tsv)
   * To better view these 2 output files, you can use a jupyter notebook.
     * For example: 
     * [samples_logs_and_results.ipynb](samples_logs_and_results.ipynb).
   
 ## Todo
-* Add evaluation scores for fr->br
 * Enhance the scoring metric(s)
 * Add more samples in samples.tsv
 * A leaderboard of the tested LLMs
