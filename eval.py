@@ -158,7 +158,7 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
     else:    
         is_translation_ok = False
         if l1 != l2:
-            print(f'!!!warning l1:{l1} is different from l2:{l2}')
+            print('!!!warning l1:'+l1+' is different from l2:'+l2)
         else:
             print(f'!!!warning l1:{l1} is different from l3:{l3}')
         if n == n_max:

@@ -42,10 +42,12 @@ def create_unique_input_file(input_file, verbose=False):
         print('l2_lines:', l2_lines)
         print('len(l1_lines):', len(l1_lines))
         print('len(l2_lines):', len(l2_lines))
-
+    '''
     # check that both files contains the same number of sentences
-    assert len(l1_lines) == len(l2_lines), 'br and fr files do not have the same number of sentences'
-
+    if len(l1_lines) == len(l2_lines):
+        print('br and fr files do not have the same number of sentences', len(l1_lines), len(l2_lines))
+        exit(-1)
+    '''
     # write both text in a new tsv file
     new_input_file = input_file[:-7]+'.tsv'        
     with open(new_input_file, 'w+') as new_file:

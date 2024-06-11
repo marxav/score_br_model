@@ -1,0 +1,5 @@
+task	datetime	model	score_mean	score_std	price	n_tokens	src_n_words_mean	src_n_words_std
+br2fr	2024-06-11_23:00:38	gpt-3.5-turbo	0.84	0.08	0.01	15885	20.3	12.5
+br2fr	2024-06-11_23:00:38	gpt-4-turbo	0.95	0.04	0.15	16380	20.3	12.5
+fr2br	2024-06-11_23:00:38	gpt-3.5-turbo	0.64	0.08	0.01	17520	21.0	14.0
+fr2br	2024-06-11_23:00:38	gpt-4-turbo	0.73	0.09	0.16	16515	21.0	14.0
