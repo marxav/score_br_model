@@ -11,7 +11,7 @@ import numpy as np
 import scores
 
 def get_translation(client, model, text_src):
-    
+
   lang_src = config['lang_src']
   lang_dst = config['lang_dst']
   if lang_src == 'br' and lang_dst == 'fr':
@@ -28,8 +28,11 @@ def get_translation(client, model, text_src):
       top_p=0.95,
   )
 
-  text_fr_predicted = response.choices[0].message.content
+  text_dst_predicted = response.choices[0].message.content
+  
+  #print('text_dst_predicted:', text_dst_predicted)
   #print(response.to_json)
+
   total_tokens = response.usage.total_tokens
   in_tokens = response.usage.prompt_tokens
   out_tokens = response.usage.completion_tokens
@@ -43,7 +46,7 @@ def get_translation(client, model, text_src):
       price = 0
       print('error: model unknown!!!')
           
-  return text_fr_predicted, total_tokens, price
+  return text_dst_predicted, total_tokens, price
 
 translation_models = [
     #'gpt-3.5-turbo-0613',  # release date: 2023-06-13
@@ -60,6 +63,7 @@ translation_models = [
 config = {
    'translation_models': translation_models,
    'tasks': ['br2fr', 'fr2br'],
+   #'tasks': ['fr2br'],
    'datetime': datetime.now().strftime("%Y-%m-%d_%H:%M:%S"),
    'log_file_postfix': 'logs.tsv',
    'res_file_postix': 'res.tsv',
@@ -70,9 +74,9 @@ def get_data(config):
     input_file = config['input_file']
     lang_src = config['lang_src']
     lang_dst = config['lang_dst']
-    if input_file.endswith('_'+lang_src+'.txt'):
+    if input_file.endswith('_br.txt'):
         src_filename = input_file
-        dst_filename = src_filename[:-7] + '_'+lang_dst+'.txt'
+        dst_filename = src_filename[:-7] + '_fr.txt'
 
         if not os.path.isfile(src_filename):
             print(f'breton input file {src_filename} not found') 
@@ -82,24 +86,30 @@ def get_data(config):
             exit(-1)
         # Open the file in read mode
         with open(src_filename, 'r') as file:
-            text_src = file.read()
+            text_br = file.read()
         with open(dst_filename, 'r') as file:
-            text_dst_target = file.read()
-    else:
-        if not os.path.isfile(input_file):
-            print(f'warning: did not found the tsv input file')
-        
-        text_src = ''
-        text_dst_target = ''
-        config['input_file']
-        df = pd.read_csv(input_file, sep='\t')
-        for index, row in df.iterrows():
-            # Example texts
-            print(row)
-            text_src = text_src + row[lang_src]
-            text_dst_target = text_dst_target + row[lang_dst]
-        
-    return text_src, text_dst_target
+            text_fr = file.read()
+
+        input_file = src_filename[:-7]+'.tsv'
+        config['input_file'] = input_file
+        with open(input_file, 'w+') as new_file:
+            new_file.write('br'+'\t'+'fr'+'\n')
+            new_file.write(text_br.strip()+'\t'+text_fr.strip()+'\n')
+            new_file.close()
+    
+    if not os.path.isfile(input_file):
+        print(f'warning: did not found the tsv input file')
+    text_src = ''
+    text_dst_target = ''
+    config['input_file']
+    df = pd.read_csv(input_file, sep='\t')
+    for index, row in df.iterrows():
+        # Example texts
+        print(row)
+        text_src = text_src + row[lang_src]
+        text_dst_target = text_dst_target + row[lang_dst]
+    
+    return config, text_src, text_dst_target
 
 
 def test_model(config, translation_model, text_src, text_dst_target, verbose=True):
@@ -146,6 +156,9 @@ def test_models(config, verbose=True):
 
     config['client'] = OpenAI(api_key=open_api_key)
 
+    df_full_results = pd.DataFrame()
+    df_full_detailss = pd.DataFrame()
+
     for task in config['tasks']: 
 
         if task == 'br2fr':
@@ -158,7 +171,7 @@ def test_models(config, verbose=True):
             print(f'Error: task {task} not implemented!')
             exit(-1)
               
-        text_src, text_dst_target = get_data(config)
+        config, text_src, text_dst_target = get_data(config)
 
         if verbose:
             print('========================')
@@ -209,19 +222,22 @@ def test_models(config, verbose=True):
             df_result = pd.DataFrame([result])
             df_results = pd.concat([df_results, df_result], ignore_index=True)
 
-        # write logs in a tsv file
-        log_filename = label + '_' + config['log_file_postfix']
-        df_detailss.to_csv(log_filename, index=False, sep='\t')
-        # write logs in a seconf file which name contains the date
-        log_filename = config['datetime'] + '_' + label + '_' + config['log_file_postfix']
-        df_detailss.to_csv(log_filename, index=False, sep='\t')
+        df_full_detailss = pd.concat([df_full_detailss, df_detailss], ignore_index=True)
+        df_full_results = pd.concat([df_full_results, df_results], ignore_index=True)
+
+    # write logs in a tsv file
+    log_filename = label + '_' + config['log_file_postfix']
+    df_full_detailss.to_csv(log_filename, index=False, sep='\t')
+    # write logs in a seconf file which name contains the date
+    log_filename = config['datetime'] + '_' + label + '_' + config['log_file_postfix']
+    df_full_detailss.to_csv(log_filename, index=False, sep='\t')
         
-        # write global results in a tsv file
-        res_filename = label + '_' + config['res_file_postix']
-        df_results.to_csv(res_filename, index=False, sep='\t')
-        # write logs in a seconf file which name contains the date
-        res_filename = config['datetime'] + '_' + label + '_' + config['res_file_postix']
-        df_results.to_csv(res_filename, index=False, sep='\t')
+    # write global results in a tsv file
+    res_filename = label + '_' + config['res_file_postix']
+    df_full_results.to_csv(res_filename, index=False, sep='\t')
+    # write logs in a seconf file which name contains the date
+    res_filename = config['datetime'] + '_' + label + '_' + config['res_file_postix']
+    df_full_results.to_csv(res_filename, index=False, sep='\t')
         
     return df_results
 
