@@ -1,23 +1,23 @@
-src	dst_target	dst_gpt-3.5-turbo	score_gpt-3.5-turbo	price_x	n_tokens_x	src_n_words	dst_gpt-4-turbo-2024-04-09	score_gpt-4-turbo-2024-04-09	price_y	n_tokens_y
-C'hoant am eus da zebriñ	J'ai envie de manger	J'ai envie de crier	0.6291833281933743	0.0002595	275	5	Je veux manger	0.8313610703912071	0.00246	266
-Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5111072850921363	0.0002595	275	4	 Il détient la vérité	0.5584980451547245	0.00246	266
-Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est toujours grand	0.6743695672314187	0.0002595	275	5	 Le chien est assez grand	0.9378263029761305	0.00246	266
-Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne restez pas à attendre qu'il vous donne les réponses	0.6999966532954904	0.0002595	275	10	 Ne vous attendez pas à ce que je vous donne les réponses	0.9560463067996124	0.00246	266
-Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la ferme et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7438450579008025	0.0002595	275	14	 Les règles de la proposition et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.757135585257473	0.00246	266
- Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les garçons de Mari-Robin l'avaient emmenée à l'hôpital	0.4768057314765102	0.0002595	275	9	 Les hommes de Mari-Robin l'avaient emmenée en prison	0.6332767585228304	0.00246	266
-E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était étouffée	0.7180257087726214	0.0002595	275	5	 Sa voix était rauque	0.7692161350811682	0.00246	266
-Setu amañ ur pardon	En voilà une comédie	 Voici une excuse	0.45220922424089394	0.0002595	275	4	 Voici un pardon	0.4436448074233738	0.00246	266
-Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Sois noir, sois blanc, chaque chèvre aime sa montagne	0.7757928653573833	0.0002595	275	10	 Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son but	0.8530263431908823	0.00246	266
-Echu eo	C'est fini	 C'est fini	0.9220646519088027	0.0002595	275	2	 C'est fini	0.9220978595837455	0.00246	266
-J'ai envie de manger	C'hoant am eus da zebriñ	'Me a gar din ober	0.3050593474922203	0.00024450000000000003	249	4	"Here is the translation of the French text into Breton:
+src	dst_target	dst_gpt-3.5-turbo	score_gpt-3.5-turbo	price_x	n_tokens_x	src_n_words	dst_gpt-4-turbo	score_gpt-4-turbo	price_y	n_tokens_y
+C'hoant am eus da zebriñ	J'ai envie de manger	Je veux savoir	0.4594677578034495	0.000249	268	5	J'ai envie de manger	0.9999999274634134	0.00252	270
+Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110100764096572	0.000249	268	4	 Il détient la vérité	0.5584968942104533	0.00252	270
+Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est toujours grand	0.6742500967659337	0.000249	268	5	 Le chien est assez grand	0.9379657407339415	0.00252	270
+Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne vous attendez pas à ce qu'il vous donne les réponses	0.8584838692425966	0.000249	268	10	 Ne vous attendez pas à ce que je vous donne les réponses	0.95605081310194	0.00252	270
+Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la ferme et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.743845057900802	0.000249	268	14	 Les règles de la proposition et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7571681168149108	0.00252	270
+ Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les garçons de Mari-Robin l'avaient emmenée à l'hôpital	0.47678846244126605	0.000249	268	9	 Les hommes de Mari-Robin l'avaient emmenée en prison	0.6333506741131861	0.00252	270
+E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était étouffée	0.7180257087726212	0.000249	268	5	 Sa voix était apaisante	0.6490006259713508	0.00252	270
+Setu amañ ur pardon	En voilà une comédie	 Voici une excuse	0.4522092242408937	0.000249	268	4	 Voici un pardon	0.44366656882876543	0.00252	270
+Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Noir ou blanc, chaque chèvre aime sa montagne	0.8045806852698227	0.000249	268	10	 Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son bâton	0.8563818421325424	0.00252	270
+Echu eo	C'est fini	 C'est fini	0.922030509670039	0.000249	268	2	 C'est fini	0.9220978595837467	0.00252	270
+J'ai envie de manger	C'hoant am eus da zebriñ	'Me 'zo o vontañ da zevañ	0.6036531118945399	0.000291	280	4	"Here is the translation of the French text into Breton:
 
-C'hoant am eus da zebriñ"	0.6618938985126003	0.003045	289
- Il a raison	Ar wirionez zo gantañ	 Ret eo	0.3564484540568974	0.00024450000000000003	249	4	 Gwir en deus	0.48338463345679633	0.003045	289
-Le chien est assez grand	Ar c'hi zo bras awalc'h	 Braz eo ar c'hazh	0.6030850743783079	0.00024450000000000003	249	5	 Ar c'hi a zo bras a-walc'h	0.8775199221273413	0.003045	289
-Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hallit ket ober eus din da reiñ ar respontoù	0.777090191522969	0.00024450000000000003	249	12	 Na c'hortozit ket e roin deoc'h ar respontoù	0.8227229701125407	0.003045	289
-Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'eo ket ar memes reolou hag hiriekañ bremañ	0.6327264995418074	0.00024450000000000003	249	12	 Ar reolennoù naetaat ha yec'hedel ne oant ket ar memes re evel bremañ	0.799215024782459	0.003045	289
-Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Ar jendarmoù en deus kaset en prizon	0.4854241097782872	0.00024450000000000003	249	6	 Ar c'homiserien o doa kaset anezhi d'ar prizon	0.5412021304462344	0.003045	289
-Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Eñ e oa e zorn leun a vroaz	0.6244753117695874	0.00024450000000000003	249	5	 He mouezh a oa un tammig grizilhet	0.5855977898261666	0.003045	289
-En voilà une comédie	Setu amañ ur pardon	 Un oberenn komediezh eo	0.341213393668225	0.00024450000000000003	249	4	 Setu ur farsadenn	0.533983198021391	0.003045	289
-Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Ma c'haller, ma c'haller, pep kavr a gar e vrezel	0.5638107058970323	0.00024450000000000003	249	11	 Pe e vefe du, pe e vefe gwenn, pep gavr a gar he c'hevre	0.7029146497562219	0.003045	289
-C'est fini	Echu eo	 Gounezet eo	0.4275460499116974	0.00024450000000000003	249	2	 Echu eo	0.8897014107319853	0.003045	289
+C'hoant am eus da zebriñ"	0.6616156417503221	0.002835	275
+ Il a raison	Ar wirionez zo gantañ	 'Zo gwir	0.5030555709084732	0.000291	280	4	 Reizh eo	0.5336199992918871	0.002835	275
+Le chien est assez grand	Ar c'hi zo bras awalc'h	 'Vugaleg bras eo ar c'hazh	0.6536997066241341	0.000291	280	5	 Bras a-walc'h eo ar c'hi	0.6583952393209802	0.002835	275
+Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hallit ket ober ezhomm e c'hallan roet deoc'h ar respontoù	0.7573874134808942	0.000291	280	12	 Na c'hortozit ket e roin deoc'h ar respontoù	0.8226692829415594	0.002835	275
+Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'eo ket ar memes reolennoù a zo bremañ evit ar c'hleñved hag ar heñvel	0.6418785519481982	0.000291	280	12	 N'eo ket ar memes reolennoù naered ha yec'hed a oa gwechall	0.649216977099951	0.002835	275
+Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Ar jendarmoù en deus kaset en ti-prizon	0.502205543831785	0.000291	280	6	 Kaset e oa bet ar jandarmed anezhi d'an toull-bac'h	0.483600071670711	0.002835	275
+Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 He glev a oa troc'het un tammig	0.5108341930688431	0.000291	280	5	 Un tammig rouezet e oa he mouezh	0.6235652984860767	0.002835	275
+En voilà une comédie	Setu amañ ur pardon	 Un oberenn komedie zo enni	0.2918620012472992	0.000291	280	4	 Setu ur farsadenn	0.534007032305784	0.002835	275
+Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Ma c'haller, ma c'haller, pep kav a gar he c'havrez	0.5653404085409686	0.000291	280	11	 Pe du pe gwenn, pep gavr a gar he c'hevre	0.6946660477614844	0.002835	275
+C'est fini	Echu eo	 Pedit eo	0.46111771554721626	0.000291	280	2	 Echu eo	0.8854487189921809	0.002835	275

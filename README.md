@@ -42,4 +42,4 @@
 * A leaderboard of the tested LLMs
 
 ## Acknowledgments
-* The text [tregor_2110_br.txt](tregor_2110_br.txt) was written by Gireg Konan and comes from Le Tregor, n°2110, June 6th 2024.
+* [tregor_2110_br.txt](tregor_2110_br.txt) is a sample of a text written by Gireg Konan in Le Tregor newspaper, n°2110, June 6th 2024.

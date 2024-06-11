@@ -56,7 +56,7 @@ translation_models = [
     #'gpt-4-0613',         # release date: 2023-06-13 aka 'gpt-4'
     #'gpt-4-1106-preview', # release date: 2023-11-06
     #'gpt-4-0125-preview', # release date: 2024-05-25
-    'gpt-4-turbo-2024-04-09', # release date: 2024-04-09s aka 'gpt-4-turbo'
+    'gpt-4-turbo',         # release date: 2024-04-09s aka 'gpt-4-turbo'
     ]
 
 
@@ -74,38 +74,15 @@ def get_data(config):
     input_file = config['input_file']
     lang_src = config['lang_src']
     lang_dst = config['lang_dst']
-    if input_file.endswith('_br.txt'):
-        src_filename = input_file
-        dst_filename = src_filename[:-7] + '_fr.txt'
-
-        if not os.path.isfile(src_filename):
-            print(f'breton input file {src_filename} not found') 
-            exit(-1)   
-        if not os.path.isfile(dst_filename):
-            print(f'french input file {dst_filename} not found') 
-            exit(-1)
-        # Open the file in read mode
-        with open(src_filename, 'r') as file:
-            text_br = file.read()
-        with open(dst_filename, 'r') as file:
-            text_fr = file.read()
-
-        input_file = src_filename[:-7]+'.tsv'
-        config['input_file'] = input_file
-        with open(input_file, 'w+') as new_file:
-            new_file.write('br'+'\t'+'fr'+'\n')
-            new_file.write(text_br.strip()+'\t'+text_fr.strip()+'\n')
-            new_file.close()
     
     if not os.path.isfile(input_file):
         print(f'warning: did not found the tsv input file')
     text_src = ''
     text_dst_target = ''
-    config['input_file']
+
     df = pd.read_csv(input_file, sep='\t')
     for index, row in df.iterrows():
         # Example texts
-        print(row)
         text_src = text_src + row[lang_src]
         text_dst_target = text_dst_target + row[lang_dst]
     
@@ -113,17 +90,25 @@ def get_data(config):
 
 
 def test_model(config, translation_model, text_src, text_dst_target, verbose=True):
+  
+  # preprocessing the input (text_src)
+
   # perform the translation
   text_fr_predicted, tokens, price = get_translation(config['client'], translation_model, text_src)
+
+  # postprocessing the output (text_fr_predicted) for corner cases (e.g. two consecutive points)
+  text_fr_predicted = text_fr_predicted.rstrip().replace('..', '.')
+
   if verbose:
+     print('text_src:', text_src)
      print('text_fr_predicted:', text_fr_predicted)
 
   sentences_src = text_src.split('.')
   sentences_dst_p = text_fr_predicted.split('.')
   sentences_dst_t = text_dst_target.split('.')
   
-  assert len(sentences_src) == len(sentences_dst_t)
-  assert len(sentences_dst_p) == len(sentences_dst_t)
+  assert len(sentences_src) == len(sentences_dst_t), f"src:{sentences_src} and dst_t:{sentences_dst_t} do not have same nb of sentences."
+  assert len(sentences_dst_p) == len(sentences_dst_t), f"dst_p:{sentences_dst_p} and dst_t{sentences_dst_t} do not have same nb of sentences."
 
   df_results = pd.DataFrame()
   for sentence_src, sentence_dst_t, sentence_dst_p in zip(sentences_src, sentences_dst_t, sentences_dst_p):
@@ -241,13 +226,79 @@ def test_models(config, verbose=True):
         
     return df_results
 
+def create_unique_input_file(input_file, verbose=False):
+    
+    l1_filename = input_file
+    if l1_filename.endswith('_br.txt'):
+        l2_filename = input_file[:-7] + '_fr.txt'
+        br_file = l1_filename
+    elif l1_filename.endswith('_fr.txt'):        
+        l2_filename = input_file[:-7] + '_br.txt'
+        br_file = l2_filename
+    else:
+        print(f'ERROR: input_file {input_file}: unexpected format')
+        exit(-1)
 
+    if not os.path.isfile(l1_filename):
+        print(f'input file l1 {l1_filename} not found') 
+        exit(-1)   
+    if not os.path.isfile(l2_filename):
+        print(f'input file l2 {l2_filename} not found') 
+        exit(-1)
+
+    # Open each of the two files in read mode and extract their text
+    with open(l1_filename, 'r') as file:
+        l1_text = file.read()
+    with open(l2_filename, 'r') as file:
+        l2_text = file.read()
+
+    # split the src and dst texts over multiple lines (one sentence per line)
+    l1_text = l1_text.rstrip().replace('.', '.\n')
+    if l1_text[-1]=='\n':
+        l1_text = l1_text[:-1]
+    l1_lines = l1_text.split('\n')
+    l2_text = l2_text.rstrip().replace('.', '.\n')
+    if l2_text[-1]=='\n':
+        l2_text = l2_text[:-1]
+    l2_lines = l2_text.split('\n')
+
+    if verbose:
+        print('input_file:', input_file)
+        print('l1_lines:', l1_lines)
+        print('l2_lines:', l2_lines)
+        print('len(l1_lines):', len(l1_lines))
+        print('len(l2_lines):', len(l2_lines))
+
+    # check that both files contains the same number of sentences
+    assert len(l1_lines) == len(l2_lines), 'br and fr files do not have the same number of sentences'
+
+    # write both text in a new tsv file
+    new_input_file = input_file[:-7]+'.tsv'        
+    with open(new_input_file, 'w+') as new_file:
+        new_file.write('br'+'\t'+'fr'+'\n')
+        if br_file == l1_filename:        
+            for l1, l2 in zip (l1_lines, l2_lines):
+                new_file.write(l1 + '\t' + l2 + '\n')
+        else:
+            for l2, l1 in zip (l2_lines, l1_lines):
+                new_file.write(l2 + '\t' + l1 + '\n')
+        new_file.close()
+    
+    return new_input_file
+    
+    
+    
 #config['input_file'] = 'samples.tsv'
 #config['input_file'] = 'tregor_2110_br.txt'
 if len(sys.argv) < 2:
     print('first argument requires an .tsv or .txt input file.')
     exit(-1)
-config['input_file'] = sys.argv[1]
+input_file = sys.argv[1]
+
+if input_file.endswith('_br.txt') or input_file.endswith('_fr.txt'):
+    input_file = create_unique_input_file(input_file)
+
+config['input_file'] = input_file
 
 # Check if path exits
 if not os.path.exists(config['input_file']):
