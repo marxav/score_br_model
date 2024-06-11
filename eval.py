@@ -177,6 +177,8 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
 
     sample_log = {
         'task': task,
+        'datetime': config['datetime'],
+        'model': translation_model,
         'src': sentence_src,
         'dst_target': sentence_dst_t,
         'dst_'+translation_model: sentence_dst_p,
