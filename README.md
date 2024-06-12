@@ -4,7 +4,9 @@
 * This project is a quick and dirty project aiming at evaluating some large language models (LLMs) able to translate Breton language into French language ('br2fr' task), and vice versa ('fr2br' task).
 * To do so, it compares the semantic distance of a translation performed by an LLM with an expected translation (a.k.a. target translation).
 * The semantic distance is based on the proximity of OpenAI embeddings.
-* Currently, only two LLMs can be tested: the latest OpenAI *gpt-3.5-turbo* and *gpt-4-turbo*.
+* Currently, the models that can be tested are: 
+  * OpenAI *gpt-3.5-turbo* and *gpt-4-turbo*
+  * Google Gemini *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
 
 ## Requirements
 * Ubuntu OS
