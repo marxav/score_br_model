@@ -11,6 +11,7 @@
 ## Requirements
 * Ubuntu OS
 * An OPENAI_API_KEY (cf. https://platform.openai.com/api-keys)
+* A GOOGLE_API_KEY (cf. https://ai.google.dev/gemini-api/docs/api-key?hl=fr)
 
 ## Installation
 * git clone https://github.com/marxav/score_br_model.git
@@ -18,7 +19,8 @@
 * python3 -m venv env
 * source env/bin/activate
 * pip install openai transformers torch sentencepiece pandas ipykernel tabulate
-* echo OPENAI_API_KEY=your-secret-key > .env
+* echo OPENAI_API_KEY=your-secret-key-1 >> .env
+* echo GOOGLE_API_KEY=your-secret-key-2 >> .env
 
 ## Run
 * cd score_br_model
