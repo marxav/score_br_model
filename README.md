@@ -6,7 +6,7 @@
 * The semantic distance is based on the proximity of OpenAI embeddings.
 * Currently, the models that can be tested are: 
   * OpenAI *gpt-3.5-turbo* and *gpt-4-turbo*
-  * Google Gemini *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
+  * Google *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
 
 ## Requirements
 * Ubuntu OS
@@ -17,7 +17,7 @@
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* pip install openai transformers torch sentencepiece pandas ipykernel
+* pip install openai transformers torch sentencepiece pandas ipykernel tabulate
 * echo OPENAI_API_KEY=your-secret-key > .env
 
 ## Run
