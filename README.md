@@ -23,6 +23,28 @@
 * source env/bin/activate
 * python eval.py samples.tsv 
 
+
+## Results
+* The result file will contain something like :
+
+| task   | model            | score       |
+|:-------|:-----------------|:------------|
+| br2fr  | gemini-1.5-pro   | 0.82 ± 0.17 |
+| br2fr  | gpt-4-turbo      | 0.8 ± 0.21  |
+| br2fr  | gemini-1.5-flash | 0.75 ± 0.18 |
+| br2fr  | gemini-1.0-pro   | 0.65 ± 0.22 |
+| br2fr  | gpt-3.5-turbo    | 0.64 ± 0.16 |
+
+| task   | model            | score       |
+|:-------|:-----------------|:------------|
+| fr2br  | gpt-4-turbo      | 0.68 ± 0.17 |
+| fr2br  | gemini-1.5-pro   | 0.67 ± 0.17 |
+| fr2br  | gemini-1.5-flash | 0.64 ± 0.16 |
+| fr2br  | gemini-1.0-pro   | 0.58 ± 0.12 |
+| fr2br  | gpt-3.5-turbo    | 0.53 ± 0.14 |
+
+
+
 ## More info
 * The input file should be a *.tsv file (e.g. [samples.tsv](samples.tsv)). 
   * The *.tsv must contain two columns named 'br' and 'fr' 

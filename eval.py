@@ -30,9 +30,9 @@ import google.generativeai as genai
 # gemini-pro
 # gemini-pro-vision
 config = {
-    'translation_models': ['gpt-3.5-turbo', 'gpt-4-turbo', 'gemini-1.5-flash'],    
+    'translation_models': ['gemini-1.5-flash', 'gemini-1.0-pro', 'gemini-1.5-pro', 'gpt-3.5-turbo', 'gpt-4-turbo'],
+    #'translation_models': ['gpt-4-turbo'],
     'tasks': ['br2fr', 'fr2br'],
-    #'translation_models': ['gemini-1.5-flash'],
     #'tasks': ['fr2br'],
     'datetime': datetime.now().strftime("%Y-%m-%d_%H:%M:%S"),
     'log_file_postfix': 'logs.tsv',
@@ -124,7 +124,7 @@ def get_translation(config, model, text_src, verbose=False):
 
     if verbose:
         print('text_dst_predicted:', text_dst_predicted)
-        print(response)
+    print(response)
 
     other_data = response.usage_metadata
     total_tokens = other_data.total_token_count
@@ -147,9 +147,6 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
   # preprocessing the input (text_src)
   text_src = text_src.rstrip().replace('\n', '')
 
-  # perform the translation
-  text_fr_predicted, tokens, price = get_translation(config, translation_model, text_src)
-
   is_translation_ok = False
   n_max = 3
   n = 0
@@ -158,6 +155,9 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
   # the translated text than in the source text; hence we allow n_max trials be
   while is_translation_ok == False and n <= n_max:
     n += 1
+
+    # perform the translation
+    text_fr_predicted, tokens, price = get_translation(config, translation_model, text_src)
 
     # postprocessing the output (text_fr_predicted) for corner cases (e.g. two consecutive points)
     text_fr_predicted = text_fr_predicted.replace('...', '…')
@@ -215,10 +215,11 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
 
     sample_log = {
         'task': task,
+        'model': translation_model,
         'src': sentence_src,
-        'dst_target': sentence_dst_t,
-        'dst_'+translation_model: sentence_dst_p,
-        'score_'+translation_model: score,
+        'target': sentence_dst_t,
+        'prediction': sentence_dst_p,
+        'score': score,
         'price': price,
         'n_tokens': tokens,
         'src_n_words': br_words
@@ -239,8 +240,25 @@ def test_models(config, args, verbose=False):
 
     config['input_file'] =  input_file.check_input_file(args)
 
-    df_full_results = pd.DataFrame()
-    df_full_detailss = pd.DataFrame()
+
+    # prepare label for logs and results
+    if config['input_file'].endswith('.tsv'):
+        label = config['input_file'].replace('.tsv', '')
+    else:
+        label = config['input_file']
+        print(f"warning: input_file {config['input_file']} does not finish with .tsv")
+    
+    log_filename = label + '_' + config['log_file_postfix']
+    res_filename = label + '_' + config['res_file_postix']
+
+    # create output file if not existing, otherwise open them
+    if not os.path.exists(log_filename):
+        df_full_results = pd.DataFrame()
+        df_full_detailss = pd.DataFrame()
+    else:
+        df_full_results = pd.read_csv(res_filename, sep='\t', index_col=0)
+        df_full_detailss = pd.read_csv(log_filename, sep='\t', index_col=0)
+    
 
     # test models for each of the task listed in the config
     for task in config['tasks']: 
@@ -262,15 +280,6 @@ def test_models(config, args, verbose=False):
             print('text_src:', text_src)
             print('text_dst_target:', text_dst_target)
             print('------------------------')  
-
-        # prepare label for logs and results
-        if config['input_file'].endswith('.tsv'):
-            label = config['input_file'].replace('.tsv', '')
-        elif config['input_file'].endswith('.txt'):
-            label = config['input_file'].replace('.txt', '')
-        else:
-            label = config['input_file']
-            print(f"warning: input_file {config['input_file']} does not finish with .tsv or .txt")
                 
 
         df_results = pd.DataFrame()
@@ -283,11 +292,9 @@ def test_models(config, args, verbose=False):
             if df_detailss.shape[0] == 0:
                 df_detailss = df_details
             else:
-                on_columns = ['src', 'dst_target', 'src_n_words']
-                df_detailss = pd.merge(left=df_detailss, right=df_details, on=on_columns)
-            score_column = 'score_'+translation_model
-            score_mean = df_details[score_column].mean()
-            score_std = df_details[score_column].std()
+                df_detailss = pd.concat([df_detailss, df_details], ignore_index=True)            
+            score_mean = df_details['score'].mean()
+            score_std = df_details['score'].std()
             price = df_details['price'].sum()
             tokens = df_details['n_tokens'].sum()
             src_n_words_mean = df_details['src_n_words'].mean()
@@ -311,20 +318,22 @@ def test_models(config, args, verbose=False):
         df_full_detailss = pd.concat([df_full_detailss, df_detailss], ignore_index=True)
         df_full_results = pd.concat([df_full_results, df_results], ignore_index=True)
 
-    # write logs in a tsv file
-    log_filename = label + '_' + config['log_file_postfix']
-    df_full_detailss.to_csv(log_filename, index=False, sep='\t')
-    # write logs in a seconf file which name contains the date
-    log_filename = config['datetime'] + '_' + label + '_' + config['log_file_postfix']
-    df_full_detailss.to_csv(log_filename, index=False, sep='\t')
+
+    # sort results before writing them to the file
+    df_full_results = df_full_results.sort_values(['task', 'score_mean'], ascending = [True, False])
         
-    # write global results in a tsv file
-    res_filename = label + '_' + config['res_file_postix']
+    # append global results in the tsv results file    
     df_full_results.to_csv(res_filename, index=False, sep='\t')
-    # write logs in a seconf file which name contains the date
-    res_filename = config['datetime'] + '_' + label + '_' + config['res_file_postix']
-    df_full_results.to_csv(res_filename, index=False, sep='\t')
-        
+    # write logs in a second file which name contains the date
+    dated_res_filename = config['datetime'] + '_' + label + '_' + config['res_file_postix']
+    df_full_results.to_csv(dated_res_filename, index=False, sep='\t')
+
+    # append logs in the tsv logs file
+    df_full_detailss.to_csv(log_filename, index=False, sep='\t')
+    # write logs in a second file which name contains the date
+    dated_log_filename = config['datetime'] + '_' + label + '_' + config['log_file_postfix']
+    df_full_detailss.to_csv(dated_log_filename, index=False, sep='\t')
+            
     return df_results
 
 def main(args):
