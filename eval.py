@@ -41,11 +41,10 @@ config = {
 }
 
 
-# read OPENAI_API_KEY for GPTs models
-open_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('OPENAI_API_KEY')), None)
-
+# read OPENAI_API_KEY for GPT models
+openai_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('OPENAI_API_KEY')), None)
 # read GOOGLE_API_KEY for Gemini models
-api_key = os.environ['GOOGLE_API_KEY']
+api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GOOGLE_API_KEY')), None)
 
 # get the source data to be translated, as well as the ideal target data
 def get_data(config):
@@ -88,7 +87,7 @@ def get_translation(config, model, text_src, verbose=False):
   #prompt += " If there is no '?' in the text to be translated, there must be no '?' as well in the translated text." # does not work
 
   if model.startswith('gpt'):
-    client = OpenAI(api_key=open_api_key)
+    client = OpenAI(api_key=openai_api_key)
 
     response = client.chat.completions.create(
         model=model,
