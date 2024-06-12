@@ -1,11 +1,12 @@
 import os
 import sys
 from datetime import datetime
-from openai import OpenAI
 import pandas as pd
 import numpy as np
 import scores
 import input_file
+from openai import OpenAI
+import google.generativeai as genai
 
 # the possible translation_models, so far:
 # 'gpt-3.5-turbo-0613',  # release date: 2023-06-13
@@ -16,10 +17,22 @@ import input_file
 # 'gpt-4-1106-preview', # release date: 2023-11-06
 # 'gpt-4-0125-preview', # release date: 2024-05-25
 # 'gpt-4-turbo',         # release date: 2024-04-09s aka 'gpt-4-turbo'
+# gemini-1.0-pro
+# gemini-1.0-pro-001
+# gemini-1.0-pro-latest
+# gemini-1.0-pro-vision-latest
+# gemini-1.5-flash
+# gemini-1.5-flash-001
+# gemini-1.5-flash-latest
+# gemini-1.5-pro
+# gemini-1.5-pro-001
+# gemini-1.5-pro-latest
+# gemini-pro
+# gemini-pro-vision
 config = {
-    'translation_models': ['gpt-3.5-turbo', 'gpt-4-turbo'],
+    'translation_models': ['gpt-3.5-turbo', 'gpt-4-turbo', 'gemini-1.5-flash'],    
     'tasks': ['br2fr', 'fr2br'],
-    #'translation_models': ['gpt-3.5-turbo'],
+    #'translation_models': ['gemini-1.5-flash'],
     #'tasks': ['fr2br'],
     'datetime': datetime.now().strftime("%Y-%m-%d_%H:%M:%S"),
     'log_file_postfix': 'logs.tsv',
@@ -28,9 +41,11 @@ config = {
 }
 
 
-# read OPENAI_API_KEY from  .env file in current directory
+# read OPENAI_API_KEY for GPTs models
 open_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('OPENAI_API_KEY')), None)
 
+# read GOOGLE_API_KEY for Gemini models
+api_key = os.environ['GOOGLE_API_KEY']
 
 # get the source data to be translated, as well as the ideal target data
 def get_data(config):
@@ -67,38 +82,61 @@ def get_translation(config, model, text_src, verbose=False):
     prompt = "Translate the following Breton text to French. "
   elif lang_src == 'fr' and lang_dst == 'br':
     prompt = "Translate the following French text to Breton. "
-  prompt += " Immediatly write the translated text, nothing more."
-  prompt += " The translated text must contain the same number of sentences and same number of '.' characters as in the input text."
+  prompt += "Immediatly write the translated text, nothing more. "
+  prompt += "The translated text must contain the same number of sentences and same number of '.' characters as in the input text. "
+  prompt += "\n"
   #prompt += " If there is no '?' in the text to be translated, there must be no '?' as well in the translated text." # does not work
 
-  client = OpenAI(api_key=open_api_key)
+  if model.startswith('gpt'):
+    client = OpenAI(api_key=open_api_key)
 
-  response = client.chat.completions.create(
-      model=model,
-      messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text_src}],
-      stream=False,
-      temperature=0.0,
-      top_p=0.95,
-  )
+    response = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text_src}],
+        stream=False,
+        temperature=0.0,
+        top_p=0.95,
+    )
 
-  text_dst_predicted = response.choices[0].message.content
-  
-  if verbose:
-    print('text_dst_predicted:', text_dst_predicted)
-    print(response.to_json)
+    text_dst_predicted = response.choices[0].message.content
 
-  total_tokens = response.usage.total_tokens
-  in_tokens = response.usage.prompt_tokens
-  out_tokens = response.usage.completion_tokens
+    if verbose:
+        print('text_dst_predicted:', text_dst_predicted)
+        print(response.to_json)
 
-  price = 0
-  if "3.5" in model:
-      price = in_tokens *0.5/1e6 + out_tokens *1.5/1e6
-  elif "4" in model:
-      price = in_tokens *5/1e6 + out_tokens *15/1e6
+    total_tokens = response.usage.total_tokens
+    in_tokens = response.usage.prompt_tokens
+    out_tokens = response.usage.completion_tokens
+
+    price = 0
+    if "3.5" in model:
+        price = in_tokens *0.5/1e6 + out_tokens *1.5/1e6
+    elif "4" in model:
+        price = in_tokens *5/1e6 + out_tokens *15/1e6
+    else:
+        price = 0
+        print('error: model unknown!!!')
+        
+  elif model.startswith('gemini'):
+    google_model = genai.GenerativeModel(model)
+    response = google_model.generate_content(prompt + text_src)
+    text_dst_predicted = response.text
+
+    if verbose:
+        print('text_dst_predicted:', text_dst_predicted)
+        print(response)
+
+    other_data = response.usage_metadata
+    total_tokens = other_data.total_token_count
+    in_tokens = other_data.prompt_token_count
+    out_tokens = other_data.candidates_token_count
+    price = 0
+
   else:
-      price = 0
-      print('error: model unknown!!!')
+      print(f'ERROR model {model} is not supported.')
+      exit(-1)
+  
+  
           
   return text_dst_predicted, total_tokens, price
 
