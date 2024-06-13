@@ -1,201 +1,191 @@
-model	src	target	prediction	score	price	n_tokens	src_n_words	task
-gemini-1.5-flash	C'hoant am eus da zebriñ	J'ai envie de manger	J'ai envie de manger	0.9999987927419832	0.0	274	5	
-gemini-1.5-flash	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110100764096572	0.0	274	4	
-gemini-1.5-flash	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est assez grand	0.9378461313573104	0.0	274	5	
-gemini-1.5-flash	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 N'attendez pas que je vous donne les réponses	0.8318218171094107	0.0	274	10	
-gemini-1.5-flash	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles des maisons de retraite et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.699693078383868	0.0	274	14	
-gemini-1.5-flash	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les hommes de Marie-Robin l'avaient emmenée en prison	0.6105180500185607	0.0	274	9	
-gemini-1.5-flash	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était rauque	0.769164771848978	0.0	274	5	
-gemini-1.5-flash	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436254061110958	0.0	274	4	
-gemini-1.5-flash	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Noir, blanc, chaque chèvre aime son foin	0.7782795158164497	0.0	274	10	
-gemini-1.5-flash	Echu eo	C'est fini	 C'est fini	0.9220762690127352	0.0	274	2	
-gemini-1.0-pro	C'hoant am eus da zebriñ	J'ai envie de manger	J'ai envie de manger	0.9999987114252225	0.0	281	5	
-gemini-1.0-pro	Ar wirionez zo gantañ	 Il a raison	La vérité est avec lui	0.5067191123022009	0.0	281	4	
-gemini-1.0-pro	Ar c'hi zo bras awalc'h	Le chien est assez grand	La maison est assez grande	0.578485274562583	0.0	281	5	
-gemini-1.0-pro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous trouve les réponses	0.9128148894168722	0.0	281	10	
-gemini-1.0-pro	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Les règles de l'ameublement et d'hygiène n'étaient pas les mêmes qu'aujourd'hui	0.8457816400502174	0.0	281	14	
-gemini-1.0-pro	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	Les hommes de Marie-Robin l'ont emmenée en prison	0.6062988552566461	0.0	281	9	
-gemini-1.0-pro	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Votre voix était criarde	0.5487504029596196	0.0	281	5	
-gemini-1.0-pro	Setu amañ ur pardon	En voilà une comédie	Voici un pardon	0.4417961616226812	0.0	281	4	
-gemini-1.0-pro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soit noir, soit blanc, chaque chèvre aime sa faon	0.8344918115895115	0.0	281	10	
-gemini-1.0-pro	Echu eo	C'est fini	C'est fini	0.9999999682142308	0.0	281	2	
-gemini-1.5-pro	C'hoant am eus da zebriñ	J'ai envie de manger	J’ai envie de manger	0.9462621719983224	0.0	279	5	
-gemini-1.5-pro	Ar wirionez zo gantañ	 Il a raison	Il a raison	0.905569800932574	0.0	279	4	
-gemini-1.5-pro	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez gros	0.9225109931471828	0.0	279	5	
-gemini-1.5-pro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999998778765278	0.0	279	10	
-gemini-1.5-pro	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Les règles de la bienséance et de l'hygiène n'étaient pas les mêmes qu'aujourd'hui	0.8786541400740275	0.0	279	14	
-gemini-1.5-pro	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les hommes de Mari-Robin l'ont emmenée en prison	0.6098768360215306	0.0	279	9	
-gemini-1.5-pro	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Sa voix était posée	0.7318412707928413	0.0	279	5	
-gemini-1.5-pro	Setu amañ ur pardon	En voilà une comédie	Voilà un pardon	0.5070194420495553	0.0	279	4	
-gemini-1.5-pro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Sois brune, sois blanche, chaque chèvre aime la sienne	0.7805035041984649	0.0	279	10	
-gemini-1.5-pro	Echu eo	C'est fini	C'est fini	0.9999999911922643	0.0	279	2	
-gpt-3.5-turbo	C'hoant am eus da zebriñ	J'ai envie de manger	J'ai envie de crier	0.6292400983163069	0.000273	310	5	
-gpt-3.5-turbo	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110698068332344	0.000273	310	4	
-gpt-3.5-turbo	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est toujours grand	0.6743176337410448	0.000273	310	5	
-gpt-3.5-turbo	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne restez pas à attendre qu'on vous donne les réponses	0.7249063159142409	0.000273	310	10	
-gpt-3.5-turbo	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de l'éducation et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7676576628059235	0.000273	310	14	
-gpt-3.5-turbo	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les garçons de Mari-Robin l'avaient emmenée à l'hôpital	0.4768702855019158	0.000273	310	9	
-gpt-3.5-turbo	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était étouffée	0.7180257087726212	0.000273	310	5	
-gpt-3.5-turbo	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.443604046309511	0.000273	310	4	
-gpt-3.5-turbo	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Noir, blanc, chaque chèvre aime sa montagne	0.7625002824425934	0.000273	310	10	
-gpt-3.5-turbo	Echu eo	C'est fini	 C'est fini	0.9220646519088014	0.000273	310	2	
-gpt-4-turbo	C'hoant am eus da zebriñ	J'ai envie de manger	J'ai envie de manger	0.999998840785707	0.00267	306	5	
-gpt-4-turbo	Ar wirionez zo gantañ	 Il a raison	La vérité est avec lui	0.5067464527957477	0.00267	306	4	
-gpt-4-turbo	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987440201544	0.00267	306	5	
-gpt-4-turbo	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9998269208559872	0.00267	306	10	
-gpt-4-turbo	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Les règles de la proposition et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7473609730147048	0.00267	306	14	
-gpt-4-turbo	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les hommes de Mari-Robin l'avaient envoyée en prison	0.7037641252465008	0.00267	306	9	
-gpt-4-turbo	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Sa voix était rauque	0.8102214802684791	0.00267	306	5	
-gpt-4-turbo	Setu amañ ur pardon	En voilà une comédie	Voici un pardon	0.4411260319731963	0.00267	306	4	
-gpt-4-turbo	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime sa portée	0.9003897819851792	0.00267	306	10	
-gpt-4-turbo	Echu eo	C'est fini	C'est fini	0.9999989426340784	0.00267	306	2	
-gemini-1.5-flash	J'ai envie de manger	C'hoant am eus da zebriñ	C'hoant de zegin din	0.5371132124316043	0.0	279	4	
-gemini-1.5-flash	 Il a raison	Ar wirionez zo gantañ	  Drech eo	0.4751877210945204	0.0	279	4	
-gemini-1.5-flash	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar c'hi a zo bras a-walc'h	0.8775199221273426	0.0	279	5	
-gemini-1.5-flash	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hortoz ket e roin ar respontoù deoc'h	0.8254827377194628	0.0	279	12	
-gemini-1.5-flash	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	  Reolennoù ar c'hlan hag ar c'hleñved ne oant ket ar memes tra hag hiziv	0.713291616164562	0.0	279	12	
-gemini-1.5-flash	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Ar jandarmed o doa kaset anezhi e prizon	0.4230249034943483	0.0	279	6	
-gemini-1.5-flash	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	  He vouezh a oa un tamm kleuz	0.6380673034540064	0.0	279	5	
-gemini-1.5-flash	En voilà une comédie	Setu amañ ur pardon	  Setu ur gomedienn	0.4387735547018561	0.0	279	4	
-gemini-1.5-flash	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	  Pe vefe du, pe vefe gwenn, pep kabal a gar e heñved	0.7127167249544579	0.0	279	11	
-gemini-1.5-flash	C'est fini	Echu eo	  Echu eo	0.8856170283585618	0.0	279	2	
-gemini-1.0-pro	J'ai envie de manger	C'hoant am eus da zebriñ	 em eus c'hoant da zebriñ	0.8306075171705627	0.0	286	4	
-gemini-1.0-pro	 Il a raison	Ar wirionez zo gantañ	 Eo deus gwir	0.4410423496029688	0.0	286	4	
-gemini-1.0-pro	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar c'hi eo bras a-walc'h	0.7669635502938481	0.0	286	5	
-gemini-1.0-pro	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na espernit ket din reiñ an nac'hoù deoc'h	0.5902472178148037	0.0	286	12	
-gemini-1.0-pro	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Ar reolennoù war an lennegezh hag ar yec'hed n'oant ket an hevelep hag bremañ	0.7947048960606959	0.0	286	12	
-gemini-1.0-pro	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Ar jandarmed a oa bet kaset hi d'ar c'harc'har	0.4646151618829115	0.0	286	6	
-gemini-1.0-pro	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 He mouezh a oa un tamm kriz	0.5548789140975992	0.0	286	5	
-gemini-1.0-pro	En voilà une comédie	Setu amañ ur pardon	 Setu ur c'hoariva	0.5417564595790678	0.0	286	4	
-gemini-1.0-pro	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Ha ma vefe du, ha ma vefe gwenn, pep dañvad a gar e dañvadik	0.6739129138433033	0.0	286	11	
-gemini-1.0-pro	C'est fini	Echu eo	 Echuet eo	0.7556192954558709	0.0	286	2	
-gemini-1.5-pro	J'ai envie de manger	C'hoant am eus da zebriñ	C'hoant da zebriñ am eus	0.8853384353994469	0.0	277	4	
-gemini-1.5-pro	 Il a raison	Ar wirionez zo gantañ	 Gwir en deus	0.4835793891681919	0.0	277	4	
-gemini-1.5-pro	Le chien est assez grand	Ar c'hi zo bras awalc'h	Bras a-walc'h eo ar c'hi	0.6864710133394342	0.0	277	5	
-gemini-1.5-pro	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Na rit ket ho kontañ din e roin an atebion deoc'h	0.6371805017529268	0.0	277	12	
-gemini-1.5-pro	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Ne oa ket reolennoù ar glendidigezh hag an naetadurezh heñvel ouzh bremañ	0.6681110983958493	0.0	277	12	
-gemini-1.5-pro	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Kaset e oa bet d'ar prizon gant ar jandarmed	0.4830132396659146	0.0	277	6	
-gemini-1.5-pro	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	He mouezh a oa kerdin un tamm	0.6035727155879986	0.0	277	5	
-gemini-1.5-pro	En voilà une comédie	Setu amañ ur pardon	Setu ur gomedienn brav	0.478130845131304	0.0	277	4	
-gemini-1.5-pro	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	Pe vefe du, pe vefe gwenn, pep gavr a gar he menn	0.7971282807846695	0.0	277	11	
-gemini-1.5-pro	C'est fini	Echu eo	Echu eo	0.9999987837374866	0.0	277	2	
-gpt-3.5-turbo	J'ai envie de manger	C'hoant am eus da zebriñ	O vont da zevañ	0.5156382603700791	0.00027	292	4	
-gpt-3.5-turbo	 Il a raison	Ar wirionez zo gantañ	 Goude eo	0.3235338493479474	0.00027	292	4	
-gpt-3.5-turbo	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Braz eo ar c'hazh	0.6031552029153833	0.00027	292	5	
-gpt-3.5-turbo	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hoarvezit ket din ro an disoc'hoù deoc'h	0.5725924057546463	0.00027	292	12	
-gpt-3.5-turbo	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'eo ket gwir an arvestoù ha sevenadur bremañ	0.5703918652860049	0.00027	292	12	
-gpt-3.5-turbo	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Lakaet e oa bet gendarmennoù en ti-prizon	0.4342193973703767	0.00027	292	6	
-gpt-3.5-turbo	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Eñ e oa he mouezh un tammig kroget	0.6291651355419963	0.00027	292	5	
-gpt-3.5-turbo	En voilà une comédie	Setu amañ ur pardon	 Un abadenn a zo	0.4096204422650639	0.00027	292	4	
-gpt-3.5-turbo	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Ma c'houlz eo, ma gwenn eo, pep gavr a gar he gavr	0.6145885044022636	0.00027	292	11	
-gpt-3.5-turbo	C'est fini	Echu eo	 Echu eo	0.8896019770990302	0.00027	292	2	
-gpt-4-turbo	J'ai envie de manger	C'hoant am eus da zebriñ	C'hoant am eus da zebriñ	0.9999984791467392	0.00285	302	4	
-gpt-4-turbo	 Il a raison	Ar wirionez zo gantañ	 Reizh eo	0.5338422281316717	0.00285	302	4	
-gpt-4-turbo	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Bras a-walc'h eo ar c'hi	0.6583952393209802	0.00285	302	5	
-gpt-4-turbo	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hortozit ket e roin deoc'h ar respontoù	0.8227239955924177	0.00285	302	12	
-gpt-4-turbo	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'eo ket ar memes reolennoù naetez ha yec'hed a oa gwechall	0.6501347358803434	0.00285	302	12	
-gpt-4-turbo	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Kaset e oa bet ar warded d'ar prizon ganto	0.5234457858362945	0.00285	302	6	
-gpt-4-turbo	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Yen e oa he mouezh un tammig	0.5630712053698548	0.00285	302	5	
-gpt-4-turbo	En voilà une comédie	Setu amañ ur pardon	 Setu ur farsadenn	0.5340948074424516	0.00285	302	4	
-gpt-4-turbo	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pe e vefe du, pe e vefe gwenn, pep gavr a gar he menn	0.743564934838195	0.00285	302	11	
-gpt-4-turbo	C'est fini	Echu eo	 Echu eo	0.8895848522134543	0.00285	302	2	
-gemini-1.5-flash	C'hoant am eus da zebriñ	J'ai envie de manger	J’ai envie de manger	0.9462731436192593	0.0	275	5	br2fr
-gemini-1.5-flash	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110698068332344	0.0	275	4	br2fr
-gemini-1.5-flash	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est assez grand	0.9378707176602004	0.0	275	5	br2fr
-gemini-1.5-flash	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne vous attendez pas à ce que je vous donne les réponses	0.956001709380721	0.0	275	10	br2fr
-gemini-1.5-flash	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la propagande et de la santé n’étaient pas les mêmes qu’aujourd’hui	0.69506283439271	0.0	275	14	br2fr
-gemini-1.5-flash	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les hommes de Mari-Robin l’avaient emmenée en prison	0.6194506901351127	0.0	275	9	br2fr
-gemini-1.5-flash	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était rauque	0.7691299949943826	0.0	275	5	br2fr
-gemini-1.5-flash	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436448074233734	0.0	275	4	br2fr
-gemini-1.5-flash	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Noir ou blanc, chaque chèvre aime sa nourriture	0.7865697697664729	0.0	275	10	br2fr
-gemini-1.5-flash	Echu eo	C'est fini	 C’est fini	0.8851885947261985	0.0	275	2	br2fr
-gemini-1.0-pro	C'hoant am eus da zebriñ	J'ai envie de manger	Je mourrai de faim	0.5148254183873113	0.0	276	5	br2fr
-gemini-1.0-pro	Ar wirionez zo gantañ	 Il a raison	 Il a raison	1.0000000570016825	0.0	276	4	br2fr
-gemini-1.0-pro	Ar c'hi zo bras awalc'h	Le chien est assez grand	 La chienne est assez grosse	0.7549403692569057	0.0	276	5	br2fr
-gemini-1.0-pro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 N'attendez pas de moi les réponses	0.7578277460614062	0.0	276	10	br2fr
-gemini-1.0-pro	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la prosodie et de la rhétorique n'étaient pas les mêmes qu'aujourd'hui	0.6064590016733291	0.0	276	14	br2fr
-gemini-1.0-pro	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les gaillards de Marie-Robin l'avaient emmenée en prison	0.62753083579535	0.0	276	9	br2fr
-gemini-1.0-pro	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était rauque	0.7691584589415013	0.0	276	5	br2fr
-gemini-1.0-pro	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436448074233734	0.0	276	4	br2fr
-gemini-1.0-pro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Sois noir, sois blanc, chaque chèvre aime son chevreau	0.8721649295170453	0.0	276	10	br2fr
-gemini-1.0-pro	Echu eo	C'est fini	 Fin	0.23392434118232847	0.0	276	2	br2fr
-gemini-1.5-pro	C'hoant am eus da zebriñ	J'ai envie de manger	J'ai envie de manger	0.9999999274634134	0.0	281	5	br2fr
-gemini-1.5-pro	Ar wirionez zo gantañ	 Il a raison	 Il a raison	0.9999989600684595	0.0	281	4	br2fr
-gemini-1.5-pro	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est assez grand	0.9378263029761305	0.0	281	5	br2fr
-gemini-1.5-pro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 N'attendez pas que je vous donne les réponses	0.831854034654067	0.0	281	10	br2fr
-gemini-1.5-pro	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la bienséance et de l'hygiène n'étaient pas les mêmes qu'aujourd'hui	0.8732173625966515	0.0	281	14	br2fr
-gemini-1.5-pro	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les hommes de Mari-Robin l'ont emmenée en prison	0.6098977709296225	0.0	281	9	br2fr
-gemini-1.5-pro	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était douce	0.7248646777316059	0.0	281	5	br2fr
-gemini-1.5-pro	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436448074233734	0.0	281	4	br2fr
-gemini-1.5-pro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime la sienne	0.8597062318910416	0.0	281	10	br2fr
-gemini-1.5-pro	Echu eo	C'est fini	 C'est fini	0.9220646519088014	0.0	281	2	br2fr
-gpt-3.5-turbo	C'hoant am eus da zebriñ	J'ai envie de manger	Je veux savoir	0.45957058162033526	0.000267	306	5	br2fr
-gpt-3.5-turbo	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110100764096572	0.000267	306	4	br2fr
-gpt-3.5-turbo	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est toujours grand	0.6742859490095885	0.000267	306	5	br2fr
-gpt-3.5-turbo	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne les attendez pas, je vous donnerai les réponses	0.755703373504046	0.000267	306	10	br2fr
-gpt-3.5-turbo	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de l'éducation et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7675540910216734	0.000267	306	14	br2fr
-gpt-3.5-turbo	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les garçons de Mari-Robin l'avaient emmenée à l'hôpital	0.4767295658316988	0.000267	306	9	br2fr
-gpt-3.5-turbo	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était étouffée	0.7187508925745291	0.000267	306	5	br2fr
-gpt-3.5-turbo	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.44366286916011866	0.000267	306	4	br2fr
-gpt-3.5-turbo	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Noir, blanc, chaque chèvre aime sa montagne	0.7624993950411353	0.000267	306	10	br2fr
-gpt-3.5-turbo	Echu eo	C'est fini	 C'est fini	0.9220646519088014	0.000267	306	2	br2fr
-gpt-4-turbo	C'hoant am eus da zebriñ	J'ai envie de manger	J'ai envie de manger	0.9999987044644643	0.002655	305	5	br2fr
-gpt-4-turbo	Ar wirionez zo gantañ	 Il a raison	La vérité est avec lui	0.5067191123022009	0.002655	305	4	br2fr
-gpt-4-turbo	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999988010337159	0.002655	305	5	br2fr
-gpt-4-turbo	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999749925644057	0.002655	305	10	br2fr
-gpt-4-turbo	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Les règles de la proposition et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7473860102736523	0.002655	305	14	br2fr
-gpt-4-turbo	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les hommes de Mari-Robin l'avaient envoyée en prison	0.7038270277606424	0.002655	305	9	br2fr
-gpt-4-turbo	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Sa voix était mélodieuse	0.7289831925387864	0.002655	305	5	br2fr
-gpt-4-turbo	Setu amañ ur pardon	En voilà une comédie	Voici un pardon	0.44108877180385825	0.002655	305	4	br2fr
-gpt-4-turbo	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime sa portée	0.9374302585626524	0.002655	305	10	br2fr
-gpt-4-turbo	Echu eo	C'est fini	C'est fini	0.9999999911922645	0.002655	305	2	br2fr
-gemini-1.5-flash	J'ai envie de manger	C'hoant am eus da zebriñ	C'hoant ober	0.49889575279031306	0.0	294	4	fr2br
-gemini-1.5-flash	 Il a raison	Ar wirionez zo gantañ	  Hema eo gwir	0.5164736789568483	0.0	294	4	fr2br
-gemini-1.5-flash	Le chien est assez grand	Ar c'hi zo bras awalc'h	  Ar c'hi a zo bras a-walc'h	0.8704910476168148	0.0	294	5	fr2br
-gemini-1.5-flash	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	  Na c'hortoz ket diganomp e rofemp ar respounsoù deoc'h	0.7711855495841926	0.0	294	12	fr2br
-gemini-1.5-flash	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	  N'oa ket ar reolennoù c'hlan ha merañ an heol evel bremañ	0.5685139955998384	0.0	294	12	fr2br
-gemini-1.5-flash	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	  An ti-kêr en doa kaset anezhi d'ar prizon	0.5061168962142873	0.0	294	6	fr2br
-gemini-1.5-flash	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	  E vouezh a oa diwall gwas ha gwas	0.6707076327572021	0.0	294	5	fr2br
-gemini-1.5-flash	En voilà une comédie	Setu amañ ur pardon	  Setu ur gomedienn	0.4388429363002997	0.0	294	4	fr2br
-gemini-1.5-flash	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	  Pezh a vefe du, pezh a vefe gwenn, kement kabl a gar e gêvriad	0.6911597829223146	0.0	294	11	fr2br
-gemini-1.5-flash	C'est fini	Echu eo	  Echu eo	0.8855428879417273	0.0	294	2	fr2br
-gemini-1.0-pro	J'ai envie de manger	C'hoant am eus da zebriñ	Am eus c'hoant debri	0.5772074825060494	0.0	283	4	fr2br
-gemini-1.0-pro	 Il a raison	Ar wirionez zo gantañ	 En deus gwir	0.40152803063877085	0.0	283	4	fr2br
-gemini-1.0-pro	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar chas a zo braz a-walc'h	0.8150933329177175	0.0	283	5	fr2br
-gemini-1.0-pro	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na ziskouezit ket c'hwi dale diouzhin ar respontou	0.7304870038827087	0.0	283	12	fr2br
-gemini-1.0-pro	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 Ar reolennoù glanded hag hijien ne oant ket ar memes re hag bremañ	0.6272549509395801	0.0	283	12	fr2br
-gemini-1.0-pro	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 An archerion a oa bet kaset ganti e toull-bac'h	0.48555903852038174	0.0	283	6	fr2br
-gemini-1.0-pro	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 He mouezh a oa nebeut kenkouet	0.5085683972079391	0.0	283	5	fr2br
-gemini-1.0-pro	En voilà une comédie	Setu amañ ur pardon	 Setu aze ur c'hoari anezhañ	0.5824948513167623	0.0	283	4	fr2br
-gemini-1.0-pro	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Be'z eo du, pe e ve gwenn, pep marh a gar he c'hvri bihan	0.6591991367227521	0.0	283	11	fr2br
-gemini-1.0-pro	C'est fini	Echu eo	 Diwezhañ eo	0.44529471310884444	0.0	283	2	fr2br
-gemini-1.5-pro	J'ai envie de manger	C'hoant am eus da zebriñ	C'hoant da zebriñ 'm eus	0.8640023853960741	0.0	275	4	fr2br
-gemini-1.5-pro	 Il a raison	Ar wirionez zo gantañ	 Gwir en deus	0.4834770480813797	0.0	275	4	fr2br
-gemini-1.5-pro	Le chien est assez grand	Ar c'hi zo bras awalc'h	Bras a-walc'h eo ar c'hi	0.6876855484794437	0.0	275	5	fr2br
-gemini-1.5-pro	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Na rit ket ho kontadenn e roin an atebion deoc'h	0.6370184223313546	0.0	275	12	fr2br
-gemini-1.5-pro	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Ne oa ket ar memes reolennoù naozusted hag endro evel bremañ	0.7304652097040358	0.0	275	12	fr2br
-gemini-1.5-pro	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Kaset e oa bet d'ar prizon gant ar jandarmed	0.48301323966591464	0.0	275	6	fr2br
-gemini-1.5-pro	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	Un tamm krog e oa he mouezh	0.5836238253474686	0.0	275	5	fr2br
-gemini-1.5-pro	En voilà une comédie	Setu amañ ur pardon	Setu ur gomedienn brav	0.478130845131304	0.0	275	4	fr2br
-gemini-1.5-pro	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	Bez' e vefe du, bez' e vefe gwenn, pep gavr a gar he menn	0.8067445222723716	0.0	275	11	fr2br
-gemini-1.5-pro	C'est fini	Echu eo	Echu eo	0.9999999241272908	0.0	275	2	fr2br
-gpt-3.5-turbo	J'ai envie de manger	C'hoant am eus da zebriñ	O vont da zevañ	0.5157038484559713	0.000261	286	4	fr2br
-gpt-3.5-turbo	 Il a raison	Ar wirionez zo gantañ	 Gouzout a ra	0.5389118573297946	0.000261	286	4	fr2br
-gpt-3.5-turbo	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Braz eo ar c'hazh	0.603054066251057	0.000261	286	5	fr2br
-gpt-3.5-turbo	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hoarvezit ket din roet an tu	0.5071639674080177	0.000261	286	12	fr2br
-gpt-3.5-turbo	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'eo ket bet gwir an arvestoù ha sevenadur bremañ	0.5759983853695112	0.000261	286	12	fr2br
-gpt-3.5-turbo	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Lec'hiañ a reas ar jendarmoù en ti-prizon	0.423903100154162	0.000261	286	6	fr2br
-gpt-3.5-turbo	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Eñ e oa e zorn	0.39637879323297875	0.000261	286	5	fr2br
-gpt-3.5-turbo	En voilà une comédie	Setu amañ ur pardon	 Un abadenn a zo	0.40967518908533884	0.000261	286	4	fr2br
-gpt-3.5-turbo	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Ma c'haller, ma c'haller, karantez a ra ar c'hazhig dezhi	0.5005563801391868	0.000261	286	11	fr2br
-gpt-3.5-turbo	C'est fini	Echu eo	 Echu eo	0.8897119216463069	0.000261	286	2	fr2br
-gpt-4-turbo	J'ai envie de manger	C'hoant am eus da zebriñ	C'hoant am eus da zebriñ	1.0000001422010993	0.002835	301	4	fr2br
-gpt-4-turbo	 Il a raison	Ar wirionez zo gantañ	 Reizh en deus	0.455242507557037	0.002835	301	4	fr2br
-gpt-4-turbo	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Bras a-walc'h eo ar c'hi	0.6582916073911669	0.002835	301	5	fr2br
-gpt-4-turbo	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hortozit ket e roin deoc'h ar respontoù	0.8227648472105836	0.002835	301	12	fr2br
-gpt-4-turbo	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'eo ket ar memes reolennoù naered ha yec'hed a oa gwechall	0.649216977099951	0.002835	301	12	fr2br
-gpt-4-turbo	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Kaset e oa bet ar warded d'ar prizon gant ar jandarmed	0.4951584482970919	0.002835	301	6	fr2br
-gpt-4-turbo	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Un tammig rouezet e oa he mouezh	0.6237858846808767	0.002835	301	5	fr2br
-gpt-4-turbo	En voilà une comédie	Setu amañ ur pardon	 Setu ur farsadenn	0.5339831980213906	0.002835	301	4	fr2br
-gpt-4-turbo	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pe du pe gwenn, pep gavr a gar he menn	0.7180415996264032	0.002835	301	11	fr2br
-gpt-4-turbo	C'est fini	Echu eo	 Echu eo	0.8897119216463069	0.002835	301	2	fr2br
+task	model	src	target	prediction	score	price	n_tokens	src_n_words
+br2fr	gemini-1.0-pro-001	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux leur chanter	0.7479925989530685	0.0	272	5
+br2fr	gemini-1.0-pro-001	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5111356103041522	0.0	272	4
+br2fr	gemini-1.0-pro-001	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est assez grand	0.9378477480923868	0.0	272	5
+br2fr	gemini-1.0-pro-001	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne vous attendez pas à ce que je vous donne les réponses	0.955900989831852	0.0	272	10
+br2fr	gemini-1.0-pro-001	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la proposition et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7571355852574737	0.0	272	14
+br2fr	gemini-1.0-pro-001	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les garçons de Marie-Robin l'avaient envoyée en prison	0.6908999033011504	0.0	272	9
+br2fr	gemini-1.0-pro-001	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était rauque	0.7691584589415013	0.0	272	5
+br2fr	gemini-1.0-pro-001	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.443686367966873	0.0	272	4
+br2fr	gemini-1.0-pro-001	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Sera noir, sera blanc, chaque chèvre aime sa couleur	0.7561823557303153	0.0	272	10
+br2fr	gemini-1.0-pro-001	Echu eo	C'est fini	 C'est terminé	0.8636781638576849	0.0	272	2
+br2fr	gemini-1.5-pro-001	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999988630570472	0.0	280	5
+br2fr	gemini-1.5-pro-001	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110698068332344	0.0	280	4
+br2fr	gemini-1.5-pro-001	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est assez grand	0.9378707176602004	0.0	280	5
+br2fr	gemini-1.5-pro-001	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 N'espérez pas que je vous donne les réponses	0.8571288645561648	0.0	280	10
+br2fr	gemini-1.5-pro-001	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la bienséance et de l'hygiène n'étaient pas les mêmes qu'aujourd'hui	0.873425282629448	0.0	280	14
+br2fr	gemini-1.5-pro-001	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les hommes de Mari-Robin l'avaient emmenée en prison	0.6333300596571487	0.0	280	9
+br2fr	gemini-1.5-pro-001	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était rauque	0.7696676986027271	0.0	280	5
+br2fr	gemini-1.5-pro-001	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436649215349418	0.0	280	4
+br2fr	gemini-1.5-pro-001	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Tu seras noir, tu seras blanc, chaque chèvre aime son semblable	0.7567120702786267	0.0	280	10
+br2fr	gemini-1.5-pro-001	Echu eo	C'est fini	 C'est fini	0.9221109127576594	0.0	280	2
+fr2br	gemini-1.5-flash	J'ai envie de chanter	C'hoant am eus da ganañ	Me 'zo c'hoant kanañ	0.702888925084294	0.0	287	4
+fr2br	gemini-1.5-flash	 Il a raison	Ar wirionez zo gantañ	  Gwir eo	0.5157813304362973	0.0	287	4
+fr2br	gemini-1.5-flash	Le chien est assez grand	Ar c'hi zo bras awalc'h	  Ar c'hi a zo bras a-walc'h	0.8704910476168148	0.0	287	5
+fr2br	gemini-1.5-flash	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	  Na c'hortoz ket din reiñ ar respoudoù deoc'h	0.753279707430092	0.0	287	12
+fr2br	gemini-1.5-flash	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	  Reolennoù ar c'hlanvder hag an ijinerezh ne oa ket ar memes re hag hiziv	0.6829811553835097	0.0	287	12
+fr2br	gemini-1.5-flash	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	  Ar jandarmed o doa kaset anezhi e kargou	0.4614037010111175	0.0	287	6
+fr2br	gemini-1.5-flash	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	  He vouezh a oa un tamm rouet	0.6394377535044877	0.0	287	5
+fr2br	gemini-1.5-flash	En voilà une comédie	Setu amañ ur pardon	  Setu ur gomedienn	0.438956411318586	0.0	287	4
+fr2br	gemini-1.5-flash	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	  Pe vefe du, pe vefe gwenn, pep kabrig a gar e c'habrigig	0.66839720209658	0.0	287	11
+fr2br	gemini-1.5-flash	C'est fini	Echu eo	  Echu eo	0.8854619042460298	0.0	287	2
+fr2br	gemini-1.0-pro-001	J'ai envie de chanter	C'hoant am eus da ganañ	Guzhum em eus c'hoant da ganañ	0.7385414342917249	0.0	275	4
+fr2br	gemini-1.0-pro-001	 Il a raison	Ar wirionez zo gantañ	 Gwir en deus	0.4834934079594367	0.0	275	4
+fr2br	gemini-1.0-pro-001	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Bras-kenañ eo ar c'hi	0.645401163296129	0.0	275	5
+fr2br	gemini-1.0-pro-001	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 N'o c'hortozoh ket em roi d'ho reiñ ar respontoù	0.7660014882109529	0.0	275	12
+fr2br	gemini-1.0-pro-001	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'e oa ket ar memes reolennoù glanded ha yec'hed evel bremañ	0.6131412815621924	0.0	275	12
+fr2br	gemini-1.0-pro-001	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Kaset e oa bet er vac'h gant ar c'harbedourien	0.4870666360602489	0.0	275	6
+fr2br	gemini-1.0-pro-001	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Un tamig war al lost e oa e vouezh	0.5789762954665556	0.0	275	5
+fr2br	gemini-1.0-pro-001	En voilà une comédie	Setu amañ ur pardon	 Setu ur c'hoariva	0.5421955382479176	0.0	275	4
+fr2br	gemini-1.0-pro-001	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Hag e vefe du pe wenn, pep lavr a gar e gavr	0.5421185492561541	0.0	275	11
+fr2br	gemini-1.0-pro-001	C'est fini	Echu eo	 Echu eo	0.8897672222909105	0.0	275	2
+fr2br	gemini-1.5-pro-001	J'ai envie de chanter	C'hoant am eus da ganañ	C'hoant kanañ am eus	0.8096529471210188	0.0	271	4
+fr2br	gemini-1.5-pro-001	 Il a raison	Ar wirionez zo gantañ	 Gwir en deus	0.4835293764252271	0.0	271	4
+fr2br	gemini-1.5-pro-001	Le chien est assez grand	Ar c'hi zo bras awalc'h	Bras a-walc'h eo ar c'hi	0.6822677373008704	0.0	271	5
+fr2br	gemini-1.5-pro-001	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Na rit ket ho kont e roin an ateoù deoc'h	0.5854099990975781	0.0	271	12
+fr2br	gemini-1.5-pro-001	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Ne oa ket reolennoù ar glendidigezh hag an naetadurezh heñvel ouzh bremañ	0.6648817038466772	0.0	271	12
+fr2br	gemini-1.5-pro-001	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Kaset e oa bet d'ar prizon gant ar jandarmed	0.4836077293306149	0.0	271	6
+fr2br	gemini-1.5-pro-001	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	Un tamm krak e oa he mouezh	0.5963912380600589	0.0	271	5
+fr2br	gemini-1.5-pro-001	En voilà une comédie	Setu amañ ur pardon	Setu ur gomedienn brav	0.478106863536228	0.0	271	4
+fr2br	gemini-1.5-pro-001	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	Pe vefe du, pe vefe gwenn, pep gavr a gar he menn	0.7971217852427384	0.0	271	11
+fr2br	gemini-1.5-pro-001	C'est fini	Echu eo	Echu eo	0.9980630872263152	0.0	271	2
+br2fr	claude-3-haiku-20240307	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.0	351	5
+br2fr	claude-3-haiku-20240307	Ar wirionez zo gantañ	 Il a raison	Il a la vérité avec lui	0.5620917023743384	0.0	351	4
+br2fr	claude-3-haiku-20240307	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999984852918112	0.0	351	5
+br2fr	claude-3-haiku-20240307	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne m'attendez pas que je vous donne les réponses	0.9014941939129932	0.0	351	10
+br2fr	claude-3-haiku-20240307	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Les règles de la proposition et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7473860102736523	0.0	351	14
+br2fr	claude-3-haiku-20240307	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	Les gars de Marie-Robin l'avaient envoyée en prison	0.7076316309634074	0.0	351	9
+br2fr	claude-3-haiku-20240307	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Sa voix était enrouée	0.8832990251787027	0.0	351	5
+br2fr	claude-3-haiku-20240307	Setu amañ ur pardon	En voilà une comédie	Voici une pardon	0.4449911518934513	0.0	351	4
+br2fr	claude-3-haiku-20240307	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son petit	0.8890052580589984	0.0	351	10
+br2fr	claude-3-haiku-20240307	Echu eo	C'est fini	C'est fini	0.9999999911922643	0.0	351	2
+br2fr	claude-3-sonnet-20240229	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989455363806	0.0	352	5
+br2fr	claude-3-sonnet-20240229	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110464133807164	0.0	352	4
+br2fr	claude-3-sonnet-20240229	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est assez grand	0.938034141845908	0.0	352	5
+br2fr	claude-3-sonnet-20240229	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne soyez pas en attente que je vous donnerai les réponses	0.8204224817785853	0.0	352	10
+br2fr	claude-3-sonnet-20240229	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de politesse et de courtoisie n'étaient pas les mêmes qu'aujourd'hui	0.7437685699982057	0.0	352	14
+br2fr	claude-3-sonnet-20240229	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les gars de Marie-Robin l'avaient amenée en prison	0.622919458200003	0.0	352	9
+br2fr	claude-3-sonnet-20240229	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était rauque	0.7697163527357619	0.0	352	5
+br2fr	claude-3-sonnet-20240229	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436203416779457	0.0	352	4
+br2fr	claude-3-sonnet-20240229	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chemin	0.83462987353884	0.0	352	10
+br2fr	claude-3-sonnet-20240229	Echu eo	C'est fini	 C'est fini	0.9220631001797176	0.0	352	2
+br2fr	claude-3-opus-20240229	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.999999015651254	0.0	344	5
+br2fr	claude-3-opus-20240229	Ar wirionez zo gantañ	 Il a raison	Il a raison	0.9055522205079368	0.0	344	4
+br2fr	claude-3-opus-20240229	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999984292886628	0.0	344	5
+br2fr	claude-3-opus-20240229	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8628925459938892	0.0	344	10
+br2fr	claude-3-opus-20240229	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Les règles d'hygiène et de santé n'étaient pas les mêmes qu'aujourd'hui	0.9043835053761076	0.0	344	14
+br2fr	claude-3-opus-20240229	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les gendarmes l'avaient envoyée en prison	0.9659974333084048	0.0	344	9
+br2fr	claude-3-opus-20240229	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Sa voix était enrouée	0.8832653411871667	0.0	344	5
+br2fr	claude-3-opus-20240229	Setu amañ ur pardon	En voilà une comédie	Voici un pardon	0.4422837070863979	0.0	344	4
+br2fr	claude-3-opus-20240229	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire ou blanche, chaque chèvre aime son chevreau	0.950678333481378	0.0	344	10
+br2fr	claude-3-opus-20240229	Echu eo	C'est fini	C'est fini	0.9999987783684864	0.0	344	2
+fr2br	claude-3-haiku-20240307	J'ai envie de chanter	C'hoant am eus da ganañ	Fellout da gana	0.2954894441965504	0.0	337	4
+fr2br	claude-3-haiku-20240307	 Il a raison	Ar wirionez zo gantañ	 Gwir eo	0.5291819038523218	0.0	337	4
+fr2br	claude-3-haiku-20240307	Le chien est assez grand	Ar c'hi zo bras awalc'h	 An ki a zo aes-tre	0.4992835539123568	0.0	337	5
+fr2br	claude-3-haiku-20240307	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hortozomp ket e roin deoc'h an respontoù	0.8185938427559462	0.0	337	12
+fr2br	claude-3-haiku-20240307	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'oant ket ar reolenn-glanded hag an yec'hed evel bremañ	0.6212412288708982	0.0	337	12
+fr2br	claude-3-haiku-20240307	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 O doa kaset anezhañ en toull-bac'h	0.5258810832999954	0.0	337	6
+fr2br	claude-3-haiku-20240307	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Skoulmoc'h e oa he mouezh	0.551490908804483	0.0	337	5
+fr2br	claude-3-haiku-20240307	En voilà une comédie	Setu amañ ur pardon	 Setu aze ur c'homediezh	0.5075541709773308	0.0	337	4
+fr2br	claude-3-haiku-20240307	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Dubenn e vez, gwennveenu, pep gaved a ger e brehig	0.6807488320655244	0.0	337	11
+fr2br	claude-3-haiku-20240307	C'est fini	Echu eo	 Echuet eo	0.7556525591861898	0.0	337	2
+fr2br	claude-3-sonnet-20240229	J'ai envie de chanter	C'hoant am eus da ganañ	Ho c'hoant am eus da ganan	0.8334061476833301	0.0	352	4
+fr2br	claude-3-sonnet-20240229	 Il a raison	Ar wirionez zo gantañ	 Reizh en deus	0.4626253466367636	0.0	352	4
+fr2br	claude-3-sonnet-20240229	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Bras mat eo ar chi	0.5780670746563864	0.0	352	5
+fr2br	claude-3-sonnet-20240229	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 N' esperit ket e rofo ar respontoù deoc'h	0.7367595570244502	0.0	352	12
+fr2br	claude-3-sonnet-20240229	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'oant ket heu' memes ar reolennoù naetadurezh hag isienadurezh hag a zo bremañ	0.6131826313071391	0.0	352	12
+fr2br	claude-3-sonnet-20240229	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Hont an aotroù oa bet kaset er prizon ganto	0.5108464193273281	0.0	352	6
+fr2br	claude-3-sonnet-20240229	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Berr-e-mouezh e oa un tammig	0.6143868740155964	0.0	352	5
+fr2br	claude-3-sonnet-20240229	En voilà une comédie	Setu amañ ur pardon	 Setu un avantur emuill	0.4978797150765922	0.0	352	4
+fr2br	claude-3-sonnet-20240229	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Ha du, ha gwenn, pep gavr a gar he fouen	0.7271822229975016	0.0	352	11
+fr2br	claude-3-sonnet-20240229	C'est fini	Echu eo	 Erruet eo fin ar vicher	0.4650319622865992	0.0	352	2
+fr2br	claude-3-opus-20240229	J'ai envie de chanter	C'hoant am eus da ganañ	Me 'meus c'hoant da gana	0.537187235397253	0.0	351	4
+fr2br	claude-3-opus-20240229	 Il a raison	Ar wirionez zo gantañ	 Gwir eo gantañ	0.6558733760507964	0.0	351	4
+fr2br	claude-3-opus-20240229	Le chien est assez grand	Ar c'hi zo bras awalc'h	Bras a-walc'h eo ar c'hi	0.6876855484794437	0.0	351	5
+fr2br	claude-3-opus-20240229	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Na c'hortoz ket e roin ar respontoù deoc'h	0.833133764936208	0.0	351	12
+fr2br	claude-3-opus-20240229	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Ne oa ket ar memes reolennoù glanañ ha yec'hedoù evel bremañ	0.7263885758930669	0.0	351	12
+fr2br	claude-3-opus-20240229	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Kaset e oa bet d'ar prizon gant an archerien	0.4844511052009018	0.0	351	6
+fr2br	claude-3-opus-20240229	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	Raouliet e oa un tammig e vouezh	0.6467202313905813	0.0	351	5
+fr2br	claude-3-opus-20240229	En voilà une comédie	Setu amañ ur pardon	Setu aze ur c'hoariva	0.5768508114359645	0.0	351	4
+fr2br	claude-3-opus-20240229	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	Pa vez du, pa vez gwenn, pep gavr a gar he menn	0.7920687850130993	0.0	351	11
+fr2br	claude-3-opus-20240229	C'est fini	Echu eo	Echu eo	0.99999869566272	0.0	351	2
+br2fr	gpt-3.5-turbo-0125	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989374861696	0.0002725	309	5
+br2fr	gpt-3.5-turbo-0125	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110262900071652	0.0002725	309	4
+br2fr	gpt-3.5-turbo-0125	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est toujours grand	0.6742405931202129	0.0002725	309	5
+br2fr	gpt-3.5-turbo-0125	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne restez pas à attendre qu'on vous donne les réponses	0.725118038501392	0.0002725	309	10
+br2fr	gpt-3.5-turbo-0125	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de l'alimentation et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7618711947580408	0.0002725	309	14
+br2fr	gpt-3.5-turbo-0125	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les garçons de Mari-Robin l'avaient emmenée à l'hôpital	0.476764697478226	0.0002725	309	9
+br2fr	gpt-3.5-turbo-0125	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 La voix était étouffée	0.6941685636670551	0.0002725	309	5
+br2fr	gpt-3.5-turbo-0125	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.443686367966873	0.0002725	309	4
+br2fr	gpt-3.5-turbo-0125	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Noir ou blanc, chaque chèvre aime son pré	0.8186251929276702	0.0002725	309	10
+br2fr	gpt-3.5-turbo-0125	Echu eo	C'est fini	 C'est fini	0.922030509670039	0.0002725	309	2
+br2fr	gpt-4-0613	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.999998898845364	0.00274	310	5
+br2fr	gpt-4-0613	Ar wirionez zo gantañ	 Il a raison	 Il a la vérité	0.6921551270903834	0.00274	310	4
+br2fr	gpt-4-0613	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Mon chien est assez grand	0.8520258094484747	0.00274	310	5
+br2fr	gpt-4-0613	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne m'attendez pas, je vous donnerai les réponses	0.7690058560589912	0.00274	310	10
+br2fr	gpt-4-0613	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la ponctuation et de la grammaire n'étaient pas les mêmes qu'aujourd'hui	0.6409058582696863	0.00274	310	14
+br2fr	gpt-4-0613	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les fils de Mari-Robin l'avaient envoyée en prison	0.6688318018808306	0.00274	310	9
+br2fr	gpt-4-0613	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était rauque	0.769164771848978	0.00274	310	5
+br2fr	gpt-4-0613	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436448074233734	0.00274	310	4
+br2fr	gpt-4-0613	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Qu'il soit noir, qu'il soit blanc, chaque chèvre aime sa crinière	0.8635865617080585	0.00274	310	10
+br2fr	gpt-4-0613	Echu eo	C'est fini	 C'est fini	0.9220752242131252	0.00274	310	2
+br2fr	gpt-4-turbo-2024-04-09	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989874376192	0.002635	303	5
+br2fr	gpt-4-turbo-2024-04-09	Ar wirionez zo gantañ	 Il a raison	Il détient la vérité	0.530686079531871	0.002635	303	4
+br2fr	gpt-4-turbo-2024-04-09	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999984292886628	0.002635	303	5
+br2fr	gpt-4-turbo-2024-04-09	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999998778765278	0.002635	303	10
+br2fr	gpt-4-turbo-2024-04-09	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Les règles de la proposition et de la santé n'étaient pas les mêmes qu'aujourd'hui	0.7473860102736523	0.002635	303	14
+br2fr	gpt-4-turbo-2024-04-09	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les hommes de Mari-Robin l'avaient emmenée en prison	0.6343934812137882	0.002635	303	9
+br2fr	gpt-4-turbo-2024-04-09	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Sa voix était mélodieuse	0.7289963948811229	0.002635	303	5
+br2fr	gpt-4-turbo-2024-04-09	Setu amañ ur pardon	En voilà une comédie	Voici un pardon	0.4410246585007798	0.002635	303	4
+br2fr	gpt-4-turbo-2024-04-09	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son but	0.8751706140473464	0.002635	303	10
+br2fr	gpt-4-turbo-2024-04-09	Echu eo	C'est fini	C'est fini	0.9999988271401168	0.002635	303	2
+br2fr	gpt-4o-2024-05-13	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.999999031986781	0.0022299999999999	264	5
+br2fr	gpt-4o-2024-05-13	Ar wirionez zo gantañ	 Il a raison	Il a la vérité	0.635034010012697	0.0022299999999999	264	4
+br2fr	gpt-4o-2024-05-13	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999989622783816	0.0022299999999999	264	5
+br2fr	gpt-4o-2024-05-13	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999752221000188	0.0022299999999999	264	10
+br2fr	gpt-4o-2024-05-13	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Les règles de la propreté et de l'hygiène n'étaient pas les mêmes qu'aujourd'hui	0.9485839905132192	0.0022299999999999	264	14
+br2fr	gpt-4o-2024-05-13	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	Les hommes de Mari-Robin l'avaient envoyée en prison	0.7224988215720762	0.0022299999999999	264	9
+br2fr	gpt-4o-2024-05-13	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Sa voix était rauque	0.8103492338185457	0.0022299999999999	264	5
+br2fr	gpt-4o-2024-05-13	Setu amañ ur pardon	En voilà une comédie	Voici un pardon	0.4417618431435904	0.0022299999999999	264	4
+br2fr	gpt-4o-2024-05-13	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir ou blanc, chaque chèvre aime son lait	0.8203859223774767	0.0022299999999999	264	10
+br2fr	gpt-4o-2024-05-13	Echu eo	C'est fini	C'est fini	0.9999999911922643	0.0022299999999999	264	2
+fr2br	gpt-3.5-turbo-0125	J'ai envie de chanter	C'hoant am eus da ganañ	O deus dañsal	0.2187176548625368	0.0002745	295	4
+fr2br	gpt-3.5-turbo-0125	 Il a raison	Ar wirionez zo gantañ	 Gouzout a ra	0.5388369960588479	0.0002745	295	4
+fr2br	gpt-3.5-turbo-0125	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Braz eo ar c'hazh	0.5955060194796515	0.0002745	295	5
+fr2br	gpt-3.5-turbo-0125	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hoarvezit ket din ro an tu	0.5091991976539187	0.0002745	295	12
+fr2br	gpt-3.5-turbo-0125	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'eo ket gwir ar reoloù diouzh ar c'hleuz ha d'ar hegiñ	0.6164908348158314	0.0002745	295	12
+fr2br	gpt-3.5-turbo-0125	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Lec'hiañ a reas ar gendarmourien en ti-prizon	0.4474150100478472	0.0002745	295	6
+fr2br	gpt-3.5-turbo-0125	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Eñ e oa he mouezh un tammig kroget	0.6293351173697419	0.0002745	295	5
+fr2br	gpt-3.5-turbo-0125	En voilà une comédie	Setu amañ ur pardon	 Un abadenn vat eo	0.4179282331951535	0.0002745	295	4
+fr2br	gpt-3.5-turbo-0125	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Ma c'haller, ma c'haller, pep gavr a gar he gavr	0.4940416944634134	0.0002745	295	11
+fr2br	gpt-3.5-turbo-0125	C'est fini	Echu eo	 Paset eo	0.4183360002422162	0.0002745	295	2
+fr2br	gpt-4-0613	J'ai envie de chanter	C'hoant am eus da ganañ	C'hoant am eus da ganañ	0.9999985671139284	0.00291	306	4
+fr2br	gpt-4-0613	 Il a raison	Ar wirionez zo gantañ	 Reizh eo	0.5336959091456551	0.00291	306	4
+fr2br	gpt-4-0613	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Bras a-walc'h eo ar c'hi	0.6585263208720342	0.00291	306	5
+fr2br	gpt-4-0613	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na gortozit ket din da reiñ deoc'h ar respontoù	0.8292202612251782	0.00291	306	12
+fr2br	gpt-4-0613	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'oa ket ar reolennoù yaouankiz ha yec'hed ar re a-vremañ	0.6054354828209195	0.00291	306	12
+fr2br	gpt-4-0613	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Kaset o doa ar jandarmoù anezhi d'ar prizon	0.5336745062305894	0.00291	306	6
+fr2br	gpt-4-0613	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Un tammig rouezet e oa he mouezh	0.6236298057322959	0.00291	306	5
+fr2br	gpt-4-0613	En voilà une comédie	Setu amañ ur pardon	 Setu ur c'hoariva	0.5420088092841682	0.00291	306	4
+fr2br	gpt-4-0613	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pe vras, pe vihan, pep gaout a gar he yaouankiz	0.5615890048203802	0.00291	306	11
+fr2br	gpt-4-0613	C'est fini	Echu eo	 Echu eo	0.8897119216463069	0.00291	306	2
+fr2br	gpt-4-turbo-2024-04-09	J'ai envie de chanter	C'hoant am eus da ganañ	C'hoant am eus da ganañ	0.9999980759043564	0.00273	294	4
+fr2br	gpt-4-turbo-2024-04-09	 Il a raison	Ar wirionez zo gantañ	 Reizh eo	0.53368191723499	0.00273	294	4
+fr2br	gpt-4-turbo-2024-04-09	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Bras a-walc'h eo ar c'hi	0.6623488982914112	0.00273	294	5
+fr2br	gpt-4-turbo-2024-04-09	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hortozit ket e roin deoc'h ar respontoù	0.8227462603006777	0.00273	294	12
+fr2br	gpt-4-turbo-2024-04-09	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 Ne oant ket ar memes reolennoù naetez ha yec'hed evel bremañ	0.6534416517889674	0.00273	294	12
+fr2br	gpt-4-turbo-2024-04-09	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Kaset e oa bet ar jandarmed anezhi d'ar prizon	0.5182057743265245	0.00273	294	6
+fr2br	gpt-4-turbo-2024-04-09	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 Yen un tamm e oa he mouezh	0.5598621896851366	0.00273	294	5
+fr2br	gpt-4-turbo-2024-04-09	En voilà une comédie	Setu amañ ur pardon	 Setu ur farsadenn	0.534007032305784	0.00273	294	4
+fr2br	gpt-4-turbo-2024-04-09	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pe du pe gwenn, pep gavr a gar he menn	0.7177936057826668	0.00273	294	11
+fr2br	gpt-4-turbo-2024-04-09	C'est fini	Echu eo	 Echu eo	0.8897119216463069	0.00273	294	2
+fr2br	gpt-4o-2024-05-13	J'ai envie de chanter	C'hoant am eus da ganañ	Me fell din kanañ	0.37321880705774435	0.0027349999999999996	281	4
+fr2br	gpt-4o-2024-05-13	 Il a raison	Ar wirionez zo gantañ	 Eñ en deus rezon	0.3705316886263649	0.0027349999999999996	281	4
+fr2br	gpt-4o-2024-05-13	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar c'hi a zo bras a-walc'h	0.8773185939132855	0.0027349999999999996	281	5
+fr2br	gpt-4o-2024-05-13	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hortozit ket ac'hanon da reiñ deoc'h ar respontoù	0.799861876067737	0.0027349999999999996	281	12
+fr2br	gpt-4o-2024-05-13	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 Ar reolennoù glanidigezh ha yec'hed ne oant ket heñvel ouzh bremañ	0.7483721027554895	0.0027349999999999996	281	12
+fr2br	gpt-4o-2024-05-13	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Ar jandarmed o doa kaset anezhi d'ar prizon	0.5228430533351974	0.0027349999999999996	281	6
+fr2br	gpt-4o-2024-05-13	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 He mouezh a oa un tammig c'hwerv	0.5975156970004462	0.0027349999999999996	281	5
+fr2br	gpt-4o-2024-05-13	En voilà une comédie	Setu amañ ur pardon	 Setu ur c'hoariva	0.542085461162615	0.0027349999999999996	281	4
+fr2br	gpt-4o-2024-05-13	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pe e vefe du, pe e vefe gwenn, pep gavr a gar he meñ	0.7107994928360631	0.0027349999999999996	281	11
+fr2br	gpt-4o-2024-05-13	C'est fini	Echu eo	 Echuiñ eo	0.7703565970087023	0.0027349999999999996	281	2

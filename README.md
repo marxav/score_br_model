@@ -7,20 +7,23 @@
 * Currently, the models that can be tested are: 
   * OpenAI *gpt-3.5-turbo* and *gpt-4-turbo*
   * Google *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
+  * Anthropic *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
 
 ## Requirements
 * Ubuntu OS
-* An OPENAI_API_KEY (cf. https://platform.openai.com/api-keys)
-* A GOOGLE_API_KEY (cf. https://ai.google.dev/gemini-api/docs/api-key?hl=fr)
+* An OPENAI_API_KEY (cf. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys))
+* A GOOGLE_API_KEY (cf. [(https://ai.google.dev/gemini-api/docs/api-key](https://ai.google.dev/gemini-api/docs/api-key))
+* An ANTHROPIC_API_KEY (cf. [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys))
 
 ## Installation
 * git clone https://github.com/marxav/score_br_model.git
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* pip install openai transformers torch sentencepiece pandas ipykernel tabulate
+* pip install openai pandas ipykernel tabulate google-generativeai anthropic
 * echo OPENAI_API_KEY=your-secret-key-1 >> .env
 * echo GOOGLE_API_KEY=your-secret-key-2 >> .env
+* echo ANTHROPIC_API_KEY=your-secret-key-3 >> .env
 
 ## Run
 * cd score_br_model
@@ -31,22 +34,30 @@
 ## Results
 * The result file will contain something like :
 
-| task   | model            | score       |
-|:-------|:-----------------|:------------|
-| br2fr  | gemini-1.5-pro   | 0.82 ± 0.17 |
-| br2fr  | gpt-4-turbo      | 0.8 ± 0.21  |
-| br2fr  | gemini-1.5-flash | 0.75 ± 0.18 |
-| br2fr  | gemini-1.0-pro   | 0.65 ± 0.22 |
-| br2fr  | gpt-3.5-turbo    | 0.64 ± 0.16 |
+| task   | model                    | score       |
+|:-------|:-------------------------|:------------|
+| br2fr  | claude-3-opus-20240229   | 0.89 ± 0.16 |
+| br2fr  | gpt-4o-2024-05-13        | 0.83 ± 0.19 |
+| br2fr  | claude-3-haiku-20240307  | 0.81 ± 0.19 |
+| br2fr  | gpt-4-turbo-2024-04-09   | 0.79 ± 0.21 |
+| br2fr  | gemini-1.5-pro-001       | 0.77 ± 0.18 |
+| br2fr  | claude-3-sonnet-20240229 | 0.76 ± 0.18 |
+| br2fr  | gpt-4-0613               | 0.76 ± 0.15 |
+| br2fr  | gemini-1.0-pro-001       | 0.74 ± 0.16 |
+| br2fr  | gpt-3.5-turbo-0125       | 0.7 ± 0.18  |
 
-| task   | model            | score       |
-|:-------|:-----------------|:------------|
-| fr2br  | gpt-4-turbo      | 0.68 ± 0.17 |
-| fr2br  | gemini-1.5-pro   | 0.67 ± 0.17 |
-| fr2br  | gemini-1.5-flash | 0.64 ± 0.16 |
-| fr2br  | gemini-1.0-pro   | 0.58 ± 0.12 |
-| fr2br  | gpt-3.5-turbo    | 0.53 ± 0.14 |
-
+| task   | model                    | score       |
+|:-------|:-------------------------|:------------|
+| fr2br  | claude-3-opus-20240229   | 0.69 ± 0.15 |
+| fr2br  | gpt-4-turbo-2024-04-09   | 0.68 ± 0.16 |
+| fr2br  | gpt-4-0613               | 0.67 ± 0.16 |
+| fr2br  | gemini-1.5-flash         | 0.66 ± 0.15 |
+| fr2br  | gemini-1.5-pro-001       | 0.65 ± 0.17 |
+| fr2br  | gpt-4o-2024-05-13        | 0.63 ± 0.17 |
+| fr2br  | gemini-1.0-pro-001       | 0.62 ± 0.13 |
+| fr2br  | claude-3-sonnet-20240229 | 0.6 ± 0.12  |
+| fr2br  | claude-3-haiku-20240307  | 0.57 ± 0.14 |
+| fr2br  | gpt-3.5-turbo-0125       | 0.48 ± 0.12 |
 
 
 ## More info
@@ -70,13 +81,20 @@
 * Add more samples in samples.tsv
 * Add more LLMs
 * Add a leaderboard of the tested LLMs and theirs scores at different tasks
+  * Either like an [https://chat.lmsys.org/?leaderboard](LMSYS) leaderboard
+  * Or with via a product like [https://scale.com/leaderboard](https://scale.com/leaderboard)
 
 ## Warning
+* Some model can refuse to translate some sentences that they consider as :
+  * *HARM CATEGORY_SEXUALLY_EXPLICIT*,
+  * *HARM_CATEGORY_HATE_SPEECH"*,
+  * *HARM_CATEGORY_HARASSMENT"*,
+  * *HARM_CATEGORY_DANGEROUS_CONTENT"*.
 * Currently, we use a file with lines like "br:port nawak" and "fr:trop chouette"
-* For the br2fr task "br:port nawak" is sent to the model; the answer is then compared with "fr:trop chouette", which is used as true value.
-* For the fr2br task "fr:trop chouette" is sent to the model; the answer is then compared with "br:port nawak", which is used as true value.
-* A model saving history could then learn that "br:port nawak" has to be translated by fr:trop chouette", which would bias the evaluation.
-* TODO: try to check if this happens... or avoid using the same input-file for the two different tasks.
+  * For the br2fr task "br:port nawak" is sent to the model; the answer is then compared with "fr:trop chouette", which is used as true value.
+  * For the fr2br task "fr:trop chouette" is sent to the model; the answer is then compared with "br:port nawak", which is used as true value.
+  * A model saving history could then learn that "br:port nawak" has to be translated by fr:trop chouette", which would bias the evaluation.
+  * TODO: try to check if this happens... or avoid using the same input-file for the two different tasks.
 
 ## Acknowledgments
 * [tregor_2110_br.txt](tregor_2110_br.txt) is a sample of a text written by Gireg Konan in Le Tregor newspaper, n°2110, June 6th 2024.
