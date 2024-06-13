@@ -5,7 +5,7 @@
 * To do so, it compares the semantic distance of a translation performed by an LLM with an expected translation (a.k.a. target translation).
 * The semantic distance is based on the proximity of OpenAI embeddings.
 * Currently, the models that can be tested are: 
-  * OpenAI *gpt-3.5-turbo* and *gpt-4-turbo*
+  * OpenAI *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*
   * Google *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
   * Anthropic *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
 
@@ -81,7 +81,7 @@
 * Add more samples in samples.tsv
 * Add more LLMs
 * Add a leaderboard of the tested LLMs and theirs scores at different tasks
-  * Either like an [https://chat.lmsys.org/?leaderboard](LMSYS) leaderboard
+  * Either like an [LMSYS](https://chat.lmsys.org/?leaderboard) leaderboard
   * Or with via a product like [https://scale.com/leaderboard](https://scale.com/leaderboard)
 
 ## Warning
