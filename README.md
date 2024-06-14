@@ -1,15 +1,17 @@
 # score_br_model
 
 ## Goal
-* This project is a quick and dirty project aiming at evaluating some large language models (LLMs) able to translate Breton language into French language ('br2fr' task), and vice versa ('fr2br' task).
-* To do so, it compares the semantic distance of a translation performed by an LLM with an expected translation (a.k.a. target translation).
-* The semantic distance is based on the proximity of OpenAI embeddings.
+* This project is a quick and dirty project aiming at providing a foundation tool to evaluate some large language models (LLMs) in their ability to carry out taks via interaction in Breton language. 
+* Examples of tasks 'br2fr' (breton to french translation) and 'fr2br' (French to Breton translation).
+* To do so, it compares the semantic distance of a task performed by an LLM with an expected task pre-performed by an evaluator.
+* The semantic distance is based on the proximity of OpenAI embeddings. 
 * Currently, the models that can be tested are: 
   * OpenAI *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*
   * Google *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
   * Anthropic *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
   * Meta *llama3-8b-8192*, *llama3-70b-8192*
   * Mistral *open-mistral-7b*, *mistral-large-latest*
+  * Cohere *command-r-plus*
 
 ## Requirements
 * Ubuntu OS
@@ -18,18 +20,21 @@
 * An ANTHROPIC_API_KEY (cf. [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys))
 * A GROQ_API_KEY (cf. [https://console.groq.com/keys](https://console.groq.com/keys))
 * A MISTRAL_API_KEY (cf. [https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/))
+* A COHERE_API_KEY (cf. [https://dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys))
+* Only the OPENAI_API_KEY is mandatory given it is also needed for calculating the evaluation scores.
 
 ## Installation
 * git clone https://github.com/marxav/score_br_model.git
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* pip install openai pandas ipykernel tabulate google-generativeai anthropici groq mistralai
+* pip install openai pandas ipykernel tabulate google-generativeai anthropici groq mistralai cohere
 * echo OPENAI_API_KEY=your-secret-key-1 >> .env
 * echo GOOGLE_API_KEY=your-secret-key-2 >> .env
 * echo ANTHROPIC_API_KEY=your-secret-key-3 >> .env
 * echo GROQ_API_KEY=your-secret-key-4 >> .env
 * echo MISTRAL_API_KEY=your-secret-key-5 >> .env
+* echo COHERE_API_KEY=your-secret-key-6 >> .env
 
 ## Run
 * cd score_br_model
@@ -50,7 +55,12 @@
 | br2fr  | claude-3-sonnet-20240229 | 0.76 ± 0.18 |
 | br2fr  | gpt-4-0613               | 0.76 ± 0.15 |
 | br2fr  | gemini-1.0-pro-001       | 0.74 ± 0.16 |
+| br2fr  | llama3-70b-8192          | 0.72 ± 0.16 |
 | br2fr  | gpt-3.5-turbo-0125       | 0.7 ± 0.18  |
+| br2fr  | command-r-plus           | 0.62 ± 0.16 |
+| br2fr  | mistral-large-latest     | 0.56 ± 0.22 |
+| br2fr  | llama3-8b-8192           | 0.43 ± 0.12 |
+| br2fr  | open-mistral-7b          | 0.25 ± 0.04 |
 
 | task   | model                    | score       |
 |:-------|:-------------------------|:------------|
@@ -59,11 +69,16 @@
 | fr2br  | gpt-4-0613               | 0.67 ± 0.16 |
 | fr2br  | gemini-1.5-flash         | 0.66 ± 0.15 |
 | fr2br  | gemini-1.5-pro-001       | 0.65 ± 0.17 |
+| fr2br  | llama3-70b-8192          | 0.64 ± 0.12 |
 | fr2br  | gpt-4o-2024-05-13        | 0.63 ± 0.17 |
 | fr2br  | gemini-1.0-pro-001       | 0.62 ± 0.13 |
 | fr2br  | claude-3-sonnet-20240229 | 0.6 ± 0.12  |
 | fr2br  | claude-3-haiku-20240307  | 0.57 ± 0.14 |
+| fr2br  | mistral-large-latest     | 0.55 ± 0.11 |
+| fr2br  | command-r-plus           | 0.5 ± 0.11  |
 | fr2br  | gpt-3.5-turbo-0125       | 0.48 ± 0.12 |
+| fr2br  | llama3-8b-8192           | 0.48 ± 0.08 |
+| fr2br  | open-mistral-7b          | 0.43 ± 0.13 |
 
 
 ## More info
@@ -85,7 +100,6 @@
 ## Todo
 * Enhance the scoring metric(s)
 * Add more samples in samples.tsv
-* Add more LLMs
 * Add a leaderboard of the tested LLMs and theirs scores at different tasks
   * Either like an [LMSYS](https://chat.lmsys.org/?leaderboard) leaderboard
   * Or with via a product like [https://scale.com/leaderboard](https://scale.com/leaderboard)

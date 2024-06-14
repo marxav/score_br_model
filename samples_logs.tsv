@@ -290,3 +290,23 @@ br2fr	mistral-large-latest	E vouezh a oa gouraouliet	Sa voix était légèrement
 br2fr	mistral-large-latest	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4435588735107451	0.0	345	4
 br2fr	mistral-large-latest	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Vie noire, vie blanche, chaque homme aime sa maison	0.5388871814431873	0.0	345	10
 br2fr	mistral-large-latest	Echu eo	C'est fini	 C'est fini	0.9220646519088014	0.0	345	2
+br2fr	command-r-plus	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8678605991587578	0.0	297	5
+br2fr	command-r-plus	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec lui	0.5110313543891993	0.0	297	4
+br2fr	command-r-plus	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est très méchant	0.6011602119089989	0.0	297	5
+br2fr	command-r-plus	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Ne le laissez pas attendre, je vous donnerai les réponses	0.6714716519714345	0.0	297	10
+br2fr	command-r-plus	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la proposition et de l'orthographe n'étaient pas les mêmes qu'aujourd'hui	0.6338539121532238	0.0	297	14
+br2fr	command-r-plus	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les gars de Marie-Robin l'avaient envoyée en prison	0.6917022464552793	0.0	297	9
+br2fr	command-r-plus	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Son visage était triste	0.4213703615117883	0.0	297	5
+br2fr	command-r-plus	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436448074233734	0.0	297	4
+br2fr	command-r-plus	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Baiser noir, baiser blanc, chaque barde aime sa langue	0.5206058353855338	0.0	297	10
+br2fr	command-r-plus	Echu eo	C'est fini	 C'est fini	0.9221063879178844	0.0	297	2
+fr2br	command-r-plus	J'ai envie de chanter	C'hoant am eus da ganañ	Me a goust breman da kaner	0.40910758659666446	0.0	286	4
+fr2br	command-r-plus	 Il a raison	Ar wirionez zo gantañ	 Ret eo	0.3564484540568971	0.0	286	4
+fr2br	command-r-plus	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Digarz hag a zo	0.5575864809275369	0.0	286	5
+fr2br	command-r-plus	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'houlennit ket enn-dro d'am eus ar respouseioù	0.7103768964890236	0.0	286	12
+fr2br	command-r-plus	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 N'eo ket kement-se ar reolennoù glizh ha hiegien a oa	0.5619838628107572	0.0	286	12
+fr2br	command-r-plus	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Oa bet kaset en prison an treiour gant ar zandarme	0.4940000717228987	0.0	286	6
+fr2br	command-r-plus	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 En hengrez vras e oa he vez	0.5993024167814907	0.0	286	5
+fr2br	command-r-plus	En voilà une comédie	Setu amañ ur pardon	 Komed-se emañ	0.37186043201723556	0.0	286	4
+fr2br	command-r-plus	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Ma 'c'hleo, ma 'c'hwen, pep chevrel a gar he chevrel	0.5737584224542942	0.0	286	11
+fr2br	command-r-plus	C'est fini	Echu eo	 Kenbet eo	0.38992622869961346	0.0	286	2

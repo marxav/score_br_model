@@ -11,6 +11,7 @@ import anthropic
 from groq import Groq
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
+import cohere
 
 # the possible translation_models, so far:
 # From https://platform.openai.com/docs/models/
@@ -41,15 +42,16 @@ from mistralai.models.chat_completion import ChatMessage
 # 'claude-3-opus-20240229',
 config = {
     'translation_models': [
-        'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
+        'command-r-plus',
+        #'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
         #'llama3-8b-8192', 'llama3-70b-8192',
         #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
     ],
     'tasks': [
-        'br2fr',
-        #'fr2br'
+        #'br2fr',
+        'fr2br'
     ],
     'log_file_postfix': 'logs.tsv',
     'res_file_postix': 'res.tsv',
@@ -69,6 +71,8 @@ anthropic_api_key = next((line.split('=')[1].strip() for line in open('.env') if
 groq_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GROQ_API_KEY')), None)
 # read MISTRAL_API_KEY for Mistral models
 mistral_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('MISTRAL_API_KEY')), None)
+# read COHERE_API_KEY for Commmand-r models
+cohere_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('COHERE_API_KEY')), None)
 
 
 # get the source data to be translated, as well as the ideal target data
@@ -219,8 +223,8 @@ def get_translation(config, model, text_src, verbose=False):
         temperature = config['temperature'],
         top_p=1.0
     )
-    #if verbose:
-    print(response)
+    if verbose:
+        print(response)
     try: 
         text_dst_predicted = response.choices[0].message.content
         print("text predicted:", text_dst_predicted)
@@ -232,6 +236,30 @@ def get_translation(config, model, text_src, verbose=False):
     in_tokens = response.usage.prompt_tokens
     out_tokens = response.usage.completion_tokens
     total_tokens = response.usage.total_tokens
+  elif 'command-r' in model:
+    co = cohere.Client(api_key=cohere_api_key)
+
+    response = co.chat(
+        model="command-r-plus",
+        message=prompt+text_src,
+        temperature = config['temperature'],
+        p = config['top_p'],
+    )
+    print('response:', response)
+
+    try: 
+        text_dst_predicted = response.text
+        print("text predicted:", text_dst_predicted)
+    except:
+        print('WARNING: no response provided by the LLM. LLM response was:', response)
+        error = True
+        return 'N/A', 0, 0, error
+    price = 0
+    tok = response.meta
+    print('tok:', tok)
+    in_tokens = tok.billed_units.input_tokens
+    out_tokens = tok.billed_units.output_tokens
+    total_tokens = in_tokens + out_tokens
   else:
       print(f'ERROR model {model} is not supported.')
       error = True
