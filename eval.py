@@ -9,6 +9,8 @@ from openai import OpenAI
 import google.generativeai as genai
 import anthropic
 from groq import Groq
+from mistralai.client import MistralClient
+from mistralai.models.chat_completion import ChatMessage
 
 # the possible translation_models, so far:
 # From https://platform.openai.com/docs/models/
@@ -39,18 +41,21 @@ from groq import Groq
 # 'claude-3-opus-20240229',
 config = {
     'translation_models': [
-        'llama3-8b-8192', 'llama3-70b-8192',
+        'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
+        #'llama3-8b-8192', 'llama3-70b-8192',
         #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
     ],
     'tasks': [
-        #'br2fr',
-        'fr2br'
+        'br2fr',
+        #'fr2br'
     ],
     'log_file_postfix': 'logs.tsv',
     'res_file_postix': 'res.tsv',
-    'input_file': 'samples.tsv'
+    'input_file': 'samples.tsv',
+    'temperature': 0.0,
+    'top_p': 0.95,
 }
 
 
@@ -62,6 +67,8 @@ api_key = next((line.split('=')[1].strip() for line in open('.env') if line.star
 anthropic_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('ANTHROPIC_API_KEY')), None)
 # read GROQ_API_KEY for Meta LLama models
 groq_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GROQ_API_KEY')), None)
+# read MISTRAL_API_KEY for Mistral models
+mistral_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('MISTRAL_API_KEY')), None)
 
 
 # get the source data to be translated, as well as the ideal target data
@@ -99,7 +106,7 @@ def get_translation(config, model, text_src, verbose=False):
     prompt = "Translate the following Breton text to French. "
   elif lang_src == 'fr' and lang_dst == 'br':
     prompt = "Translate the following French text to Breton. "
-  prompt += "Immediatly write the translated text, nothing more. "
+  prompt += "Immediatly write the translated text, nothing more. Do not add any personal comment beyond translation, just translate. "
   prompt += "The translated text must contain the same number of sentences and same number of '.' characters as in the input text. "
   prompt += "\n"
   #prompt += " If there is no '?' in the text to be translated, there must be no '?' as well in the translated text." # does not work
@@ -113,8 +120,8 @@ def get_translation(config, model, text_src, verbose=False):
         model=model,
         messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text_src}],
         stream=False,
-        temperature=0.0,
-        top_p=0.95,
+        temperature = config['temperature'],
+        top_p=config['top_p'],
     )
 
     text_dst_predicted = response.choices[0].message.content
@@ -138,8 +145,11 @@ def get_translation(config, model, text_src, verbose=False):
         
   elif model.startswith('gemini'):
     google_model = genai.GenerativeModel(model)
-    response = google_model.generate_content(prompt + text_src)
-    
+    response = google_model.generate_content(
+        prompt + text_src,
+        temperature = config['temperature'],
+        top_p=config['top_p']
+    )
     #if verbose:
     
     try:
@@ -164,7 +174,10 @@ def get_translation(config, model, text_src, verbose=False):
         messages=[
             {"role": "user", "content": prompt + text_src},
             #{"role": "assistant", "content": prompt}
-        ])
+        ],
+        temperature = config['temperature'],
+        top_p=config['top_p']
+        )
       print('message.content:', message)
       print('text:', message.content[0].text)
       price = 0
@@ -173,10 +186,8 @@ def get_translation(config, model, text_src, verbose=False):
       total_tokens = in_tokens + out_tokens
       text_dst_predicted = message.content[0].text
   elif 'llama' in model:
-    print('api-keu:', groq_api_key) 
     client = Groq(api_key=groq_api_key)
-    print(model)
-    chat_completion = client.chat.completions.create(
+    response = client.chat.completions.create(
         messages=[
             {
                 "role": "user",
@@ -184,20 +195,43 @@ def get_translation(config, model, text_src, verbose=False):
             }
         ],
         model=model,
+        temperature = config['temperature'],
+        top_p=config['top_p']
     ) 
-    print(chat_completion)
-    print(chat_completion.choices[0].message.content)
+    if verbose:
+        print(response)
     try:
-        text_dst_predicted = chat_completion.choices[0].message.content
+        text_dst_predicted = response.choices[0].message.content
     except:
         print('WARNING: no response provided by the LLM. LLM response was:', response)
         error = True
         return 'N/A', 0, 0, error
     price = 0
-    in_tokens = chat_completion.usage.prompt_tokens
-    out_tokens = chat_completion.usage.completion_tokens
-    total_tokens = chat_completion.usage.total_tokens
-    
+    in_tokens = response.usage.prompt_tokens
+    out_tokens = response.usage.completion_tokens
+    total_tokens = response.usage.total_tokens
+  elif 'mistral' in model:
+    client = MistralClient(api_key=mistral_api_key)
+
+    response = client.chat(
+        model=model,
+        messages=[ChatMessage(role="user", content=prompt+text_src)],
+        temperature = config['temperature'],
+        top_p=1.0
+    )
+    #if verbose:
+    print(response)
+    try: 
+        text_dst_predicted = response.choices[0].message.content
+        print("text predicted:", text_dst_predicted)
+    except:
+        print('WARNING: no response provided by the LLM. LLM response was:', response)
+        error = True
+        return 'N/A', 0, 0, error
+    price = 0
+    in_tokens = response.usage.prompt_tokens
+    out_tokens = response.usage.completion_tokens
+    total_tokens = response.usage.total_tokens
   else:
       print(f'ERROR model {model} is not supported.')
       error = True

@@ -9,23 +9,27 @@
   * Google *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
   * Anthropic *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
   * Meta *llama3-8b-8192*, *llama3-70b-8192*
+  * Mistral *open-mistral-7b*, *mistral-large-latest*
 
 ## Requirements
 * Ubuntu OS
 * An OPENAI_API_KEY (cf. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys))
 * A GOOGLE_API_KEY (cf. [(https://ai.google.dev/gemini-api/docs/api-key](https://ai.google.dev/gemini-api/docs/api-key))
 * An ANTHROPIC_API_KEY (cf. [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys))
+* A GROQ_API_KEY (cf. [https://console.groq.com/keys](https://console.groq.com/keys))
+* A MISTRAL_API_KEY (cf. [https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/))
 
 ## Installation
 * git clone https://github.com/marxav/score_br_model.git
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* pip install openai pandas ipykernel tabulate google-generativeai anthropici groq
+* pip install openai pandas ipykernel tabulate google-generativeai anthropici groq mistralai
 * echo OPENAI_API_KEY=your-secret-key-1 >> .env
 * echo GOOGLE_API_KEY=your-secret-key-2 >> .env
 * echo ANTHROPIC_API_KEY=your-secret-key-3 >> .env
 * echo GROQ_API_KEY=your-secret-key-4 >> .env
+* echo MISTRAL_API_KEY=your-secret-key-5 >> .env
 
 ## Run
 * cd score_br_model
@@ -89,9 +93,9 @@
 ## Warning
 * Some model can refuse to translate some sentences that they consider as :
   * *HARM CATEGORY_SEXUALLY_EXPLICIT*,
-  * *HARM_CATEGORY_HATE_SPEECH"*,
-  * *HARM_CATEGORY_HARASSMENT"*,
-  * *HARM_CATEGORY_DANGEROUS_CONTENT"*.
+  * *HARM_CATEGORY_HATE_SPEECH*,
+  * *HARM_CATEGORY_HARASSMENT*,
+  * *HARM_CATEGORY_DANGEROUS_CONTENT*.
 * Currently, we use a file with lines like "br:port nawak" and "fr:trop chouette"
   * For the br2fr task "br:port nawak" is sent to the model; the answer is then compared with "fr:trop chouette", which is used as true value.
   * For the fr2br task "fr:trop chouette" is sent to the model; the answer is then compared with "br:port nawak", which is used as true value.

@@ -221,7 +221,7 @@ fr2br	llama3-8b-8192	En voilà une comédie	Setu amañ ur pardon	Gwelet eo e zoe
 fr2br	llama3-8b-8192	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	Kan ivez ez eus kement greg a zro hag e zro, da lavarout kement meiz da c'horvao	0.4758297887342071	0.0	310	11
 fr2br	llama3-8b-8192	C'est fini	Echu eo	Kao ar werziûg	0.3446667307016985	0.0	310	2
 fr2br	llama3-70b-8192	J'ai envie de chanter	C'hoant am eus da ganañ	Me a ganin da ganañ	0.685266568569817	0.0	300	4
-fr2br	llama3-70b-8192	 Il a raison	Ar wirionez zo gantañ	 En deus gwirion	0.45711619457089353	0.0	300	4
+fr2br	llama3-70b-8192	 Il a raison	Ar wirionez zo gantañ	 En deus gwirion	0.4571161945708935	0.0	300	4
 fr2br	llama3-70b-8192	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar c'hi a zo a-walc'h bras	0.8750639015624042	0.0	300	5
 fr2br	llama3-70b-8192	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na verzhet ket e karin din d'heul les respontoù	0.7390614091313752	0.0	300	12
 fr2br	llama3-70b-8192	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	DaN'e oa ket ar reolennou a vije hag a savoniezh evel bremañ	0.6039191120610938	0.0	300	12
@@ -230,3 +230,63 @@ fr2br	llama3-70b-8192	Sa voix était légèrement enrouée	E vouezh a oa gouraou
 fr2br	llama3-70b-8192	En voilà une comédie	Setu amañ ur pardon	Setu ur c'hoariva	0.5629591573055992	0.0	300	4
 fr2br	llama3-70b-8192	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	Seurt gwenn, seurt du, bep gouez a gar he c'hevre	0.7139342831697656	0.0	300	11
 fr2br	llama3-70b-8192	C'est fini	Echu eo	Komz a ra eo echu	0.5830411839910694	0.0	300	2
+fr2br	open-mistral-7b	J'ai envie de chanter	C'hoant am eus da ganañ	Ma'z eus kent ar c'hant	0.5702667345969765	0.0	372	4
+fr2br	open-mistral-7b	 Il a raison	Ar wirionez zo gantañ	 Ha ma ziz	0.2099182466335771	0.0	372	4
+fr2br	open-mistral-7b	Le chien est assez grand	Ar c'hi zo bras awalc'h	"
+Ar c'hien e d'ar benn ar vurz gwenn"	0.536322520422914	0.0	372	5
+fr2br	open-mistral-7b	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	"
+N'eus ma zizouet ha ma ziz e-c'hortez viz an ar vrasow"	0.4640783917268999	0.0	372	12
+fr2br	open-mistral-7b	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	"
+Ar vras ar bed ar vrasiezh k'hent a-benn paotret k'hent anow"	0.4664323186986437	0.0	372	12
+fr2br	open-mistral-7b	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	"
+Ar gendarmen e-moc'h hag ar gwaredig e-moc'h e-tro hag ar prisun"	0.3886917731072135	0.0	372	6
+fr2br	open-mistral-7b	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	"
+Ar vras e d'ar roz evit tregont"	0.4831403047121247	0.0	372	5
+fr2br	open-mistral-7b	En voilà une comédie	Setu amañ ur pardon	"
+Eus ma comedia"	0.2921111630409474	0.0	372	4
+fr2br	open-mistral-7b	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	"
+Benn e groach, benn e blaned, kazh un ch'hève a ma ziz ar ch'hèveou"	0.6243434045359973	0.0	372	11
+fr2br	open-mistral-7b	C'est fini	Echu eo	"
+Kevrech"	0.3261716566028744	0.0	372	2
+fr2br	mistral-large-latest	J'ai envie de chanter	C'hoant am eus da ganañ	Ma c'hellf a ra c'hoari	0.5197253924263898	0.0	361	4
+fr2br	mistral-large-latest	 Il a raison	Ar wirionez zo gantañ	 Emañ eo ar reizh a-zoue	0.616661107873377	0.0	361	4
+fr2br	mistral-large-latest	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar c'hi a zo brasoc'h mat	0.7905859082009374	0.0	361	5
+fr2br	mistral-large-latest	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Ne c'hellit ket evit ma enklaskit an holl raezoù d'oc'h	0.5512760739289702	0.0	361	12
+fr2br	mistral-large-latest	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 Ar reulioù sklaer hag a vouediezh ne oant ket an hini e-tal an hiziv	0.5826272634664929	0.0	361	12
+fr2br	mistral-large-latest	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Ar jeneralied a oant enorc'het e c'harvailh	0.374142059531881	0.0	361	6
+fr2br	mistral-large-latest	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 E oa e talvoudus d'un nebeud eus ar vorc'h	0.5798008962607044	0.0	361	5
+fr2br	mistral-large-latest	En voilà une comédie	Setu amañ ur pardon	 Setu-se eur komedi	0.404798615462789	0.0	361	4
+fr2br	mistral-large-latest	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pa veze ken, pa veze gwenn, pep seurt a gar e veurc'h	0.6432588317280924	0.0	361	11
+fr2br	mistral-large-latest	C'est fini	Echu eo	 Ret eo	0.502624511615432	0.0	361	2
+br2fr	open-mistral-7b	C'hoant am eus da ganañ	J'ai envie de chanter	"Voici la traduction du texte breton en français :
+
+Je suis venu pour le gagner"	0.3457498869930184	0.0	405	5
+br2fr	open-mistral-7b	Ar wirionez zo gantañ	 Il a raison	"
+Dans les bois profonds"	0.2657274374130001	0.0	405	4
+br2fr	open-mistral-7b	Ar c'hi zo bras awalc'h	Le chien est assez grand	"
+Au fond du marais"	0.2269912842995786	0.0	405	5
+br2fr	open-mistral-7b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	"
+Je n'ai pas vu de chasseur et la forêt répondit au grincement de ma voix"	0.2920454189380252	0.0	405	10
+br2fr	open-mistral-7b	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	"
+Je rencontrai les brebis et les bêtes sauvages ne s'éloignèrent pas de moi"	0.2906254025607023	0.0	405	14
+br2fr	open-mistral-7b	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	"
+Pauvre Mari-Robin a perdu son cochon et je l'ai trouvé"	0.2353625019743644	0.0	405	9
+br2fr	open-mistral-7b	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	"
+Et vous êtes venus me chercher"	0.1966392422347607	0.0	405	5
+br2fr	open-mistral-7b	Setu amañ ur pardon	En voilà une comédie	"
+Attendez une minute, une heure, un homme qui vient chercher"	0.275957166752412	0.0	405	4
+br2fr	open-mistral-7b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	"
+Et je suis parti"	0.2107757002956099	0.0	405	10
+br2fr	open-mistral-7b	Echu eo	C'est fini	"
+
+La traduction contient le même nombre de phrases et de points que le texte original breton"	0.2342705077516274	0.0	405	2
+br2fr	mistral-large-latest	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8678428712288855	0.0	345	5
+br2fr	mistral-large-latest	Ar wirionez zo gantañ	 Il a raison	 La vérité est avec moi	0.4150814744853226	0.0	345	4
+br2fr	mistral-large-latest	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est grand maintenant	0.7394098984064684	0.0	345	5
+br2fr	mistral-large-latest	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 Vous ne recevrez pas immédiatement les réponses	0.6209366688303384	0.0	345	10
+br2fr	mistral-large-latest	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la grammaire et de l'orthographe ne sont pas les mêmes et aujourd'hui	0.4333328608064651	0.0	345	14
+br2fr	mistral-large-latest	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les garçons de Marie-Robin ont été envoyés chez le forgeron	0.3949999071811534	0.0	345	9
+br2fr	mistral-large-latest	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 La ville était gouvernée	0.2490044207103491	0.0	345	5
+br2fr	mistral-large-latest	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4435588735107451	0.0	345	4
+br2fr	mistral-large-latest	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Vie noire, vie blanche, chaque homme aime sa maison	0.5388871814431873	0.0	345	10
+br2fr	mistral-large-latest	Echu eo	C'est fini	 C'est fini	0.9220646519088014	0.0	345	2
