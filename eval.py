@@ -42,12 +42,15 @@ import cohere
 # 'claude-3-opus-20240229',
 config = {
     'translation_models': [
-        'command-r-plus',
-        'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
-        'llama3-8b-8192', 'llama3-70b-8192',
+        #'command-r-plus',
+        #'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
+        #'llama3-8b-8192', 'llama3-70b-8192',
         #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
+        #'gpt-4-turbo-2024-04-09', 
+        #'gpt-4o-2024-05-13', 
+        'gemini-1.5-pro-001'
     ],
     'tasks': [
         'br2fr',
@@ -64,7 +67,7 @@ config = {
 # read OPENAI_API_KEY for GPT models
 openai_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('OPENAI_API_KEY')), None)
 # read GOOGLE_API_KEY for Gemini models
-api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GOOGLE_API_KEY')), None)
+google_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GOOGLE_API_KEY')), None)
 # read ANTHROPIC_API_KEY for Gemini models
 anthropic_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('ANTHROPIC_API_KEY')), None)
 # read GROQ_API_KEY for Meta LLama models
@@ -76,7 +79,7 @@ cohere_api_key = next((line.split('=')[1].strip() for line in open('.env') if li
 
 
 # get the source data to be translated, as well as the ideal target data
-def get_data(config):
+def get_data(config, verbose=False):
     
     input_file = config['input_file']
     lang_src = config['lang_src']
@@ -88,8 +91,15 @@ def get_data(config):
     text_dst_target = ''
     
     df = pd.read_csv(input_file, sep='\t', encoding = 'utf8')
+    df = df.dropna()
+    print(df)
     for index, row in df.iterrows():
         # Example texts
+        if verbose:
+            print(row)
+            print('text_src:', text_src)
+            print('txt_src:', row[lang_src])
+            print('txt_dst:', row[lang_dst])
         text_src = text_src + row[lang_src]
         text_dst_target = text_dst_target + row[lang_dst]
         
@@ -117,7 +127,7 @@ def get_translation(config, model, text_src, verbose=False):
 
   error = False
 
-  if model.startswith('gpt'):
+  if 'gpt' in model:
     client = OpenAI(api_key=openai_api_key)
 
     response = client.chat.completions.create(
@@ -147,12 +157,12 @@ def get_translation(config, model, text_src, verbose=False):
         price = 0
         print('error: model unknown!!!')
         
-  elif model.startswith('gemini'):
+  elif 'gemini' in model:
+    genai.configure(api_key=google_api_key)
     google_model = genai.GenerativeModel(model)
     response = google_model.generate_content(
         prompt + text_src,
-        temperature = config['temperature'],
-        top_p=config['top_p']
+        generation_config=genai.GenerationConfig(temperature=config['temperature'], top_p=config['top_p'])
     )
     #if verbose:
     
@@ -295,7 +305,7 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
 
     # postprocessing the output (text_fr_predicted) for corner cases (e.g. two consecutive points)
     text_fr_predicted = text_fr_predicted.replace('...', '…')
-    text_fr_predicted = text_fr_predicted.replace('?', '?.') # hack because sometime affirmative sentence is predicted as an interrogative sentence
+    #text_fr_predicted = text_fr_predicted.replace('?', '?.') # hack because sometime affirmative sentence is predicted as an interrogative sentence
 
     if verbose:
         print('n:', n)
@@ -331,8 +341,12 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
         is_translation_ok = False
         if l1 != l2:
             print('!!!warning l1:'+l1+' is different from l2:'+l2)
+            print('text_src:', text_src)
+            print('text_dst_target:', text_dst_target)
         else:
             print(f'!!!warning l1:{l1} is different from l3:{l3}')
+            print('text_src:', text_src)
+            print('text_fr_predicted:', text_fr_predicted)
         if n == n_max:
             print("ERROR, too many unsuccessful trials, let's stop here")
             error = True
@@ -456,14 +470,14 @@ def test_models(config, args, verbose=False):
             df_full_results.to_csv(res_filename, index=False, sep='\t')
 
             # write logs in a second file which name contains the date
-            dated_res_filename = result['datetime'] + '_' + label + '_' + config['res_file_postix']
-            df_full_results.to_csv(dated_res_filename, index=False, sep='\t')
+            #dated_res_filename = result['datetime'] + '_' + label + '_' + config['res_file_postix']
+            #df_full_results.to_csv(dated_res_filename, index=False, sep='\t')
 
             # append logs in the tsv logs file
             df_full_detailss.to_csv(log_filename, index=False, sep='\t')
             # write logs in a second file which name contains the date
-            dated_log_filename = result['datetime'] + '_' + label + '_' + config['log_file_postfix']
-            df_details.to_csv(dated_log_filename, index=False, sep='\t')
+            #dated_log_filename = result['datetime'] + '_' + label + '_' + config['log_file_postfix']
+            #df_details.to_csv(dated_log_filename, index=False, sep='\t')
             
     return df_full_results
 
