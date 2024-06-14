@@ -43,14 +43,14 @@ import cohere
 config = {
     'translation_models': [
         'command-r-plus',
-        #'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
-        #'llama3-8b-8192', 'llama3-70b-8192',
+        'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
+        'llama3-8b-8192', 'llama3-70b-8192',
         #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
     ],
     'tasks': [
-        #'br2fr',
+        'br2fr',
         'fr2br'
     ],
     'log_file_postfix': 'logs.tsv',
