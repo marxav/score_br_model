@@ -179,13 +179,54 @@ fr2br	gpt-4-turbo-2024-04-09	Sa voix était légèrement enrouée	E vouezh a oa 
 fr2br	gpt-4-turbo-2024-04-09	En voilà une comédie	Setu amañ ur pardon	 Setu ur farsadenn	0.534007032305784	0.00273	294	4
 fr2br	gpt-4-turbo-2024-04-09	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pe du pe gwenn, pep gavr a gar he menn	0.7177936057826668	0.00273	294	11
 fr2br	gpt-4-turbo-2024-04-09	C'est fini	Echu eo	 Echu eo	0.8897119216463069	0.00273	294	2
-fr2br	gpt-4o-2024-05-13	J'ai envie de chanter	C'hoant am eus da ganañ	Me fell din kanañ	0.37321880705774435	0.0027349999999999996	281	4
-fr2br	gpt-4o-2024-05-13	 Il a raison	Ar wirionez zo gantañ	 Eñ en deus rezon	0.3705316886263649	0.0027349999999999996	281	4
-fr2br	gpt-4o-2024-05-13	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar c'hi a zo bras a-walc'h	0.8773185939132855	0.0027349999999999996	281	5
-fr2br	gpt-4o-2024-05-13	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hortozit ket ac'hanon da reiñ deoc'h ar respontoù	0.799861876067737	0.0027349999999999996	281	12
-fr2br	gpt-4o-2024-05-13	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 Ar reolennoù glanidigezh ha yec'hed ne oant ket heñvel ouzh bremañ	0.7483721027554895	0.0027349999999999996	281	12
-fr2br	gpt-4o-2024-05-13	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Ar jandarmed o doa kaset anezhi d'ar prizon	0.5228430533351974	0.0027349999999999996	281	6
-fr2br	gpt-4o-2024-05-13	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 He mouezh a oa un tammig c'hwerv	0.5975156970004462	0.0027349999999999996	281	5
-fr2br	gpt-4o-2024-05-13	En voilà une comédie	Setu amañ ur pardon	 Setu ur c'hoariva	0.542085461162615	0.0027349999999999996	281	4
-fr2br	gpt-4o-2024-05-13	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pe e vefe du, pe e vefe gwenn, pep gavr a gar he meñ	0.7107994928360631	0.0027349999999999996	281	11
-fr2br	gpt-4o-2024-05-13	C'est fini	Echu eo	 Echuiñ eo	0.7703565970087023	0.0027349999999999996	281	2
+fr2br	gpt-4o-2024-05-13	J'ai envie de chanter	C'hoant am eus da ganañ	Me fell din kanañ	0.3732188070577443	0.0027349999999999	281	4
+fr2br	gpt-4o-2024-05-13	 Il a raison	Ar wirionez zo gantañ	 Eñ en deus rezon	0.3705316886263649	0.0027349999999999	281	4
+fr2br	gpt-4o-2024-05-13	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar c'hi a zo bras a-walc'h	0.8773185939132855	0.0027349999999999	281	5
+fr2br	gpt-4o-2024-05-13	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na c'hortozit ket ac'hanon da reiñ deoc'h ar respontoù	0.799861876067737	0.0027349999999999	281	12
+fr2br	gpt-4o-2024-05-13	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	 Ar reolennoù glanidigezh ha yec'hed ne oant ket heñvel ouzh bremañ	0.7483721027554895	0.0027349999999999	281	12
+fr2br	gpt-4o-2024-05-13	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	 Ar jandarmed o doa kaset anezhi d'ar prizon	0.5228430533351974	0.0027349999999999	281	6
+fr2br	gpt-4o-2024-05-13	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	 He mouezh a oa un tammig c'hwerv	0.5975156970004462	0.0027349999999999	281	5
+fr2br	gpt-4o-2024-05-13	En voilà une comédie	Setu amañ ur pardon	 Setu ur c'hoariva	0.542085461162615	0.0027349999999999	281	4
+fr2br	gpt-4o-2024-05-13	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	 Pe e vefe du, pe e vefe gwenn, pep gavr a gar he meñ	0.7107994928360631	0.0027349999999999	281	11
+fr2br	gpt-4o-2024-05-13	C'est fini	Echu eo	 Echuiñ eo	0.7703565970087023	0.0027349999999999	281	2
+br2fr	llama3-8b-8192	C'hoant am eus da ganañ	J'ai envie de chanter	J'aime vraiment	0.4757686364074985	0.0	289	5
+br2fr	llama3-8b-8192	Ar wirionez zo gantañ	 Il a raison	Mon caractère est grave	0.286043086729047	0.0	289	4
+br2fr	llama3-8b-8192	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar ciel est beau	0.280559514093824	0.0	289	5
+br2fr	llama3-8b-8192	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	La vérité n'est pas toujours en rapport avec la réponse que vous attendez	0.4744387115509804	0.0	289	10
+br2fr	llama3-8b-8192	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Règles de la vie et de la morale ne sont pas les mêmes actuellement	0.5168044011489115	0.0	289	14
+br2fr	llama3-8b-8192	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	Hommes de Marie-Robin les ont envoyés à la prison	0.6174836385069562	0.0	289	9
+br2fr	llama3-8b-8192	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	Mon Dieu a été inconsidéré	0.2774324374393306	0.0	289	5
+br2fr	llama3-8b-8192	Setu amañ ur pardon	En voilà une comédie	C'est ici un pardon	0.394860179926828	0.0	289	4
+br2fr	llama3-8b-8192	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Voyez-vous, voyez-vous, chaque âme aime son désir	0.4407789518177615	0.0	289	10
+br2fr	llama3-8b-8192	Echu eo	C'est fini	Fini	0.6056466869596966	0.0	289	2
+br2fr	llama3-70b-8192	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8678638815115634	0.0	306	5
+br2fr	llama3-70b-8192	Ar wirionez zo gantañ	 Il a raison	 La vérité est à lui	0.5287950816107231	0.0	306	4
+br2fr	llama3-70b-8192	Ar c'hi zo bras awalc'h	Le chien est assez grand	 Le chien est suffisamment grand	0.8594254722797331	0.0	306	5
+br2fr	llama3-70b-8192	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	 N'attendez pas, je vais vous donner les réponses de suite	0.6197931554080034	0.0	306	10
+br2fr	llama3-70b-8192	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	 Les règles de la modestie et de l'hygiène n'étaient pas les mêmes qu'aujourd'hui	0.8402785782118809	0.0	306	14
+br2fr	llama3-70b-8192	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	Les gendarmes l'avaient envoyée en prison	 Les jeunes de Mari-Robin l'avaient jetée en prison	0.6138986667383088	0.0	306	9
+br2fr	llama3-70b-8192	E vouezh a oa gouraouliet	Sa voix était légèrement enrouée	 Sa voix était enrouée	0.8478155597418457	0.0	306	5
+br2fr	llama3-70b-8192	Setu amañ ur pardon	En voilà une comédie	 Voici un pardon	0.4436332550817501	0.0	306	4
+br2fr	llama3-70b-8192	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	 Soit noir, soit blanc, chaque coq aime sa crémière	0.659391659437036	0.0	306	10
+br2fr	llama3-70b-8192	Echu eo	C'est fini	 C'est fini	0.9221083024576392	0.0	306	2
+fr2br	llama3-8b-8192	J'ai envie de chanter	C'hoant am eus da ganañ	Eañfizout eo ganjout	0.5138762767236162	0.0	310	4
+fr2br	llama3-8b-8192	 Il a raison	Ar wirionez zo gantañ	 Eñ a zraoñ	0.43997619279563	0.0	310	4
+fr2br	llama3-8b-8192	Le chien est assez grand	Ar c'hi zo bras awalc'h	Le krampouezh zo bras	0.5511077008195424	0.0	310	5
+fr2br	llama3-8b-8192	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Net eo ket drouk bout kaout an anvioù	0.5239451179208142	0.0	310	12
+fr2br	llama3-8b-8192	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	An holl reiennañ ha diouzhganoù na oa ket an-heolie el live	0.5009328991450366	0.0	310	12
+fr2br	llama3-8b-8192	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	"
+Ar reoù gur sgi skiñ ez eñvistet"	0.4486139520561736	0.0	310	6
+fr2br	llama3-8b-8192	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	Eñ a oa treuzet e dour	0.6319677270247046	0.0	310	5
+fr2br	llama3-8b-8192	En voilà une comédie	Setu amañ ur pardon	Gwelet eo e zoed ar c'hoarivel	0.383282489437312	0.0	310	4
+fr2br	llama3-8b-8192	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	Kan ivez ez eus kement greg a zro hag e zro, da lavarout kement meiz da c'horvao	0.4758297887342071	0.0	310	11
+fr2br	llama3-8b-8192	C'est fini	Echu eo	Kao ar werziûg	0.3446667307016985	0.0	310	2
+fr2br	llama3-70b-8192	J'ai envie de chanter	C'hoant am eus da ganañ	Me a ganin da ganañ	0.685266568569817	0.0	300	4
+fr2br	llama3-70b-8192	 Il a raison	Ar wirionez zo gantañ	 En deus gwirion	0.45711619457089353	0.0	300	4
+fr2br	llama3-70b-8192	Le chien est assez grand	Ar c'hi zo bras awalc'h	 Ar c'hi a zo a-walc'h bras	0.8750639015624042	0.0	300	5
+fr2br	llama3-70b-8192	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	 Na verzhet ket e karin din d'heul les respontoù	0.7390614091313752	0.0	300	12
+fr2br	llama3-70b-8192	Les règles de propreté et d'hygiène n'étaient pas les mêmes que maintenant	Reolennoù ar broponi hag ar yec’hederezh ne oant ket ar memes re ha bremañ	DaN'e oa ket ar reolennou a vije hag a savoniezh evel bremañ	0.6039191120610938	0.0	300	12
+fr2br	llama3-70b-8192	Les gendarmes l'avaient envoyée en prison	 Paotred Mari-Robin o devoa kaset anezhi d'ar brizon	An archerion a oa kaset anezhi d'ar prizon	0.4957538226472069	0.0	300	6
+fr2br	llama3-70b-8192	Sa voix était légèrement enrouée	E vouezh a oa gouraouliet	He vouez a oa un tamm bouzhugel	0.7049810250487809	0.0	300	5
+fr2br	llama3-70b-8192	En voilà une comédie	Setu amañ ur pardon	Setu ur c'hoariva	0.5629591573055992	0.0	300	4
+fr2br	llama3-70b-8192	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	Seurt gwenn, seurt du, bep gouez a gar he c'hevre	0.7139342831697656	0.0	300	11
+fr2br	llama3-70b-8192	C'est fini	Echu eo	Komz a ra eo echu	0.5830411839910694	0.0	300	2

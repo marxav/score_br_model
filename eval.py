@@ -8,6 +8,7 @@ import input_file
 from openai import OpenAI
 import google.generativeai as genai
 import anthropic
+from groq import Groq
 
 # the possible translation_models, so far:
 # From https://platform.openai.com/docs/models/
@@ -38,12 +39,13 @@ import anthropic
 # 'claude-3-opus-20240229',
 config = {
     'translation_models': [
-        'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
+        'llama3-8b-8192', 'llama3-70b-8192',
+        #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
     ],
     'tasks': [
-        'br2fr',
+        #'br2fr',
         'fr2br'
     ],
     'log_file_postfix': 'logs.tsv',
@@ -58,6 +60,8 @@ openai_api_key = next((line.split('=')[1].strip() for line in open('.env') if li
 api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GOOGLE_API_KEY')), None)
 # read ANTHROPIC_API_KEY for Gemini models
 anthropic_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('ANTHROPIC_API_KEY')), None)
+# read GROQ_API_KEY for Meta LLama models
+groq_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GROQ_API_KEY')), None)
 
 
 # get the source data to be translated, as well as the ideal target data
@@ -168,6 +172,32 @@ def get_translation(config, model, text_src, verbose=False):
       out_tokens = message.usage.output_tokens
       total_tokens = in_tokens + out_tokens
       text_dst_predicted = message.content[0].text
+  elif 'llama' in model:
+    print('api-keu:', groq_api_key) 
+    client = Groq(api_key=groq_api_key)
+    print(model)
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": prompt + text_src
+            }
+        ],
+        model=model,
+    ) 
+    print(chat_completion)
+    print(chat_completion.choices[0].message.content)
+    try:
+        text_dst_predicted = chat_completion.choices[0].message.content
+    except:
+        print('WARNING: no response provided by the LLM. LLM response was:', response)
+        error = True
+        return 'N/A', 0, 0, error
+    price = 0
+    in_tokens = chat_completion.usage.prompt_tokens
+    out_tokens = chat_completion.usage.completion_tokens
+    total_tokens = chat_completion.usage.total_tokens
+    
   else:
       print(f'ERROR model {model} is not supported.')
       error = True

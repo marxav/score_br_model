@@ -8,6 +8,7 @@
   * OpenAI *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*
   * Google *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
   * Anthropic *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
+  * Meta *llama3-8b-8192*, *llama3-70b-8192*
 
 ## Requirements
 * Ubuntu OS
@@ -20,10 +21,11 @@
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* pip install openai pandas ipykernel tabulate google-generativeai anthropic
+* pip install openai pandas ipykernel tabulate google-generativeai anthropici groq
 * echo OPENAI_API_KEY=your-secret-key-1 >> .env
 * echo GOOGLE_API_KEY=your-secret-key-2 >> .env
 * echo ANTHROPIC_API_KEY=your-secret-key-3 >> .env
+* echo GROQ_API_KEY=your-secret-key-4 >> .env
 
 ## Run
 * cd score_br_model
