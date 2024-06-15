@@ -1,0 +1,13 @@
+task	datetime	model	score_mean	score_std	price	n_tokens	src_n_words_mean	src_n_words_std
+br2fr	2024-06-15_15:39:01	gpt-4o-2024-05-13	0.9	0.07	0.09	10010.0	23.8	16.5
+br2fr	2024-06-15_15:38:45	claude-3-opus-20240229	0.86	0.09	0.0	12595.0	23.8	16.5
+br2fr	2024-06-15_15:39:21	gemini-1.5-pro-001	0.82	0.12	0.0	10384.0	23.8	16.5
+br2fr	2024-06-15_15:37:40	command-r-plus	0.62	0.14	0.0	10538.0	23.8	16.5
+br2fr	2024-06-15_15:38:05	mistral-large-latest	0.62	0.15	0.0	12144.0	23.8	16.5
+br2fr	2024-06-15_15:37:45	llama3-70b-8192	n/a	n/a	n/a	n/a	n/a	n/a
+fr2br	2024-06-15_15:43:33	claude-3-opus-20240229	0.73	0.07	0.0	12947.0	26.4	16.9
+fr2br	2024-06-15_15:44:10	gemini-1.5-pro-001	0.7	0.11	0.0	10692.0	26.4	16.9
+fr2br	2024-06-15_15:43:48	gpt-4o-2024-05-13	0.69	0.09	0.09	9922.0	26.4	16.9
+fr2br	2024-06-15_15:42:40	mistral-large-latest	0.6	0.11	0.0	14443.0	26.4	16.9
+fr2br	2024-06-15_15:42:08	command-r-plus	n/a	n/a	n/a	n/a	n/a	n/a
+fr2br	2024-06-15_15:42:14	llama3-70b-8192	n/a	n/a	n/a	n/a	n/a	n/a

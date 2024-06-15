@@ -31,5 +31,5 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     in_tokens = token_info.billed_units.input_tokens
     out_tokens = token_info.billed_units.output_tokens
     total_tokens = in_tokens + out_tokens
-
+    error = False
     return text_dst_predicted, total_tokens, price, error

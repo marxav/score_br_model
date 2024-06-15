@@ -41,13 +41,16 @@ config = {
         #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
-        #'gpt-4-turbo-2024-04-09', 
-        #'gpt-4o-2024-05-13', 
+        'command-r-plus',
+        'llama3-70b-8192',
+        'mistral-large-latest',
+	    'claude-3-opus-20240229', 
+        'gpt-4o-2024-05-13', 
         'gemini-1.5-pro-001'
     ],
     'tasks': [
         'br2fr',
-        #'fr2br'
+        'fr2br'
     ],
     'log_file_postfix': 'logs.tsv',
     'res_file_postix': 'res.tsv',
@@ -99,7 +102,7 @@ def get_translation(config, model, text_src, text_dst_target, verbose=False):
   elif lang_src == 'fr' and lang_dst == 'br':
     prompt = "Translate the following French text to Breton. "
   prompt += "Immediatly write the translated text, nothing more. Do not add any personal comment beyond translation, just translate. "
-  prompt += "The translated text must contain the same number of '.', '?' and '!' characters as in the input text. "
+  prompt += "The translated text must contain the same number of '.', ';', '?' and '!' characters as in the input text. "
   prompt += "\n"
   #prompt += " If there is no '?' in the text to be translated, there must be no '?' as well in the translated text." # does not work
 
@@ -131,8 +134,21 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
   
   # preprocessing the input (text_src)
   text_src = text_src.rstrip().replace('\n', '')
-
+  
   error = False
+
+  # check that src and target text have same number of sentences
+  sentences_src = text_src.split('.')
+  sentences_dst_t = text_dst_target.split('.')
+  l1 = len(sentences_src)
+  l2 = len(sentences_dst_t)
+  if l1 != l2:
+    print(f'!!!warning len(sentences_src):{l1} is different from len(sentences_dst_t):{l2}')
+    for i in range(min(l1, l2)):
+        print(f'sentences_src[{i}]: {sentences_src[i]}')
+        print(f'sentences_dst[{i}]: {sentences_dst_t[i]}')
+        print('')
+    return None, error
 
   is_translation_ok = False
   n_max = 3
@@ -159,8 +175,6 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
         print('text_dst_target:', text_dst_target)
         print('text_fr_predicted:', text_fr_predicted)
 
-    sentences_src = text_src.split('.')
-    sentences_dst_t = text_dst_target.split('.')
     sentences_dst_p = text_fr_predicted.split('.')
     
     if verbose:
@@ -168,8 +182,6 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
         print('sentences_dst_t:', sentences_dst_t)
         print('sentences_dst_p:', sentences_dst_p)
 
-    l1 = len(sentences_src)
-    l2 = len(sentences_dst_t)
     l3 = len(sentences_dst_p)
     
     if verbose:
@@ -185,14 +197,12 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
         is_translation_ok = True
     else:    
         is_translation_ok = False
-        if l1 != l2:
-            print('!!!warning l1:'+l1+' is different from l2:'+l2)
-            print('text_src:', text_src)
-            print('text_dst_target:', text_dst_target)
-        else:
-            print(f'!!!warning l1:{l1} is different from l3:{l3}')
-            print('text_src:', text_src)
-            print('text_fr_predicted:', text_fr_predicted)
+        if l2 != l3:
+            print(f'!!!warning len(sentences_src):{l1} is different from len(sentences_dst_p):{l3}')
+            for i in range(min(l1, l3)):
+               print(f'text_src[{i}]: {sentences_src[i]}')
+               print(f'text_dst[{i}]: {sentences_dst_p[i]}')
+               print('')
         if n == n_max:
             print("ERROR, too many unsuccessful trials, let's stop here")
             error = True
@@ -278,32 +288,38 @@ def test_models(config, args, verbose=False):
                 df_full_results = pd.DataFrame()
                 df_full_detailss = pd.DataFrame()
             else:
+                print(res_filename)
+                print(log_filename)
                 df_full_results = pd.read_csv(res_filename, sep='\t')
                 df_full_detailss = pd.read_csv(log_filename, sep='\t')
 
             print(f'  * starting translation_model {translation_model}:')
             df_details, error = test_model(config, task, translation_model, text_src, text_dst_target)
-            if error:
-                print(f"WARNING: error encountered with model {translation_model}, let's skip it")
-                continue
-            
-            score_mean = df_details['score'].mean()
-            score_std = df_details['score'].std()
-            price = df_details['price'].sum()
-            tokens = df_details['n_tokens'].sum()
-            src_n_words_mean = df_details['src_n_words'].mean()
-            src_n_words_std = df_details['src_n_words'].std()
+            if not error:
+                score_mean = int(df_details['score'].mean()*100)/100
+                score_std = int(df_details['score'].std()*100)/100
+                price = int(df_details['price'].sum()*100)/100
+                tokens = df_details['n_tokens'].sum()
+                src_n_words_mean = int(df_details['src_n_words'].mean()*10)/10
+                src_n_words_std = int(df_details['src_n_words'].std()*10)/10
+            else:
+                score_mean = pd.NA
+                score_std = pd.NA
+                price = pd.NA
+                tokens = pd.NA
+                src_n_words_mean = pd.NA
+                src_n_words_std = pd.NA
             
             result = {
                 'task': task,
                 'datetime': datetime.now().strftime("%Y-%m-%d_%H:%M:%S"),
                 'model': translation_model,
-                'score_mean': int(score_mean*100)/100,
-                'score_std': int(score_std*100)/100,
-                'price': int(price*100)/100,
+                'score_mean': score_mean,
+                'score_std': score_std,
+                'price': price,
                 'n_tokens': tokens,
-                'src_n_words_mean': int(src_n_words_mean*10)/10,
-                'src_n_words_std': int(src_n_words_std*10)/10
+                'src_n_words_mean': src_n_words_mean,
+                'src_n_words_std': src_n_words_std
             }
             print(result)
             df_result = pd.DataFrame([result])
@@ -315,14 +331,14 @@ def test_models(config, args, verbose=False):
             df_full_results = df_full_results.sort_values(['task', 'score_mean'], ascending = [True, False])
         
             # append global results in the tsv results file    
-            df_full_results.to_csv(res_filename, index=False, sep='\t')
+            df_full_results.to_csv(res_filename, index=False, sep='\t', na_rep='n/a')
 
             # write logs in a second file which name contains the date
             #dated_res_filename = result['datetime'] + '_' + label + '_' + config['res_file_postix']
             #df_full_results.to_csv(dated_res_filename, index=False, sep='\t')
 
             # append logs in the tsv logs file
-            df_full_detailss.to_csv(log_filename, index=False, sep='\t')
+            df_full_detailss.to_csv(log_filename, index=False, sep='\t', na_rep='n/a')
             # write logs in a second file which name contains the date
             #dated_log_filename = result['datetime'] + '_' + label + '_' + config['log_file_postfix']
             #df_details.to_csv(dated_log_filename, index=False, sep='\t')
