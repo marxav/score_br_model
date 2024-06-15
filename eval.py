@@ -42,8 +42,8 @@ config = {
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
         #'gpt-4-turbo-2024-04-09', 
-        'gpt-4o-2024-05-13', 
-        #'gemini-1.5-pro-001'
+        #'gpt-4o-2024-05-13', 
+        'gemini-1.5-pro-001'
     ],
     'tasks': [
         'br2fr',
@@ -99,32 +99,29 @@ def get_translation(config, model, text_src, text_dst_target, verbose=False):
   elif lang_src == 'fr' and lang_dst == 'br':
     prompt = "Translate the following French text to Breton. "
   prompt += "Immediatly write the translated text, nothing more. Do not add any personal comment beyond translation, just translate. "
-  prompt += "The translated text must contain the same number of sentences and same number of '.' characters as in the input text. "
+  prompt += "The translated text must contain the same number of '.', '?' and '!' characters as in the input text. "
   prompt += "\n"
   #prompt += " If there is no '?' in the text to be translated, there must be no '?' as well in the translated text." # does not work
 
   error = False
 
   if 'gpt' in model:
-    res = openai.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = openai.process(config, model, prompt, text_src, text_dst_target)
   elif 'gemini' in model:
-    res = google.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = google.process(config, model, prompt, text_src, text_dst_target)
   elif 'claude' in model:
-    res = anthropic.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = anthropic.process(config, model, prompt, text_src, text_dst_target)
   elif 'llama' in model:
-    res = llama.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = llama.process(config, model, prompt, text_src, text_dst_target)
   elif 'mistral' in model:
-    res = mistral.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = mistral.process(config, model, prompt, text_src, text_dst_target)
   elif 'command-r' in model:
-    res = cohere.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = cohere.process(config, model, prompt, text_src, text_dst_target)
   else:
       print(f'ERROR model {model} is not supported.')
       error = True
       return 'N/A', 0, 0, True
-  
-  (text_dst_predicted, in_tokens, out_tokens, error) = res
-  total_tokens = in_tokens, out_tokens
-  price = 0.0
+
   error = False
   return text_dst_predicted, total_tokens, price, error
 

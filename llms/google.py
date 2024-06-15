@@ -29,4 +29,4 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     out_tokens = other_data.candidates_token_count
     price = 0
     error = False
-    return text_dst_predicted, in_tokens, out_tokens, error
+    return text_dst_predicted, total_tokens, price, error

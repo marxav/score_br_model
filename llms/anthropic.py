@@ -24,5 +24,5 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     out_tokens = message.usage.output_tokens
     total_tokens = in_tokens + out_tokens
     text_dst_predicted = message.content[0].text
-
-    return text_dst_predicted, in_tokens, out_tokens, error
+    error = False
+    return text_dst_predicted, total_tokens, price, error
