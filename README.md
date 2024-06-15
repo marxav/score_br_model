@@ -119,10 +119,10 @@
 ## Other information
 * Instead of using this tool, you can manually use [LMSYS](https://chat.lmsys.org) (in the "Arena side-by-side" tab) to compare the results of 2 models
   * In the parameters, set *temperature=0.0* and *top_p=0.95*
-  * For the *br2fr* task, input the following example prompt:
-    * Translate the following Breton text to French. Immediatly write the translated text, nothing more. Do not add any personal comment beyond translation, just translate. The translated text must contain the same number of sentences and same number of '.' characters as in the input text.\n\nC'hoant am eus da ganañ. Ar wirionez zo gantañ. Ar c'hi zo bras awalc'h. Na vezit ket e gortoz e rofen ar respontoù deoc’h. Echu eo.
-  * For the *fr2br* task, input the following example prompt:
-    * Translate the following French text to Breton. Immediatly write the translated text, nothing more. Do not add any personal comment beyond translation, just translate. The translated text must contain the same number of sentences and same number of '.' characters as in the input text.\n\nJ'ai envie de chanter. Il a raison. Le chien est assez grand.Ne vous attendez pas à ce que je vous donne les réponses. C'est fini.
+  * For the *br2fr* task, input a [prompt](https://arxiv.org/pdf/2406.06608) like:
+    * *Translate the following Breton text to French. Immediatly write the translated text, nothing more. Do not add any personal comment beyond translation, just translate. The translated text must contain the same number of sentences and same number of '.' characters as in the input text.\n\nC'hoant am eus da ganañ. Ar wirionez zo gantañ. Ar c'hi zo bras awalc'h. Na vezit ket e gortoz e rofen ar respontoù deoc’h. Echu eo.*
+  * For the *fr2br* task, input a [prompt](https://arxiv.org/pdf/2406.06608) like:
+    * *Translate the following French text to Breton. Immediatly write the translated text, nothing more. Do not add any personal comment beyond translation, just translate. The translated text must contain the same number of sentences and same number of '.' characters as in the input text.\n\nJ'ai envie de chanter. Il a raison. Le chien est assez grand. Ne vous attendez pas à ce que je vous donne les réponses. C'est fini.*
 
 ## Acknowledgments
 * [tregor_2110_br.txt](tregor_2110_br.txt) is a sample of a text written by Gireg Konan in Le Tregor newspaper, n°2110, June 6th 2024.
