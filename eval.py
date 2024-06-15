@@ -2,16 +2,9 @@ import os
 import sys
 from datetime import datetime
 import pandas as pd
-import numpy as np
 import scores
 import input_file
-from openai import OpenAI
-import google.generativeai as genai
-import anthropic
-from groq import Groq
-from mistralai.client import MistralClient
-from mistralai.models.chat_completion import ChatMessage
-import cohere
+from llms import anthropic, cohere, google, llama, mistral, openai
 
 # the possible translation_models, so far:
 # From https://platform.openai.com/docs/models/
@@ -49,12 +42,12 @@ config = {
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
         #'gpt-4-turbo-2024-04-09', 
-        #'gpt-4o-2024-05-13', 
-        'gemini-1.5-pro-001'
+        'gpt-4o-2024-05-13', 
+        #'gemini-1.5-pro-001'
     ],
     'tasks': [
         'br2fr',
-        'fr2br'
+        #'fr2br'
     ],
     'log_file_postfix': 'logs.tsv',
     'res_file_postix': 'res.tsv',
@@ -62,21 +55,6 @@ config = {
     'temperature': 0.0,
     'top_p': 0.95,
 }
-
-
-# read OPENAI_API_KEY for GPT models
-openai_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('OPENAI_API_KEY')), None)
-# read GOOGLE_API_KEY for Gemini models
-google_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GOOGLE_API_KEY')), None)
-# read ANTHROPIC_API_KEY for Gemini models
-anthropic_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('ANTHROPIC_API_KEY')), None)
-# read GROQ_API_KEY for Meta LLama models
-groq_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GROQ_API_KEY')), None)
-# read MISTRAL_API_KEY for Mistral models
-mistral_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('MISTRAL_API_KEY')), None)
-# read COHERE_API_KEY for Commmand-r models
-cohere_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('COHERE_API_KEY')), None)
-
 
 # get the source data to be translated, as well as the ideal target data
 def get_data(config, verbose=False):
@@ -112,7 +90,7 @@ def get_data(config, verbose=False):
 
 
 # perform the translation of a source text thanks to a given model (a.k.a. LLM)
-def get_translation(config, model, text_src, verbose=False):
+def get_translation(config, model, text_src, text_dst_target, verbose=False):
 
   lang_src = config['lang_src']
   lang_dst = config['lang_dst']
@@ -128,155 +106,26 @@ def get_translation(config, model, text_src, verbose=False):
   error = False
 
   if 'gpt' in model:
-    client = OpenAI(api_key=openai_api_key)
-
-    response = client.chat.completions.create(
-        model=model,
-        messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text_src}],
-        stream=False,
-        temperature = config['temperature'],
-        top_p=config['top_p'],
-    )
-
-    text_dst_predicted = response.choices[0].message.content
-
-    if verbose:
-        print('text_dst_predicted:', text_dst_predicted)
-        print(response.to_json)
-
-    total_tokens = response.usage.total_tokens
-    in_tokens = response.usage.prompt_tokens
-    out_tokens = response.usage.completion_tokens
-
-    price = 0
-    if "3.5" in model:
-        price = in_tokens *0.5/1e6 + out_tokens *1.5/1e6
-    elif "4" in model:
-        price = in_tokens *5/1e6 + out_tokens *15/1e6
-    else:
-        price = 0
-        print('error: model unknown!!!')
-        
+    res = openai.process(config, model, prompt, text_src, text_dst_target)
   elif 'gemini' in model:
-    genai.configure(api_key=google_api_key)
-    google_model = genai.GenerativeModel(model)
-    response = google_model.generate_content(
-        prompt + text_src,
-        generation_config=genai.GenerationConfig(temperature=config['temperature'], top_p=config['top_p'])
-    )
-    #if verbose:
-    
-    try:
-        text_dst_predicted = response.text
-    except:
-        print('WARNING: no response provided by the LLM. LLM response was:', response)
-        error = True
-        return 'N/A', 0, 0, error
-    if verbose:
-        print('text_dst_predicted:', text_dst_predicted)
-    
-
-    other_data = response.usage_metadata
-    total_tokens = other_data.total_token_count
-    in_tokens = other_data.prompt_token_count
-    out_tokens = other_data.candidates_token_count
-    price = 0
+    res = google.process(config, model, prompt, text_src, text_dst_target)
   elif 'claude' in model:
-      message = anthropic.Anthropic(api_key=anthropic_api_key).messages.create(
-        model=model,
-        max_tokens=1000,
-        messages=[
-            {"role": "user", "content": prompt + text_src},
-            #{"role": "assistant", "content": prompt}
-        ],
-        temperature = config['temperature'],
-        top_p=config['top_p']
-        )
-      print('message.content:', message)
-      print('text:', message.content[0].text)
-      price = 0
-      in_tokens = message.usage.input_tokens
-      out_tokens = message.usage.output_tokens
-      total_tokens = in_tokens + out_tokens
-      text_dst_predicted = message.content[0].text
+    res = anthropic.process(config, model, prompt, text_src, text_dst_target)
   elif 'llama' in model:
-    client = Groq(api_key=groq_api_key)
-    response = client.chat.completions.create(
-        messages=[
-            {
-                "role": "user",
-                "content": prompt + text_src
-            }
-        ],
-        model=model,
-        temperature = config['temperature'],
-        top_p=config['top_p']
-    ) 
-    if verbose:
-        print(response)
-    try:
-        text_dst_predicted = response.choices[0].message.content
-    except:
-        print('WARNING: no response provided by the LLM. LLM response was:', response)
-        error = True
-        return 'N/A', 0, 0, error
-    price = 0
-    in_tokens = response.usage.prompt_tokens
-    out_tokens = response.usage.completion_tokens
-    total_tokens = response.usage.total_tokens
+    res = llama.process(config, model, prompt, text_src, text_dst_target)
   elif 'mistral' in model:
-    client = MistralClient(api_key=mistral_api_key)
-
-    response = client.chat(
-        model=model,
-        messages=[ChatMessage(role="user", content=prompt+text_src)],
-        temperature = config['temperature'],
-        top_p=1.0
-    )
-    if verbose:
-        print(response)
-    try: 
-        text_dst_predicted = response.choices[0].message.content
-        print("text predicted:", text_dst_predicted)
-    except:
-        print('WARNING: no response provided by the LLM. LLM response was:', response)
-        error = True
-        return 'N/A', 0, 0, error
-    price = 0
-    in_tokens = response.usage.prompt_tokens
-    out_tokens = response.usage.completion_tokens
-    total_tokens = response.usage.total_tokens
+    res = mistral.process(config, model, prompt, text_src, text_dst_target)
   elif 'command-r' in model:
-    co = cohere.Client(api_key=cohere_api_key)
-
-    response = co.chat(
-        model="command-r-plus",
-        message=prompt+text_src,
-        temperature = config['temperature'],
-        p = config['top_p'],
-    )
-    print('response:', response)
-
-    try: 
-        text_dst_predicted = response.text
-        print("text predicted:", text_dst_predicted)
-    except:
-        print('WARNING: no response provided by the LLM. LLM response was:', response)
-        error = True
-        return 'N/A', 0, 0, error
-    price = 0
-    tok = response.meta
-    print('tok:', tok)
-    in_tokens = tok.billed_units.input_tokens
-    out_tokens = tok.billed_units.output_tokens
-    total_tokens = in_tokens + out_tokens
+    res = cohere.process(config, model, prompt, text_src, text_dst_target)
   else:
       print(f'ERROR model {model} is not supported.')
       error = True
-      return 'N/A', 0, 0, error
+      return 'N/A', 0, 0, True
   
-  
-          
+  (text_dst_predicted, in_tokens, out_tokens, error) = res
+  total_tokens = in_tokens, out_tokens
+  price = 0.0
+  error = False
   return text_dst_predicted, total_tokens, price, error
 
 
@@ -298,7 +147,7 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
     n += 1
 
     # perform the translation
-    text_fr_predicted, tokens, price, error = get_translation(config, translation_model, text_src)
+    text_fr_predicted, tokens, price, error = get_translation(config, translation_model, text_src, text_dst_target)
     if error:
         error = True
         return None, error
@@ -373,7 +222,9 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
         'n_tokens': tokens,
         'src_n_words': br_words
     }
-    print(f'sample_log:{sample_log}')
+    print('sample_log:')
+    for key, value in sample_log.items():
+        print(f"* {key}: {value}")
     df_sample = pd.DataFrame([sample_log])
 
     # Concatenate the new row DataFrame with the existing DataFrame
