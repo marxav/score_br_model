@@ -33,6 +33,9 @@ from llms import anthropic, cohere, google, llama, mistral, openai
 #'claude-3-haiku-20240307', 
 # 'claude-3-sonnet-20240229', 
 # 'claude-3-opus-20240229',
+# https://docs.mistral.ai/getting-started/models/
+# 'mistral-large-2402' <- 'mistral-large-latest'
+# 'open-mixtral-8x22b-2404' <- 'open-mixtral-8x22b'
 config = {
     'translation_models': [
         #'command-r-plus',
@@ -41,16 +44,17 @@ config = {
         #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
         #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
         #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
-        'command-r-plus',
-        'llama3-70b-8192',
-        'mistral-large-latest',
-	    'claude-3-opus-20240229', 
-        'gpt-4o-2024-05-13', 
+        #'command-r-plus',
+        #'llama3-70b-8192',
+        #'mistral-large-2402',
+        #'open-mixtral-8x22b',
+	    #'claude-3-opus-20240229', 
+        #'gpt-4o-2024-05-13', 
         'gemini-1.5-pro-001'
     ],
     'tasks': [
         'br2fr',
-        'fr2br'
+        #'fr2br'
     ],
     'log_file_postfix': 'logs.tsv',
     'res_file_postix': 'res.tsv',
@@ -58,6 +62,20 @@ config = {
     'temperature': 0.0,
     'top_p': 0.95,
 }
+
+def str_blocks_to_list(input_string):
+    # Split the string using '***' as the delimiter
+    split_list = input_string.split('***')
+    
+    # Remove any empty strings that may result from leading or trailing delimiters
+    split_list = [s for s in split_list if s]
+    
+    return split_list
+
+def list_to_str_blocks(my_lines):
+    # Join the list elements with '***' and add '***' at the beginning and end
+    result_string = '***' + '***'.join(my_lines) + '***'
+    return result_string
 
 # get the source data to be translated, as well as the ideal target data
 def get_data(config, verbose=False):
@@ -68,8 +86,8 @@ def get_data(config, verbose=False):
     
     if not os.path.isfile(input_file):
         print(f'warning: did not found the tsv input file')
-    text_src = ''
-    text_dst_target = ''
+    src_lines = []
+    dst_target_lines = []
     
     df = pd.read_csv(input_file, sep='\t', encoding = 'utf8')
     df = df.dropna()
@@ -78,32 +96,43 @@ def get_data(config, verbose=False):
         # Example texts
         if verbose:
             print(row)
-            print('text_src:', text_src)
             print('txt_src:', row[lang_src])
             print('txt_dst:', row[lang_dst])
-        text_src = text_src + row[lang_src]
-        text_dst_target = text_dst_target + row[lang_dst]
-        
-    # postprocessing
-    # remove '...' that will otherwise be undestood as 3 different sentences
-    text_src = text_src.replace('...', '…')
-    text_dst_target = text_dst_target.replace('...', '…')
-    
-    return config, text_src, text_dst_target
+
+        if len(row[lang_src]) > 100:
+            if verbose:
+                print('splitting line because line is too long')
+            src_sub_lines = row[lang_src].replace('...', '…').split('.')
+            dst_sub_lines = row[lang_dst].replace('...', '…').split('.')
+            for (src_sub_line, dst_sub_line) in zip(src_sub_lines, dst_sub_lines):
+                if len(src_sub_line) > 0:
+                    src_lines.append(src_sub_line)
+                    dst_target_lines.append(dst_sub_line)
+                    if verbose:
+                        print('1', src_sub_line, len(src_sub_line))
+                        print('2', dst_sub_line, len(dst_sub_line))
+        else:
+            src_lines.append(row[lang_src])
+            dst_target_lines.append(row[lang_dst])
+
+    return config, src_lines, dst_target_lines
 
 
 # perform the translation of a source text thanks to a given model (a.k.a. LLM)
-def get_translation(config, model, text_src, text_dst_target, verbose=False):
+def get_translation(config, model, src_lines, dst_target_lines, verbose=False):
 
   lang_src = config['lang_src']
   lang_dst = config['lang_dst']
   if lang_src == 'br' and lang_dst == 'fr':
-    prompt = "Translate the following Breton text to French. "
+    prompt = "Translate the following blocks of Breton text to French. "
   elif lang_src == 'fr' and lang_dst == 'br':
     prompt = "Translate the following French text to Breton. "
-  prompt += "Immediatly write the translated text, nothing more. Do not add any personal comment beyond translation, just translate. "
-  prompt += "The translated text must contain the same number of '.', ';', '?' and '!' characters as in the input text. "
-  prompt += "\n"
+  prompt += "Immediatly write the translated text and do not add any comment after the translation. "
+  prompt += "Each block to be translated starts with *** and ends with *** ; add *** in the tranlated text. "
+  #prompt += "The translated text must contain the same number of '.', ';', '?' and '!' characters as in the input text. "
+  prompt += "\n\n" 
+  text_src = list_to_str_blocks(src_lines)
+  text_dst_target = list_to_str_blocks(dst_target_lines)
   #prompt += " If there is no '?' in the text to be translated, there must be no '?' as well in the translated text." # does not work
 
   error = False
@@ -125,28 +154,26 @@ def get_translation(config, model, text_src, text_dst_target, verbose=False):
       error = True
       return 'N/A', 0, 0, True
 
+  text_dst_predicted = text_dst_predicted.rstrip()
+  dst_predic_lines = str_blocks_to_list(text_dst_predicted)
   error = False
-  return text_dst_predicted, total_tokens, price, error
+  return dst_predic_lines, total_tokens, price, error
 
 
 # launch the translation with a given model and estimate (i.e. score) the result
-def test_model(config, task, translation_model, text_src, text_dst_target, verbose=False):
+def test_model(config, task, translation_model, src_lines, dst_target_lines, verbose=True):
   
-  # preprocessing the input (text_src)
-  text_src = text_src.rstrip().replace('\n', '')
-  
+
   error = False
 
-  # check that src and target text have same number of sentences
-  sentences_src = text_src.split('.')
-  sentences_dst_t = text_dst_target.split('.')
-  l1 = len(sentences_src)
-  l2 = len(sentences_dst_t)
+  # check that src and target text have same number of lines
+  l1 = len(src_lines)
+  l2 = len(dst_target_lines)
   if l1 != l2:
     print(f'!!!warning len(sentences_src):{l1} is different from len(sentences_dst_t):{l2}')
     for i in range(min(l1, l2)):
-        print(f'sentences_src[{i}]: {sentences_src[i]}')
-        print(f'sentences_dst[{i}]: {sentences_dst_t[i]}')
+        print(f'sentences_src[{i}]: {src_lines[i]}')
+        print(f'sentences_dst[{i}]: {dst_target_lines[i]}')
         print('')
     return None, error
 
@@ -160,70 +187,78 @@ def test_model(config, task, translation_model, text_src, text_dst_target, verbo
     n += 1
 
     # perform the translation
-    text_fr_predicted, tokens, price, error = get_translation(config, translation_model, text_src, text_dst_target)
+    dst_predic_lines, tokens, price, error = get_translation(config, translation_model, src_lines, dst_target_lines)
     if error:
         error = True
         return None, error
 
     # postprocessing the output (text_fr_predicted) for corner cases (e.g. two consecutive points)
-    text_fr_predicted = text_fr_predicted.replace('...', '…')
+    '''
+    dst_predic_lines = dst_predic_lines.replace('...', '…')
+    '''
+    
     #text_fr_predicted = text_fr_predicted.replace('?', '?.') # hack because sometime affirmative sentence is predicted as an interrogative sentence
 
     if verbose:
         print('n:', n)
-        print('text_src:', text_src)
-        print('text_dst_target:', text_dst_target)
-        print('text_fr_predicted:', text_fr_predicted)
+        print('src_lines:', src_lines)
+        print('dst_target_lines:', dst_target_lines)
+        print('dst_predic_lines:', dst_predic_lines)
 
-    sentences_dst_p = text_fr_predicted.split('.')
-    
-    if verbose:
-        print('sentences_src:', sentences_src)
-        print('sentences_dst_t:', sentences_dst_t)
-        print('sentences_dst_p:', sentences_dst_p)
-
-    l3 = len(sentences_dst_p)
+    l3 = len(dst_predic_lines)
     
     if verbose:
         print("++++++++++++++++++")
-        print("src:"+text_src+" , n_sentences:", l1)
+        print("src:"+''.join(src_lines)+" , n_lines:", l1)
         print("++++++++++++++++++")
-        print("dst_t:"+text_dst_target+" , n_sentences:", l2)
+        print("dst_t:"+''.join(dst_target_lines)+" , n_lines:", l2)
         print("++++++++++++++++++")
-        print("dst_p:"+text_fr_predicted+" , n_sentences:", l3)
+        print("dst_p:"+''.join(dst_predic_lines)+" , n_lines:", l3)
         print("++++++++++++++++++")
     
     if (l1 == l2) and (l2 == l3):
         is_translation_ok = True
     else:    
         is_translation_ok = False
-        if l2 != l3:
-            print(f'!!!warning len(sentences_src):{l1} is different from len(sentences_dst_p):{l3}')
+
+    
+        if l1 != l3:
+            print(f'!!!warning len(lines_src):{l1} is different from len(lines_dst_p):{l3}')
+            i_min = min(l1, l3)
+            i_max = max(l1, l3)
             for i in range(min(l1, l3)):
-               print(f'text_src[{i}]: {sentences_src[i]}')
-               print(f'text_dst[{i}]: {sentences_dst_p[i]}')
-               print('')
+                print(f'src_lines[{i}]: {src_lines[i]}')
+                print(f'dst_target_lines[{i}]: {dst_target_lines[i]}')
+                print('')
+            for i in range(i_min, i_max):
+                if i_min == l1:
+                    print(f'text_src[{i}]: n/a')
+                    print(f'dst_predic_lines[{i}]: {dst_predic_lines[i]}')
+                else:
+                    print(f'src_lines[{i}]: {src_lines[i]}')
+                    print(f'dst_predic_lines[{i}]: n/a')
         if n == n_max:
+
             print("ERROR, too many unsuccessful trials, let's stop here")
             error = True
             return None, error
   
   
   df_results = pd.DataFrame()
-  for sentence_src, sentence_dst_t, sentence_dst_p in zip(sentences_src, sentences_dst_t, sentences_dst_p):
+  for line_src, line_dst_t, line_dst_p in zip(src_lines, dst_target_lines, dst_predic_lines):
 
     # calculate number of words in br sentence (just for info)
-    br_words = len(sentence_src.split(' '))
-    if sentence_dst_t == '':
+    br_words = len(line_src.split(' '))
+    if line_dst_t == '':
       break
-    score = scores.get_openai_score(sentence_dst_t, sentence_dst_p)
+    score = scores.get_openai_score(line_dst_t, line_dst_p)
 
     sample_log = {
         'task': task,
         'model': translation_model,
-        'src': sentence_src,
-        'target': sentence_dst_t,
-        'prediction': sentence_dst_p,
+        'src': line_src,
+        'target': line_dst_t,
+        'prediction': line_dst_p,
         'score': score,
         'price': price,
         'n_tokens': tokens,
@@ -272,12 +307,12 @@ def test_models(config, args, verbose=False):
             print(f'Error: task {task} not implemented!')
             exit(-1)
               
-        config, text_src, text_dst_target = get_data(config)
+        config, src_lines, dst_target_lines = get_data(config)
 
         if verbose:
             print('========================')
-            print('text_src:', text_src)
-            print('text_dst_target:', text_dst_target)
+            print('text_src:', src_lines)
+            print('text_dst_target:', dst_target_lines)
             print('------------------------')  
                 
         # test all the translation models listed is the config
@@ -290,11 +325,11 @@ def test_models(config, args, verbose=False):
             else:
                 print(res_filename)
                 print(log_filename)
-                df_full_results = pd.read_csv(res_filename, sep='\t')
-                df_full_detailss = pd.read_csv(log_filename, sep='\t')
+                df_full_results = pd.read_csv(res_filename, sep='\t', encoding='utf-8')
+                df_full_detailss = pd.read_csv(log_filename, sep='\t', encoding='utf-8')
 
             print(f'  * starting translation_model {translation_model}:')
-            df_details, error = test_model(config, task, translation_model, text_src, text_dst_target)
+            df_details, error = test_model(config, task, translation_model, src_lines, dst_target_lines)
             if not error:
                 score_mean = int(df_details['score'].mean()*100)/100
                 score_std = int(df_details['score'].std()*100)/100
@@ -331,17 +366,17 @@ def test_models(config, args, verbose=False):
             df_full_results = df_full_results.sort_values(['task', 'score_mean'], ascending = [True, False])
         
             # append global results in the tsv results file    
-            df_full_results.to_csv(res_filename, index=False, sep='\t', na_rep='n/a')
+            df_full_results.to_csv(res_filename, index=False, sep='\t', na_rep='n/a', encoding='utf-8')
 
             # write logs in a second file which name contains the date
             #dated_res_filename = result['datetime'] + '_' + label + '_' + config['res_file_postix']
-            #df_full_results.to_csv(dated_res_filename, index=False, sep='\t')
+            #df_full_results.to_csv(dated_res_filename, index=False, sep='\t', encoding='utf-8')
 
             # append logs in the tsv logs file
-            df_full_detailss.to_csv(log_filename, index=False, sep='\t', na_rep='n/a')
+            df_full_detailss.to_csv(log_filename, index=False, sep='\t', na_rep='n/a', encoding='utf-8')
             # write logs in a second file which name contains the date
             #dated_log_filename = result['datetime'] + '_' + label + '_' + config['log_file_postfix']
-            #df_details.to_csv(dated_log_filename, index=False, sep='\t')
+            #df_details.to_csv(dated_log_filename, index=False, sep='\t', encoding='utf-8')
             
     return df_full_results
 
