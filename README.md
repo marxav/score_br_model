@@ -5,13 +5,13 @@
 * Examples of tasks 'br2fr' (breton to french translation) and 'fr2br' (French to Breton translation).
 * To do so, it compares the semantic distance of a task performed by an LLM with an expected task pre-performed by an evaluator.
 * The semantic distance is based on the proximity of OpenAI embeddings. 
-* Currently, the models that can be tested are: 
-  * OpenAI *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*
-  * Google *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
-  * Anthropic *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
-  * Meta *llama3-8b-8192*, *llama3-70b-8192*
-  * Mistral *open-mistral-7b*, *mistral-large-latest*
-  * Cohere *command-r-plus*
+* Currently, the models from the following providers can be tested: 
+  * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*
+  * [Google](https://ai.google.dev/gemini-api/docs/models/gemini) e.g. *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
+  * [Anthropic](https://docs.anthropic.com/en/docs/models-overview): e.g. *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
+  * [Meta](https://console.groq.com/docs/models): e.g. *llama3-8b-8192*, *llama3-70b-8192*
+  * [Mistral](https://docs.mistral.ai/getting-started/models/) *open-mistral-7b*, *mistral-large-latest*
+  * [Cohere](https://docs.cohere.com/docs/models): e.g. *command-r-plus*
 
 ## Requirements
 * Ubuntu OS
@@ -22,6 +22,7 @@
 * A MISTRAL_API_KEY (cf. [https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/))
 * A COHERE_API_KEY (cf. [https://dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys))
 * Only the OPENAI_API_KEY is mandatory given it is also needed for calculating the evaluation scores.
+* A dataset file (e.g. [samples.tsv](samples.tsv)) and a configuration file (e.g [samples.yaml](samples.yaml))
 
 ## Installation
 * git clone https://github.com/marxav/score_br_model.git
@@ -39,54 +40,42 @@
 ## Run
 * cd score_br_model
 * source env/bin/activate
-* python eval.py samples.tsv 
-
+* python eval.py samples.yaml 
 
 ## Results
 * The result file will contain something like :
 
-| task   | model                    | score       |
-|:-------|:-------------------------|:------------|
-| br2fr  | claude-3-opus-20240229   | 0.89 ± 0.16 |
-| br2fr  | gpt-4o-2024-05-13        | 0.83 ± 0.19 |
-| br2fr  | claude-3-haiku-20240307  | 0.81 ± 0.19 |
-| br2fr  | gpt-4-turbo-2024-04-09   | 0.79 ± 0.21 |
-| br2fr  | gemini-1.5-pro-001       | 0.77 ± 0.18 |
-| br2fr  | claude-3-sonnet-20240229 | 0.76 ± 0.18 |
-| br2fr  | gpt-4-0613               | 0.76 ± 0.15 |
-| br2fr  | gemini-1.0-pro-001       | 0.74 ± 0.16 |
-| br2fr  | llama3-70b-8192          | 0.72 ± 0.16 |
-| br2fr  | gpt-3.5-turbo-0125       | 0.7 ± 0.18  |
-| br2fr  | command-r-plus           | 0.62 ± 0.16 |
-| br2fr  | mistral-large-latest     | 0.56 ± 0.22 |
-| br2fr  | llama3-8b-8192           | 0.43 ± 0.12 |
-| br2fr  | open-mistral-7b          | 0.25 ± 0.04 |
+| task   | model                  | score       |
+|:-------|:-----------------------|:------------|
+| br2fr  | claude-3-opus-20240229 | 0.9 ± 0.17  |
+| br2fr  | gemini-1.5-pro-001     | 0.8 ± 0.19  |
+| br2fr  | gpt-4-turbo-2024-04-09 | 0.8 ± 0.21  |
+| br2fr  | gpt-4o-2024-05-13      | 0.8 ± 0.17  |
+| br2fr  | gemini-1.5-flash       | 0.77 ± 0.19 |
+| br2fr  | llama3-70b-8192        | 0.71 ± 0.17 |
+| br2fr  | gpt-3.5-turbo-0125     | 0.71 ± 0.19 |
+| br2fr  | command-r-plus         | 0.6 ± 0.17  |
+| br2fr  | mistral-large-2402     | 0.6 ± 0.21  |
 
-| task   | model                    | score       |
-|:-------|:-------------------------|:------------|
-| fr2br  | claude-3-opus-20240229   | 0.69 ± 0.15 |
-| fr2br  | gpt-4-turbo-2024-04-09   | 0.68 ± 0.16 |
-| fr2br  | gpt-4-0613               | 0.67 ± 0.16 |
-| fr2br  | gemini-1.5-flash         | 0.66 ± 0.15 |
-| fr2br  | gemini-1.5-pro-001       | 0.65 ± 0.17 |
-| fr2br  | llama3-70b-8192          | 0.64 ± 0.12 |
-| fr2br  | gpt-4o-2024-05-13        | 0.63 ± 0.17 |
-| fr2br  | gemini-1.0-pro-001       | 0.62 ± 0.13 |
-| fr2br  | claude-3-sonnet-20240229 | 0.6 ± 0.12  |
-| fr2br  | claude-3-haiku-20240307  | 0.57 ± 0.14 |
-| fr2br  | mistral-large-latest     | 0.55 ± 0.11 |
-| fr2br  | command-r-plus           | 0.5 ± 0.11  |
-| fr2br  | gpt-3.5-turbo-0125       | 0.48 ± 0.12 |
-| fr2br  | llama3-8b-8192           | 0.48 ± 0.08 |
-| fr2br  | open-mistral-7b          | 0.43 ± 0.13 |
+| task   | model                  | score       |
+|:-------|:-----------------------|:------------|
+| fr2br  | claude-3-opus-20240229 | 0.73 ± 0.15 |
+| fr2br  | gpt-4-turbo-2024-04-09 | 0.73 ± 0.19 |
+| fr2br  | gemini-1.5-flash       | 0.69 ± 0.2  |
+| fr2br  | gpt-4o-2024-05-13      | 0.69 ± 0.15 |
+| fr2br  | gemini-1.5-pro-001     | 0.67 ± 0.17 |
+| fr2br  | mistral-large-2402     | 0.55 ± 0.17 |
+| fr2br  | gpt-3.5-turbo-0125     | 0.55 ± 0.19 |
+| fr2br  | command-r-plus         | nan ± nan   |
+| fr2br  | llama3-70b-8192        | nan ± nan   |
 
 
 ## More info
-* The input file should be a *.tsv file (e.g. [samples.tsv](samples.tsv)). 
+* The dataset file should be a *.tsv file (e.g. [samples.tsv](samples.tsv)). 
   * The *.tsv must contain two columns named 'br' and 'fr' 
   * Each 'br' or 'fr' sentence must finish with a '.' (i.e. current limitation).  
   * The columns must be separated by a tab (i.e. '\t').  
-* Alternatively, the input file may be a *_br.txt file containing only breton sentences (e.g. [tregor_2110_br.txt](tregor_2110_br.txt)). 
+* Alternatively, the dataset file may be a *_br.txt file containing only breton sentences (e.g. [tregor_2110_br.txt](tregor_2110_br.txt)). 
   * In this case, another file *_fr.txt file containing the corresponding french translations must be available in the same repository and must contain exactly the same number of sentences than the *_br.tsv file (e.g. [tregor_2110_fr.txt](tregor_2110_fr.txt))
   * A derived *.tsv file resulting from the merge of *_br.txt and *_fr.txt will be automatically generated by our software.
 * Running the eval.py creates 2 files 
