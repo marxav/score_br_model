@@ -36,60 +36,48 @@ from llms import anthropic, cohere, google, llama, mistral, openai
 # https://docs.mistral.ai/getting-started/models/
 # 'mistral-large-2402' <- 'mistral-large-latest'
 # 'open-mixtral-8x22b-2404' <- 'open-mixtral-8x22b'
-config = {
-    'translation_models': [
-        #'command-r-plus',
-        #'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
-        #'llama3-8b-8192', 'llama3-70b-8192',
-        #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
-        #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
-        #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
-        #'command-r-plus',
-        #'llama3-70b-8192',
-        #'mistral-large-2402',
-        #'open-mixtral-8x22b',
-	    #'claude-3-opus-20240229', 
-        #'gpt-4o-2024-05-13', 
-        'gemini-1.5-pro-001'
-    ],
-    'tasks': [
-        'br2fr',
-        #'fr2br'
-    ],
-    'log_file_postfix': 'logs.tsv',
-    'res_file_postix': 'res.tsv',
-    'input_file': 'samples.tsv',
-    'temperature': 0.0,
-    'top_p': 0.95,
-}
+ #'command-r-plus',
+ #'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
+ #'llama3-8b-8192', 'llama3-70b-8192',
+ #'claude-3-haiku-20240307', 'claude-3-sonnet-20240229', 'claude-3-opus-20240229',
+ #'gemini-1.5-flash', 'gemini-1.0-pro-001', 'gemini-1.5-pro-001', 
+ #'gpt-3.5-turbo-0125', 'gpt-4-0613', 'gpt-4-turbo-2024-04-09', 'gpt-4o-2024-05-13'
+ #'command-r-plus',
+ #'llama3-70b-8192',
+ #'mistral-large-2402',
+#'claude-3-opus-20240229', 
+#'gpt-4o-2024-05-13', 
+#'gemini-1.5-pro-001',
+#'gpt-4-turbo-2024-04-09'
 
-def str_blocks_to_list(input_string):
+
+def str_blocks_to_list(block_separator, input_string):
     # Split the string using '***' as the delimiter
-    split_list = input_string.split('***')
+    split_list = input_string.split(block_separator)
     
     # Remove any empty strings that may result from leading or trailing delimiters
     split_list = [s for s in split_list if s]
     
     return split_list
 
-def list_to_str_blocks(my_lines):
+def list_to_str_blocks(block_separator, lines):
     # Join the list elements with '***' and add '***' at the beginning and end
-    result_string = '***' + '***'.join(my_lines) + '***'
+    result_string = block_separator + block_separator.join(lines) + block_separator
     return result_string
 
 # get the source data to be translated, as well as the ideal target data
 def get_data(config, verbose=False):
     
-    input_file = config['input_file']
-    lang_src = config['lang_src']
-    lang_dst = config['lang_dst']
+    dataset_file = config.dataset_file
+    lang_src = config.lang_src
+    lang_dst = config.lang_dst
     
-    if not os.path.isfile(input_file):
+    if not os.path.isfile(dataset_file):
         print(f'warning: did not found the tsv input file')
     src_lines = []
     dst_target_lines = []
     
-    df = pd.read_csv(input_file, sep='\t', encoding = 'utf8')
+    df = pd.read_csv(dataset_file, sep='\t', encoding = 'utf8')
     df = df.dropna()
     print(df)
     for index, row in df.iterrows():
@@ -119,22 +107,19 @@ def get_data(config, verbose=False):
 
 
 # perform the translation of a source text thanks to a given model (a.k.a. LLM)
-def get_translation(config, model, src_lines, dst_target_lines, verbose=False):
+def get_translation(config, task, model, src_lines, dst_target_lines, verbose=True):
 
-  lang_src = config['lang_src']
-  lang_dst = config['lang_dst']
-  if lang_src == 'br' and lang_dst == 'fr':
-    prompt = "Translate the following blocks of Breton text to French. "
-  elif lang_src == 'fr' and lang_dst == 'br':
-    prompt = "Translate the following French text to Breton. "
-  prompt += "Immediatly write the translated text and do not add any comment after the translation. "
-  prompt += "Each block to be translated starts with *** and ends with *** ; add *** in the tranlated text. "
-  #prompt += "The translated text must contain the same number of '.', ';', '?' and '!' characters as in the input text. "
-  prompt += "\n\n" 
-  text_src = list_to_str_blocks(src_lines)
-  text_dst_target = list_to_str_blocks(dst_target_lines)
-  #prompt += " If there is no '?' in the text to be translated, there must be no '?' as well in the translated text." # does not work
-
+  lang_src = config.lang_src
+  lang_dst = config.lang_dst
+  block_separator = task.separator
+  
+  prompt = task.prompt
+  text_src = list_to_str_blocks(block_separator,src_lines)
+  text_dst_target = list_to_str_blocks(block_separator, dst_target_lines)
+  
+  if verbose:
+    print('text_src:', text_src)
+  
   error = False
 
   if 'gpt' in model:
@@ -154,8 +139,11 @@ def get_translation(config, model, src_lines, dst_target_lines, verbose=False):
       error = True
       return 'N/A', 0, 0, True
 
+  if verbose:
+    print('text_dst_predicted:', text_dst_predicted)
+
   text_dst_predicted = text_dst_predicted.rstrip()
-  dst_predic_lines = str_blocks_to_list(text_dst_predicted)
+  dst_predic_lines = str_blocks_to_list(block_separator, text_dst_predicted)
   error = False
   return dst_predic_lines, total_tokens, price, error
 
@@ -163,7 +151,6 @@ def get_translation(config, model, src_lines, dst_target_lines, verbose=False):
 # launch the translation with a given model and estimate (i.e. score) the result
 def test_model(config, task, translation_model, src_lines, dst_target_lines, verbose=True):
   
-
   error = False
 
   # check that src and target text have same number of lines
@@ -187,7 +174,7 @@ def test_model(config, task, translation_model, src_lines, dst_target_lines, ver
     n += 1
 
     # perform the translation
-    dst_predic_lines, tokens, price, error = get_translation(config, translation_model, src_lines, dst_target_lines)
+    dst_predic_lines, tokens, price, error = get_translation(config, task, translation_model, src_lines, dst_target_lines)
     if error:
         error = True
         return None, error
@@ -254,7 +241,7 @@ def test_model(config, task, translation_model, src_lines, dst_target_lines, ver
     score = scores.get_openai_score(line_dst_t, line_dst_p)
 
     sample_log = {
-        'task': task,
+        'task': task.name,
         'model': translation_model,
         'src': line_src,
         'target': line_dst_t,
@@ -278,33 +265,30 @@ def test_model(config, task, translation_model, src_lines, dst_target_lines, ver
   return df_results, error
 
 # launch all the asks with each of supported models
-def test_models(config, args, verbose=False):
-
-    config['input_file'] =  input_file.check_input_file(args)
-
+def test_models(config, verbose=False):
 
     # prepare label for logs and results
-    if config['input_file'].endswith('.tsv'):
-        label = config['input_file'].replace('.tsv', '')
+    if config.dataset_file.endswith('.tsv'):
+        label = config.dataset_file.replace('.tsv', '')
     else:
-        label = config['input_file']
-        print(f"warning: input_file {config['input_file']} does not finish with .tsv")
+        label = config.dataset_file
+        print(f"warning: dataset_file {label} does not finish with .tsv")
     
-    log_filename = label + '_' + config['log_file_postfix']
-    res_filename = label + '_' + config['res_file_postix']
+    log_filename = label + '_' + config.log_file_postfix
+    res_filename = label + '_' + config.res_file_postix
 
 
     # test models for each of the task listed in the config
-    for task in config['tasks']: 
+    for task in config.tasks: 
         print(f'* starting task {task}:')
-        if task == 'br2fr':
-            config['lang_src'] = 'br'
-            config['lang_dst'] = 'fr'
-        elif task == 'fr2br':
-            config['lang_src'] = 'fr'
-            config['lang_dst'] = 'br'
+        if task.name == 'br2fr':
+            config.lang_src = 'br'
+            config.lang_dst = 'fr'
+        elif task.name == 'fr2br':
+            config.lang_src = 'fr'
+            config.lang_dst = 'br'
         else:
-            print(f'Error: task {task} not implemented!')
+            print(f'Error: task {task.name} not implemented!')
             exit(-1)
               
         config, src_lines, dst_target_lines = get_data(config)
@@ -316,7 +300,7 @@ def test_models(config, args, verbose=False):
             print('------------------------')  
                 
         # test all the translation models listed is the config
-        for translation_model in config['translation_models']:          
+        for translation_model in config.models:          
 
             # create output file if not existing, otherwise open them
             if not os.path.exists(log_filename) or not os.path.exists(res_filename):
@@ -346,7 +330,7 @@ def test_models(config, args, verbose=False):
                 src_n_words_std = pd.NA
             
             result = {
-                'task': task,
+                'task': task.name,
                 'datetime': datetime.now().strftime("%Y-%m-%d_%H:%M:%S"),
                 'model': translation_model,
                 'score_mean': score_mean,
@@ -369,19 +353,20 @@ def test_models(config, args, verbose=False):
             df_full_results.to_csv(res_filename, index=False, sep='\t', na_rep='n/a', encoding='utf-8')
 
             # write logs in a second file which name contains the date
-            #dated_res_filename = result['datetime'] + '_' + label + '_' + config['res_file_postix']
+            #dated_res_filename = result['datetime'] + '_' + label + '_' + config.res_file_postix
             #df_full_results.to_csv(dated_res_filename, index=False, sep='\t', encoding='utf-8')
 
             # append logs in the tsv logs file
             df_full_detailss.to_csv(log_filename, index=False, sep='\t', na_rep='n/a', encoding='utf-8')
             # write logs in a second file which name contains the date
-            #dated_log_filename = result['datetime'] + '_' + label + '_' + config['log_file_postfix']
+            #dated_log_filename = result['datetime'] + '_' + label + '_' + config.log_file_postfix
             #df_details.to_csv(dated_log_filename, index=False, sep='\t', encoding='utf-8')
             
     return df_full_results
-
+    
 def main(args):
-    test_results = test_models(config, args)
+    config = input_file.load_config(args)
+    test_results = test_models(config)
     print('test_results:', test_results)
 
 if __name__ == '__main__':
