@@ -15,8 +15,8 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
             }
         ],
         model=model,
-        temperature = config['temperature'],
-        top_p=config['top_p']
+        temperature = config.temperature,
+        top_p=config.top_p,
     ) 
     if verbose:
         print('text_dst_target:', text_dst_target)

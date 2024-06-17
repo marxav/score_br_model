@@ -11,8 +11,8 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
         model=model,
         messages=[{"role": "system", "content": prompt}, {"role": "user", "content": text_src}],
         stream=False,
-        temperature = config['temperature'],
-        top_p=config['top_p'],
+        temperature = config.temperature,
+        top_p=config.top_p,
     )
 
     text_dst_predicted = response.choices[0].message.content
@@ -37,4 +37,3 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     error = False
     
     return text_dst_predicted, total_tokens, price, error
-    

@@ -11,7 +11,7 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     response = client.chat(
         model=model,
         messages=[ChatMessage(role="user", content=prompt+text_src)],
-        temperature = config['temperature'],
+        temperature = config.temperature,
         top_p=1.0
     )
     if verbose:

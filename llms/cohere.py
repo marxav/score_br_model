@@ -10,10 +10,11 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     response = co.chat(
         model="command-r-plus",
         message=prompt+text_src,
-        temperature = config['temperature'],
-        p = config['top_p'],
+        temperature = config.temperature,
+        p = config.top_p,
     )
-    print('response:', response)
+    if verbose:
+        print('response:', response)
 
     try: 
         text_dst_predicted = response.text

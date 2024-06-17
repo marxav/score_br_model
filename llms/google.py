@@ -8,7 +8,7 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     google_model = genai.GenerativeModel(model)
     response = google_model.generate_content(
         prompt + text_src,
-        generation_config=genai.GenerationConfig(temperature=config['temperature'], top_p=config['top_p'])
+        generation_config=genai.GenerationConfig(temperature=config.temperature, top_p=config.top_p)
     )
     #if verbose:
     
