@@ -188,7 +188,10 @@ def load_config(args):
         
         models = [model for model in config_data['models']]
         tasks = [TaskConfig(**task) for task in config_data['tasks']]
-        dataset_file = directory + os.sep + config_data['dataset_file']
+        if len(directory) > 0:
+            dataset_file = directory + os.sep + config_data['dataset_file']
+        else:
+            dataset_file = config_data['dataset_file']
         log_file_postfix = config_data['log_file_postfix']
         res_file_postfix = config_data['res_file_postfix']
         temperature = config_data['temperature']
