@@ -171,6 +171,9 @@ def load_config(args):
         print('ERROR: first argument requires an .yaml configuration file.')
         exit(-1)
     config_file = args[1] 
+    if not config_file.endswith('.yaml'):
+        print(f'ERROR: configuration file must be a .yaml file (received {config_file})')
+        exit(-1)
     if not os.path.exists(config_file):
         print(f'ERROR: yaml file {config_file} does not exist.')
         exit(-1)
