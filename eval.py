@@ -6,36 +6,10 @@ import scores
 import input_file
 from llms import anthropic, cohere, google, llama, mistral, openai
 
-# the possible translation_models, so far:
-# From https://platform.openai.com/docs/models/
-# 'gpt-3.5-turbo-0613',  # release date: 2023-06-13
-# 'gpt-3.5-turbo-1106',  # release date: 2023-11-06
-# 'gpt-3.5-turbo-0125',  # release date: 2024-01-2, aka 'gpt-3.5-turbo'
-# 'gpt-4-0613',          # release date: 2023-06-13, aka 'gpt-4'
-# 'gpt-4-1106-preview',  # release date: 2023-11-06
-# 'gpt-4-0125-preview',  # release date: 2024-05-25
-# 'gtp-4-turbo-2024-04-09',  # release date: 2024-04-09, aka 'gpt-4-turbo'
-# 'gpt-4o-2024-05-13',   # release date: 2024-05-13, aka 'gpt-4o'
-# From https://ai.google.dev/gemini-api/docs/models/gemini?hl=fr 
-# gemini-1.0-pro
-# gemini-1.0-pro-001
-# gemini-1.0-pro-latest
-# gemini-1.0-pro-vision-latest
-# gemini-1.5-flash
-# gemini-1.5-flash-001
-# gemini-1.5-flash-latest
-# gemini-1.5-pro
-# gemini-1.5-pro-001
-# gemini-1.5-pro-latest
-# gemini-pro
-# gemini-pro-vision
-# From https://docs.anthropic.com/en/docs/models-overview
-#'claude-3-haiku-20240307', 
-# 'claude-3-sonnet-20240229', 
-# 'claude-3-opus-20240229',
 # https://docs.mistral.ai/getting-started/models/
 # 'mistral-large-2402' <- 'mistral-large-latest'
 # 'open-mixtral-8x22b-2404' <- 'open-mixtral-8x22b'
+# https://docs.cohere.com/docs/models
  #'command-r-plus',
  #'open-mistral-7b', 'mistral-large-latest', # not (yet?) supported: 'open-mixtral-8x7b', #'open-mixtral-8x22b', 
  #'llama3-8b-8192', 'llama3-70b-8192',
@@ -50,19 +24,33 @@ from llms import anthropic, cohere, google, llama, mistral, openai
 #'gemini-1.5-pro-001',
 #'gpt-4-turbo-2024-04-09'
 
+def string_to_hex(s):
+    return ' '.join(format(ord(c), '02x') for c in s)
 
-def str_blocks_to_list(block_separator, input_string):
-    # Split the string using '***' as the delimiter
-    split_list = input_string.split(block_separator)
+def str_blocks_to_list(block_separator, input_string, verbose=False):
+
+    # Split the string into blocks using '***' as the delimiter
+    # 1 block either contains 1 row from the dataset (if row is short), 
+    # or a part of a row (if the row is long)
+    blocks = input_string.split(block_separator)
     
     # Remove any empty strings that may result from leading or trailing delimiters
-    split_list = [s for s in split_list if s]
-    
-    return split_list
+    blocks = [s for s in blocks if s]
 
-def list_to_str_blocks(block_separator, lines):
-    # Join the list elements with '***' and add '***' at the beginning and end
-    result_string = block_separator + block_separator.join(lines) + block_separator
+    if verbose:
+        for block in blocks:
+            hex_output = string_to_hex(block)
+            print('block:', block)
+            # display the block as a sequence of hexadecimal values
+            print('block:', hex_output)
+
+    # return the list of blocks
+    return blocks
+
+def list_to_str_blocks(block_separator, blocks):
+
+    # Join the list of blocks with '***' and add '***' at the beginning and end
+    result_string = block_separator + block_separator.join(blocks) + block_separator
     return result_string
 
 # get the source data to be translated, as well as the ideal target data
@@ -80,6 +68,8 @@ def get_data(config, verbose=False):
     df = pd.read_csv(dataset_file, sep='\t', encoding = 'utf8')
     df = df.dropna()
     print(df)
+
+    len_df = df.shape[0]
     for index, row in df.iterrows():
         # Example texts
         if verbose:
@@ -92,7 +82,13 @@ def get_data(config, verbose=False):
                 print('splitting line because line is too long')
             src_sub_lines = row[lang_src].replace('...', '…').split('.')
             dst_sub_lines = row[lang_dst].replace('...', '…').split('.')
+            i = 0
+            len_l = len(src_sub_lines)
             for (src_sub_line, dst_sub_line) in zip(src_sub_lines, dst_sub_lines):
+                i+=1
+                if i == len_l and src_sub_line == '\n':
+                    print('warning: skip this last sub-line, otherwise gpt4-turbo does not like it')
+                    continue
                 if len(src_sub_line) > 0:
                     src_lines.append(src_sub_line)
                     dst_target_lines.append(dst_sub_line)
@@ -179,13 +175,6 @@ def test_model(config, task, translation_model, src_lines, dst_target_lines, ver
         error = True
         return None, error
 
-    # postprocessing the output (text_fr_predicted) for corner cases (e.g. two consecutive points)
-    '''
-    dst_predic_lines = dst_predic_lines.replace('...', '…')
-    '''
-    
-    #text_fr_predicted = text_fr_predicted.replace('?', '?.') # hack because sometime affirmative sentence is predicted as an interrogative sentence
-
     if verbose:
         print('n:', n)
         print('src_lines:', src_lines)
@@ -208,8 +197,14 @@ def test_model(config, task, translation_model, src_lines, dst_target_lines, ver
     else:    
         is_translation_ok = False
 
-    
-        if l1 != l3:
+
+        if l3 > l1: # happens for llama and cohere for fr2br
+            print(f'!!!warn len(lines_src):{l1} is different from len(lines_dst_p):{l3}')
+            # remove lines afterwards
+            dst_predic_lines = dst_predic_lines[l1:]
+            is_translation_ok = True
+            l3 = l1
+        elif l1 != l3:
             print(f'!!!warning len(lines_src):{l1} is different from len(lines_dst_p):{l3}')
             i_min = min(l1, l3)
             i_max = max(l1, l3)
