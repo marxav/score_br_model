@@ -47,28 +47,27 @@
 
 | task   | model                  | score       |
 |:-------|:-----------------------|:------------|
-| br2fr  | claude-3-opus-20240229 | 0.9 ± 0.17  |
-| br2fr  | gemini-1.5-pro-001     | 0.8 ± 0.19  |
+| br2fr  | claude-3-opus-20240229 | 0.88 ± 0.18 |
+| br2fr  | gemini-1.5-pro-001     | 0.84 ± 0.17 |
+| br2fr  | gpt-4o-2024-05-13      | 0.81 ± 0.17 |
 | br2fr  | gpt-4-turbo-2024-04-09 | 0.8 ± 0.21  |
-| br2fr  | gpt-4o-2024-05-13      | 0.8 ± 0.17  |
-| br2fr  | gemini-1.5-flash       | 0.77 ± 0.19 |
-| br2fr  | llama3-70b-8192        | 0.71 ± 0.17 |
-| br2fr  | gpt-3.5-turbo-0125     | 0.71 ± 0.19 |
-| br2fr  | command-r-plus         | 0.6 ± 0.17  |
-| br2fr  | mistral-large-2402     | 0.6 ± 0.21  |
+| br2fr  | gemini-1.5-flash       | 0.78 ± 0.19 |
+| br2fr  | llama3-70b-8192        | 0.74 ± 0.18 |
+| br2fr  | gpt-3.5-turbo-0125     | 0.66 ± 0.16 |
+| br2fr  | command-r-plus         | 0.58 ± 0.12 |
+| br2fr  | mistral-large-2402     | 0.57 ± 0.15 |
 
 | task   | model                  | score       |
 |:-------|:-----------------------|:------------|
-| fr2br  | claude-3-opus-20240229 | 0.73 ± 0.15 |
-| fr2br  | gpt-4-turbo-2024-04-09 | 0.73 ± 0.19 |
-| fr2br  | gemini-1.5-flash       | 0.69 ± 0.2  |
-| fr2br  | gpt-4o-2024-05-13      | 0.69 ± 0.15 |
-| fr2br  | gemini-1.5-pro-001     | 0.67 ± 0.17 |
-| fr2br  | mistral-large-2402     | 0.55 ± 0.17 |
-| fr2br  | gpt-3.5-turbo-0125     | 0.55 ± 0.19 |
-| fr2br  | command-r-plus         | nan ± nan   |
-| fr2br  | llama3-70b-8192        | nan ± nan   |
-
+| fr2br  | claude-3-opus-20240229 | 0.69 ± 0.14 |
+| fr2br  | gpt-4-turbo-2024-04-09 | 0.68 ± 0.17 |
+| fr2br  | gpt-4o-2024-05-13      | 0.65 ± 0.17 |
+| fr2br  | gemini-1.5-flash       | 0.64 ± 0.18 |
+| fr2br  | gemini-1.5-pro-001     | 0.61 ± 0.14 |
+| fr2br  | mistral-large-2402     | 0.58 ± 0.14 |
+| fr2br  | gpt-3.5-turbo-0125     | 0.57 ± 0.16 |
+| fr2br  | llama3-70b-8192        | 0.25 ± 0.16 |
+| fr2br  | command-r-plus         | 0.23 ± 0.18 |
 
 ## More info
 * The dataset file should be a *.tsv file (e.g. [samples.tsv](samples.tsv)). 
