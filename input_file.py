@@ -174,13 +174,18 @@ def load_config(args):
     if not os.path.exists(config_file):
         print(f'ERROR: yaml file {config_file} does not exist.')
         exit(-1)
+    print('yaml config file:', config_file)
+
+    filename = os.path.basename(config_file)
+    directory = os.path.dirname(config_file)
 
     with open(config_file, 'r') as file:
+        
         config_data = yaml.safe_load(file)
         
         models = [model for model in config_data['models']]
         tasks = [TaskConfig(**task) for task in config_data['tasks']]
-        dataset_file = config_data['dataset_file']
+        dataset_file = directory + os.sep + config_data['dataset_file']
         log_file_postfix = config_data['log_file_postfix']
         res_file_postfix = config_data['res_file_postfix']
         temperature = config_data['temperature']
