@@ -1,0 +1,30 @@
+models:
+- 'command-r-plus'
+- 'llama3-70b-8192'
+- 'mistral-large-2402'
+- 'claude-3-opus-20240229'
+- 'gemini-1.5-flash'
+- 'gemini-1.5-pro-001'
+- 'gpt-3.5-turbo-0125'
+- 'gpt-4-turbo-2024-04-09'
+- 'gpt-4o-2024-05-13'
+tasks:
+- name: 'br2fr'
+  prompt: "Translate the following blocks of Breton text to French. \
+  Immediatly write the translated text and do not add any comment after the translation. \
+  Each block to be translated starts with *** and ends with *** ; add *** in the tranlated text. \
+  The translated text must contain exactly the same number of '\n', '.', ';', '?' and '!' characters as in the input text. \
+  \n\n"
+  separator: '***'
+- name: 'fr2br'
+  prompt: "Translate the following blocks of French text to Breton. \
+  Immediatly write the translated text and do not add any comment after the translation. \
+  Each block to be translated starts with *** and ends with *** ; add *** in the tranlated text. \
+  The translated text must contain exactly the same number of '\n', '.', ';', '?' and '!' characters as in the input text. \
+  \n\n"
+  separator: '***'
+dataset_file: 'maria_prat_br.txt'
+log_file_postfix: 'logs.tsv'
+res_file_postfix: 'res.tsv'
+temperature: 0.0
+top_p: 0.95
