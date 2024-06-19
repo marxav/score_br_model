@@ -1,9 +1,11 @@
 # score_br_model
 
 ## Goal
-* This project is a quick and dirty project aiming at providing a foundation tool to evaluate some large language models (LLMs) in their ability to carry out taks via interaction in Breton language. 
-* Examples of tasks 'br2fr' (breton to french translation) and 'fr2br' (French to Breton translation).
-* To do so, it compares the semantic distance of a task performed by an LLM with an expected task pre-performed by an evaluator.
+* This project is a quick and dirty tool to evaluate some large language models (LLMs) in their ability to carry out tasks via interaction in Breton language. 
+* So far, only 2 tasks are implemented:
+  * *br2fr* (Breton to French translation)
+  * *fr2br* (French to Breton translation)
+* The evaluation produces a proximity *score* comparing the semantic distance of a text produced by an LLM with an expected text pre-written by a human evaluator.
 * The semantic distance is based on the proximity of OpenAI embeddings. 
 * Currently, the models from the following providers can be tested: 
   * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*
