@@ -10,7 +10,8 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
         prompt + text_src,
         generation_config=genai.GenerationConfig(temperature=config.temperature, top_p=config.top_p)
     )
-    #if verbose:
+    if verbose:
+        print('text_src:', text_src)
     
     try:
         text_dst_predicted = response.text
