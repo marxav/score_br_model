@@ -310,12 +310,22 @@ def test_models(config, verbose=False):
             print(f'  * starting translation_model {translation_model}:')
             df_details, error = test_model(config, task, translation_model, src_lines, dst_target_lines)
             if not error:
-                score_mean = int(df_details['score'].mean()*100)/100
-                score_std = int(df_details['score'].std()*100)/100
-                price = int(df_details['price'].sum()*100)/100
-                tokens = df_details['n_tokens'].sum()
-                src_n_words_mean = int(df_details['src_n_words'].mean()*10)/10
-                src_n_words_std = int(df_details['src_n_words'].std()*10)/10
+                try:
+                    score_mean = int(df_details['score'].mean()*100)/100
+                    score_std = int(df_details['score'].std()*100)/100
+                    price = int(df_details['price'].sum()*100)/100
+                    tokens = df_details['n_tokens'].sum()
+                    src_n_words_mean = int(df_details['src_n_words'].mean()*10)/10
+                    src_n_words_std = int(df_details['src_n_words'].std()*10)/10
+                except:
+                    score_mean = pd.NA
+                    score_std = pd.NA
+                    score_mean = pd.NA
+                    score_std = pd.NA
+                    price = pd.NA
+                    tokens = pd.NA
+                    src_n_words_mean = pd.NA
+                    src_n_words_std = pd.NA
             else:
                 score_mean = pd.NA
                 score_std = pd.NA
