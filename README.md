@@ -31,7 +31,7 @@
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* pip install openai pandas ipykernel tabulate google-generativeai anthropici groq mistralai cohere
+* pip install openai pandas ipykernel tabulate llmlite google-generativeai anthropic groq mistralai cohere
 * echo OPENAI_API_KEY=your-secret-key-1 >> .env
 * echo GOOGLE_API_KEY=your-secret-key-2 >> .env
 * echo ANTHROPIC_API_KEY=your-secret-key-3 >> .env
