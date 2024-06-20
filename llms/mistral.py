@@ -1,10 +1,11 @@
+import usage
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
 
 # read MISTRAL_API_KEY for Mistral models
 mistral_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('MISTRAL_API_KEY')), None)
 
-def process(config, model, prompt, text_src, text_dst_target, verbose=False):
+def completion(config, model, prompt, text_src, text_dst_target, verbose=False):
     
     client = MistralClient(api_key=mistral_api_key)
 
@@ -29,6 +30,7 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     in_tokens = response.usage.prompt_tokens
     out_tokens = response.usage.completion_tokens
     total_tokens = response.usage.total_tokens
+    price = usage.get_price(config, model, input_tokens=in_tokens, output_tokens=out_tokens)
     error=False
 
     return text_dst_predicted, total_tokens, price, error

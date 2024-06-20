@@ -1,3 +1,4 @@
+import usage
 from openai import OpenAI
 
 # read OPENAI_API_KEY for GPT models
@@ -5,7 +6,7 @@ openai_api_key = next((line.split('=')[1].strip() for line in open('.env') if li
 
 client = OpenAI(api_key=openai_api_key)
 
-def process(config, model, prompt, text_src, text_dst_target, verbose=False):
+def completion(config, model, prompt, text_src, text_dst_target, verbose=False):
 
     response = client.chat.completions.create(
         model=model,
@@ -26,14 +27,7 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     in_tokens = response.usage.prompt_tokens
     out_tokens = response.usage.completion_tokens
 
-    price = 0
-    if "3.5" in model:
-        price = in_tokens *0.5/1e6 + out_tokens *1.5/1e6
-    elif "4" in model:
-        price = in_tokens *5/1e6 + out_tokens *15/1e6
-    else:
-        price = 0
-        print('error: model unknown!!!')
+    price = usage.get_price(config, model, input_tokens=in_tokens, output_tokens=out_tokens)
     error = False
     
     return text_dst_predicted, total_tokens, price, error

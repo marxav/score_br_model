@@ -4,6 +4,7 @@ from datetime import datetime
 import pandas as pd
 import scores
 import input_file
+from litellm import completion
 from llms import anthropic, cohere, google, llama, mistral, openai
 
 # https://docs.mistral.ai/getting-started/models/
@@ -119,17 +120,17 @@ def get_translation(config, task, model, src_lines, dst_target_lines, verbose=Tr
   error = False
 
   if 'gpt' in model:
-    text_dst_predicted, total_tokens, price, error = openai.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = openai.completion(config, model, prompt, text_src, text_dst_target)
   elif 'gemini' in model:
-    text_dst_predicted, total_tokens, price, error = google.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = google.completion(config, model, prompt, text_src, text_dst_target)
   elif 'claude' in model:
-    text_dst_predicted, total_tokens, price, error = anthropic.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = anthropic.completion(config, model, prompt, text_src, text_dst_target)
   elif 'llama' in model:
-    text_dst_predicted, total_tokens, price, error = llama.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = llama.completion(config, model, prompt, text_src, text_dst_target)
   elif 'mistral' in model:
-    text_dst_predicted, total_tokens, price, error = mistral.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = mistral.completion(config, model, prompt, text_src, text_dst_target)
   elif 'command-r' in model:
-    text_dst_predicted, total_tokens, price, error = cohere.process(config, model, prompt, text_src, text_dst_target)
+    text_dst_predicted, total_tokens, price, error = cohere.completion(config, model, prompt, text_src, text_dst_target)
   else:
       print(f'ERROR model {model} is not supported.')
       error = True
@@ -199,9 +200,11 @@ def test_model(config, task, translation_model, src_lines, dst_target_lines, ver
 
 
         if l3 > l1: # happens for llama and cohere for fr2br
-            print(f'!!!warn len(lines_src):{l1} is different from len(lines_dst_p):{l3}')
+            print(f'!!!warning len(lines_src):{l1} is different from len(lines_dst_p):{l3}')
+            print(f'using only the first {l1} lines for the evaluation.')
             # remove lines afterwards
-            dst_predic_lines = dst_predic_lines[l1:]
+            dst_predic_lines = dst_predic_lines[0:l1]
+            print('dst_predic_lines:', dst_predic_lines)
             is_translation_ok = True
             l3 = l1
         elif l1 != l3:
@@ -233,7 +236,7 @@ def test_model(config, task, translation_model, src_lines, dst_target_lines, ver
     br_words = len(line_src.split(' '))
     if line_dst_t == '':
       break
-    score = scores.get_openai_score(line_dst_t, line_dst_p)
+    score, scoring_tokens, scoring_price = scores.get_openai_score(config, line_dst_t, line_dst_p)
 
     sample_log = {
         'task': task.name,
@@ -242,8 +245,8 @@ def test_model(config, task, translation_model, src_lines, dst_target_lines, ver
         'target': line_dst_t,
         'prediction': line_dst_p,
         'score': score,
-        'price': price,
-        'n_tokens': tokens,
+        'price': price + scoring_price,
+        'n_tokens': tokens + scoring_tokens,
         'src_n_words': br_words
     }
     print('sample_log:')
@@ -313,7 +316,7 @@ def test_models(config, verbose=False):
                 try:
                     score_mean = int(df_details['score'].mean()*100)/100
                     score_std = int(df_details['score'].std()*100)/100
-                    price = int(df_details['price'].sum()*100)/100
+                    price = int(df_details['price'].sum()*10000)/10000
                     tokens = df_details['n_tokens'].sum()
                     src_n_words_mean = int(df_details['src_n_words'].mean()*10)/10
                     src_n_words_std = int(df_details['src_n_words'].std()*10)/10

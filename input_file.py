@@ -3,6 +3,27 @@ import yaml
 from itertools import zip_longest
 import pandas as pd 
 
+# the function returns the path to Litellm package's pricing file installed locally 
+# (i.e. in the virtual environment), which is a copy of the pricing file available at
+# https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
+def get_pricing_file():
+
+    # look for all directories in "env/lib/"
+    # look for a single directory name starting with "python"
+    # exit if more than one directory is found
+    root_dir = './env/lib/'
+    python_dirs = [d for d in os.listdir('env/lib/') if d.startswith('python')]
+    if len(python_dirs) != 1:
+        print(f"ERROR: found {len(python_dirs)} python directories in env/lib/: {python_dirs}")
+        exit(-1)
+    python_dir = python_dirs[0]
+    litellm_dir = 'env/lib/' + python_dir + '/site-packages/litellm'
+    filename = 'model_prices_and_context_window_backup.json'
+
+    pricing_file = litellm_dir + os.sep + filename
+    print('pricing_file:', pricing_file)
+    return pricing_file
+
 def read_lines_and_count(file_path):
     try:
         with open(file_path, 'r') as file:
@@ -202,4 +223,7 @@ def load_config(args):
                         log_file_postfix=log_file_postfix, res_file_postix=res_file_postfix, 
                         temperature=temperature, top_p=top_p)
         config.dataset_file =  check_dataset_file(config.dataset_file)
+        config.models_price_file = get_pricing_file()
+        config.scoring_model = 'text-embedding-3-large'
+    
         return config

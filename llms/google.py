@@ -1,9 +1,10 @@
+import usage
 import google.generativeai as genai
 
 # read GOOGLE_API_KEY for Gemini models
 google_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GOOGLE_API_KEY')), None)
 
-def process(config, model, prompt, text_src, text_dst_target, verbose=False):
+def completion(config, model, prompt, text_src, text_dst_target, verbose=False):
     genai.configure(api_key=google_api_key)
     google_model = genai.GenerativeModel(model)
     response = google_model.generate_content(
@@ -28,6 +29,6 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     total_tokens = other_data.total_token_count
     in_tokens = other_data.prompt_token_count
     out_tokens = other_data.candidates_token_count
-    price = 0
+    price = usage.get_price(config, model, input_tokens=in_tokens, output_tokens=out_tokens)
     error = False
     return text_dst_predicted, total_tokens, price, error

@@ -1,9 +1,10 @@
+import usage
 import cohere
 
 # read COHERE_API_KEY for Commmand-r models
 cohere_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('COHERE_API_KEY')), None)
 
-def process(config, model, prompt, text_src, text_dst_target, verbose=False):
+def completion(config, model, prompt, text_src, text_dst_target, verbose=False):
     
     co = cohere.Client(api_key=cohere_api_key)
 
@@ -25,12 +26,13 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
         print('WARNING: no response provided by the LLM. LLM response was:', response)
         error = True
         return 'N/A', 0, 0, error
-    price = 0
+
     token_info = response.meta
     if verbose: 
         print('token_info:', token_info)
     in_tokens = token_info.billed_units.input_tokens
     out_tokens = token_info.billed_units.output_tokens
     total_tokens = in_tokens + out_tokens
+    price = usage.get_price(config, model, input_tokens=in_tokens, output_tokens=out_tokens)
     error = False
     return text_dst_predicted, total_tokens, price, error

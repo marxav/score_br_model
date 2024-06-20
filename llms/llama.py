@@ -1,9 +1,10 @@
+import usage
 from groq import Groq
 
 # read GROQ_API_KEY for Meta LLama models
 groq_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('GROQ_API_KEY')), None)
 
-def process(config, model, prompt, text_src, text_dst_target, verbose=False):
+def completion(config, model, prompt, text_src, text_dst_target, verbose=False):
     
     client = Groq(api_key=groq_api_key)
     error = False
@@ -31,5 +32,5 @@ def process(config, model, prompt, text_src, text_dst_target, verbose=False):
     in_tokens = response.usage.prompt_tokens
     out_tokens = response.usage.completion_tokens
     total_tokens = response.usage.total_tokens
-
+    price = usage.get_price(config, model, input_tokens=in_tokens, output_tokens=out_tokens)
     return text_dst_predicted, total_tokens, price, error
