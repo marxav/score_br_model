@@ -10,7 +10,7 @@
 * Currently, the models from the following providers can be tested: 
   * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*
   * [Google](https://ai.google.dev/gemini-api/docs/models/gemini) e.g. *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
-  * [Anthropic](https://docs.anthropic.com/en/docs/models-overview): e.g. *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
+  * [Anthropic](https://docs.anthropic.com/en/docs/models-overview): e.g. *claude-3-5-sonnet-20240620*, *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
   * [Meta](https://console.groq.com/docs/models): e.g. *llama3-8b-8192*, *llama3-70b-8192*
   * [Mistral](https://docs.mistral.ai/getting-started/models/) *open-mistral-7b*, *mistral-large-latest*
   * [Cohere](https://docs.cohere.com/docs/models): e.g. *command-r-plus*

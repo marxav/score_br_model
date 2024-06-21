@@ -2,6 +2,7 @@ models:
 - 'command-r-plus'
 - 'llama3-70b-8192'
 - 'mistral-large-2402'
+- 'claude-3-5-sonnet-20240620'
 - 'claude-3-opus-20240229'
 - 'gemini-1.5-flash'
 - 'gemini-1.5-pro-001'
