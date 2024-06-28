@@ -9,20 +9,22 @@
 * The semantic distance is based on the proximity of OpenAI embeddings. 
 * Currently, the models from the following providers can be tested: 
   * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*
-  * [Google](https://ai.google.dev/gemini-api/docs/models/gemini) e.g. *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*
+  * [Google](https://ai.google.dev/gemini-api/docs/models/gemini) e.g. *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*, *palm-2-chat-bison-32k*
   * [Anthropic](https://docs.anthropic.com/en/docs/models-overview): e.g. *claude-3-5-sonnet-20240620*, *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
   * [Meta](https://console.groq.com/docs/models): e.g. *llama3-8b-8192*, *llama3-70b-8192*
   * [Mistral](https://docs.mistral.ai/getting-started/models/) *open-mistral-7b*, *mistral-large-latest*
   * [Cohere](https://docs.cohere.com/docs/models): e.g. *command-r-plus*
+  
 
 ## Requirements
 * Ubuntu OS
 * An OPENAI_API_KEY (cf. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys))
 * A GOOGLE_API_KEY (cf. [(https://ai.google.dev/gemini-api/docs/api-key](https://ai.google.dev/gemini-api/docs/api-key))
 * An ANTHROPIC_API_KEY (cf. [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys))
-* A GROQ_API_KEY (cf. [https://console.groq.com/keys](https://console.groq.com/keys))
+* A GROQ_API_KEY (cf. [https://console.groq.com/keys](https://console.groq.com/keys)) for Llama models
 * A MISTRAL_API_KEY (cf. [https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/))
 * A COHERE_API_KEY (cf. [https://dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys))
+* A OPENROUTER_API_KEY (cf. [https://openrouter.ai/keys](https://openrouter.ai/keys)) for Google Palm models
 * Only the OPENAI_API_KEY is mandatory given it is also needed for calculating the evaluation scores.
 * A dataset file (e.g. [samples.tsv](samples.tsv)) and a configuration file (e.g [samples.yaml](samples.yaml))
 
@@ -38,6 +40,7 @@
 * echo GROQ_API_KEY=your-secret-key-4 >> .env
 * echo MISTRAL_API_KEY=your-secret-key-5 >> .env
 * echo COHERE_API_KEY=your-secret-key-6 >> .env
+* echo OPENROUTER_API_KEY=your-secret-key-67 >> .env
 
 ## Run
 * cd score_br_model
