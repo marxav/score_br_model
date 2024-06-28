@@ -5,7 +5,7 @@ import pandas as pd
 import scores
 import input_file
 from litellm import completion
-from llms import anthropic, cohere, google, llama, mistral, openai
+from llms import anthropic, cohere, google, llama, mistral, openai, palm
 
 # https://docs.mistral.ai/getting-started/models/
 # 'mistral-large-2402' <- 'mistral-large-latest'
@@ -24,6 +24,7 @@ from llms import anthropic, cohere, google, llama, mistral, openai
 #'gpt-4o-2024-05-13', 
 #'gemini-1.5-pro-001',
 #'gpt-4-turbo-2024-04-09'
+#'palm/chat-bison'
 
 def string_to_hex(s):
     return ' '.join(format(ord(c), '02x') for c in s)
@@ -129,6 +130,8 @@ def get_translation(config, task, model, src_lines, dst_target_lines, verbose=Tr
     text_dst_predicted, total_tokens, price, error = llama.completion(config, model, prompt, text_src, text_dst_target)
   elif 'mistral' in model:
     text_dst_predicted, total_tokens, price, error = mistral.completion(config, model, prompt, text_src, text_dst_target)
+  elif 'palm' in model:
+    text_dst_predicted, total_tokens, price, error = palm.completion(config, model, prompt, text_src, text_dst_target)
   elif 'command-r' in model:
     text_dst_predicted, total_tokens, price, error = cohere.completion(config, model, prompt, text_src, text_dst_target)
   else:
