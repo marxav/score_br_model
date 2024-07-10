@@ -1,0 +1,2 @@
+task	datetime	model	score_mean	score_std	price	n_tokens	src_n_words_mean	src_n_words_std
+br2fr	2024-07-10_21:24:23	gpt-3.5-turbo-0125	0.77	0.14	0.0009	1309	6.3	2.9
