@@ -16,12 +16,6 @@ tasks:
   Immediatly write the translated text and do not add any comment after the translation. \
   The translated text must contain exactly the same number of '.', ';', '?' and '!' characters as in the input text. \
   \n\n"
-#- name: 'fr2br'
-#  prompt: "Translate the following lines of French text to Breton. \
-#  Immediatly write the translated text and do not add any comment after the translation. \
-#  The translated text must contain exactly the same number of '.', ';', '?' and '!' characters as in the input text. \
-#  \n\n"
-#  separator: '***'
 source_file: 'samples_br.txt'
 target_file: 'samples_fr.txt'
 log_file_postfix: 'logs.tsv'
