@@ -11,6 +11,8 @@ def get_price(config, model, input_tokens=0, output_tokens=0):
         model_price_name = 'groq/' + model
     elif 'mistral' in model:
         model_price_name = 'mistral/' + model
+    elif 'palm' in model:
+        model_price_name = 'openrouter/google/' + model
     else:
         model_price_name = model
 
