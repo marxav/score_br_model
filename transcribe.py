@@ -140,9 +140,11 @@ def main(argv):
     
     # check if the file exists
     if os.path.exists(processed_photos_file):
+        print('found processed_photos_file:', processed_photos_file)
         df_processed_photos = pd.read_csv(processed_photos_file)
     else:
         # create an empty DataFrame
+        print('not found processed_photos_file:', processed_photos_file)
         df_processed_photos = pd.DataFrame()
         df_processed_photos.to_csv(processed_photos_file, index=False)
     
@@ -199,14 +201,14 @@ def main(argv):
                             'creationTime':  r['mediaMetadata']['creationTime'],
                             'baseUrl': r['baseUrl']
                         }
-                        
+                        print("photo['filename']:", photo['filename'])
                         if photo['filename'] not in df_processed_photos.values:
                             print('r:', r)
-                            print('filename:', str(photo), 'not in df_processed_photos')
+                            print('filename:', photo['filename'], 'not in df_processed_photos')
                             print('len(baseUrl):', len(r['baseUrl']))
                             local_filename = download(photo['filename'], photo['baseUrl'])
                             transcribe(photo['filename'], local_filename)
-                            dfi = pd.DataFrame([{'filename': str(photo)}], index=[0])
+                            dfi = pd.DataFrame([{'filename': photo['filename']}], index=[0])
                             df_processed_photos = pd.concat([df_processed_photos, dfi], ignore_index=True)
                             df_processed_photos.to_csv(processed_photos_file, index=False)
                 
