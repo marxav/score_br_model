@@ -139,7 +139,7 @@ def translate(config, model, task, src_lines, verbose=False):
       print(f'ERROR: with ${model}, number of lines in src and predicted text do not match: {len(src_lines)} vs {len(dst_predic_lines)}')
       print('dst_predic_lines:', dst_predic_lines)
       error = True
-      return dst_predic_lines, error
+      return dst_predic_lines, tokens, price, error
 
   return dst_predic_lines, tokens, price, False
 
@@ -270,8 +270,7 @@ def translate_and_eval(config, verbose=True):
       config.lang_dst = task.name[3:5]
         
       dst_predic_lines, tokens, price, error = translate(config, model, task, src_lines)
-      if error:
-          dst_predic_lines = ['error']
+      # save results, even if there is an error
       save_results(config, model, task, dst_predic_lines)
 
       if config.eval:
