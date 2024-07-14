@@ -53,7 +53,9 @@ def transcribe(filename, local_filename):
                 "type": "text",
                 "text": "Transcribe the Breton text from the image. \
                     Do not add anything besides translation. \
-                    Take care preserving the 'ñ' and 'ê' characters."
+                    Take care preserving the 'ñ' and 'ê' characters. \
+                    Note that 'ñ' can not immediatly follow a 'n' \
+                    given that 'nñ' do not exist in Breton language."
             },
             {
                 "type": "image_url",
@@ -140,11 +142,9 @@ def main(argv):
     
     # check if the file exists
     if os.path.exists(processed_photos_file):
-        print('found processed_photos_file:', processed_photos_file)
         df_processed_photos = pd.read_csv(processed_photos_file)
     else:
         # create an empty DataFrame
-        print('not found processed_photos_file:', processed_photos_file)
         df_processed_photos = pd.DataFrame()
         df_processed_photos.to_csv(processed_photos_file, index=False)
     
