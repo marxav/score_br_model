@@ -8,7 +8,7 @@ def completion(config, model, prompt, text_src, text_dst_target, verbose=False):
     
     message = anthropic.Anthropic(api_key=anthropic_api_key).messages.create(
         model=model,
-        max_tokens=1000,
+        max_tokens=2500,
         messages=[
             {"role": "user", "content": prompt + text_src},
             #{"role": "assistant", "content": prompt}
