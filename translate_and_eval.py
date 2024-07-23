@@ -164,7 +164,7 @@ def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, pri
   else:    
     is_translation_ok = False
     print(f'ERROR: number of lines in src, target and predicted text do not match: {l1} vs {l2} vs {l3}')
-    exit(-1)
+    return None, None, is_translation_ok
 
   df_details = pd.DataFrame()
   for line_src, line_dst_t, line_dst_p in zip(src_lines, dst_target_lines, dst_predic_lines):
@@ -269,7 +269,19 @@ def translate_and_eval(config, verbose=True):
       config.lang_src = task.name[0:2]
       config.lang_dst = task.name[3:5]
         
-      dst_predic_lines, tokens, price, error = translate(config, model, task, src_lines)
+      n_retry_max = 3
+      n_try = 0
+      # do translate() while n_retry < n_retry_max because sometimes
+      # a translation will return a different number of lines than the source
+      # so it is worth retrying
+      while n_try < n_retry_max:
+        n_try += 1
+        dst_predic_lines, tokens, price, error = translate(config, model, task, src_lines)
+        if error:
+          print(f'ERROR: retrying {n_try}/{n_retry_max}...')
+        else:
+          break
+      
       # save results, even if there is an error
       save_results(config, model, task, dst_predic_lines)
 
