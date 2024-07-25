@@ -3,6 +3,7 @@ import sys
 from datetime import datetime
 import pandas as pd
 import scores
+import usage
 import input_file
 from litellm import completion
 from llms import anthropic, cohere, google, llama, mistral, openai, palm
@@ -326,10 +327,15 @@ def get_output_file(config, model, task):
   
   return output_file
 
+
 def main(args):
-    config = input_file.load_config(args)
-    translate_and_eval(config)
-    print('finished')
+  config = input_file.load_config(args)
+
+  # trick to avoid reinstalling litellm each time there is a new llm model
+  usage.update_model_price_list()
+
+  translate_and_eval(config)
+  print('finished')
 
 if __name__ == '__main__':
     main(sys.argv)
