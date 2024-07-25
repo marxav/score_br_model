@@ -26,5 +26,5 @@ source_file: 'samples_br.txt'
 target_file: 'samples_fr.txt'
 log_file_postfix: 'logs.tsv'
 res_file_postfix: 'res.tsv'
-temperature: 0.2
+temperature: 0.0
 top_p: 0.95
