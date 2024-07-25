@@ -73,6 +73,9 @@ def check_source_and_target_files(config):
     else:
         source_lines, source_n_lines = read_lines_and_count(config.source_file)
         target_lines, target_n_lines = read_lines_and_count(config.target_file)
+        if source_n_lines < 2:
+            print(f'ERROR: source file {config.source_file} must contain at least 2 lines.')
+            exit(-1)
         if source_n_lines != target_n_lines:
             print(f'ERROR: source file {config.source_file} has {source_n_lines} lines, while target file {config.target_file} has {target_n_lines} lines.')
             exit(-1)
