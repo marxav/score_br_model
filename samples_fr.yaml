@@ -13,6 +13,7 @@ models:
 #- 'llama-3.1-8b-instant'
 #- 'llama3-70b-8192'
 #- 'mistral-large-2402'
+#- 'mistral-large-2407'
 #- 'open-mistral-nemo-2407'
 #- 'palm-2-chat-bison-32k'
 tasks:
