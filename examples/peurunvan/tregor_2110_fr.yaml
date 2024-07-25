@@ -1,0 +1,30 @@
+models:
+#- 'claude-3-5-sonnet-20240620'
+#- 'claude-3-opus-20240229'
+#- 'command-r-plus'
+#- 'gemini-1.5-flash'
+#- 'gemini-1.5-pro-001'
+#- 'gpt-3.5-turbo-0125'
+#- 'gpt-4-turbo-2024-04-09'
+- 'gpt-4o-2024-05-13'
+#- 'gpt-4o-mini-2024-07-18'
+#- 'llama-3.1-405b-reasoning'
+#- 'llama-3.1-70b-versatile'
+#- 'llama-3.1-8b-instant'
+#- 'llama3-70b-8192'
+#- 'mistral-large-2402'
+#- 'mistral-large-2407'
+#- 'open-mistral-nemo-2407'
+#- 'palm-2-chat-bison-32k'
+tasks:
+- name: 'fr2br'
+  prompt: "Translate the following lines of French text to Breton. \
+  Immediatly write the translated text and do not add any comment after the translation. \
+  The translated text must contain exactly the same number of '.', ';', '?' and '!' characters as in the input text. \
+  \n\n"
+source_file: 'tregor_2110_fr.txt'
+target_file: 'tregor_2110_br.txt'
+log_file_postfix: 'logs.tsv'
+res_file_postfix: 'res.tsv'
+temperature: 0.0
+top_p: 0.95
