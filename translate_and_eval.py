@@ -22,7 +22,7 @@ def save_results(config, model, task, translated_lines):
         f.write(line)
       l+=1
 
-  print(f'results for model:{model} on task:{task.name} saved in file:{output_file}')
+  print(f'translations results from model:{model} on task:{task.name} are saved in file:{output_file}')
 
 # get data from a file (e.g. source data file, target data file)
 def get_data(config, file, verbose=False):
@@ -45,8 +45,8 @@ def get_translation(config, model, task, src_lines, dst_target_lines, verbose=Fa
     print('get_translation() src_lines:', src_lines)
     print('get_translation() dst_target_lines:', dst_target_lines)
   prompt = task.prompt
-
-  print('get_translation() prompt:', prompt)
+  
+  print('get_translation() prompt:', prompt.rstrip())
 
   text_src = ''
   
@@ -169,37 +169,89 @@ def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, pri
 
   df_details = pd.DataFrame()
   for line_src, line_dst_t, line_dst_p in zip(src_lines, dst_target_lines, dst_predic_lines):
-    # if nothing in the source line (e.g. between 2 "paragraphs"), nothing to evaluate
-    if line_src == '':
-       continue
-    # calculate number of words in the source sentence (just for info)
-    br_words = len(line_src.split(' '))
-    if line_dst_t == '':
-      break
-    score, scoring_tokens, scoring_price = scores.get_openai_score(config, line_dst_t, line_dst_p)
+    
+    print('******************* config.split_sentences_during_eval:', config.split_sentences_during_eval)
+    if config.split_sentences_during_eval:
+      # split the source and target lines into sentences
+      src_sentences = line_src.split('.')
+      dst_sentences_t = line_dst_t.split('.')
+      dst_sentences_p = line_dst_p.split('.')
+            
+      # counting the EXACT number of tokens and exact price per sentence would take too much code
+      # instead, we will approximate the price and number of tokens per sentence
+      n_sentences = 0
+      # for each sentence in the source text, calculate the score with the target and predicted sentences
+      for src_sentence, dst_sentence_t, dst_sentence_p in zip(src_sentences, dst_sentences_t, dst_sentences_p):
+        if src_sentence == '':
+          continue
+        else: 
+          n_sentences += 1      
+      # approximation du prix
+      delta_price = price / n_sentences
+      delta_tokens = tokens / n_sentences
 
-    sample_log = {
-        'task': task.name,
-        'model': model,
-        'src': line_src,
-        'target': line_dst_t,
-        'prediction': line_dst_p,
-        'score': score,
-        'price': price + scoring_price,
-        'n_tokens': tokens + scoring_tokens,
-        'src_n_words': br_words
-    }
-    print('sample_log:')
-    for key, value in sample_log.items():
-        print(f"* {key}: {value}")
-    df_sample = pd.DataFrame([sample_log])
+      # for each sentence in the source text, calculate the score with the target and predicted sentences
+      for src_sentence, dst_sentence_t, dst_sentence_p in zip(src_sentences, dst_sentences_t, dst_sentences_p):
+        if src_sentence == '':
+          continue
+        if dst_sentence_t == '':
+          break        
+        score, scoring_tokens, scoring_price = scores.get_openai_score(config, dst_sentence_t, dst_sentence_p)
+        
+        # calculate number of words in the source sentence (just for info)
+        br_words = len(src_sentence.split(' '))
 
-    # Concatenate the new row DataFrame with the existing DataFrame
-    df_details = pd.concat([df_details, df_sample], ignore_index=True)
+        sample_log = {
+            'task': task.name,
+            'model': model,
+            'src': src_sentence,
+            'target': dst_sentence_t,
+            'prediction': dst_sentence_p,
+            'score': score,
+            'price': delta_price + scoring_price,
+            'n_tokens': delta_tokens + scoring_tokens,
+            'src_n_words': br_words
+        }
+        df_sample = pd.DataFrame([sample_log])
 
+        # Concatenate the new row DataFrame with the existing DataFrame
+        df_details = pd.concat([df_details, df_sample], ignore_index=True)
 
-    # only print the new line in the df (i.e. last line of the df)
-    print('last row of df_model_results:', df_details.tail(1))
+        # only print the new line in the df (i.e. last line of the df)
+        print('last row of df_model_results:', df_details.tail(1))
+      
+    else:
+      
+      # if nothing in the source line (e.g. between 2 "paragraphs"), nothing to evaluate
+      if line_src == '':
+        continue
+      # calculate number of words in the source sentence (just for info)
+      br_words = len(line_src.split(' '))
+      if line_dst_t == '':
+        break
+      score, scoring_tokens, scoring_price = scores.get_openai_score(config, line_dst_t, line_dst_p)
+
+      sample_log = {
+          'task': task.name,
+          'model': model,
+          'src': line_src,
+          'target': line_dst_t,
+          'prediction': line_dst_p,
+          'score': score,
+          'price': price + scoring_price,
+          'n_tokens': tokens + scoring_tokens,
+          'src_n_words': br_words
+      }
+      print('sample_log:')
+      for key, value in sample_log.items():
+          print(f"* {key}: {value}")
+      df_sample = pd.DataFrame([sample_log])
+
+      # Concatenate the new row DataFrame with the existing DataFrame
+      df_details = pd.concat([df_details, df_sample], ignore_index=True)
+
+      # only print the new line in the df (i.e. last line of the df)
+      print('last row of df_model_results:', df_details.tail(1))
 
   try:
     score_mean = int(df_details['score'].mean()*100)/100
@@ -287,7 +339,7 @@ def translate_and_eval(config, verbose=True):
       save_results(config, model, task, dst_predic_lines)
 
       if config.eval:
-        print('evaluating...')
+        print(f'evaluating model:{model}...')
         config, dst_target_lines = get_data(config, config.target_file)
         df_details, df_results, error = eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, price, tokens)
         
