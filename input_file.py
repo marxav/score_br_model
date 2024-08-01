@@ -73,12 +73,24 @@ def check_source_and_target_files(config):
     else:
         source_lines, source_n_lines = read_lines_and_count(config.source_file)
         target_lines, target_n_lines = read_lines_and_count(config.target_file)
+
+        # check that number of lines in the source and target files are the same
         if source_n_lines < 2:
-            print(f'ERROR: source file {config.source_file} must contain at least 2 lines.')
-            exit(-1)
+                print(f'ERROR: source file {config.source_file} must contain at least 2 lines.')
+                exit(-1)
         if source_n_lines != target_n_lines:
-            print(f'ERROR: source file {config.source_file} has {source_n_lines} lines, while target file {config.target_file} has {target_n_lines} lines.')
-            exit(-1)
+                print(f'ERROR: source file {config.source_file} has {source_n_lines} lines, while target file {config.target_file} has {target_n_lines} lines.')
+                exit(-1)
+
+        if config.split_sentences_during_eval:
+            # check that number of sentences in the source and target files are the same
+            source_n_sentences = sum([len(line.split('.')) for line in source_lines])
+            target_n_sentences = sum([len(line.split('.')) for line in target_lines])
+
+            if source_n_sentences != target_n_sentences:
+                print(f'ERROR: source file {config.source_file} has {source_n_sentences} sentences, while target file {config.target_file} has {target_n_sentences} sentences.')
+                exit(-1)
+            
         config.eval = True
     return config
 
@@ -88,7 +100,7 @@ class TaskConfig:
         self.prompt = prompt
  
 class Config:
-    def __init__(self, models, tasks, source_file, target_file, log_file_postfix, res_file_postix, temperature, top_p):
+    def __init__(self, models, tasks, source_file, target_file, log_file_postfix, res_file_postix, temperature, top_p, split_sentences_during_eval):
         self.models = models
         self.tasks = tasks
         self.source_file = source_file
@@ -97,6 +109,7 @@ class Config:
         self.res_file_postix = res_file_postix
         self.temperature = temperature
         self.top_p = top_p
+        self.split_sentences_during_eval = split_sentences_during_eval
 
 # the function loads the configuration file from a yaml input file
 def load_config(args, check=True): 
@@ -138,11 +151,19 @@ def load_config(args, check=True):
         temperature = config_data['temperature']
         top_p = config_data['top_p']
 
+        # config param 'split_sentences_during_eval' is optional, is True by default
+        try:
+            split_sentences_during_eval = config_data.get('split_sentences_during_eval')
+            if split_sentences_during_eval is None:
+                split_sentences_during_eval = True
+        except:
+            split_sentences_during_eval = True
+
         config = Config(models=models, tasks=tasks, 
                         source_file=source_file,
                         target_file=target_file,
                         log_file_postfix=log_file_postfix, res_file_postix=res_file_postfix, 
-                        temperature=temperature, top_p=top_p)
+                        temperature=temperature, top_p=top_p, split_sentences_during_eval=split_sentences_during_eval)
         #config.dataset_file =  check_dataset_file(config.dataset_file, check)
         check_source_and_target_files(config)
         # load the optional glossary file
