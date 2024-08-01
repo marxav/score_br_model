@@ -170,7 +170,6 @@ def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, pri
   df_details = pd.DataFrame()
   for line_src, line_dst_t, line_dst_p in zip(src_lines, dst_target_lines, dst_predic_lines):
     
-    print('******************* config.split_sentences_during_eval:', config.split_sentences_during_eval)
     if config.split_sentences_during_eval:
       # split the source and target lines into sentences
       src_sentences = line_src.split('.')
@@ -187,8 +186,12 @@ def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, pri
         else: 
           n_sentences += 1      
       # approximation du prix
-      delta_price = price / n_sentences
-      delta_tokens = tokens / n_sentences
+      if n_sentences > 0:
+        delta_price = price / n_sentences
+        delta_tokens = tokens / n_sentences
+      else:
+        delta_price = price
+        delta_tokens = tokens
 
       # for each sentence in the source text, calculate the score with the target and predicted sentences
       for src_sentence, dst_sentence_t, dst_sentence_p in zip(src_sentences, dst_sentences_t, dst_sentences_p):
