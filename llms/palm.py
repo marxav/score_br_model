@@ -1,7 +1,7 @@
 import usage
 from openai import OpenAI
 
-# read OPENAI_API_KEY for GPT models
+# read OPENROUTER_API_KEY for GPT models
 openrouter_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('OPENROUTER_API_KEY')), None)
 
 client = OpenAI(
