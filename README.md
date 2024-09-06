@@ -35,7 +35,7 @@
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* pip install openai pandas ipykernel tabulate llmlite google-generativeai anthropic groq mistralai cohere
+* pip install openai pandas ipykernel tabulate google-generativeai anthropic groq mistralai cohere
 * echo OPENAI_API_KEY=your-secret-key-1 >> .env
 * echo GOOGLE_API_KEY=your-secret-key-2 >> .env
 * echo ANTHROPIC_API_KEY=your-secret-key-3 >> .env
@@ -52,29 +52,47 @@
 ## Results
 * The result file will contain something like :
 
-| task   | model                  | score       |
-|:-------|:-----------------------|:------------|
-| br2fr  | claude-3-opus-20240229 | 0.88 ± 0.18 |
-| br2fr  | gemini-1.5-pro-001     | 0.84 ± 0.17 |
-| br2fr  | gpt-4o-2024-05-13      | 0.81 ± 0.17 |
-| br2fr  | gpt-4-turbo-2024-04-09 | 0.8 ± 0.21  |
-| br2fr  | gemini-1.5-flash       | 0.78 ± 0.19 |
-| br2fr  | llama3-70b-8192        | 0.74 ± 0.18 |
-| br2fr  | gpt-3.5-turbo-0125     | 0.66 ± 0.16 |
-| br2fr  | command-r-plus         | 0.58 ± 0.12 |
-| br2fr  | mistral-large-2402     | 0.57 ± 0.15 |
+| task   | model                      | score       |
+|:-------|:---------------------------|:------------|
+| br2fr  | claude-3-opus-20240229     | 0.95 ± 0.06 |
+| br2fr  | gpt-4o-2024-05-13          | 0.95 ± 0.07 |
+| br2fr  | palm-2-chat-bison-32k      | 0.94 ± 0.1  |
+| br2fr  | gemini-1.5-pro             | 0.92 ± 0.13 |
+| br2fr  | gpt-4-turbo-2024-04-09     | 0.92 ± 0.07 |
+| br2fr  | gemini-1.0-pro             | 0.91 ± 0.11 |
+| br2fr  | claude-3-5-sonnet-20240620 | 0.9 ± 0.17  |
+| br2fr  | gpt-4o-2024-08-06          | 0.89 ± 0.1  |
+| br2fr  | llama-3.1-70b-versatile    | 0.84 ± 0.22 |
+| br2fr  | gemini-1.5-flash           | 0.82 ± 0.18 |
+| br2fr  | gpt-4o-mini-2024-07-18     | 0.81 ± 0.2  |
+| br2fr  | mistral-large-2407         | 0.78 ± 0.3  |
+| br2fr  | gpt-3.5-turbo-0125         | 0.77 ± 0.12 |
+| br2fr  | llama3-70b-8192            | 0.77 ± 0.25 |
+| br2fr  | open-mistral-nemo-2407     | 0.7 ± 0.21  |
+| br2fr  | command-r-plus             | 0.63 ± 0.26 |
+| br2fr  | llama-3.1-8b-instant       | 0.58 ± 0.19 |
+| br2fr  | mistral-large-2402         | 0.56 ± 0.19 |
 
-| task   | model                  | score       |
-|:-------|:-----------------------|:------------|
-| fr2br  | claude-3-opus-20240229 | 0.69 ± 0.14 |
-| fr2br  | gpt-4-turbo-2024-04-09 | 0.68 ± 0.17 |
-| fr2br  | gpt-4o-2024-05-13      | 0.65 ± 0.17 |
-| fr2br  | gemini-1.5-flash       | 0.64 ± 0.18 |
-| fr2br  | gemini-1.5-pro-001     | 0.61 ± 0.14 |
-| fr2br  | mistral-large-2402     | 0.58 ± 0.14 |
-| fr2br  | gpt-3.5-turbo-0125     | 0.57 ± 0.16 |
-| fr2br  | llama3-70b-8192        | 0.25 ± 0.16 |
-| fr2br  | command-r-plus         | 0.23 ± 0.18 |
+| task   | model                      | score       |
+|:-------|:---------------------------|:------------|
+| fr2br  | gpt-4-turbo-2024-04-09     | 0.73 ± 0.18 |
+| fr2br  | claude-3-5-sonnet-20240620 | 0.72 ± 0.16 |
+| fr2br  | gpt-4o-2024-08-06          | 0.71 ± 0.15 |
+| fr2br  | llama-3.1-70b-versatile    | 0.7 ± 0.13  |
+| fr2br  | palm-2-chat-bison-32k      | 0.7 ± 0.19  |
+| fr2br  | claude-3-opus-20240229     | 0.68 ± 0.1  |
+| fr2br  | gemini-1.5-flash           | 0.68 ± 0.16 |
+| fr2br  | gemini-1.5-pro             | 0.67 ± 0.11 |
+| fr2br  | gpt-4o-2024-05-13          | 0.65 ± 0.19 |
+| fr2br  | mistral-large-2407         | 0.65 ± 0.14 |
+| fr2br  | llama3-70b-8192            | 0.64 ± 0.18 |
+| fr2br  | gemini-1.0-pro             | 0.63 ± 0.15 |
+| fr2br  | gpt-3.5-turbo-0125         | 0.58 ± 0.06 |
+| fr2br  | mistral-large-2402         | 0.58 ± 0.17 |
+| fr2br  | gpt-4o-mini-2024-07-18     | 0.57 ± 0.17 |
+| fr2br  | llama-3.1-8b-instant       | 0.56 ± 0.15 |
+| fr2br  | open-mistral-nemo-2407     | 0.51 ± 0.16 |
+| fr2br  | command-r-plus             | 0.5 ± 0.12  |
 
 ## More info
 * The source text to be translated must be in a *.txt file (e.g. [samples_br.txt](samples_br.txt)). 
