@@ -5,7 +5,6 @@ import pandas as pd
 import scores
 import usage
 import input_file
-from litellm import completion
 from llms import anthropic, cohere, google, llama, mistral, openai, palm
 import pandas as pd
 
