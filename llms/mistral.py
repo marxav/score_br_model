@@ -1,17 +1,16 @@
 import usage
-from mistralai.client import MistralClient
-from mistralai.models.chat_completion import ChatMessage
+from mistralai import Mistral, UserMessage
 
 # read MISTRAL_API_KEY for Mistral models
 mistral_api_key = next((line.split('=')[1].strip() for line in open('.env') if line.startswith('MISTRAL_API_KEY')), None)
 
 def completion(config, model, prompt, text_src, text_dst_target, verbose=False):
     
-    client = MistralClient(api_key=mistral_api_key)
+    client = Mistral(api_key=mistral_api_key)
 
-    response = client.chat(
+    response = client.chat.complete(
         model=model,
-        messages=[ChatMessage(role="user", content=prompt+text_src)],
+        messages=[{"role":"user", "content":prompt+text_src}],
         temperature = config.temperature,
         top_p=1.0
     )
