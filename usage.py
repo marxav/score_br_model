@@ -51,13 +51,12 @@ def update_model_price_list(verbose=False):
         
         site_pack_dir = os.path.join(python_dir, 'site-packages')
         
+        litellm_dir = os.path.join(site_pack_dir, 'litellm')
         # check that python_dir contains an litellm folder
         if 'litellm' not in os.listdir(site_pack_dir):
-            print('ERROR: litellm folder not found in', site_pack_dir)
-            exit(-1)
-        else:
-            litellm_dir = os.path.join(site_pack_dir, 'litellm')
-
+            print('creating: litellm folder', site_pack_dir)
+            os.mkdir(litellm_dir)
+        
         local_filename = 'model_prices_and_context_window_backup.json'
         llm_file = os.path.join(litellm_dir, local_filename)
         
