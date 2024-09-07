@@ -111,16 +111,11 @@
   * Or with via a product like [https://scale.com/leaderboard](https://scale.com/leaderboard)
 
 ## Warning
-* Some model can refuse to translate some sentences that they consider as :
+* Some models can refuse to translate some sentences that they consider as :
   * *HARM CATEGORY_SEXUALLY_EXPLICIT*,
   * *HARM_CATEGORY_HATE_SPEECH*,
   * *HARM_CATEGORY_HARASSMENT*,
   * *HARM_CATEGORY_DANGEROUS_CONTENT*.
-* Currently, we use a file with lines like "br:port nawak" and "fr:trop chouette"
-  * For the br2fr task "br:port nawak" is sent to the model; the answer is then compared with "fr:trop chouette", which is used as true value.
-  * For the fr2br task "fr:trop chouette" is sent to the model; the answer is then compared with "br:port nawak", which is used as true value.
-  * A model saving history could then learn that "br:port nawak" has to be translated by fr:trop chouette", which would bias the evaluation.
-  * TODO: try to check if this happens... or avoid using the same input-file for the two different tasks.
 
 ## Other information
 * Instead of using this tool, you can manually use [LMSYS](https://chat.lmsys.org) (in the "Arena side-by-side" tab) to compare the results of 2 models
