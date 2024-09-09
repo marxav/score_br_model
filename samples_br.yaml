@@ -10,7 +10,6 @@ models:
 - 'gpt-4o-2024-05-13'
 - 'gpt-4o-2024-08-06'
 - 'gpt-4o-mini-2024-07-18'
-#- 'llama-3.1-405b-reasoning'
 - 'llama-3.1-70b-versatile'
 - 'llama-3.1-8b-instant'
 - 'llama3-70b-8192'
@@ -18,6 +17,7 @@ models:
 - 'mistral-large-2407'
 - 'open-mistral-nemo-2407'
 - 'palm-2-chat-bison-32k'
+- 'google-translate'
 tasks:
 - name: 'br2fr'
   prompt: "Translate the following lines of Breton text to French. \

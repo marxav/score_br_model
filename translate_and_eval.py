@@ -6,6 +6,7 @@ import scores
 import usage
 import input_file
 from llms import anthropic, cohere, google, llama, mistral, openai, palm
+import google_translate
 import pandas as pd
 
 def save_results(config, model, task, translated_lines):
@@ -86,10 +87,15 @@ def get_translation(config, model, task, src_lines, dst_target_lines, verbose=Fa
     text_dst_predicted, total_tokens, price, error = palm.completion(config, model, prompt, text_src, text_dst_target)
   elif 'command-r' in model:
     text_dst_predicted, total_tokens, price, error = cohere.completion(config, model, prompt, text_src, text_dst_target)
+  elif 'google-translate' in model:
+    text_dst_predicted = google_translate.translate_text(config, text_src, verbose=True)
+    total_tokens = 0
+    price = 0.0
+    error = False
   else:
-      print(f'ERROR model {model} is not supported.')
-      error = True
-      return 'N/A', 0, 0, True
+    print(f'ERROR model {model} is not supported.')
+    error = True
+    return 'N/A', 0, 0, True
 
   if verbose:
     print('text_dst_predicted:', text_dst_predicted)

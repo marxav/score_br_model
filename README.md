@@ -14,7 +14,7 @@
   * [Meta](https://console.groq.com/docs/models): e.g. *llama-3.1-70b-versatile*, *llama-3.1-8b-instant*, *llama3-8b-8192*, *llama3-70b-8192*
   * [Mistral](https://docs.mistral.ai/getting-started/models/) *open-mistral-7b*, *mistral-large-latest*
   * [Cohere](https://docs.cohere.com/docs/models): e.g. *command-r-plus*
-  
+* In addition, *google-translate*, which is more than a LLM can also be tested  
 
 ## Requirements
 * Ubuntu OS
@@ -35,7 +35,7 @@
 * cd score_br_model
 * python3 -m venv env
 * source env/bin/activate
-* pip install openai pandas ipykernel tabulate google-generativeai anthropic groq mistralai cohere
+* pip install openai pandas ipykernel tabulate google-generativeai anthropic groq mistralai cohere jupyter google-cloud-translate
 * echo OPENAI_API_KEY=your-secret-key-1 >> .env
 * echo GOOGLE_API_KEY=your-secret-key-2 >> .env
 * echo ANTHROPIC_API_KEY=your-secret-key-3 >> .env
@@ -43,6 +43,13 @@
 * echo MISTRAL_API_KEY=your-secret-key-5 >> .env
 * echo COHERE_API_KEY=your-secret-key-6 >> .env
 * echo OPENROUTER_API_KEY=your-secret-key-7 >> .env
+* to test google-translate 
+ * log to https://console.cloud.google.com/ 
+   * Enable *Cloud Translation API*
+ * go to https://cloud.google.com/sdk/docs/install and install *gcloud CLI* on your machine
+ * and then 
+   * gcloud init
+   * gcloud auth application-default login
 
 ## Run
 * cd score_br_model
@@ -64,6 +71,7 @@
 | br2fr  | gpt-4o-2024-08-06          | 0.89 ± 0.1  |
 | br2fr  | llama-3.1-70b-versatile    | 0.84 ± 0.22 |
 | br2fr  | gemini-1.5-flash           | 0.82 ± 0.18 |
+| br2fr  | google-translate           | 0.82 ± 0.23 |
 | br2fr  | gpt-4o-mini-2024-07-18     | 0.81 ± 0.2  |
 | br2fr  | mistral-large-2407         | 0.78 ± 0.3  |
 | br2fr  | gpt-3.5-turbo-0125         | 0.77 ± 0.12 |
@@ -80,6 +88,7 @@
 | fr2br  | gpt-4o-2024-08-06          | 0.71 ± 0.15 |
 | fr2br  | llama-3.1-70b-versatile    | 0.7 ± 0.13  |
 | fr2br  | palm-2-chat-bison-32k      | 0.7 ± 0.19  |
+| fr2br  | google-translate           | 0.69 ± 0.14 |
 | fr2br  | claude-3-opus-20240229     | 0.68 ± 0.1  |
 | fr2br  | gemini-1.5-flash           | 0.68 ± 0.16 |
 | fr2br  | gemini-1.5-pro             | 0.67 ± 0.11 |
