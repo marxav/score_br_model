@@ -25,6 +25,7 @@
 * A MISTRAL_API_KEY (cf. [https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/))
 * A COHERE_API_KEY (cf. [https://dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys))
 * A OPENROUTER_API_KEY (cf. [https://openrouter.ai/keys](https://openrouter.ai/keys)) for Google Palm models
+* A GOOGLE_TRANSLATION_PROJECT_ID (cf. https://console.cloud.google.com/, assign a project to Cloud Translation API)
 * Only the OPENAI_API_KEY is mandatory given it is also needed for calculating the evaluation scores.
 * A mandatory source file of your choice (e.g. [samples_br.txt](samples_br.txt))
 * An optional target file of your choice (e.g. [samples_fr.txt](samples_fr.txt)). If not provided, evaluation will not be performed.
@@ -43,6 +44,7 @@
 * echo MISTRAL_API_KEY=your-secret-key-5 >> .env
 * echo COHERE_API_KEY=your-secret-key-6 >> .env
 * echo OPENROUTER_API_KEY=your-secret-key-7 >> .env
+* echo GOOGLE_TRANSLATION_PROJECT_ID=your-secret-gt-project-id >> .env
 * to test google-translate 
  * log to https://console.cloud.google.com/ 
    * Enable *Cloud Translation API*

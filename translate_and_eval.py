@@ -88,7 +88,7 @@ def get_translation(config, model, task, src_lines, dst_target_lines, verbose=Fa
   elif 'command-r' in model:
     text_dst_predicted, total_tokens, price, error = cohere.completion(config, model, prompt, text_src, text_dst_target)
   elif 'google-translate' in model:
-    text_dst_predicted = google_translate.translate_text(config, text_src, verbose=True)
+    text_dst_predicted = google_translate.translate_text(config, text_src, verbose=False)
     total_tokens = 0
     price = 0.0
     error = False
