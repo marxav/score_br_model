@@ -140,4 +140,4 @@
 * [tregor_2110_br.txt](/examples/peurunvan/tregor_2110_br.txt) is a sample of a text written by Gireg Konan (Le Tregor newspaper, n°2110, June 6th 2024).
 * [assimil_76_br.txt](/examples/etrerannyezhel/assimil_76_br.txt) is a sample of a text written by Fañch Morvannou (Le Breton sans peine Assimil book, 1990).
 * [maria_prat_br.txt](/examples/tregerieg/maria_prat_br.txt) is a sample of a text written by Maria Prat (Eun toullad kontadennou, Skol Uhel ar Vro, 1988).
-* [pipi_gonto_br.txt](/examples/tregerieg_pipi_gonto_br.txt) is a sample of a text written by Dir na dor (Pipi Gonto, E. Kemper, 1926).
+* [pipi_gonto_br.txt](/examples/tregerieg/pipi_gonto_br.txt) is a sample of a text written by Dir na dor (Pipi Gonto, E. Kemper, 1926).
