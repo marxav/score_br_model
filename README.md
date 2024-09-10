@@ -8,14 +8,14 @@
 * The evaluation produces a proximity *score* comparing the semantic distance of a text produced by an LLM with an expected text pre-written by a human evaluator.
 * The semantic distance is based on the proximity of OpenAI embeddings. 
 * Currently, the models from the following providers can be tested: 
-  * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*, *gpt-4o-mini-2024-07-18*
-  * [Google](https://ai.google.dev/gemini-api/docs/models/gemini) e.g. *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*, *palm-2-chat-bison-32k*
   * [Anthropic](https://docs.anthropic.com/en/docs/models-overview): e.g. *claude-3-5-sonnet-20240620*, *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
+  * [Cohere](https://docs.cohere.com/docs/models): e.g. *command-r-plus* 
+  * [Google](https://ai.google.dev/gemini-api/docs/models/gemini) e.g. *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*, *palm-2-chat-bison-32k*
+  * [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) e.g. *google-translate* (it is not strictly an LLM as other models (no prompt allowed), but can be tested nevertheless)
   * [Meta](https://console.groq.com/docs/models): e.g. *llama-3.1-70b-versatile*, *llama-3.1-8b-instant*, *llama3-8b-8192*, *llama3-70b-8192*
   * [Mistral](https://docs.mistral.ai/getting-started/models/) *open-mistral-7b*, *mistral-large-latest*
-  * [Cohere](https://docs.cohere.com/docs/models): e.g. *command-r-plus*
-* In addition, *google-translate*, which is more than a LLM can also be tested  
-
+  * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*, *gpt-4o-mini-2024-07-18*
+  
 ## Requirements
 * Ubuntu OS
 * An OPENAI_API_KEY (cf. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys))
