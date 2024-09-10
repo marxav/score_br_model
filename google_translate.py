@@ -7,14 +7,14 @@ location = "global"
 parent = f"projects/{project_id}/locations/{location}"
 
 
-# Initialize Translation client with translate API v3def translate_text(config, text_src, verbose=False):
+# Initialize Translation client with translate API v3
 def translate_text(config, text_src, verbose=False):
     task = config.tasks[0]
     source_language = task.name[0:2]
     target_language = task.name[3:5]
 
     # More info on Google Translate v3 API at
-    # https://cloud.google.com/translate/docs/advanced/translating-text-v3?hl=fr
+    # https://cloud.google.com/translate/docs/advanced/translating-text-v3
     results = ''
     for line in text_src.rstrip().split('\n'):
         if verbose:
