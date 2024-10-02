@@ -5,7 +5,7 @@ import pandas as pd
 import scores
 import usage
 import input_file
-from llms import anthropic, cohere, google, llama, mistral, openai, palm
+from llms import anthropic, cohere, google, llama, mistral, openai, openrouter 
 import google_translate
 import pandas as pd
 
@@ -73,7 +73,9 @@ def get_translation(config, model, task, src_lines, dst_target_lines, verbose=Fa
   
   error = False
 
-  if 'gpt' in model:
+  if '/' in model:
+    text_dst_predicted, total_tokens, price, error = openrouter.completion(config, model, prompt, text_src, text_dst_target)
+  elif 'gpt' in model:
     text_dst_predicted, total_tokens, price, error = openai.completion(config, model, prompt, text_src, text_dst_target)
   elif 'gemini' in model:
     text_dst_predicted, total_tokens, price, error = google.completion(config, model, prompt, text_src, text_dst_target)
@@ -83,8 +85,6 @@ def get_translation(config, model, task, src_lines, dst_target_lines, verbose=Fa
     text_dst_predicted, total_tokens, price, error = llama.completion(config, model, prompt, text_src, text_dst_target)
   elif 'mistral' in model:
     text_dst_predicted, total_tokens, price, error = mistral.completion(config, model, prompt, text_src, text_dst_target)
-  elif 'palm' in model:
-    text_dst_predicted, total_tokens, price, error = palm.completion(config, model, prompt, text_src, text_dst_target)
   elif 'command-r' in model:
     text_dst_predicted, total_tokens, price, error = cohere.completion(config, model, prompt, text_src, text_dst_target)
   elif 'google-translate' in model:
@@ -381,7 +381,9 @@ def get_output_file(config, model, task):
   # get the currrent date and time under the form YYYY-MM-DD-HH-MM-SS
   now = datetime.now()
   date_time = now.strftime("%Y%m%d@%H%M%S")
-   
+  # if OPENROUTER is used, then the model name contains a '/', so let's replace it by a '_'
+  if '/' in model:
+     model = model.replace('/', '_')
   # create the output file name
   output_file = filename + '_'+ target_lang + '_' + model + '_' + date_time + '.txt'
   
