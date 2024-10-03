@@ -61,31 +61,31 @@
 ## Results
 * The result file will contain something like :
 
-| task   | model                                         | score       |   score_rank |       price |   price_rank |
-|:-------|:----------------------------------------------|:------------|-------------:|------------:|-------------:|
-| br2fr  | openai/gpt-4-turbo-preview                    | 0.97 ± 0.05 |            1 | 0.00378     |          136 |
-| br2fr  | openai/gpt-4-vision-preview                   | 0.97 ± 0.05 |            2 | 0.00378     |          137 |
-| br2fr  | openai/gpt-4-1106-preview                     | 0.97 ± 0.05 |            3 | 0.00384     |          138 |
-| br2fr  | openai/gpt-4o:extended                        | 0.95 ± 0.07 |            6 | 0.001968    |          122 |
-| br2fr  | anthropic/claude-3-haiku                      | 0.95 ± 0.07 |            4 | 0.00017025  |           79 |
-| br2fr  | anthropic/claude-3-haiku:beta                 | 0.95 ± 0.07 |            5 | 0.00017025  |           80 |
-| br2fr  | anthropic/claude-3-opus                       | 0.95 ± 0.06 |            7 | 0.01029     |          140 |
-| br2fr  | anthropic/claude-3-opus:beta                  | 0.95 ± 0.07 |            8 | 0.01029     |          141 |
-| br2fr  | google/palm-2-chat-bison-32k                  | 0.94 ± 0.1  |            9 | 0.000304    |           93 |
-| br2fr  | openai/gpt-4o-2024-05-13                      | 0.93 ± 0.08 |           10 | 0.00161     |          120 |
-| br2fr  | openai/gpt-4-turbo                            | 0.93 ± 0.08 |           11 | 0.00366     |          135 |
-| br2fr  | openai/chatgpt-4o-latest                      | 0.92 ± 0.07 |           13 | 0.0017      |          121 |
-| br2fr  | openai/gpt-4o-2024-08-06                      | 0.92 ± 0.1  |           12 | 0.00094     |          114 |
-| br2fr  | anthropic/claude-3.5-sonnet                   | 0.92 ± 0.17 |           14 | 0.002073    |          124 |
-| br2fr  | anthropic/claude-3.5-sonnet:beta              | 0.92 ± 0.17 |           15 | 0.002073    |          125 |
-| br2fr  | openai/o1-preview-2024-09-12                  | 0.91 ± 0.1  |           16 | 0.117255    |          144 |
-| br2fr  | google/gemini-pro-1.5-exp                     | 0.9 ± 0.14  |           17 | 0           |            1 |
-| br2fr  | google/gemini-flash-1.5-exp                   | 0.89 ± 0.1  |           18 | 0           |            2 |
-| br2fr  | nousresearch/hermes-3-llama-3.1-405b:free     | 0.89 ± 0.15 |           19 | 0           |            3 |
-| br2fr  | perplexity/llama-3.1-sonar-huge-128k-online   | 0.89 ± 0.14 |           20 | 0.001095    |          116 |
-| br2fr  | anthropic/claude-3-sonnet                     | 0.89 ± 0.16 |           21 | 0.002073    |          126 |
-| br2fr  | anthropic/claude-3-sonnet:beta                | 0.89 ± 0.16 |           22 | 0.002073    |          127 |
-| br2fr  | google/gemini-pro-vision                      | 0.88 ± 0.12 |           23 | 0.0001775   |           83 |
+| task   | model                                         | score       |   s_rank |       price |   p_rank |
+|:-------|:----------------------------------------------|:------------|---------:|------------:|---------:|
+| br2fr  | openai/gpt-4-turbo-preview                    | 0.97 ± 0.05 |        1 | 0.00378     |      136 |
+| br2fr  | openai/gpt-4-vision-preview                   | 0.97 ± 0.05 |        2 | 0.00378     |      137 |
+| br2fr  | openai/gpt-4-1106-preview                     | 0.97 ± 0.05 |        3 | 0.00384     |      138 |
+| br2fr  | openai/gpt-4o:extended                        | 0.95 ± 0.07 |        6 | 0.001968    |      122 |
+| br2fr  | anthropic/claude-3-haiku                      | 0.95 ± 0.07 |        4 | 0.00017025  |       79 |
+| br2fr  | anthropic/claude-3-haiku:beta                 | 0.95 ± 0.07 |        5 | 0.00017025  |       80 |
+| br2fr  | anthropic/claude-3-opus                       | 0.95 ± 0.06 |        7 | 0.01029     |      140 |
+| br2fr  | anthropic/claude-3-opus:beta                  | 0.95 ± 0.07 |        8 | 0.01029     |      141 |
+| br2fr  | google/palm-2-chat-bison-32k                  | 0.94 ± 0.1  |        9 | 0.000304    |       93 |
+| br2fr  | openai/gpt-4o-2024-05-13                      | 0.93 ± 0.08 |       10 | 0.00161     |      120 |
+| br2fr  | openai/gpt-4-turbo                            | 0.93 ± 0.08 |       11 | 0.00366     |      135 |
+| br2fr  | openai/chatgpt-4o-latest                      | 0.92 ± 0.07 |       13 | 0.0017      |      121 |
+| br2fr  | openai/gpt-4o-2024-08-06                      | 0.92 ± 0.1  |       12 | 0.00094     |      114 |
+| br2fr  | anthropic/claude-3.5-sonnet                   | 0.92 ± 0.17 |       14 | 0.002073    |      124 |
+| br2fr  | anthropic/claude-3.5-sonnet:beta              | 0.92 ± 0.17 |       15 | 0.002073    |      125 |
+| br2fr  | openai/o1-preview-2024-09-12                  | 0.91 ± 0.1  |       16 | 0.117255    |      144 |
+| br2fr  | google/gemini-pro-1.5-exp                     | 0.9 ± 0.14  |       17 | 0           |        1 |
+| br2fr  | google/gemini-flash-1.5-exp                   | 0.89 ± 0.1  |       18 | 0           |        2 |
+| br2fr  | nousresearch/hermes-3-llama-3.1-405b:free     | 0.89 ± 0.15 |       19 | 0           |        3 |
+| br2fr  | perplexity/llama-3.1-sonar-huge-128k-online   | 0.89 ± 0.14 |       20 | 0.001095    |      116 |
+| br2fr  | anthropic/claude-3-sonnet                     | 0.89 ± 0.16 |       21 | 0.002073    |      126 |
+| br2fr  | anthropic/claude-3-sonnet:beta                | 0.89 ± 0.16 |       22 | 0.002073    |      127 |
+| br2fr  | google/gemini-pro-vision                      | 0.88 ± 0.12 |       23 | 0.0001775   |       83 |
 ...
 
 | task   | model                      | score       |
