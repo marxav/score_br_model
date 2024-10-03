@@ -16,7 +16,7 @@ models:
 - 'mistral-large-2402'
 - 'mistral-large-2407'
 - 'open-mistral-nemo-2407'
-- 'palm-2-chat-bison-32k'
+- 'google/palm-2-chat-bison-32k'
 - 'google-translate'
 tasks:
 - name: 'br2fr'
