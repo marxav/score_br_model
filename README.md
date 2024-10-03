@@ -15,7 +15,7 @@
   * [Mistral](https://docs.mistral.ai/getting-started/models/) *open-mistral-7b*, *mistral-large-latest*
   * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*, *gpt-4o-mini-2024-07-18*
 * The LLMs made available by [OpenRouter](https://openrouter.ai/docs/models) can also be tested: e.g. *openai/gpt-4-turbo-preview*, use or *openrouter/all* to test them all.
-* Althought [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) it is not strictly an LLM, it can be tested with *google-translate*
+* Although [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) it is not strictly an LLM, it can be tested with *google-translate*
   
 ## Requirements
 * Ubuntu OS
