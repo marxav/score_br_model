@@ -56,11 +56,10 @@
 ## Run
 * cd score_br_model
 * source env/bin/activate
-* python translate_and_eval.py samples.yaml 
+* python translate_and_eval.py samples_br.yaml 
 
 ## Results
-* The result file will contain something like :
-
+* The result file related to samples_br.yaml will contain something like :
 | task   | model                                         | score       |   s_rank |       price |   p_rank |
 |:-------|:----------------------------------------------|:------------|---------:|------------:|---------:|
 | br2fr  | openai/gpt-4-turbo-preview                    | 0.97 ± 0.05 |        1 | 0.00378     |      136 |
@@ -87,7 +86,7 @@
 | br2fr  | anthropic/claude-3-sonnet:beta                | 0.89 ± 0.16 |       22 | 0.002073    |      127 |
 | br2fr  | google/gemini-pro-vision                      | 0.88 ± 0.12 |       23 | 0.0001775   |       83 |
 ...
-
+* The result file related to samples_fr.yaml will contain something like :
 | task   | model                      | score       |
 |:-------|:---------------------------|:------------|
 | fr2br  | gpt-4-turbo-2024-04-09     | 0.73 ± 0.18 |
@@ -134,7 +133,7 @@
   * *HARM_CATEGORY_DANGEROUS_CONTENT*.
 
 ## Other information
-* Add the "virtual" '**openrouter/all**' model in the yaml file if you want to test all LLMs available at [OpenRouter.ai](https://openrouter.ai/api/v1/models)
+* Add the "virtual" **openrouter/all** model in the yaml file to test all LLMs available at [OpenRouter.ai](https://openrouter.ai/api/v1/models)
 * Instead of using this tool, you can manually use [LMSYS](https://chat.lmsys.org) (in the "Arena side-by-side" tab) to compare the results of 2 models
   * In the parameters, set *temperature=0.0* and *top_p=0.95*
   * For the *br2fr* task, input a [prompt](https://arxiv.org/pdf/2406.06608) like:
