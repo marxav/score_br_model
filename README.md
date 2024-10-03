@@ -7,25 +7,26 @@
   * *fr2br* (French to Breton translation)
 * The evaluation produces a proximity *score* comparing the semantic distance of a text produced by an LLM with an expected text pre-written by a human evaluator.
 * The semantic distance is based on the proximity of OpenAI embeddings. 
-* Currently, the models from the following providers can be tested: 
+* The LLMs of following providers can be tested: 
   * [Anthropic](https://docs.anthropic.com/en/docs/models-overview): e.g. *claude-3-5-sonnet-20240620*, *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
   * [Cohere](https://docs.cohere.com/docs/models): e.g. *command-r-plus* 
   * [Google](https://ai.google.dev/gemini-api/docs/models/gemini) e.g. *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*, *palm-2-chat-bison-32k*
-  * [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) e.g. *google-translate* (it is not strictly an LLM as other models (no prompt allowed), but can be tested nevertheless)
   * [Meta](https://console.groq.com/docs/models): e.g. *llama-3.1-70b-versatile*, *llama-3.1-8b-instant*, *llama3-8b-8192*, *llama3-70b-8192*
   * [Mistral](https://docs.mistral.ai/getting-started/models/) *open-mistral-7b*, *mistral-large-latest*
   * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*, *gpt-4o-mini-2024-07-18*
+* The LLMs made available by [OpenRouter](https://openrouter.ai/docs/models) can also be tested: e.g. *openai/gpt-4-turbo-preview*, use or *openrouter/all* to test them all.
+* Althought [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) it is not strictly an LLM, it can be tested with *google-translate*
   
 ## Requirements
 * Ubuntu OS
 * An OPENAI_API_KEY (cf. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys))
-* A GOOGLE_API_KEY (cf. [(https://ai.google.dev/gemini-api/docs/api-key](https://ai.google.dev/gemini-api/docs/api-key))
-* An ANTHROPIC_API_KEY (cf. [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys))
-* A GROQ_API_KEY (cf. [https://console.groq.com/keys](https://console.groq.com/keys)) for Llama models
-* A MISTRAL_API_KEY (cf. [https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/))
-* A COHERE_API_KEY (cf. [https://dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys))
-* A OPENROUTER_API_KEY (cf. [https://openrouter.ai/keys](https://openrouter.ai/keys)) for Google Palm models
-* A GOOGLE_TRANSLATION_PROJECT_ID (cf. https://console.cloud.google.com/, assign a project to Cloud Translation API)
+* An optional GOOGLE_API_KEY (cf. [(https://ai.google.dev/gemini-api/docs/api-key](https://ai.google.dev/gemini-api/docs/api-key))
+* An optional ANTHROPIC_API_KEY (cf. [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys))
+* An optional GROQ_API_KEY (cf. [https://console.groq.com/keys](https://console.groq.com/keys)) for Llama models
+* An optional MISTRAL_API_KEY (cf. [https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/))
+* An optional COHERE_API_KEY (cf. [https://dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys))
+* An optional OPENROUTER_API_KEY (cf. [https://openrouter.ai/keys](https://openrouter.ai/keys)) for models reachable via OpenRouter
+* An optional GOOGLE_TRANSLATION_PROJECT_ID (cf. https://console.cloud.google.com/, assign a project to Cloud Translation API)
 * Only the OPENAI_API_KEY is mandatory given it is also needed for calculating the evaluation scores.
 * A mandatory source file of your choice (e.g. [samples_br.txt](samples_br.txt))
 * An optional target file of your choice (e.g. [samples_fr.txt](samples_fr.txt)). If not provided, evaluation will not be performed.
@@ -136,7 +137,6 @@
   * *HARM_CATEGORY_DANGEROUS_CONTENT*.
 
 ## Other information
-* Add the "virtual" **openrouter/all** model in the yaml file to test all LLMs available at [OpenRouter.ai](https://openrouter.ai/api/v1/models)
 * Instead of using this tool, you can manually use [LMSYS](https://chat.lmsys.org) (in the "Arena side-by-side" tab) to compare the results of 2 models
   * In the parameters, set *temperature=0.0* and *top_p=0.95*
   * For the *br2fr* task, input a [prompt](https://arxiv.org/pdf/2406.06608) like:
