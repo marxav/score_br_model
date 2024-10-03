@@ -1,134 +1,890 @@
 task	model	src	target	prediction	score	price	n_tokens	src_n_words
-br2fr	claude-3-5-sonnet-20240620	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.999998898845364	0.00194582	286.0	5
-br2fr	claude-3-5-sonnet-20240620	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	0.00194556	284.0	5
-br2fr	claude-3-5-sonnet-20240620	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999998778765278	0.00194764	300.0	10
-br2fr	claude-3-5-sonnet-20240620	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999989967816104	0.00194582	286.0	5
-br2fr	claude-3-5-sonnet-20240620	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bouleau noir, bouleau blanc, chaque chèvre aime son chevreau	0.784208764307515	0.00194907	311.0	10
-br2fr	claude-3-5-sonnet-20240620	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle maison dans la paroisse	0.5388415736585466	0.00194621	289.0	5
-br2fr	claude-3-5-sonnet-20240620	Kazi echu eo	C'est presque fini	C'est presque fini	1.000000049504444	0.00194556	284.0	3
-br2fr	claude-3-opus-20240229	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.0102468199999999	293.0	5
-br2fr	claude-3-opus-20240229	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	0.0102465599999999	291.0	5
-br2fr	claude-3-opus-20240229	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8629061550308437	0.01024838	305.0	10
-br2fr	claude-3-opus-20240229	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999999898938214	0.0102468199999999	293.0	5
-br2fr	claude-3-opus-20240229	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son chevreau	0.969455558667644	0.0102502	319.0	10
-br2fr	claude-3-opus-20240229	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel remue-ménage dans la paroisse	0.8429453690238649	0.0102477299999999	300.0	5
-br2fr	claude-3-opus-20240229	Kazi echu eo	C'est presque fini	C'est presque fini	1.000000049504444	0.0102465599999999	291.0	3
-br2fr	command-r-plus	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989455363806	0.00153482	241.0	5
-br2fr	command-r-plus	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est un grand voleur	0.5617403686630261	0.00153495	242.0	5
-br2fr	command-r-plus	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne passez pas votre temps à attendre les réponses	0.6199051825307966	0.00153638	253.0	10
-br2fr	command-r-plus	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.88304006599279	0.00153482	241.0	5
-br2fr	command-r-plus	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Œil noir, œil blanc, chaque corbeau aime son œil	0.6212910447344195	0.00153768	263.0	10
-br2fr	command-r-plus	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle est la différence entre la prison et le cercueil ?	0.1542699315399652	0.00153599	250.0	5
-br2fr	command-r-plus	Kazi echu eo	C'est presque fini	Le travail est terminé	0.5947573934007442	0.00153443	238.0	3
-br2fr	gemini-1.5-flash	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.00016382	222.0	5
-br2fr	gemini-1.5-flash	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	0.0001635599999999	220.0	5
-br2fr	gemini-1.5-flash	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8625883713846358	0.00016538	234.0	10
-br2fr	gemini-1.5-flash	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829411092399535	0.00016382	222.0	5
-br2fr	gemini-1.5-flash	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque chèvre aime son foin	0.7700039350171766	0.0001661599999999	240.0	10
-br2fr	gemini-1.5-flash	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel bruit dans la salle	0.4632507262238808	0.00016408	224.0	5
-br2fr	gemini-1.5-flash	Kazi echu eo	C'est presque fini	Presque fini	0.8203801398828275	0.0001632999999999	218.0	3
-br2fr	gemini-1.5-pro	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.00178682	233.0	5
-br2fr	gemini-1.5-pro	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999989242023936	0.00178656	231.0	5
-br2fr	gemini-1.5-pro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999998778765278	0.00178864	247.0	10
-br2fr	gemini-1.5-pro	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999989967816104	0.00178682	233.0	5
-br2fr	gemini-1.5-pro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaque chèvre aime la sienne	0.8138662717496296	0.00178955	254.0	10
-br2fr	gemini-1.5-pro	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel bordel dans la grange	0.6584815313771101	0.00178708	235.0	5
-br2fr	gemini-1.5-pro	Kazi echu eo	C'est presque fini	C'est presque fini	1.000000049504444	0.00178656	231.0	3
-br2fr	gemini-1.0-pro	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.00018332	235.0	5
-br2fr	gemini-1.0-pro	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987440201544	0.00018306	233.0	5
-br2fr	gemini-1.0-pro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8625883713846358	0.00018488	247.0	10
-br2fr	gemini-1.0-pro	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.88304006599279	0.00018332	235.0	5
-br2fr	gemini-1.0-pro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	1.0000000993620994	0.0001864399999999	259.0	10
-br2fr	gemini-1.0-pro	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans la grange	0.68511701070496	0.00018384	239.0	5
-br2fr	gemini-1.0-pro	Kazi echu eo	C'est presque fini	C'est presque fini	1.000000049504444	0.00018306	233.0	3
-br2fr	gpt-3.5-turbo-0125	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8678428712288855	0.00017706	233.0	5
-br2fr	gpt-3.5-turbo-0125	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est toujours grand	0.6813382544844215	0.00017706	233.0	5
-br2fr	gpt-3.5-turbo-0125	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne restez pas en attente je vous donnerai les réponses	0.6836404340959747	0.00017914	249.0	10
-br2fr	gpt-3.5-turbo-0125	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999999898938214	0.00017732	235.0	5
-br2fr	gpt-3.5-turbo-0125	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque chèvre aime sa montagne	0.76513773296508	0.0001796599999999	253.0	10
-br2fr	gpt-3.5-turbo-0125	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le bourg	0.7312591054543194	0.00017784	239.0	5
-br2fr	gpt-3.5-turbo-0125	Kazi echu eo	C'est presque fini	C'est fini	0.6717841623457212	0.0001768	231.0	3
-br2fr	gpt-4-turbo-2024-04-09	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.00366182	240.0	5
-br2fr	gpt-4-turbo-2024-04-09	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	0.00366156	238.0	5
-br2fr	gpt-4-turbo-2024-04-09	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999998778765278	0.00366364	254.0	10
-br2fr	gpt-4-turbo-2024-04-09	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8828766193778345	0.00366182	240.0	5
-br2fr	gpt-4-turbo-2024-04-09	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son petit	0.8890696073844557	0.00366468	262.0	10
-br2fr	gpt-4-turbo-2024-04-09	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle agitation dans la paroisse	0.8488194004983405	0.00366221	243.0	5
-br2fr	gpt-4-turbo-2024-04-09	Kazi echu eo	C'est presque fini	Presque fini	0.8203801398828275	0.0036613	236.0	3
-br2fr	gpt-4o-2024-05-13	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.00164182	222.0	5
-br2fr	gpt-4o-2024-05-13	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	0.00164156	220.0	5
-br2fr	gpt-4o-2024-05-13	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999998778765278	0.00164364	236.0	10
-br2fr	gpt-4o-2024-05-13	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.88304006599279	0.00164182	222.0	5
-br2fr	gpt-4o-2024-05-13	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soit noir, soit blanc, chaque chèvre aime son lait	0.833196688267094	0.00164442	242.0	10
-br2fr	gpt-4o-2024-05-13	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle pagaille dans la paroisse	1.0000000396955353	0.00164234	226.0	5
-br2fr	gpt-4o-2024-05-13	Kazi echu eo	C'est presque fini	C'est presque fini	0.999999055630328	0.00164156	220.0	3
-br2fr	gpt-4o-2024-08-06	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.00092182	217.0	5
-br2fr	gpt-4o-2024-08-06	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	0.00092156	215.0	5
-br2fr	gpt-4o-2024-08-06	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente que je vous donne les réponses	0.8419865545062165	0.00092377	232.0	10
-br2fr	gpt-4o-2024-08-06	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.88304006599279	0.00092182	217.0	5
-br2fr	gpt-4o-2024-08-06	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir ou blanc, chaque chèvre aime son lait	0.8202407232618841	0.00092416	235.0	10
-br2fr	gpt-4o-2024-08-06	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le village	0.7488501742399021	0.00092221	220.0	5
-br2fr	gpt-4o-2024-08-06	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991621502377	0.00092156	215.0	3
-br2fr	gpt-4o-mini-2024-07-18	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	5.882e-05	220.0	5
-br2fr	gpt-4o-mini-2024-07-18	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	5.8559999999999995e-05	218.0	5
-br2fr	gpt-4o-mini-2024-07-18	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente, je vous donnerai les réponses	0.7183854087890352	6.09e-05	236.0	10
-br2fr	gpt-4o-mini-2024-07-18	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était douce	0.717291900624534	5.868999999999999e-05	219.0	5
-br2fr	gpt-4o-mini-2024-07-18	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Sois noir, sois blanc, chaque chèvre aime son maître	0.8147534863036392	6.154999999999999e-05	241.0	10
-br2fr	gpt-4o-mini-2024-07-18	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel soulagement dans le brouhaha	0.4470377006196069	5.947e-05	225.0	5
-br2fr	gpt-4o-mini-2024-07-18	Kazi echu eo	C'est presque fini	C'est presque fini	1.000000049504444	5.8559999999999995e-05	218.0	3
-br2fr	llama-3.1-70b-versatile	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677220236658232	0.00016385	263.0	5
-br2fr	llama-3.1-70b-versatile	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	1.0000000921029892	0.00016385	263.0	5
-br2fr	llama-3.1-70b-versatile	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8625723388493862	0.00016567	277.0	10
-br2fr	llama-3.1-70b-versatile	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999999898938214	0.00016411	265.0	5
-br2fr	llama-3.1-70b-versatile	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaque chèvre aime son maître	0.8030561432844882	0.00016684	286.0	10
-br2fr	llama-3.1-70b-versatile	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle queue a-t-elle dans la baratte	0.3535165831073532	0.00016489	271.0	5
-br2fr	llama-3.1-70b-versatile	Kazi echu eo	C'est presque fini	C'est presque fini	1.000000049504444	0.00016385	263.0	3
-br2fr	llama-3.1-8b-instant	C'hoant am eus da ganañ	J'ai envie de chanter	C'est agréable d'avoir joué	0.3345948329330303	0.00016292	266.0	5
-br2fr	llama-3.1-8b-instant	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est plus grand	0.7584375564520804	0.00016227	261.0	5
-br2fr	llama-3.1-8b-instant	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Vous ne recevrez pas de réponse immédiatement	0.5427867697254292	0.00016409	275.0	10
-br2fr	llama-3.1-8b-instant	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était cassée	0.8565424837775573	0.0001624	262.0	5
-br2fr	llama-3.1-8b-instant	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Vous êtes noir, vous êtes blanc, chaque personne aime son choix	0.594102476496757	0.0001648699999999	281.0	10
-br2fr	llama-3.1-8b-instant	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque tare est dans le brouillard	0.3532743378346088	0.00016318	268.0	5
-br2fr	llama-3.1-8b-instant	Kazi echu eo	C'est presque fini	C'est fini	0.6717841623457212	0.00016201	259.0	3
-br2fr	llama3-70b-8192	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.867768821510618	0.00014594	234.0	5
-br2fr	llama3-70b-8192	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	0.00014594	234.0	5
-br2fr	llama3-70b-8192	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas en vain la réponse de Dieu	0.4994524059057916	0.00014776	248.0	10
-br2fr	llama3-70b-8192	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999999898938214	0.0001462	236.0	5
-br2fr	llama3-70b-8192	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaque chevreuil aime son destin	0.7209880034558513	0.0001487999999999	256.0	10
-br2fr	llama3-70b-8192	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose dans le fourré	0.3700004077670442	0.00014659	239.0	5
-br2fr	llama3-70b-8192	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991316358624	0.00014594	234.0	3
-br2fr	mistral-large-2402	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.867768821510618	0.00162156	263.0	5
-br2fr	mistral-large-2402	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand maintenant	0.774076890200607	0.00162156	263.0	5
-br2fr	mistral-large-2402	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas trop pressé d'attendre vos réponses	0.6134234934135449	0.0016237699999999	280.0	10
-br2fr	mistral-large-2402	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa vie était bien remplie	0.4320845349838939	0.0016216899999999	264.0	5
-br2fr	mistral-large-2402	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir un jour, blanc un jour, chaque personne aime son tour	0.5655228034306532	0.0016242899999999	284.0	10
-br2fr	mistral-large-2402	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Plusieurs familles dans le village	0.3997605974238115	0.00162208	267.0	5
-br2fr	mistral-large-2402	Kazi echu eo	C'est presque fini	Le chat est parti	0.3292144791097504	0.0016213	261.0	3
-br2fr	mistral-large-2407	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.00135182	280.0	5
-br2fr	mistral-large-2407	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381972	0.00135156	278.0	5
-br2fr	mistral-large-2407	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente, je vous donnerai les réponses	0.7183854087890352	0.0013539	296.0	10
-br2fr	mistral-large-2407	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999990344940995	0.00135182	280.0	5
-br2fr	mistral-large-2407	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il y a des noirs, il y a des blancs, chaque géant aime sa pierre	0.5294525526809176	0.0013552	306.0	10
-br2fr	mistral-large-2407	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Combien de trous dans la barbe	0.2410126372739545	0.00135221	283.0	5
-br2fr	mistral-large-2407	Kazi echu eo	C'est presque fini	C'est presque fini	0.999999055630328	0.00135156	278.0	3
-br2fr	open-mistral-nemo-2407	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	6.242e-05	216.0	5
-br2fr	open-mistral-nemo-2407	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est trop grand	0.7826852080429635	6.216e-05	214.0	5
-br2fr	open-mistral-nemo-2407	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne m'attendez pas pour avoir les réponses	0.7947709376608889	6.385e-05	227.0	10
-br2fr	open-mistral-nemo-2407	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était grave	0.7912910489257308	6.216e-05	214.0	5
-br2fr	open-mistral-nemo-2407	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir ou blanc, chaque homme aime sa femme	0.6156817890502888	6.437e-05	231.0	10
-br2fr	open-mistral-nemo-2407	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque tiale dans le bar	0.3282235196705116	6.267999999999999e-05	218.0	5
-br2fr	open-mistral-nemo-2407	Kazi echu eo	C'est presque fini	Le travail est terminé	0.5947573934007442	6.203e-05	213.0	3
-br2fr	palm-2-chat-bison-32k	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	1.82e-06	244.0	5
-br2fr	palm-2-chat-bison-32k	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999984292886628	1.56e-06	242.0	5
-br2fr	palm-2-chat-bison-32k	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999745491696252	3.64e-06	258.0	10
-br2fr	palm-2-chat-bison-32k	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829119776065637	1.82e-06	244.0	5
-br2fr	palm-2-chat-bison-32k	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	1.0000000993620994	4.94e-06	268.0	10
-br2fr	palm-2-chat-bison-32k	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle pagaille dans la grange	0.7203932187115348	2.21e-06	247.0	5
-br2fr	palm-2-chat-bison-32k	Kazi echu eo	C'est presque fini	C'est presque fini	1.000000049504444	1.56e-06	242.0	3
-br2fr	google-translate	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8678428712288853	1.5599999999999999e-06	12.0	5
-br2fr	google-translate	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999788381984	1.5599999999999999e-06	12.0	5
-br2fr	google-translate	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999750924750028	3.64e-06	28.0	10
-br2fr	google-translate	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8830400659927896	1.82e-06	14.0	5
-br2fr	google-translate	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo noir, bezo blanc, chaque chèvre aime le sien	0.7827377554973183	4.55e-06	35.0	10
-br2fr	google-translate	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle tiala dans le barrouz	0.33098975173241074	2.47e-06	19.0	5
-br2fr	google-translate	Kazi echu eo	C'est presque fini	C&#39;est presque fini	0.9253109282530059	1.95e-06	15.0	3
+br2fr	google-translate	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677790076953431	0.0	12.0	5
+br2fr	google-translate	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987555031802	0.0	12.0	5
+br2fr	google-translate	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.999974833718022	0.0	28.0	10
+br2fr	google-translate	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829946269557152	0.0	14.0	5
+br2fr	google-translate	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo noir, bezo blanc, chaque chèvre aime le sien	0.7827133624875651	0.0	35.0	10
+br2fr	google-translate	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle tiala dans la paroisse	0.5232953871195465	0.0	19.0	5
+br2fr	google-translate	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0	12.0	3
+br2fr	liquid/lfm-40b	C'hoant am eus da ganañ	J'ai envie de chanter	Nous avons envie de manger	0.4768939012277927	0.0	270.0	5
+br2fr	liquid/lfm-40b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand et fort	0.7889315719316066	0.0	269.0	5
+br2fr	liquid/lfm-40b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous inquiétez pas, nous répondrons à vos questions	0.4752967612114222	0.0	285.0	10
+br2fr	liquid/lfm-40b	E vouezh a oa gouraouliet	Sa voix était enrouée	Il était autrefois un grand guerrier	0.3284197494073951	0.0	272.0	5
+br2fr	liquid/lfm-40b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir et blanc, chaque vache a son caractère	0.5682555499554893	0.0	287.0	10
+br2fr	liquid/lfm-40b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque tala est dans le barrouz	0.2998279249234754	0.0	275.0	5
+br2fr	liquid/lfm-40b	Kazi echu eo	C'est presque fini	L'affaire est close	0.4944662525508784	0.0	267.0	3
+br2fr	liquid/lfm-40b:free	C'hoant am eus da ganañ	J'ai envie de chanter	Nous avons envie de manger	0.4768842354780365	0.0	270.0	5
+br2fr	liquid/lfm-40b:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand et fort	0.7889315719316066	0.0	269.0	5
+br2fr	liquid/lfm-40b:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous inquiétez pas, nous répondrons à vos questions	0.4752967612114222	0.0	285.0	10
+br2fr	liquid/lfm-40b:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Il était autrefois un grand guerrier	0.3284197494073951	0.0	272.0	5
+br2fr	liquid/lfm-40b:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir et blanc, chaque vache a son caractère	0.5682403801968987	0.0	287.0	10
+br2fr	liquid/lfm-40b:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque tala est dans le barrouz	0.2998279249234754	0.0	275.0	5
+br2fr	liquid/lfm-40b:free	Kazi echu eo	C'est presque fini	L'affaire est close	0.4945276936847556	0.0	267.0	3
+br2fr	thedrummer/rocinante-12b	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999990629888408	6.825e-05	228.0	5
+br2fr	thedrummer/rocinante-12b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.999999951884648	6.825e-05	226.0	5
+br2fr	thedrummer/rocinante-12b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne m'attendez pas pour les réponses	0.730504611995165	6.825e-05	238.0	10
+br2fr	thedrummer/rocinante-12b	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était grave	0.7912152190355151	6.825e-05	226.0	5
+br2fr	thedrummer/rocinante-12b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Sois noir, sois blanc, chaque homme aime sa femme	0.6161599355177134	6.825e-05	246.0	10
+br2fr	thedrummer/rocinante-12b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque fois dans le bar	0.297144475157978	6.825e-05	229.0	5
+br2fr	thedrummer/rocinante-12b	Kazi echu eo	C'est presque fini	Le travail est terminé	0.594811887511114	6.825e-05	225.0	3
+br2fr	eva-unit-01/eva-qwen-2.5-14b	C'hoant am eus da ganañ	J'ai envie de chanter	C'est un grand plaisir de vous parler	0.3256538813811861	7.075e-05	234.0	5
+br2fr	eva-unit-01/eva-qwen-2.5-14b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le temps est très beau	0.3257118419619844	7.075e-05	230.0	5
+br2fr	eva-unit-01/eva-qwen-2.5-14b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je n'ai pas beaucoup de réponses pour vous	0.5155340526008056	7.075e-05	243.0	10
+br2fr	eva-unit-01/eva-qwen-2.5-14b	E vouezh a oa gouraouliet	Sa voix était enrouée	Je suis très fatigué	0.2935926856419507	7.075e-05	232.0	5
+br2fr	eva-unit-01/eva-qwen-2.5-14b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, un enfant est assis sur le banc	0.3103849833245505	7.075e-05	252.0	10
+br2fr	eva-unit-01/eva-qwen-2.5-14b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Je suis allé à la boulangerie	0.2547163306479718	7.075e-05	238.0	5
+br2fr	eva-unit-01/eva-qwen-2.5-14b	Kazi echu eo	C'est presque fini	Je suis arrivé	0.352627640462761	7.075e-05	229.0	3
+br2fr	anthracite-org/magnum-v2-72b	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux vivre	0.5781822536794283	0.00084225	225.0	5
+br2fr	anthracite-org/magnum-v2-72b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le temps est loin	0.3083998684367097	0.00084225	223.0	5
+br2fr	anthracite-org/magnum-v2-72b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à obtenir rapidement les réponses attendues	0.720704965243602	0.00084225	241.0	10
+br2fr	anthracite-org/magnum-v2-72b	E vouezh a oa gouraouliet	Sa voix était enrouée	Vous êtes des rêveurs	0.1481831756054653	0.00084225	227.0	5
+br2fr	anthracite-org/magnum-v2-72b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque chien garde son os	0.5522605114770778	0.00084225	244.0	10
+br2fr	anthracite-org/magnum-v2-72b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Priez pour le monde	0.3280293839394501	0.00084225	228.0	5
+br2fr	anthracite-org/magnum-v2-72b	Kazi echu eo	C'est presque fini	C'est ainsi	0.3970990198102709	0.00084225	222.0	3
+br2fr	meta-llama/llama-3.2-3b-instruct:free	C'hoant am eus da ganañ	J'ai envie de chanter	Je n'ai pas faim	0.4111875814239379	0.0	237.0	5
+br2fr	meta-llama/llama-3.2-3b-instruct:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Il y a beaucoup de fleurs	0.3174630788944527	0.0	237.0	5
+br2fr	meta-llama/llama-3.2-3b-instruct:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	On ne voit pas le bout de la réponse	0.3971028255267234	0.0	248.0	10
+br2fr	meta-llama/llama-3.2-3b-instruct:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Les voix sont étranges	0.4453664930425772	0.0	238.0	5
+br2fr	meta-llama/llama-3.2-3b-instruct:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Deux, deux, chaque homme a son chien	0.4470096063038938	0.0	254.0	10
+br2fr	meta-llama/llama-3.2-3b-instruct:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Le peuple est fatigué de parler de la guerre	0.2205197202711649	0.0	246.0	5
+br2fr	meta-llama/llama-3.2-3b-instruct:free	Kazi echu eo	C'est presque fini	J'ai fini	0.5880262492748115	0.0	234.0	3
+br2fr	meta-llama/llama-3.2-90b-vision-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677790076953431	8.24e-05	238.0	5
+br2fr	meta-llama/llama-3.2-90b-vision-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999988051360856	8.24e-05	238.0	5
+br2fr	meta-llama/llama-3.2-90b-vision-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8628568167758508	8.24e-05	252.0	10
+br2fr	meta-llama/llama-3.2-90b-vision-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999990159895182	8.24e-05	240.0	5
+br2fr	meta-llama/llama-3.2-90b-vision-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaque chèvre aime son maître	0.8030369308962527	8.24e-05	261.0	10
+br2fr	meta-llama/llama-3.2-90b-vision-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle queue dans le trou	0.4249266043500528	8.24e-05	241.0	5
+br2fr	meta-llama/llama-3.2-90b-vision-instruct	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	8.24e-05	238.0	3
+br2fr	google-translate	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677790076953431	0.0	12.0	5
+br2fr	google-translate	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999983566066726	0.0	12.0	5
+br2fr	google-translate	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999999716328034	0.0	28.0	10
+br2fr	google-translate	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829946269557152	0.0	14.0	5
+br2fr	google-translate	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo noir, bezo blanc, chaque chèvre aime le sien	0.782906725493947	0.0	35.0	10
+br2fr	google-translate	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle tiala dans le barrouz	0.3309097222559022	0.0	19.0	5
+br2fr	google-translate	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0	12.0	3
+br2fr	meta-llama/llama-3.2-11b-vision-instruct:free	C'hoant am eus da ganañ	J'ai envie de chanter	C'est agréable de jouer	0.3994725579950199	0.0	249.0	5
+br2fr	meta-llama/llama-3.2-11b-vision-instruct:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est plus grand que l'ours	0.5955432767629087	0.0	251.0	5
+br2fr	meta-llama/llama-3.2-11b-vision-instruct:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous faites pas attendre, vous recevrez des réponses	0.622681742064927	0.0	264.0	10
+br2fr	meta-llama/llama-3.2-11b-vision-instruct:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était cassée	0.8565316885752869	0.0	248.0	5
+br2fr	meta-llama/llama-3.2-11b-vision-instruct:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Vous êtes noir, vous êtes blanc, chaque jour aime son ménage	0.5464314291200587	0.0	269.0	10
+br2fr	meta-llama/llama-3.2-11b-vision-instruct:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle tare est-il dans le barreau	0.3245992727335467	0.0	254.0	5
+br2fr	meta-llama/llama-3.2-11b-vision-instruct:free	Kazi echu eo	C'est presque fini	C'est fini	0.6718437744623016	0.0	245.0	3
+br2fr	qwen/qwen-2.5-72b-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	Cela même est à gagner	0.2679584562212743	8.529999999999999e-05	247.0	5
+br2fr	qwen/qwen-2.5-72b-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chi est grand aussi	0.5056157513204065	8.529999999999999e-05	244.0	5
+br2fr	qwen/qwen-2.5-72b-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne doit-on pas être attentif aux réponses possibles	0.4297276646885509	8.529999999999999e-05	259.0	10
+br2fr	qwen/qwen-2.5-72b-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	En vieil âge, il était respecté	0.3543114109737756	8.529999999999999e-05	250.0	5
+br2fr	qwen/qwen-2.5-72b-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir dehors, blanc dedans, chaque veau a sa mère	0.5907364485521194	8.529999999999999e-05	269.0	10
+br2fr	qwen/qwen-2.5-72b-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Peu importe le lieu où l'on se trouve	0.2306158915176826	8.529999999999999e-05	253.0	5
+br2fr	qwen/qwen-2.5-72b-instruct	Kazi echu eo	C'est presque fini	Cas échéant	0.2872921324060908	8.529999999999999e-05	243.0	3
+br2fr	qwen/qwen-2-vl-72b-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	C'est bon de chanter	0.6657722491221728	8.84e-05	234.0	5
+br2fr	qwen/qwen-2-vl-72b-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand et fort	0.7889315719316066	8.84e-05	234.0	5
+br2fr	qwen/qwen-2-vl-72b-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il ne peut pas rester en attente pour les réponses	0.4387942434132357	8.84e-05	248.0	10
+br2fr	qwen/qwen-2-vl-72b-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	Il est toujours impatient	0.2834033096452527	8.84e-05	232.0	5
+br2fr	qwen/qwen-2-vl-72b-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque cheval a sa couleur	0.5611851826899973	8.84e-05	251.0	10
+br2fr	qwen/qwen-2-vl-72b-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Peut-être que le temps passe sur le pont	0.1966211684476221	8.84e-05	240.0	5
+br2fr	qwen/qwen-2-vl-72b-instruct	Kazi echu eo	C'est presque fini	C'est sûr	0.4207472978220303	8.84e-05	230.0	3
+br2fr	openai/o1-mini-2024-09-12	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999990334682634	0.013707	1277.0	5
+br2fr	openai/o1-mini-2024-09-12	Ar c'hi zo bras awalc'h	Le chien est assez grand	Les boucs sont très gros	0.4588450938756083	0.013707	1275.0	5
+br2fr	openai/o1-mini-2024-09-12	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Vous ne mourrez pas en souffrant, ils vous donneront les réponses	0.5367959762319178	0.013707	1294.0	10
+br2fr	openai/o1-mini-2024-09-12	E vouezh a oa gouraouliet	Sa voix était enrouée	La langue était laborieuse	0.4618972442248248	0.013707	1276.0	5
+br2fr	openai/o1-mini-2024-09-12	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Beaucoup de noir, beaucoup de blanc, chaque bouc aime ton âme	0.5793973754478561	0.013707	1298.0	10
+br2fr	openai/o1-mini-2024-09-12	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Un coup de pied dans le brouillard	0.3287236484870007	0.013707	1281.0	5
+br2fr	openai/o1-mini-2024-09-12	Kazi echu eo	C'est presque fini	La maison est finie	0.5500596393160895	0.013707	1274.0	3
+br2fr	openai/o1-preview-2024-09-12	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.117255	2089.0	5
+br2fr	openai/o1-preview-2024-09-12	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.999999951884648	0.117255	2087.0	5
+br2fr	openai/o1-preview-2024-09-12	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8627982644850273	0.117255	2101.0	10
+br2fr	openai/o1-preview-2024-09-12	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.117255	2089.0	5
+br2fr	openai/o1-preview-2024-09-12	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soit noire, soit blanche, chaque chèvre aime son beurre	0.8123579969596113	0.117255	2111.0	10
+br2fr	openai/o1-preview-2024-09-12	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le village	0.7489203546967327	0.117255	2092.0	5
+br2fr	openai/o1-preview-2024-09-12	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991547517866	0.117255	2087.0	3
+br2fr	mistralai/pixtral-12b	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	2.17e-05	231.0	5
+br2fr	mistralai/pixtral-12b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est trop grand	0.7827681063332136	2.17e-05	229.0	5
+br2fr	mistralai/pixtral-12b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente, nous vous donnerons les réponses	0.666108378266555	2.17e-05	247.0	10
+br2fr	mistralai/pixtral-12b	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999991494767806	2.17e-05	231.0	5
+br2fr	mistralai/pixtral-12b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Sera noir, sera blanc, chaque jour aime sa tête	0.5556604509953239	2.17e-05	248.0	10
+br2fr	mistralai/pixtral-12b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pépite de talus dans le barbouillage	0.3060096269091836	2.17e-05	238.0	5
+br2fr	mistralai/pixtral-12b	Kazi echu eo	C'est presque fini	Le travail est terminé	0.5947380236427289	2.17e-05	228.0	3
+br2fr	cohere/command-r-plus-08-2024	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999988750820898	0.000985625	234.0	5
+br2fr	cohere/command-r-plus-08-2024	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chemin est très long	0.3513223548237891	0.000985625	231.0	5
+br2fr	cohere/command-r-plus-08-2024	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne restez pas à attendre, je vous donnerai les réponses	0.701130359981788	0.000985625	249.0	10
+br2fr	cohere/command-r-plus-08-2024	E vouezh a oa gouraouliet	Sa voix était enrouée	Dans son cœur il était triste	0.4803526002170375	0.000985625	235.0	5
+br2fr	cohere/command-r-plus-08-2024	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque homme aime sa femme	0.5784000600623619	0.000985625	249.0	10
+br2fr	cohere/command-r-plus-08-2024	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel silence dans la forêt	0.3494069361088876	0.000985625	236.0	5
+br2fr	cohere/command-r-plus-08-2024	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.000985625	232.0	3
+br2fr	cohere/command-r-08-2024	C'hoant am eus da ganañ	J'ai envie de chanter	J'aime à chanter	0.7822959265536213	6.255750000000001e-05	239.0	5
+br2fr	cohere/command-r-08-2024	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chat est très gros	0.5259092173179267	6.255750000000001e-05	237.0	5
+br2fr	cohere/command-r-08-2024	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous inquiétez pas, je n'attends pas vos réponses	0.6409309988948158	6.255750000000001e-05	258.0	10
+br2fr	cohere/command-r-08-2024	E vouezh a oa gouraouliet	Sa voix était enrouée	Il faisait très sombre	0.4446295569260957	6.255750000000001e-05	239.0	5
+br2fr	cohere/command-r-08-2024	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il faut être noir, il faut être blanc, chaque homme a son opinion	0.5450800526607316	6.255750000000001e-05	260.0	10
+br2fr	cohere/command-r-08-2024	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Combien de fois dans la tempête	0.3335385570311477	6.255750000000001e-05	243.0	5
+br2fr	cohere/command-r-08-2024	Kazi echu eo	C'est presque fini	C'est une chose terrible	0.4029088538741732	6.255750000000001e-05	237.0	3
+br2fr	google/gemini-flash-8b-1.5-exp	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.999998804380662	0.0	232.0	5
+br2fr	google/gemini-flash-8b-1.5-exp	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446772891128588	0.0	230.0	5
+br2fr	google/gemini-flash-8b-1.5-exp	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas, je vous donnerai les réponses	0.7201754476888002	0.0	245.0	10
+br2fr	google/gemini-flash-8b-1.5-exp	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était forte	0.7011293827435627	0.0	230.0	5
+br2fr	google/gemini-flash-8b-1.5-exp	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il y aura du noir, il y aura du blanc, chaque chèvre aime sa laine	0.7297322656601537	0.0	257.0	10
+br2fr	google/gemini-flash-8b-1.5-exp	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel chemin à travers la campagne	0.3308538830824898	0.0	235.0	5
+br2fr	google/gemini-flash-8b-1.5-exp	Kazi echu eo	C'est presque fini	Le travail est terminé	0.594811887511114	0.0	229.0	3
+br2fr	sao10k/l3.1-euryale-70b	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux réussir	0.5113982850967296	0.0	12.0	5
+br2fr	sao10k/l3.1-euryale-70b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Elle est assez grande	0.619421705067438	0.0	11.0	5
+br2fr	sao10k/l3.1-euryale-70b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne vois pas un truc qui m'empêche de répondre à tes questions	0.4347754635943492	0.0	33.0	10
+br2fr	sao10k/l3.1-euryale-70b	E vouezh a oa gouraouliet	Sa voix était enrouée	La voix était hurlée	0.6013823980307231	0.0	13.0	5
+br2fr	sao10k/l3.1-euryale-70b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il y a du rouge, il y a du blanc, chaque cheval aime sa couleur	0.5789118320342612	0.0	37.0	10
+br2fr	sao10k/l3.1-euryale-70b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quand même dans les parcs	0.3069840004218755	0.0	16.0	5
+br2fr	sao10k/l3.1-euryale-70b	Kazi echu eo	C'est presque fini	C'est fini	0.6718437744623016	0.0	10.0	3
+br2fr	google/gemini-flash-1.5-exp	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.0	227.0	5
+br2fr	google/gemini-flash-1.5-exp	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.999999951884648	0.0	225.0	5
+br2fr	google/gemini-flash-1.5-exp	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8628908724463629	0.0	239.0	10
+br2fr	google/gemini-flash-1.5-exp	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8830132668544426	0.0	227.0	5
+br2fr	google/gemini-flash-1.5-exp	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Sera noir, sera blanc, chaque chèvre aime sa broussaille	0.7698782947461551	0.0	249.0	10
+br2fr	google/gemini-flash-1.5-exp	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le village	0.7489203546967327	0.0	230.0	5
+br2fr	google/gemini-flash-1.5-exp	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0	225.0	3
+br2fr	ai21/jamba-1-5-large	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999988789175304	0.0008719999999999	255.0	5
+br2fr	ai21/jamba-1-5-large	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez gros	0.9225241868191996	0.0008719999999999	253.0	5
+br2fr	ai21/jamba-1-5-large	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.862917347960426	0.0008719999999999	267.0	10
+br2fr	ai21/jamba-1-5-large	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était ensoleillée	0.639493709901831	0.0008719999999999	256.0	5
+br2fr	ai21/jamba-1-5-large	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Que de bruit dans la foule	0.2462203261583087	0.0008719999999999	268.0	10
+br2fr	ai21/jamba-1-5-large	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle joie dans le bazar	0.4900612676183601	0.0008719999999999	258.0	5
+br2fr	ai21/jamba-1-5-large	Kazi echu eo	C'est presque fini	C'est fini	0.6718437744623016	0.0008719999999999	251.0	3
+br2fr	ai21/jamba-1-5-mini	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677750282530973	6e-05	250.0	5
+br2fr	ai21/jamba-1-5-mini	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chat est trop gros	0.464524972502953	6e-05	249.0	5
+br2fr	ai21/jamba-1-5-mini	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je n'attends pas les réponses de vous	0.6597159725071725	6e-05	263.0	10
+br2fr	ai21/jamba-1-5-mini	E vouezh a oa gouraouliet	Sa voix était enrouée	Elle était très jolie	0.4435707130286277	6e-05	251.0	5
+br2fr	ai21/jamba-1-5-mini	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque chevreau suit sa mère	0.7062673410210496	6e-05	270.0	10
+br2fr	ai21/jamba-1-5-mini	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel mystère dans le grenier	0.4102993114100424	6e-05	255.0	5
+br2fr	ai21/jamba-1-5-mini	Kazi echu eo	C'est presque fini	Il est complètement fou	0.3022813554184632	6e-05	250.0	3
+br2fr	nousresearch/hermes-3-llama-3.1-70b	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.867804549140385	9.08e-05	239.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-70b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999986697054312	9.08e-05	239.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-70b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8628224129272499	9.08e-05	253.0	10
+br2fr	nousresearch/hermes-3-llama-3.1-70b	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999990927297074	9.08e-05	241.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-70b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaque chèvre aime sa manière	0.79087898517058	9.08e-05	261.0	10
+br2fr	nousresearch/hermes-3-llama-3.1-70b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle queue dans le bâton	0.4349292482982265	9.08e-05	244.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-70b	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991547517866	9.08e-05	239.0	3
+br2fr	nousresearch/hermes-3-llama-3.1-405b:free	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.0	14.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-405b:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.999999951884648	0.0	12.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-405b:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne m'attendez pas pour vous donner les réponses	0.8551999926385572	0.0	26.0	10
+br2fr	nousresearch/hermes-3-llama-3.1-405b:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.0	14.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-405b:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Brebis noires, brebis blanches, chaque chèvre aime son agneau	0.7988137275452517	0.0	38.0	10
+br2fr	nousresearch/hermes-3-llama-3.1-405b:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le placard	0.5859464746699277	0.0	18.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-405b:free	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991116843492	0.0	12.0	3
+br2fr	nousresearch/hermes-3-llama-3.1-405b:extended	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.0	14.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-405b:extended	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.999999951884648	0.0	12.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-405b:extended	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne m'attendez pas pour vous donner les réponses	0.8551923669479917	0.0	26.0	10
+br2fr	nousresearch/hermes-3-llama-3.1-405b:extended	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.0	14.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-405b:extended	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	À brebis tondue, Dieu mesure le vent	0.3683129510771056	0.0	31.0	10
+br2fr	nousresearch/hermes-3-llama-3.1-405b:extended	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le placard	0.5859336119132583	0.0	18.0	5
+br2fr	nousresearch/hermes-3-llama-3.1-405b:extended	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991547517866	0.0	12.0	3
+br2fr	perplexity/llama-3.1-sonar-huge-128k-online	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.999998832765696	0.001095	233.0	5
+br2fr	perplexity/llama-3.1-sonar-huge-128k-online	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987453480422	0.001095	231.0	5
+br2fr	perplexity/llama-3.1-sonar-huge-128k-online	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente que nous vous donnions les réponses	0.7704991975832967	0.001095	249.0	10
+br2fr	perplexity/llama-3.1-sonar-huge-128k-online	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8830163550521856	0.001095	233.0	5
+br2fr	perplexity/llama-3.1-sonar-huge-128k-online	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son agneau	0.940567072296666	0.001095	256.0	10
+br2fr	perplexity/llama-3.1-sonar-huge-128k-online	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le grenier	0.6361011646261809	0.001095	237.0	5
+br2fr	perplexity/llama-3.1-sonar-huge-128k-online	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.001095	231.0	3
+br2fr	openai/chatgpt-4o-latest	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.999998735618303	0.0017	226.0	5
+br2fr	openai/chatgpt-4o-latest	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999983566066726	0.0017	224.0	5
+br2fr	openai/chatgpt-4o-latest	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente que je vous donne les réponses	0.8421154054803257	0.0017	241.0	10
+br2fr	openai/chatgpt-4o-latest	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829946269557152	0.0017	226.0	5
+br2fr	openai/chatgpt-4o-latest	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soit noir, soit blanc, chaque chèvre aime son lait	0.8330717086005434	0.0017	246.0	10
+br2fr	openai/chatgpt-4o-latest	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans la paroisse	0.8891652027288933	0.0017	231.0	5
+br2fr	openai/chatgpt-4o-latest	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0017	224.0	3
+br2fr	sao10k/l3-lunaris-8b	C'hoant am eus da ganañ	J'ai envie de chanter	Cela me plaît de chanter	0.7360685833260336	0.0005499999999999	290.0	5
+br2fr	sao10k/l3-lunaris-8b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chat est grand, mais faible	0.4926830772476832	0.0005499999999999	289.0	5
+br2fr	sao10k/l3-lunaris-8b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Vous ne le laissez pas attendre vos réponses	0.5904600759353211	0.0005499999999999	300.0	10
+br2fr	sao10k/l3-lunaris-8b	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était éteinte	0.7366233605459104	0.0005499999999999	289.0	5
+br2fr	sao10k/l3-lunaris-8b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque goutte aime son destin	0.5506407974465758	0.0005499999999999	309.0	10
+br2fr	sao10k/l3-lunaris-8b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chacun est dans son baril	0.3434863499204651	0.0005499999999999	292.0	5
+br2fr	sao10k/l3-lunaris-8b	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0005499999999999	287.0	3
+br2fr	aetherwiing/mn-starcannon-12b	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.999998735618303	0.000448	238.0	5
+br2fr	aetherwiing/mn-starcannon-12b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est trop gros	0.6963044101425168	0.000448	236.0	5
+br2fr	aetherwiing/mn-starcannon-12b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne m'attendez pas pour avoir les réponses	0.7983499817563766	0.000448	249.0	10
+br2fr	aetherwiing/mn-starcannon-12b	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829946269557152	0.000448	238.0	5
+br2fr	aetherwiing/mn-starcannon-12b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soit noir, soit blanc, chaque homme aime son âme	0.636491973947402	0.000448	256.0	10
+br2fr	aetherwiing/mn-starcannon-12b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque goutte de pluie dans le verre	0.253439868996734	0.000448	246.0	5
+br2fr	aetherwiing/mn-starcannon-12b	Kazi echu eo	C'est presque fini	Le travail est fini	0.6137494297436362	0.000448	235.0	3
+br2fr	openai/gpt-4o-2024-08-06	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999942176072	0.00094	219.0	5
+br2fr	openai/gpt-4o-2024-08-06	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999983566066726	0.00094	217.0	5
+br2fr	openai/gpt-4o-2024-08-06	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.999974833718022	0.00094	233.0	10
+br2fr	openai/gpt-4o-2024-08-06	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8830329686174521	0.00094	219.0	5
+br2fr	openai/gpt-4o-2024-08-06	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir ou blanc, chaque chèvre aime son lait	0.820359757257844	0.00094	237.0	10
+br2fr	openai/gpt-4o-2024-08-06	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le village	0.7489203546967327	0.00094	222.0	5
+br2fr	openai/gpt-4o-2024-08-06	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.00094	217.0	3
+br2fr	nothingiisreal/mn-celeste-12b	C'hoant am eus da ganañ	J'ai envie de chanter	J'aimerais chanter	0.8351814002243428	0.0003315	234.0	5
+br2fr	nothingiisreal/mn-celeste-12b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446772891128588	0.0003315	233.0	5
+br2fr	nothingiisreal/mn-celeste-12b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne m'attendez pas à ce que je vous donne les réponses	0.940017604482349	0.0003315	250.0	10
+br2fr	nothingiisreal/mn-celeste-12b	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était grave	0.7912152190355151	0.0003315	233.0	5
+br2fr	nothingiisreal/mn-celeste-12b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Être noir, être blanc, chaque rencontre qu'elle aime	0.5494745139322239	0.0003315	253.0	10
+br2fr	nothingiisreal/mn-celeste-12b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Peu importe la taille du bar	0.1891872317206769	0.0003315	238.0	5
+br2fr	nothingiisreal/mn-celeste-12b	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0003315	233.0	3
+br2fr	google-translate	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677920336922743	0.0	12.0	5
+br2fr	google-translate	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999984774596895	0.0	12.0	5
+br2fr	google-translate	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999999716328034	0.0	28.0	10
+br2fr	google-translate	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8830114857988389	0.0	14.0	5
+br2fr	google-translate	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo noir, bezo blanc, chaque chèvre aime le sien	0.7829030569945641	0.0	35.0	10
+br2fr	google-translate	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle tiala dans la paroisse	0.5232953871195465	0.0	19.0	5
+br2fr	google-translate	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0	12.0	3
+br2fr	google/gemini-pro-1.5-exp	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.0	233.0	5
+br2fr	google/gemini-pro-1.5-exp	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0	231.0	5
+br2fr	google/gemini-pro-1.5-exp	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999999716328034	0.0	247.0	10
+br2fr	google/gemini-pro-1.5-exp	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829687791618215	0.0	233.0	5
+br2fr	google/gemini-pro-1.5-exp	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son petit	0.8787133747789264	0.0	257.0	10
+br2fr	google/gemini-pro-1.5-exp	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel bordel dans la brouette	0.5990886211790004	0.0	236.0	5
+br2fr	google/gemini-pro-1.5-exp	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991319592778	0.0	231.0	3
+br2fr	perplexity/llama-3.1-sonar-large-128k-online	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999990211020526	0.00020899999999999998	223.0	5
+br2fr	perplexity/llama-3.1-sonar-large-128k-online	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.00020899999999999998	221.0	5
+br2fr	perplexity/llama-3.1-sonar-large-128k-online	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas, je vous donnerai les réponses	0.7210715201453002	0.00020899999999999998	236.0	10
+br2fr	perplexity/llama-3.1-sonar-large-128k-online	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999991873594223	0.00020899999999999998	223.0	5
+br2fr	perplexity/llama-3.1-sonar-large-128k-online	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Chaque vache aime son maître	0.6067472387521622	0.00020899999999999998	236.0	10
+br2fr	perplexity/llama-3.1-sonar-large-128k-online	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel type de fromage est dans le fromage?	0.17211668454880258	0.00020899999999999998	230.0	5
+br2fr	perplexity/llama-3.1-sonar-large-128k-online	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.00020899999999999998	221.0	3
+br2fr	perplexity/llama-3.1-sonar-large-128k-chat	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677750282530973	0.00022799999999999999	240.0	5
+br2fr	perplexity/llama-3.1-sonar-large-128k-chat	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999986129197107	0.00022799999999999999	240.0	5
+br2fr	perplexity/llama-3.1-sonar-large-128k-chat	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8628568167758508	0.00022799999999999999	254.0	10
+br2fr	perplexity/llama-3.1-sonar-large-128k-chat	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999990944734138	0.00022799999999999999	242.0	5
+br2fr	perplexity/llama-3.1-sonar-large-128k-chat	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son maître	0.8892833880470792	0.00022799999999999999	265.0	10
+br2fr	perplexity/llama-3.1-sonar-large-128k-chat	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose dans le sac	0.3038614738375017	0.00022799999999999999	244.0	5
+br2fr	perplexity/llama-3.1-sonar-large-128k-chat	Kazi echu eo	C'est presque fini	C'est presque fini	0.999998984653037	0.00022799999999999999	240.0	3
+br2fr	perplexity/llama-3.1-sonar-small-128k-online	C'hoant am eus da ganañ	J'ai envie de chanter	Je voudrais chanter	0.8322588461285855	4.2e-05	223.0	5
+br2fr	perplexity/llama-3.1-sonar-small-128k-online	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand	0.8627868848461777	4.2e-05	221.0	5
+br2fr	perplexity/llama-3.1-sonar-small-128k-online	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à des réponses de ma part	0.7456100990051293	4.2e-05	236.0	10
+br2fr	perplexity/llama-3.1-sonar-small-128k-online	E vouezh a oa gouraouliet	Sa voix était enrouée	Ma voix est cassée	0.6533762981454295	4.2e-05	223.0	5
+br2fr	perplexity/llama-3.1-sonar-small-128k-online	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque jour aime son ménage	0.5370974769299572	4.2e-05	244.0	10
+br2fr	perplexity/llama-3.1-sonar-small-128k-online	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque tâche est dans le barrouz	0.3105618536886573	4.2e-05	230.0	5
+br2fr	perplexity/llama-3.1-sonar-small-128k-online	Kazi echu eo	C'est presque fini	C'est fini	0.671756212933867	4.2e-05	220.0	3
+br2fr	perplexity/llama-3.1-sonar-small-128k-chat	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis content de pouvoir le faire	0.42260860874779155	4.68e-05	248.0	5
+br2fr	perplexity/llama-3.1-sonar-small-128k-chat	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est plus grand que moi	0.740869784879438	4.68e-05	248.0	5
+br2fr	perplexity/llama-3.1-sonar-small-128k-chat	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne des réponses	0.9488071977502481	4.68e-05	262.0	10
+br2fr	perplexity/llama-3.1-sonar-small-128k-chat	E vouezh a oa gouraouliet	Sa voix était enrouée	Mon voix était cassée	0.7355841774774028	4.68e-05	247.0	5
+br2fr	perplexity/llama-3.1-sonar-small-128k-chat	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque jour aime son ménage	0.5388276540471536	4.68e-05	268.0	10
+br2fr	perplexity/llama-3.1-sonar-small-128k-chat	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle tâche est-elle dans le barrouz ?	0.3063043557078364	4.68e-05	257.0	5
+br2fr	perplexity/llama-3.1-sonar-small-128k-chat	Kazi echu eo	C'est presque fini	C'est fini	0.6718437744623016	4.68e-05	244.0	3
+br2fr	meta-llama/llama-3.1-70b-instruct:free	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677790076953431	0.0	258.0	5
+br2fr	meta-llama/llama-3.1-70b-instruct:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0	258.0	5
+br2fr	meta-llama/llama-3.1-70b-instruct:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que nous vous donnions les réponses	0.7925748135325634	0.0	273.0	10
+br2fr	meta-llama/llama-3.1-70b-instruct:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999990125718783	0.0	260.0	5
+br2fr	meta-llama/llama-3.1-70b-instruct:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaque chèvre aime son maître	0.8029433210482959	0.0	281.0	10
+br2fr	meta-llama/llama-3.1-70b-instruct:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle queue dans le trou	0.42492660435005286	0.0	261.0	5
+br2fr	meta-llama/llama-3.1-70b-instruct:free	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0	258.0	3
+br2fr	meta-llama/llama-3.1-8b-instruct:free	C'hoant am eus da ganañ	J'ai envie de chanter	C'est agréable de jouer	0.39947255799501996	0.0	244.0	5
+br2fr	meta-llama/llama-3.1-8b-instruct:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est plus grand que l'ours	0.5955432767629087	0.0	246.0	5
+br2fr	meta-llama/llama-3.1-8b-instruct:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce qu'il vous réponde	0.6864252741905308	0.0	256.0	10
+br2fr	meta-llama/llama-3.1-8b-instruct:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était cassée	0.8564580504856998	0.0	243.0	5
+br2fr	meta-llama/llama-3.1-8b-instruct:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Vous êtes noir, vous êtes blanc, chaque jour aime son ménage	0.546401374855725	0.0	264.0	10
+br2fr	meta-llama/llama-3.1-8b-instruct:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle tare est-il dans le barreau	0.3245812609898058	0.0	249.0	5
+br2fr	meta-llama/llama-3.1-8b-instruct:free	Kazi echu eo	C'est presque fini	C'est fini	0.6718437744623016	0.0	240.0	3
+br2fr	meta-llama/llama-3.1-405b-instruct:free	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.0	265.0	5
+br2fr	meta-llama/llama-3.1-405b-instruct:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0	263.0	5
+br2fr	meta-llama/llama-3.1-405b-instruct:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en train d'attendre que je vous donne les réponses	0.828804954828859	0.0	283.0	10
+br2fr	meta-llama/llama-3.1-405b-instruct:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829946269557152	0.0	265.0	5
+br2fr	meta-llama/llama-3.1-405b-instruct:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir ou blanc, chaque chèvre aime son foin	0.8039888673245909	0.0	283.0	10
+br2fr	meta-llama/llama-3.1-405b-instruct:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel vacarme dans le boucan	0.5456334945548185	0.0	268.0	5
+br2fr	meta-llama/llama-3.1-405b-instruct:free	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0	263.0	3
+br2fr	mistralai/mistral-nemo	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999993293113552	2.652e-05	218.0	5
+br2fr	mistralai/mistral-nemo	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446772891128588	2.652e-05	216.0	5
+br2fr	mistralai/mistral-nemo	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne m'attendez pas pour recevoir les réponses	0.7424478698664783	2.652e-05	230.0	10
+br2fr	mistralai/mistral-nemo	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était grave	0.7912152190355151	2.652e-05	216.0	5
+br2fr	mistralai/mistral-nemo	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir ou blanc, chaque cheval aime sa jument	0.6568174595276383	2.652e-05	235.0	10
+br2fr	mistralai/mistral-nemo	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque paille dans la barbe	0.3602854824063084	2.652e-05	221.0	5
+br2fr	mistralai/mistral-nemo	Kazi echu eo	C'est presque fini	Le travail est terminé	0.594811887511114	2.652e-05	215.0	3
+br2fr	openai/gpt-4o-mini-2024-07-18	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999990120038931	5.6999999999999996e-05	220.0	5
+br2fr	openai/gpt-4o-mini-2024-07-18	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987555031802	5.6999999999999996e-05	218.0	5
+br2fr	openai/gpt-4o-mini-2024-07-18	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente, je vous donnerai les réponses	0.7187189997467931	5.6999999999999996e-05	236.0	10
+br2fr	openai/gpt-4o-mini-2024-07-18	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était douce	0.717371937107453	5.6999999999999996e-05	219.0	5
+br2fr	openai/gpt-4o-mini-2024-07-18	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Sois noir, sois blanc, chaque chèvre aime son maître	0.814720285466874	5.6999999999999996e-05	241.0	10
+br2fr	openai/gpt-4o-mini-2024-07-18	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel soulagement dans le brouhaha	0.4470124785029892	5.6999999999999996e-05	225.0	5
+br2fr	openai/gpt-4o-mini-2024-07-18	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	5.6999999999999996e-05	218.0	3
+br2fr	qwen/qwen-2-7b-instruct:free	C'hoant am eus da ganañ	J'ai envie de chanter	Je n'ai pas envie	0.5186409205214941	0.0	247.0	5
+br2fr	qwen/qwen-2-7b-instruct:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Tu es mon bras droit	0.21404408478865655	0.0	245.0	5
+br2fr	qwen/qwen-2-7b-instruct:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il faut que je fasse un travail de réponse à l'appel	0.3367614978903027	0.0	262.0	10
+br2fr	qwen/qwen-2-7b-instruct:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Et je vais faire un travail de cuisine	0.19675914740688555	0.0	249.0	5
+br2fr	qwen/qwen-2-7b-instruct:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Beaucoup de travail, beaucoup de bonheur, peur du vent et de la mer	0.22846470324354495	0.0	272.0	10
+br2fr	qwen/qwen-2-7b-instruct:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Je préfère aller à la boucherie au marché	0.26494228922585167	0.0	255.0	5
+br2fr	qwen/qwen-2-7b-instruct:free	Kazi echu eo	C'est presque fini	C'est fini maintenant	0.661374796956676	0.0	245.0	3
+br2fr	alpindale/magnum-72b	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux vivre pour gagner	0.446908218282413	0.0009255000000000001	247.0	5
+br2fr	alpindale/magnum-72b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le ciel est large et ouvert	0.37396297596547873	0.0009255000000000001	246.0	5
+br2fr	alpindale/magnum-72b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne craignez pas de vous souvenir des réponses d'antan	0.43852605495581876	0.0009255000000000001	260.0	10
+br2fr	alpindale/magnum-72b	E vouezh a oa gouraouliet	Sa voix était enrouée	Je veux être un explorateur	0.14035745058880225	0.0009255000000000001	246.0	5
+br2fr	alpindale/magnum-72b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir et blanc, chaque cheval a sa crinière	0.49683513200546014	0.0009255000000000001	264.0	10
+br2fr	alpindale/magnum-72b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Priez pour la paix dans le monde	0.3008741684466505	0.0009255000000000001	251.0	5
+br2fr	alpindale/magnum-72b	Kazi echu eo	C'est presque fini	C'est ainsi que c'est	0.3957927742838542	0.0009255000000000001	244.0	3
+br2fr	nousresearch/hermes-2-theta-llama-3-8b	C'hoant am eus da ganañ	J'ai envie de chanter	Je voudrais chanter	0.8322588461285855	0.0001063125	240.0	5
+br2fr	nousresearch/hermes-2-theta-llama-3-8b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est plus grand	0.7585112232330797	0.0001063125	239.0	5
+br2fr	nousresearch/hermes-2-theta-llama-3-8b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Vous n'attendez pas encore les réponses de vous	0.5989359845222603	0.0001063125	253.0	10
+br2fr	nousresearch/hermes-2-theta-llama-3-8b	E vouezh a oa gouraouliet	Sa voix était enrouée	Votre voix était égarée	0.584441020736918	0.0001063125	241.0	5
+br2fr	nousresearch/hermes-2-theta-llama-3-8b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque grain d'amour que j'aime	0.516242130819317	0.0001063125	263.0	10
+br2fr	nousresearch/hermes-2-theta-llama-3-8b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque tige dans le buisson	0.2783961757548111	0.0001063125	244.0	5
+br2fr	nousresearch/hermes-2-theta-llama-3-8b	Kazi echu eo	C'est presque fini	C'est fini	0.6718437744623016	0.0001063125	237.0	3
+br2fr	ai21/jamba-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677850046528677	0.0001434	272.0	5
+br2fr	ai21/jamba-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est trop gros	0.6963044101425168	0.0001434	272.0	5
+br2fr	ai21/jamba-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je n'attends pas les réponses de vous	0.6595551610220273	0.0001434	285.0	10
+br2fr	ai21/jamba-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	Elle était très en colère	0.5226551042238087	0.0001434	274.0	5
+br2fr	ai21/jamba-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque chèvre a son bouc	0.7475868424076738	0.0001434	292.0	10
+br2fr	ai21/jamba-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle place dans le brouillard	0.362606097220296	0.0001434	277.0	5
+br2fr	ai21/jamba-instruct	Kazi echu eo	C'est presque fini	Presque fini	0.8204510166723444	0.0001434	270.0	3
+br2fr	anthropic/claude-3.5-sonnet	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999988750820898	0.002073	293.0	5
+br2fr	anthropic/claude-3.5-sonnet	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987617128854	0.002073	291.0	5
+br2fr	anthropic/claude-3.5-sonnet	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9998274155029935	0.002073	307.0	10
+br2fr	anthropic/claude-3.5-sonnet	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.002073	293.0	5
+br2fr	anthropic/claude-3.5-sonnet	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son chevreau	0.9694503502786551	0.002073	319.0	10
+br2fr	anthropic/claude-3.5-sonnet	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle maison en ruine dans la paroisse	0.5250982582823545	0.002073	299.0	5
+br2fr	anthropic/claude-3.5-sonnet	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991319592778	0.002073	291.0	3
+br2fr	anthropic/claude-3.5-sonnet:beta	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.002073	293.0	5
+br2fr	anthropic/claude-3.5-sonnet:beta	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999988051360857	0.002073	291.0	5
+br2fr	anthropic/claude-3.5-sonnet:beta	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.999998740614291	0.002073	307.0	10
+br2fr	anthropic/claude-3.5-sonnet:beta	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999989924992311	0.002073	293.0	5
+br2fr	anthropic/claude-3.5-sonnet:beta	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son chevreau	0.9694503502786551	0.002073	319.0	10
+br2fr	anthropic/claude-3.5-sonnet:beta	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle maison en ruine dans la paroisse	0.5250812717774557	0.002073	299.0	5
+br2fr	anthropic/claude-3.5-sonnet:beta	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.002073	291.0	3
+br2fr	sao10k/l3-euryale-70b	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux que cela réussisse	0.46081204086176714	0.0	14.0	5
+br2fr	sao10k/l3-euryale-70b	Ar c'hi zo bras awalc'h	Le chien est assez grand	C'est si grave, si lourd	0.2537538730285587	0.0	14.0	5
+br2fr	sao10k/l3-euryale-70b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne vois pas d'attente dans les réponses de Dieu	0.48074105966385355	0.0	29.0	10
+br2fr	sao10k/l3-euryale-70b	E vouezh a oa gouraouliet	Sa voix était enrouée	Et tu es gourmand	0.23453362167986364	0.0	13.0	5
+br2fr	sao10k/l3-euryale-70b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Quelque soit noir, quelque soit blanc, j'aime ce garçon-là comme moi	0.5636047129925043	0.0	39.0	10
+br2fr	sao10k/l3-euryale-70b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Peu importe l'endroit sous le casque	0.2086105880042699	0.0	21.0	5
+br2fr	sao10k/l3-euryale-70b	Kazi echu eo	C'est presque fini	Ça y est	0.5435106143952168	0.0	10.0	3
+br2fr	cognitivecomputations/dolphin-mixtral-8x22b	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999990211020526	0.0	14.0	5
+br2fr	cognitivecomputations/dolphin-mixtral-8x22b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très gros	0.7886446981470248	0.0	12.0	5
+br2fr	cognitivecomputations/dolphin-mixtral-8x22b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attends pas trop longtemps pour les réponses	0.5481510164755086	0.0	26.0	10
+br2fr	cognitivecomputations/dolphin-mixtral-8x22b	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était douce	0.717371937107453	0.0	13.0	5
+br2fr	cognitivecomputations/dolphin-mixtral-8x22b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir et blanc, chaque oiseau aime son nid	0.6007924709181758	0.0	31.0	10
+br2fr	cognitivecomputations/dolphin-mixtral-8x22b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Combien de proies à l'intérieur des barreaux	0.24085936051892773	0.0	22.0	5
+br2fr	cognitivecomputations/dolphin-mixtral-8x22b	Kazi echu eo	C'est presque fini	La chasse est terminée	0.46581947607397245	0.0	12.0	3
+br2fr	qwen/qwen-2-72b-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	On ne peut jamais gagner	0.20544551902002822	8.335999999999999e-05	247.0	5
+br2fr	qwen/qwen-2-72b-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le temps est toujours en avance	0.2368754207232295	8.335999999999999e-05	247.0	5
+br2fr	qwen/qwen-2-72b-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne craignez jamais d'attendre pour les réponses appropriées	0.5496529607103099	8.335999999999999e-05	263.0	10
+br2fr	qwen/qwen-2-72b-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	On peut être étonné	0.24335418585047272	8.335999999999999e-05	247.0	5
+br2fr	qwen/qwen-2-72b-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque chien garde son os	0.5521927565852667	8.335999999999999e-05	265.0	10
+br2fr	qwen/qwen-2-72b-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Prenez soin d'ici, au-delà de la colline	0.3100869560711478	8.335999999999999e-05	258.0	5
+br2fr	qwen/qwen-2-72b-instruct	Kazi echu eo	C'est presque fini	C'est ainsi que ça se passe	0.3980545179857521	8.335999999999999e-05	247.0	3
+br2fr	nousresearch/hermes-2-pro-llama-3-8b	C'hoant am eus da ganañ	J'ai envie de chanter	Souhaitant que vous vouliez gagner	0.3597926125402032	3.2760000000000005e-05	251.0	5
+br2fr	nousresearch/hermes-2-pro-llama-3-8b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand premier	0.6407920859355922	3.2760000000000005e-05	246.0	5
+br2fr	nousresearch/hermes-2-pro-llama-3-8b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il n'y a pas de place pour attendre vos réponses de vous	0.5664118766724632	3.2760000000000005e-05	263.0	10
+br2fr	nousresearch/hermes-2-pro-llama-3-8b	E vouezh a oa gouraouliet	Sa voix était enrouée	Son voix était abîmée	0.8043166916936724	3.2760000000000005e-05	249.0	5
+br2fr	nousresearch/hermes-2-pro-llama-3-8b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Nous sommes bleu et blanc, chaque chapeau nous aime	0.45577571261503097	3.2760000000000005e-05	266.0	10
+br2fr	nousresearch/hermes-2-pro-llama-3-8b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chacun des deux poteaux	0.22114976943266543	3.2760000000000005e-05	251.0	5
+br2fr	nousresearch/hermes-2-pro-llama-3-8b	Kazi echu eo	C'est presque fini	C'est fini pour Kazi	0.4613267945106354	3.2760000000000005e-05	247.0	3
+br2fr	mistralai/mistral-7b-instruct-v0.3	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis venu pour gagner	0.3842723626429594	1.5675e-05	299.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.3	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ici, je tiens la main gauche	0.23179072400024103	1.5675e-05	300.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.3	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Nous avons été surpris et trouvés en train de répondre aux questions d'un interrogatoire	0.30879217535000064	1.5675e-05	319.0	10
+br2fr	mistralai/mistral-7b-instruct-v0.3	E vouezh a oa gouraouliet	Sa voix était enrouée	Et vous êtes ici pour nous observer	0.17555471142203313	1.5675e-05	299.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.3	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Dehors, dehors, un homme vieux et un jeune homme sont en train de parler	0.2677141246169352	1.5675e-05	324.0	10
+br2fr	mistralai/mistral-7b-instruct-v0.3	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Il y a des choses à faire	0.2892123576907897	1.5675e-05	301.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.3	Kazi echu eo	C'est presque fini	J'ai fait ce que je devais faire	0.356387052936872	1.5675e-05	300.0	3
+br2fr	mistralai/mistral-7b-instruct:nitro	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis venu pour gagner	0.3842723626429594	1.953e-05	293.0	5
+br2fr	mistralai/mistral-7b-instruct:nitro	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ici, je tiens la main gauche	0.23166145857227013	1.953e-05	294.0	5
+br2fr	mistralai/mistral-7b-instruct:nitro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Nous avons été surpris et trouvés en train de répondre aux questions d'un interrogatoire	0.30868151775650254	1.953e-05	313.0	10
+br2fr	mistralai/mistral-7b-instruct:nitro	E vouezh a oa gouraouliet	Sa voix était enrouée	Et vous êtes ici pour nous observer	0.17557018038868039	1.953e-05	293.0	5
+br2fr	mistralai/mistral-7b-instruct:nitro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bois de bouleau, bois de blanc, homme de pierre et de fer	0.30226571725370566	1.953e-05	316.0	10
+br2fr	mistralai/mistral-7b-instruct:nitro	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pépite de plomb et de zinc	0.24955885632269054	1.953e-05	297.0	5
+br2fr	mistralai/mistral-7b-instruct:nitro	Kazi echu eo	C'est presque fini	Travail accompli	0.45337385771339567	1.953e-05	289.0	3
+br2fr	microsoft/phi-3-mini-128k-instruct:free	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de jouer	0.6803315702208762	0.0	272.0	5
+br2fr	microsoft/phi-3-mini-128k-instruct:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo brave, très ancien	0.3388602435715201	0.0	275.0	5
+br2fr	microsoft/phi-3-mini-128k-instruct:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	À la fois que je reviens, réponds-moi	0.34107113364130026	0.0	285.0	10
+br2fr	microsoft/phi-3-mini-128k-instruct:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Je suis bien content	0.22344996627384206	0.0	270.0	5
+br2fr	microsoft/phi-3-mini-128k-instruct:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Voilà, voilà, pas de mots pour les hommes	0.2959100021590364	0.0	292.0	10
+br2fr	microsoft/phi-3-mini-128k-instruct:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Tous les poissons sont dans l'eau	0.2846106990119683	0.0	277.0	5
+br2fr	microsoft/phi-3-mini-128k-instruct:free	Kazi echu eo	C'est presque fini	C'est ce que je dis	0.3901021091801632	0.0	271.0	3
+br2fr	neversleep/llama-3-lumimaid-70b	C'hoant am eus da ganañ	J'ai envie de chanter	Je ne suis pas capable de chanter	0.629011592523274	0.0008685	248.0	5
+br2fr	neversleep/llama-3-lumimaid-70b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Il est trop difficile pour moi	0.2958083027895727	0.0008685	245.0	5
+br2fr	neversleep/llama-3-lumimaid-70b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je n'attends pas la réponse de vos prières	0.5453329080613047	0.0008685	259.0	10
+br2fr	neversleep/llama-3-lumimaid-70b	E vouezh a oa gouraouliet	Sa voix était enrouée	La voix a été réprimée	0.5493176999207676	0.0008685	248.0	5
+br2fr	neversleep/llama-3-lumimaid-70b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il y a du bien, il y a du mal, tout le monde a sa part	0.3938203494164945	0.0008685	270.0	10
+br2fr	neversleep/llama-3-lumimaid-70b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Peut-être que cela se produira demain	0.16297232513358778	0.0008685	252.0	5
+br2fr	neversleep/llama-3-lumimaid-70b	Kazi echu eo	C'est presque fini	C'est tout	0.5243722433218375	0.0008685	242.0	3
+br2fr	deepseek/deepseek-chat	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677321580689366	4.5360000000000006e-05	255.0	5
+br2fr	deepseek/deepseek-chat	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand et noir	0.736583422701246	4.5360000000000006e-05	256.0	5
+br2fr	deepseek/deepseek-chat	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas pressés, je répondrai à vos questions	0.5527897902462379	4.5360000000000006e-05	271.0	10
+br2fr	deepseek/deepseek-chat	E vouezh a oa gouraouliet	Sa voix était enrouée	Il était gai autrefois	0.35836228420573935	4.5360000000000006e-05	256.0	5
+br2fr	deepseek/deepseek-chat	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque grain a sa couleur	0.4984499535118948	4.5360000000000006e-05	272.0	10
+br2fr	deepseek/deepseek-chat	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Le temps est clair au-dessus des montagnes	0.19889826180094994	4.5360000000000006e-05	264.0	5
+br2fr	deepseek/deepseek-chat	Kazi echu eo	C'est presque fini	Il est en retard	0.3431623206331239	4.5360000000000006e-05	253.0	3
+br2fr	openai/gpt-4o-2024-05-13	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999993293113552	0.00161	220.0	5
+br2fr	openai/gpt-4o-2024-05-13	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.00161	218.0	5
+br2fr	openai/gpt-4o-2024-05-13	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente que je vous donne les réponses	0.8421764658944739	0.00161	235.0	10
+br2fr	openai/gpt-4o-2024-05-13	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829991714430141	0.00161	220.0	5
+br2fr	openai/gpt-4o-2024-05-13	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soit noir, soit blanc, chaque chèvre aime son lait	0.8330717086005434	0.00161	240.0	10
+br2fr	openai/gpt-4o-2024-05-13	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle pagaille dans la paroisse	1.000000118961732	0.00161	224.0	5
+br2fr	openai/gpt-4o-2024-05-13	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.00161	218.0	3
+br2fr	openai/gpt-4o:extended	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.001968	222.0	5
+br2fr	openai/gpt-4o:extended	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999985099015165	0.001968	220.0	5
+br2fr	openai/gpt-4o:extended	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999999716328034	0.001968	236.0	10
+br2fr	openai/gpt-4o:extended	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8830114857988389	0.001968	222.0	5
+br2fr	openai/gpt-4o:extended	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soit noir, soit blanc, chaque chèvre aime son lait	0.8330717086005434	0.001968	242.0	10
+br2fr	openai/gpt-4o:extended	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle pagaille dans la paroisse	0.9999990266639347	0.001968	226.0	5
+br2fr	openai/gpt-4o:extended	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999989962567654	0.001968	220.0	3
+br2fr	qwen/qwen-72b-chat	C'hoant am eus da ganañ	J'ai envie de chanter	J'aimerais y aller	0.4960672629498193	0.00017415	228.0	5
+br2fr	qwen/qwen-72b-chat	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446772891128588	0.00017415	227.0	5
+br2fr	qwen/qwen-72b-chat	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ils ne seront pas contents de tes réponses	0.5393803933096133	0.00017415	239.0	10
+br2fr	qwen/qwen-72b-chat	E vouezh a oa gouraouliet	Sa voix était enrouée	Il faisait très chaud	0.39017563263926414	0.00017415	227.0	5
+br2fr	qwen/qwen-72b-chat	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il faut, il faut, chaque matin	0.36046299977092167	0.00017415	243.0	10
+br2fr	qwen/qwen-72b-chat	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Parfois il pleut même en été	0.26919202498355743	0.00017415	232.0	5
+br2fr	qwen/qwen-72b-chat	Kazi echu eo	C'est presque fini	Le travail est fini	0.6137147085580114	0.00017415	226.0	3
+br2fr	neversleep/llama-3-lumimaid-8b	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis content de gagner	0.3926823656065561	0.0001228125	293.0	5
+br2fr	neversleep/llama-3-lumimaid-8b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Il est grand, il est fort	0.484224507970049	0.0001228125	293.0	5
+br2fr	neversleep/llama-3-lumimaid-8b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il n'y a pas de temps à attendre pour obtenir des réponses de toi	0.48268529581570885	0.0001228125	312.0	10
+br2fr	neversleep/llama-3-lumimaid-8b	E vouezh a oa gouraouliet	Sa voix était enrouée	Mon voix était égarée	0.6239101385382673	0.0001228125	294.0	5
+br2fr	neversleep/llama-3-lumimaid-8b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque oiseau aime son opinion	0.5784556162404052	0.0001228125	314.0	10
+br2fr	neversleep/llama-3-lumimaid-8b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chacun est dans son barrouz	0.35731198973974115	0.0001228125	298.0	5
+br2fr	neversleep/llama-3-lumimaid-8b	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0001228125	292.0	3
+br2fr	neversleep/llama-3-lumimaid-8b:extended	C'hoant am eus da ganañ	J'ai envie de chanter	C'est bon pour moi de gagner	0.4005782068675938	0.0001096875	245.0	5
+br2fr	neversleep/llama-3-lumimaid-8b:extended	Ar c'hi zo bras awalc'h	Le chien est assez grand	L'air est grand et frais	0.3833600759154571	0.0001096875	243.0	5
+br2fr	neversleep/llama-3-lumimaid-8b:extended	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il n'y a pas de temps pour attendre vos réponses	0.5133153869306293	0.0001096875	257.0	10
+br2fr	neversleep/llama-3-lumimaid-8b:extended	E vouezh a oa gouraouliet	Sa voix était enrouée	Mon voix était égarée	0.6238615275011872	0.0001096875	244.0	5
+br2fr	neversleep/llama-3-lumimaid-8b:extended	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque oiseau aime son nid	0.6020373188893418	0.0001096875	264.0	10
+br2fr	neversleep/llama-3-lumimaid-8b:extended	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chacun est dans son trou	0.3374154020189917	0.0001096875	246.0	5
+br2fr	neversleep/llama-3-lumimaid-8b:extended	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0001096875	242.0	3
+br2fr	sao10k/fimbulvetr-11b-v2	C'hoant am eus da ganañ	J'ai envie de chanter	Je ne peux pas en avoir	0.3463693553191626	0.00020437500000000002	288.0	5
+br2fr	sao10k/fimbulvetr-11b-v2	Ar c'hi zo bras awalc'h	Le chien est assez grand	C'est là le prix à payer	0.24913403435747183	0.00020437500000000002	288.0	5
+br2fr	sao10k/fimbulvetr-11b-v2	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'espérez pas obtenir un retour rapide sur les réponses précédentes	0.5732436588976157	0.00020437500000000002	307.0	10
+br2fr	sao10k/fimbulvetr-11b-v2	E vouezh a oa gouraouliet	Sa voix était enrouée	Et vous êtes un gourouillet	0.18174756474572634	0.00020437500000000002	290.0	5
+br2fr	sao10k/fimbulvetr-11b-v2	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Deux, trois, un petit gars qui a méné	0.3136406419152532	0.00020437500000000002	307.0	10
+br2fr	sao10k/fimbulvetr-11b-v2	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Un peu de thé à la barre	0.265834547881361	0.00020437500000000002	292.0	5
+br2fr	sao10k/fimbulvetr-11b-v2	Kazi echu eo	C'est presque fini	C'est assez	0.5364930219975215	0.00020437500000000002	284.0	3
+br2fr	meta-llama/llama-3-70b-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677790076953431	0.0	12.0	5
+br2fr	meta-llama/llama-3-70b-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0	12.0	5
+br2fr	meta-llama/llama-3-70b-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas, je vous donnerai les réponses demain	0.6655911705477816	0.0	29.0	10
+br2fr	meta-llama/llama-3-70b-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était éclatante	0.6846488729306627	0.0	15.0	5
+br2fr	meta-llama/llama-3-70b-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaqueGoëland aime sa couleur	0.6119870949648003	0.0	34.0	10
+br2fr	meta-llama/llama-3-70b-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose dans le jardin	0.33743714052962115	0.0	16.0	5
+br2fr	meta-llama/llama-3-70b-instruct	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0	12.0	3
+br2fr	meta-llama/llama-3-8b-instruct:free	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis content de gagner	0.39271107232374564	0.0	242.0	5
+br2fr	meta-llama/llama-3-8b-instruct:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le ciel est grand et large	0.4222327678307668	0.0	242.0	5
+br2fr	meta-llama/llama-3-8b-instruct:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il n'y a pas de temps à attendre pour obtenir vos réponses	0.5056708479386244	0.0	259.0	10
+br2fr	meta-llama/llama-3-8b-instruct:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Mon voix était égarée	0.6238615275011872	0.0	243.0	5
+br2fr	meta-llama/llama-3-8b-instruct:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque personne aime son opinion	0.5671657542758195	0.0	261.0	10
+br2fr	meta-llama/llama-3-8b-instruct:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chacun est dans son coin	0.3279633562801265	0.0	245.0	5
+br2fr	meta-llama/llama-3-8b-instruct:free	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0	241.0	3
+br2fr	meta-llama/llama-3-8b-instruct:nitro	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis content de gagner	0.39271107232374564	3.9041999999999997e-05	254.0	5
+br2fr	meta-llama/llama-3-8b-instruct:nitro	Ar c'hi zo bras awalc'h	Le chien est assez grand	Il est grand, il est beau, chaque jour j'aime sa pensée	0.37079361608774786	3.9041999999999997e-05	263.0	5
+br2fr	meta-llama/llama-3-8b-instruct:nitro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Peut-être que l'un de ces jours je trouverai une réponse de toi	0.39274580143466375	3.9041999999999997e-05	271.0	10
+br2fr	meta-llama/llama-3-8b-instruct:nitro	E vouezh a oa gouraouliet	Sa voix était enrouée	Mon sort était égaré	0.3805825181366228	3.9041999999999997e-05	254.0	5
+br2fr	meta-llama/llama-3-8b-instruct:nitro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque jour j'aime sa pensée	0.5043807443128373	3.9041999999999997e-05	276.0	10
+br2fr	meta-llama/llama-3-8b-instruct:nitro	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chacun de ces jours dans le passé	0.21294307978721827	3.9041999999999997e-05	259.0	5
+br2fr	meta-llama/llama-3-8b-instruct:nitro	Kazi echu eo	C'est presque fini	Presque fini est	0.7440305440370709	3.9041999999999997e-05	252.0	3
+br2fr	meta-llama/llama-3-8b-instruct:extended	C'hoant am eus da ganañ	J'ai envie de chanter	Cela me plaît de gagner	0.4140960425593121	0.0001130625	248.0	5
+br2fr	meta-llama/llama-3-8b-instruct:extended	Ar c'hi zo bras awalc'h	Le chien est assez grand	L'argent est grand à la fois	0.35062559335693444	0.0001130625	247.0	5
+br2fr	meta-llama/llama-3-8b-instruct:extended	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il n'y a pas de temps à attendre les réponses de toi	0.48743714876349226	0.0001130625	262.0	10
+br2fr	meta-llama/llama-3-8b-instruct:extended	E vouezh a oa gouraouliet	Sa voix était enrouée	Mon voix était égarée	0.6238615275011872	0.0001130625	247.0	5
+br2fr	meta-llama/llama-3-8b-instruct:extended	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Je suis noir, je suis blanc, chaque oiseau aime son opinion	0.5784696851695214	0.0001130625	267.0	10
+br2fr	meta-llama/llama-3-8b-instruct:extended	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chacun est dans son coin	0.3279633562801265	0.0001130625	249.0	5
+br2fr	meta-llama/llama-3-8b-instruct:extended	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991714253901	0.0001130625	245.0	3
+br2fr	mistralai/mixtral-8x22b-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.00022769999999999998	267.0	5
+br2fr	mistralai/mixtral-8x22b-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999993016383861	0.00022769999999999998	265.0	5
+br2fr	mistralai/mixtral-8x22b-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas trop pour vos réponses	0.5987521143377958	0.00022769999999999998	277.0	10
+br2fr	mistralai/mixtral-8x22b-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.883005024194893	0.00022769999999999998	267.0	5
+br2fr	mistralai/mixtral-8x22b-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir ou blanc, chaque corbeau aime son nid	0.6498094983268318	0.00022769999999999998	284.0	10
+br2fr	mistralai/mixtral-8x22b-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel mystère dans les barreaux	0.3228498862650089	0.00022769999999999998	271.0	5
+br2fr	mistralai/mixtral-8x22b-instruct	Kazi echu eo	C'est presque fini	Le travail est terminé	0.594811887511114	0.00022769999999999998	264.0	3
+br2fr	microsoft/wizardlm-2-7b	C'hoant am eus da ganañ	J'ai envie de chanter	C'hoant am eus de ganañ	0.3217488871079978	1.584e-05	306.0	5
+br2fr	microsoft/wizardlm-2-7b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo bras awalc'h	0.2767671524324408	1.584e-05	303.0	5
+br2fr	microsoft/wizardlm-2-7b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc'h	0.32936184708103644	1.584e-05	320.0	10
+br2fr	microsoft/wizardlm-2-7b	E vouezh a oa gouraouliet	Sa voix était enrouée	E vouezh a oa gouraouliet	0.2511238484109021	1.584e-05	307.0	5
+br2fr	microsoft/wizardlm-2-7b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	0.3233631182356825	1.584e-05	323.0	10
+br2fr	microsoft/wizardlm-2-7b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pebezh tiala e-barzh ar barrouz	0.23843174111648352	1.584e-05	310.0	5
+br2fr	microsoft/wizardlm-2-7b	Kazi echu eo	C'est presque fini	Kazi echu eo	0.1709389975996513	1.584e-05	299.0	3
+br2fr	microsoft/wizardlm-2-8x22b	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989298853567	0.0001335	281.0	5
+br2fr	microsoft/wizardlm-2-8x22b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446772891128588	0.0001335	279.0	5
+br2fr	microsoft/wizardlm-2-8x22b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il ne faut pas attendre pour obtenir vos réponses	0.5887666400189584	0.0001335	293.0	10
+br2fr	microsoft/wizardlm-2-8x22b	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était ensorcelante	0.697239310043233	0.0001335	282.0	5
+br2fr	microsoft/wizardlm-2-8x22b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il faut du bleu, il faut du blanc, chaque personne aime sa couleur	0.5098399468756216	0.0001335	302.0	10
+br2fr	microsoft/wizardlm-2-8x22b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le jardin	0.5959772795893057	0.0001335	284.0	5
+br2fr	microsoft/wizardlm-2-8x22b	Kazi echu eo	C'est presque fini	C'est un travail fini	0.6303191174883788	0.0001335	279.0	3
+br2fr	openai/gpt-4-turbo	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.00366	240.0	5
+br2fr	openai/gpt-4-turbo	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.00366	238.0	5
+br2fr	openai/gpt-4-turbo	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999999716328034	0.00366	254.0	10
+br2fr	openai/gpt-4-turbo	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.00366	240.0	5
+br2fr	openai/gpt-4-turbo	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son but	0.875099446769663	0.00366	262.0	10
+br2fr	openai/gpt-4-turbo	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle agitation dans la paroisse	0.8487620598836911	0.00366	243.0	5
+br2fr	openai/gpt-4-turbo	Kazi echu eo	C'est presque fini	Presque fini	0.8204648040718541	0.00366	236.0	3
+br2fr	cohere/command-r-plus-04-2024	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai choisi de chanter	0.716566189460723	0.00135375	233.0	5
+br2fr	cohere/command-r-plus-04-2024	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est un grand voleur	0.5619066655859458	0.00135375	234.0	5
+br2fr	cohere/command-r-plus-04-2024	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne passe pas ton temps à attendre les réponses	0.571398957729977	0.00135375	244.0	10
+br2fr	cohere/command-r-plus-04-2024	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829946269557152	0.00135375	233.0	5
+br2fr	cohere/command-r-plus-04-2024	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Œil noir, œil bleu, chaque corbeau aime son œil	0.5957431155212125	0.00135375	256.0	10
+br2fr	cohere/command-r-plus-04-2024	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel bruit dans le brouillard !	0.4349842728196984	0.00135375	238.0	5
+br2fr	cohere/command-r-plus-04-2024	Kazi echu eo	C'est presque fini	Le travail est terminé	0.594811887511114	0.00135375	230.0	3
+br2fr	sophosympatheia/midnight-rose-70b	C'hoant am eus da ganañ	J'ai envie de chanter	Ça y est, je suis prêt à marcher	0.375448970770415	0.0	19.0	5
+br2fr	sophosympatheia/midnight-rose-70b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chemin est devant moi, assez large	0.40300846428084164	0.0	14.0	5
+br2fr	sophosympatheia/midnight-rose-70b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Nobody knows where the road will lead us	0.16319712046635035	0.0	22.0	10
+br2fr	sophosympatheia/midnight-rose-70b	E vouezh a oa gouraouliet	Sa voix était enrouée	Je vais donc avancer avec courage	0.2318668468685598	0.0	14.0	5
+br2fr	sophosympatheia/midnight-rose-70b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soyez avec moi, soyez blancs, peu importe la couleur	0.42537650074066824	0.0	36.0	10
+br2fr	sophosympatheia/midnight-rose-70b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Peut-être que nous trouverons notre route	0.18825620375871363	0.0	18.0	5
+br2fr	sophosympatheia/midnight-rose-70b	Kazi echu eo	C'est presque fini	On y va, marche !	0.3207530318029783	0.0	13.0	3
+br2fr	anthropic/claude-3-haiku	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.00017025	291.0	5
+br2fr	anthropic/claude-3-haiku	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.00017025	289.0	5
+br2fr	anthropic/claude-3-haiku	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas à attendre que je vous donne les réponses	0.8506454593400812	0.00017025	306.0	10
+br2fr	anthropic/claude-3-haiku	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.00017025	291.0	5
+br2fr	anthropic/claude-3-haiku	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son chevreau	0.9694503502786551	0.00017025	317.0	10
+br2fr	anthropic/claude-3-haiku	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle agitation dans la paroisse	0.8488829777284951	0.00017025	294.0	5
+br2fr	anthropic/claude-3-haiku	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991547517866	0.00017025	289.0	3
+br2fr	anthropic/claude-3-haiku:beta	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.00017025	291.0	5
+br2fr	anthropic/claude-3-haiku:beta	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987555031802	0.00017025	289.0	5
+br2fr	anthropic/claude-3-haiku:beta	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas à attendre que je vous donne les réponses	0.850670416653713	0.00017025	306.0	10
+br2fr	anthropic/claude-3-haiku:beta	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999989924992311	0.00017025	291.0	5
+br2fr	anthropic/claude-3-haiku:beta	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son chevreau	0.9694716840570761	0.00017025	317.0	10
+br2fr	anthropic/claude-3-haiku:beta	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle agitation dans la paroisse	0.8488606639874889	0.00017025	294.0	5
+br2fr	anthropic/claude-3-haiku:beta	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.00017025	289.0	3
+br2fr	anthropic/claude-3-sonnet	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.002073	293.0	5
+br2fr	anthropic/claude-3-sonnet	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999983550521727	0.002073	291.0	5
+br2fr	anthropic/claude-3-sonnet	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas dans l'attente que je vous donnerai les réponses	0.8429666249446561	0.002073	311.0	10
+br2fr	anthropic/claude-3-sonnet	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.002073	293.0	5
+br2fr	anthropic/claude-3-sonnet	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son pis	0.8670471801106057	0.002073	317.0	10
+br2fr	anthropic/claude-3-sonnet	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans la chambre	0.5464794148353231	0.002073	296.0	5
+br2fr	anthropic/claude-3-sonnet	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991116843492	0.002073	291.0	3
+br2fr	anthropic/claude-3-sonnet:beta	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.002073	293.0	5
+br2fr	anthropic/claude-3-sonnet:beta	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999986697054313	0.002073	291.0	5
+br2fr	anthropic/claude-3-sonnet:beta	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas dans l'attente que je vous donnerai les réponses	0.842955022974524	0.002073	311.0	10
+br2fr	anthropic/claude-3-sonnet:beta	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.002073	293.0	5
+br2fr	anthropic/claude-3-sonnet:beta	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son pis	0.8669245692479468	0.002073	317.0	10
+br2fr	anthropic/claude-3-sonnet:beta	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans la chambre	0.5464095646511182	0.002073	296.0	5
+br2fr	anthropic/claude-3-sonnet:beta	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999992087207394	0.002073	291.0	3
+br2fr	anthropic/claude-3-opus	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.01029	292.0	5
+br2fr	anthropic/claude-3-opus	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.01029	290.0	5
+br2fr	anthropic/claude-3-opus	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8628568167758508	0.01029	304.0	10
+br2fr	anthropic/claude-3-opus	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.01029	292.0	5
+br2fr	anthropic/claude-3-opus	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son chevreau	0.9694089298436597	0.01029	318.0	10
+br2fr	anthropic/claude-3-opus	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel remue-ménage dans la paroisse	0.8428360508182733	0.01029	299.0	5
+br2fr	anthropic/claude-3-opus	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991116843492	0.01029	290.0	3
+br2fr	anthropic/claude-3-opus:beta	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.01029	292.0	5
+br2fr	anthropic/claude-3-opus:beta	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.01029	290.0	5
+br2fr	anthropic/claude-3-opus:beta	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8625146656901728	0.01029	304.0	10
+br2fr	anthropic/claude-3-opus:beta	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999989924992311	0.01029	292.0	5
+br2fr	anthropic/claude-3-opus:beta	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son chevreau	0.9694503502786551	0.01029	318.0	10
+br2fr	anthropic/claude-3-opus:beta	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel remue-ménage dans la paroisse	0.8428360508182733	0.01029	299.0	5
+br2fr	anthropic/claude-3-opus:beta	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.01029	290.0	3
+br2fr	cohere/command-r-03-2024	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux le savoir	0.4384631079727177	0.000161975	229.0	5
+br2fr	cohere/command-r-03-2024	Ar c'hi zo bras awalc'h	Le chien est assez grand	C'est une grande affaire	0.3343278986192938	0.000161975	229.0	5
+br2fr	cohere/command-r-03-2024	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne pourrais pas supporter les réponses de votre part	0.49966060536085266	0.000161975	243.0	10
+br2fr	cohere/command-r-03-2024	E vouezh a oa gouraouliet	Sa voix était enrouée	C'était un avertissement	0.3647147093327495	0.000161975	231.0	5
+br2fr	cohere/command-r-03-2024	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Beaucoup, beaucoup de gens ont marché sur leurs chemins	0.20050343980654162	0.000161975	248.0	10
+br2fr	cohere/command-r-03-2024	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Erre dans les bois	0.3547062683425066	0.000161975	231.0	5
+br2fr	cohere/command-r-03-2024	Kazi echu eo	C'est presque fini	C'est fini	0.6717860581559709	0.000161975	227.0	3
+br2fr	mistralai/mistral-large	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989980130908	0.0008779999999999999	275.0	5
+br2fr	mistralai/mistral-large	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0008779999999999999	273.0	5
+br2fr	mistralai/mistral-large	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente, je vous donnerai les réponses	0.7186889696449849	0.0008779999999999999	291.0	10
+br2fr	mistralai/mistral-large	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.0008779999999999999	275.0	5
+br2fr	mistralai/mistral-large	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Ils sont noirs, ils sont blancs, chaque géant aime sa pierre	0.5506027361636513	0.0008779999999999999	298.0	10
+br2fr	mistralai/mistral-large	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Combien de trous dans la barbe	0.24103314239664764	0.0008779999999999999	278.0	5
+br2fr	mistralai/mistral-large	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991116843492	0.0008779999999999999	273.0	3
+br2fr	openai/gpt-4-turbo-preview	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989980130908	0.0037800000000000004	244.0	5
+br2fr	openai/gpt-4-turbo-preview	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999983566066726	0.0037800000000000004	242.0	5
+br2fr	openai/gpt-4-turbo-preview	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999748337180219	0.0037800000000000004	258.0	10
+br2fr	openai/gpt-4-turbo-preview	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999990706212817	0.0037800000000000004	244.0	5
+br2fr	openai/gpt-4-turbo-preview	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	0.9999999966473792	0.0037800000000000004	268.0	10
+br2fr	openai/gpt-4-turbo-preview	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle agitation dans la paroisse	0.848668725559465	0.0037800000000000004	247.0	5
+br2fr	openai/gpt-4-turbo-preview	Kazi echu eo	C'est presque fini	C'est presque fini	0.999998984653037	0.0037800000000000004	242.0	3
+br2fr	openai/gpt-3.5-turbo-0613	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8678530419932828	0.000304	242.0	5
+br2fr	openai/gpt-3.5-turbo-0613	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446772891128588	0.000304	242.0	5
+br2fr	openai/gpt-3.5-turbo-0613	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne restez pas en attente, je vous donnerai les réponses	0.6867526625409446	0.000304	259.0	10
+br2fr	openai/gpt-3.5-turbo-0613	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.000304	244.0	5
+br2fr	openai/gpt-3.5-turbo-0613	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Sois noir, sois blanc, chaque chèvre aime sa montagne	0.7897891029920346	0.000304	265.0	10
+br2fr	openai/gpt-3.5-turbo-0613	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle est la couleur à l'intérieur de la poche ?	0.15315907014974636	0.000304	253.0	5
+br2fr	openai/gpt-3.5-turbo-0613	Kazi echu eo	C'est presque fini	C'est fini maintenant	0.6613869209293952	0.000304	241.0	3
+br2fr	nousresearch/nous-hermes-2-mixtral-8x7b-dpo	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai eu envie de le faire	0.5709106792798105	0.0001512	295.0	5
+br2fr	nousresearch/nous-hermes-2-mixtral-8x7b-dpo	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand au début	0.6851931567711933	0.0001512	293.0	5
+br2fr	nousresearch/nous-hermes-2-mixtral-8x7b-dpo	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Et je n'attendais pas qu'il me réponde en français	0.5018969678727133	0.0001512	308.0	10
+br2fr	nousresearch/nous-hermes-2-mixtral-8x7b-dpo	E vouezh a oa gouraouliet	Sa voix était enrouée	Mon désir était trop avide	0.39442214512969864	0.0001512	294.0	5
+br2fr	nousresearch/nous-hermes-2-mixtral-8x7b-dpo	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Deux doigts, deux blancs, une main pleine	0.32849978826376813	0.0001512	313.0	10
+br2fr	nousresearch/nous-hermes-2-mixtral-8x7b-dpo	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	La peur de l'étranger à l'intérieur de la boîte	0.23480067699585033	0.0001512	306.0	5
+br2fr	nousresearch/nous-hermes-2-mixtral-8x7b-dpo	Kazi echu eo	C'est presque fini	Le travail est terminé	0.5947715645764147	0.0001512	291.0	3
+br2fr	mistralai/mistral-medium	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai eu envie de le faire	0.5709106792798105	0.00113765	275.0	5
+br2fr	mistralai/mistral-medium	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est grand dès le départ	0.6777031917566156	0.00113765	274.0	5
+br2fr	mistralai/mistral-medium	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il ne faut pas attendre pour vous donner les réponses	0.7001803172186006	0.00113765	286.0	10
+br2fr	mistralai/mistral-medium	E vouezh a oa gouraouliet	Sa voix était enrouée	Il était question de discussions	0.31777837316348023	0.00113765	272.0	5
+br2fr	mistralai/mistral-medium	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaque homme aime sa pierre	0.5945550930914733	0.00113765	293.0	10
+br2fr	mistralai/mistral-medium	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chacun a sa part dans le royaume	0.3566920180739771	0.00113765	280.0	5
+br2fr	mistralai/mistral-medium	Kazi echu eo	C'est presque fini	Le chat est sorti	0.3289392833113651	0.00113765	271.0	3
+br2fr	mistralai/mistral-small	C'hoant am eus da ganañ	J'ai envie de chanter	C'est ce que j'ai à dire	0.390659452807936	8.32e-05	271.0	5
+br2fr	mistralai/mistral-small	Ar c'hi zo bras awalc'h	Le chien est assez grand	La maison est très grande	0.47686155539263714	8.32e-05	267.0	5
+br2fr	mistralai/mistral-small	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je n'ai pas attendu longtemps vos réponses	0.5516094954344584	8.32e-05	281.0	10
+br2fr	mistralai/mistral-small	E vouezh a oa gouraouliet	Sa voix était enrouée	Il était très pressé	0.4068884280384401	8.32e-05	268.0	5
+br2fr	mistralai/mistral-small	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir et blanc, chaque cheval a sa couleur	0.537971422089863	8.32e-05	286.0	10
+br2fr	mistralai/mistral-small	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Il y a de la lumière dans la brume	0.25472253402986333	8.32e-05	276.0	5
+br2fr	mistralai/mistral-small	Kazi echu eo	C'est presque fini	C'est du travail bien fait	0.460304394494623	8.32e-05	268.0	3
+br2fr	mistralai/mistral-tiny	C'hoant am eus da ganañ	J'ai envie de chanter	Je n'ai jamais eu de joie	0.3525072049229766	6.8e-05	287.0	5
+br2fr	mistralai/mistral-tiny	Ar c'hi zo bras awalc'h	Le chien est assez grand	Il y a là un bras d'au-delà	0.22429665930178574	6.8e-05	289.0	5
+br2fr	mistralai/mistral-tiny	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je n'ai jamais vu ce que cela est que la tristesse et la colère	0.2331306444489025	6.8e-05	304.0	10
+br2fr	mistralai/mistral-tiny	E vouezh a oa gouraouliet	Sa voix était enrouée	Et vous êtes comme un voleur	0.26146649942764694	6.8e-05	287.0	5
+br2fr	mistralai/mistral-tiny	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Deux doigts, deux blancs, un homme sans espoir	0.30663525097909106	6.8e-05	307.0	10
+br2fr	mistralai/mistral-tiny	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Passer tout le temps à sourire	0.2326380856861742	6.8e-05	289.0	5
+br2fr	mistralai/mistral-tiny	Kazi echu eo	C'est presque fini	Travail et travail	0.26629231170964296	6.8e-05	282.0	3
+br2fr	austism/chronos-hermes-13b	C'hoant am eus da ganañ	J'ai envie de chanter	C'hoant am eus da ganañ	0.3012310951084268	3.861e-05	315.0	5
+br2fr	austism/chronos-hermes-13b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo bras awalc'h	0.2768134093947605	3.861e-05	312.0	5
+br2fr	austism/chronos-hermes-13b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	0.3314471772286053	3.861e-05	329.0	10
+br2fr	austism/chronos-hermes-13b	E vouezh a oa gouraouliet	Sa voix était enrouée	E vouezh a oa gouraouliet	0.2511238484109021	3.861e-05	316.0	5
+br2fr	austism/chronos-hermes-13b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	0.3233430232989546	3.861e-05	332.0	10
+br2fr	austism/chronos-hermes-13b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pebezh tiala e-barzh ar barrouz	0.23839706259201604	3.861e-05	319.0	5
+br2fr	austism/chronos-hermes-13b	Kazi echu eo	C'est presque fini	Kazi echu eo	0.1709389975996513	3.861e-05	308.0	3
+br2fr	nousresearch/nous-hermes-yi-34b	C'hoant am eus da ganañ	J'ai envie de chanter	C'est toujours bon de chanter	0.6172699770726265	0.00021527999999999999	313.0	5
+br2fr	nousresearch/nous-hermes-yi-34b	Ar c'hi zo bras awalc'h	Le chien est assez grand	La chanson est une branche d'abricot	0.20584630096682027	0.00021527999999999999	316.0	5
+br2fr	nousresearch/nous-hermes-yi-34b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il n'y a pas de temps pour écouter les réponses de l'autre	0.34619178020071184	0.00021527999999999999	330.0	10
+br2fr	nousresearch/nous-hermes-yi-34b	E vouezh a oa gouraouliet	Sa voix était enrouée	Il est vraiment gourouliet	0.21440092788173498	0.00021527999999999999	314.0	5
+br2fr	nousresearch/nous-hermes-yi-34b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Beau, beau, les vieux sont là pour les hommes	0.3340406464135821	0.00021527999999999999	330.0	10
+br2fr	nousresearch/nous-hermes-yi-34b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Il est en train de se promener entre les barricades	0.2925366579214821	0.00021527999999999999	320.0	5
+br2fr	nousresearch/nous-hermes-yi-34b	Kazi echu eo	C'est presque fini	Il est très étrange	0.3131389735439085	0.00021527999999999999	311.0	3
+br2fr	mistralai/mistral-7b-instruct-v0.2	C'hoant am eus da ganañ	J'ai envie de chanter	On a eu trop de souffrance	0.3627405502981432	5.436e-05	317.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.2	Ar c'hi zo bras awalc'h	Le chien est assez grand	Dans ce lieu, nos bras ont balancé les palettes	0.14273985981408482	5.436e-05	321.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.2	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Nous n'avons pas vu ceux qui répondent aux appels de nos frères	0.3122266862419214	5.436e-05	333.0	10
+br2fr	mistralai/mistral-7b-instruct-v0.2	E vouezh a oa gouraouliet	Sa voix était enrouée	Et vous êtes devenus des gouroumis	0.2317693724685661	5.436e-05	320.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.2	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bois de bouleau, bois de pin, pêpe Gavr a garde notre main	0.2691220534118466	5.436e-05	342.0	10
+br2fr	mistralai/mistral-7b-instruct-v0.2	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pérez tiala e-barzh aux bords des marais	0.3076000217763859	5.436e-05	326.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.2	Kazi echu eo	C'est presque fini	Travail que nous avons fait	0.355276072027639	5.436e-05	314.0	3
+br2fr	cognitivecomputations/dolphin-mixtral-8x7b	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai hâte d'avoir la chance	0.4650643116997982	0.0001385	293.0	5
+br2fr	cognitivecomputations/dolphin-mixtral-8x7b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le grand moment est arrivé	0.3283087525135071	0.0001385	289.0	5
+br2fr	cognitivecomputations/dolphin-mixtral-8x7b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je réponde à vos questions	0.7934605671589036	0.0001385	305.0	10
+br2fr	cognitivecomputations/dolphin-mixtral-8x7b	E vouezh a oa gouraouliet	Sa voix était enrouée	Je vais vous rendre la monnaie	0.1779659064616162	0.0001385	292.0	5
+br2fr	cognitivecomputations/dolphin-mixtral-8x7b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Un bœuf noir, un bœuf blanc, un taureau et une vache	0.4558269239872994	0.0001385	315.0	10
+br2fr	cognitivecomputations/dolphin-mixtral-8x7b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Un chat enfermé dans un sac	0.3252914109210645	0.0001385	294.0	5
+br2fr	cognitivecomputations/dolphin-mixtral-8x7b	Kazi echu eo	C'est presque fini	Cela a été fait	0.40855244086860765	0.0001385	288.0	3
+br2fr	google/gemini-pro-vision	C'hoant am eus da ganañ	J'ai envie de chanter	J'aime chanter	0.7975195525158818	0.0001775	229.0	5
+br2fr	google/gemini-pro-vision	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0001775	229.0	5
+br2fr	google/gemini-pro-vision	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que je vous donne les réponses	0.8627559518980588	0.0001775	243.0	10
+br2fr	google/gemini-pro-vision	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.882943274173412	0.0001775	231.0	5
+br2fr	google/gemini-pro-vision	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	0.9999994098893232	0.0001775	255.0	10
+br2fr	google/gemini-pro-vision	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans la grange	0.6851017510090657	0.0001775	235.0	5
+br2fr	google/gemini-pro-vision	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0001775	229.0	3
+br2fr	mistralai/mixtral-8x7b-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de le faire	0.6481740892143936	6.383999999999999e-05	280.0	5
+br2fr	mistralai/mixtral-8x7b-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	C'est très grand à l'extérieur	0.47022857669899987	6.383999999999999e-05	281.0	5
+br2fr	mistralai/mixtral-8x7b-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne l'attends pas pour répondre à vos questions	0.6547110335656398	6.383999999999999e-05	293.0	10
+br2fr	mistralai/mixtral-8x7b-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	Il était très bavard	0.42136915646544704	6.383999999999999e-05	279.0	5
+br2fr	mistralai/mixtral-8x7b-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Blanc ou noir, chaque corbeau a son esprit	0.5963260628433353	6.383999999999999e-05	298.0	10
+br2fr	mistralai/mixtral-8x7b-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Prenez garde à l'intérieur de la boîte	0.23926897876519904	6.383999999999999e-05	288.0	5
+br2fr	mistralai/mixtral-8x7b-instruct	Kazi echu eo	C'est presque fini	C'est fini	0.6717860581559709	6.383999999999999e-05	276.0	3
+br2fr	mistralai/mixtral-8x7b-instruct:nitro	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai eu le plaisir de le faire	0.3784101247318463	0.00014364	281.0	5
+br2fr	mistralai/mixtral-8x7b-instruct:nitro	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446772891128588	0.00014364	278.0	5
+br2fr	mistralai/mixtral-8x7b-instruct:nitro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne vous attends pas en train d'attendre mes réponses	0.7201338598693867	0.00014364	294.0	10
+br2fr	mistralai/mixtral-8x7b-instruct:nitro	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829991714430141	0.00014364	280.0	5
+br2fr	mistralai/mixtral-8x7b-instruct:nitro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir ou blanc, chaque oiseau a son charme	0.5705567245940883	0.00014364	298.0	10
+br2fr	mistralai/mixtral-8x7b-instruct:nitro	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	La peur s'installe dans la forêt	0.3208017608689462	0.00014364	286.0	5
+br2fr	mistralai/mixtral-8x7b-instruct:nitro	Kazi echu eo	C'est presque fini	Le travail est terminé	0.5947282470883253	0.00014364	277.0	3
+br2fr	gryphe/mythomist-7b:free	C'hoant am eus da ganañ	J'ai envie de chanter	Immédiatement, je suis allé chercher	0.31484097404600797	0.0	319.0	5
+br2fr	gryphe/mythomist-7b:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Au bout de quelques minutes, j'ai trouvé un bras de fer	0.2111055709453395	0.0	320.0	5
+br2fr	gryphe/mythomist-7b:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ensuite, j'ai pris un peu de repos et j'ai réfléchi sur la réponse	0.30320574718494475	0.0	335.0	10
+br2fr	gryphe/mythomist-7b:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Et maintenant, je vais essayer de gagner	0.21251088808346436	0.0	318.0	5
+br2fr	gryphe/mythomist-7b:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Deux fois, une fois, un peu de chance et un peu de chance	0.2545355616417647	0.0	336.0	10
+br2fr	gryphe/mythomist-7b:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pour gagner, il faut être intelligent	0.1379239684183069	0.0	318.0	5
+br2fr	gryphe/mythomist-7b:free	Kazi echu eo	C'est presque fini	Travailler et gagner	0.20750482775866386	0.0	313.0	3
+br2fr	openchat/openchat-7b:free	C'hoant am eus da ganañ	J'ai envie de chanter	Je n'ai pas encore eu de chance de gagner	0.3232478659048389	0.0	313.0	5
+br2fr	openchat/openchat-7b:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	C'est là que je suis allé pour la première fois	0.1314551900739947	0.0	313.0	5
+br2fr	openchat/openchat-7b:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne peux pas dire que je suis content de la réponse	0.38778817310487046	0.0	321.0	10
+br2fr	openchat/openchat-7b:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Et c'est là que je me suis arrêté	0.2888881489161301	0.0	313.0	5
+br2fr	openchat/openchat-7b:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Deux fois, deux fois, un homme de mer et un homme de terre	0.307299594136226	0.0	330.0	10
+br2fr	openchat/openchat-7b:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Croiser le chemin sur la route	0.25773352303305785	0.0	311.0	5
+br2fr	openchat/openchat-7b:free	Kazi echu eo	C'est presque fini	Travail et paix	0.2619627649491234	0.0	306.0	3
+br2fr	neversleep/noromaid-20b	C'hoant am eus da ganañ	J'ai envie de chanter	Je ne sais pas	0.3488359928687146	0.000465	280.0	5
+br2fr	neversleep/noromaid-20b	Ar c'hi zo bras awalc'h	Le chien est assez grand	C'est peut-être parce que je suis fatigué	0.18028334917422012	0.000465	286.0	5
+br2fr	neversleep/noromaid-20b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je vais attendre les réponses de demain	0.4958752778065053	0.000465	293.0	10
+br2fr	neversleep/noromaid-20b	E vouezh a oa gouraouliet	Sa voix était enrouée	Et je vous enverrai un message	0.18718186000810522	0.000465	284.0	5
+br2fr	neversleep/noromaid-20b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bonjour, bonjour, bonjour à tous	0.23313383501182172	0.000465	297.0	10
+br2fr	neversleep/noromaid-20b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	J'ai besoin de reposer un peu	0.21423241416711541	0.000465	286.0	5
+br2fr	neversleep/noromaid-20b	Kazi echu eo	C'est presque fini	C'est tout	0.5243143160320228	0.000465	278.0	3
+br2fr	anthropic/claude-2.1	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999993293113552	0.0036	274.0	5
+br2fr	anthropic/claude-2.1	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0036	272.0	5
+br2fr	anthropic/claude-2.1	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne serais pas en colère si je vous donnais les réponses	0.5651615645193715	0.0036	290.0	10
+br2fr	anthropic/claude-2.1	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999989924992311	0.0036	274.0	5
+br2fr	anthropic/claude-2.1	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque cheval aime son écurie	0.7605278836693421	0.0036	297.0	10
+br2fr	anthropic/claude-2.1	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose brûle dans la marmite	0.38832762835104706	0.0036	281.0	5
+br2fr	anthropic/claude-2.1	Kazi echu eo	C'est presque fini	Assez parlé	0.45857369835180456	0.0036	270.0	3
+br2fr	anthropic/claude-2.1:beta	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.0036	274.0	5
+br2fr	anthropic/claude-2.1:beta	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0036	272.0	5
+br2fr	anthropic/claude-2.1:beta	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne serais pas en colère si je vous donnais les réponses	0.5647500818983873	0.0036	290.0	10
+br2fr	anthropic/claude-2.1:beta	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999989797679223	0.0036	274.0	5
+br2fr	anthropic/claude-2.1:beta	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque cheval aime son écurie	0.7605006590891279	0.0036	297.0	10
+br2fr	anthropic/claude-2.1:beta	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose brûle dans la marmite	0.38832762835104706	0.0036	281.0	5
+br2fr	anthropic/claude-2.1:beta	Kazi echu eo	C'est presque fini	Assez parlé	0.4586333346725513	0.0036	270.0	3
+br2fr	anthropic/claude-2:beta	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989606194525	0.0036	274.0	5
+br2fr	anthropic/claude-2:beta	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987056117503	0.0036	272.0	5
+br2fr	anthropic/claude-2:beta	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne serais pas en colère si je vous donnais les réponses	0.565176484718944	0.0036	290.0	10
+br2fr	anthropic/claude-2:beta	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.0036	274.0	5
+br2fr	anthropic/claude-2:beta	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque cheval aime son écurie	0.7604977097145307	0.0036	297.0	10
+br2fr	anthropic/claude-2:beta	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose brûle dans la marmite	0.38832762835104706	0.0036	281.0	5
+br2fr	anthropic/claude-2:beta	Kazi echu eo	C'est presque fini	Assez parlé	0.4586333346725513	0.0036	270.0	3
+br2fr	teknium/openhermes-2.5-mistral-7b	C'hoant am eus da ganañ	J'ai envie de chanter	C'était une drôle de situation	0.25012601287425335	4.522e-05	280.0	5
+br2fr	teknium/openhermes-2.5-mistral-7b	Ar c'hi zo bras awalc'h	Le chien est assez grand	De la blague pour l'occasion	0.19370162590614284	4.522e-05	280.0	5
+br2fr	teknium/openhermes-2.5-mistral-7b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	En voyage avec quelques passagers	0.14997057134061953	4.522e-05	286.0	10
+br2fr	teknium/openhermes-2.5-mistral-7b	E vouezh a oa gouraouliet	Sa voix était enrouée	Et alors, c'est une réunion pour demain	0.18277368709036362	4.522e-05	284.0	5
+br2fr	teknium/openhermes-2.5-mistral-7b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Chez lui, chez elle, pourrait être partout	0.32871860044283074	4.522e-05	296.0	10
+br2fr	teknium/openhermes-2.5-mistral-7b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pas de souci, tous sûrs	0.2901253624021364	4.522e-05	283.0	5
+br2fr	teknium/openhermes-2.5-mistral-7b	Kazi echu eo	C'est presque fini	Et c'est fini	0.6600344911520104	4.522e-05	277.0	3
+br2fr	openai/gpt-4-vision-preview	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999989455363807	0.0037800000000000004	244.0	5
+br2fr	openai/gpt-4-vision-preview	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.99999879961183	0.0037800000000000004	242.0	5
+br2fr	openai/gpt-4-vision-preview	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.999998740614291	0.0037800000000000004	258.0	10
+br2fr	openai/gpt-4-vision-preview	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.0037800000000000004	244.0	5
+br2fr	openai/gpt-4-vision-preview	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	0.9999999966473792	0.0037800000000000004	268.0	10
+br2fr	openai/gpt-4-vision-preview	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle agitation dans la paroisse	0.8488317932658929	0.0037800000000000004	247.0	5
+br2fr	openai/gpt-4-vision-preview	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0037800000000000004	242.0	3
+br2fr	lizpreciatior/lzlv-70b-fp16-hf	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis prêt à combattre	0.44571481264548896	9.654999999999999e-05	280.0	5
+br2fr	lizpreciatior/lzlv-70b-fp16-hf	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ma force est grande	0.3240273499944649	9.654999999999999e-05	275.0	5
+br2fr	lizpreciatior/lzlv-70b-fp16-hf	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Nous ne devons pas attendre pour répondre aux défis	0.3795266646629613	9.654999999999999e-05	292.0	10
+br2fr	lizpreciatior/lzlv-70b-fp16-hf	E vouezh a oa gouraouliet	Sa voix était enrouée	Le courage est notre arme	0.22655523112413578	9.654999999999999e-05	278.0	5
+br2fr	lizpreciatior/lzlv-70b-fp16-hf	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Soyons audacieux, soyons honnêtes, unis et forts	0.2595355570644264	9.654999999999999e-05	301.0	10
+br2fr	lizpreciatior/lzlv-70b-fp16-hf	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Nous conquerrons la victoire	0.1796632475345685	9.654999999999999e-05	281.0	5
+br2fr	lizpreciatior/lzlv-70b-fp16-hf	Kazi echu eo	C'est presque fini	Allons-y ensemble	0.35104147162066285	9.654999999999999e-05	275.0	3
+br2fr	alpindale/goliath-120b	C'hoant am eus da ganañ	J'ai envie de chanter	Ça fait du bien de se reposer	0.36448140392058986	0.0027749999999999997	312.0	5
+br2fr	alpindale/goliath-120b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Il y a longtemps que ça ne s'est pas passé	0.22612240249738502	0.0027749999999999997	314.0	5
+br2fr	alpindale/goliath-120b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas que les réponses tombent du ciel	0.6089704058647134	0.0027749999999999997	324.0	10
+br2fr	alpindale/goliath-120b	E vouezh a oa gouraouliet	Sa voix était enrouée	Il faut y aller de bon cœur	0.2133673521039124	0.0027749999999999997	311.0	5
+br2fr	alpindale/goliath-120b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Voilà ce que je pense, c'est à vous de décider	0.2503690177484994	0.0027749999999999997	330.0	10
+br2fr	alpindale/goliath-120b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Il est temps de se remettre au travail	0.2557762144399697	0.0027749999999999997	315.0	5
+br2fr	alpindale/goliath-120b	Kazi echu eo	C'est presque fini	Allez-y, prenez courage, le plus difficile est fait	0.42625323984177843	0.0027749999999999997	315.0	3
+br2fr	undi95/toppy-m-7b:free	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai toujours eu envie de gagner	0.47137067985560893	0.0	306.0	5
+br2fr	undi95/toppy-m-7b:free	Ar c'hi zo bras awalc'h	Le chien est assez grand	Au début, il y avait un bras gauche	0.15571995483025913	0.0	305.0	5
+br2fr	undi95/toppy-m-7b:free	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ensuite, il y avait une fois où j'ai répondu à des questions de langue bretonne	0.294228674989658	0.0	326.0	10
+br2fr	undi95/toppy-m-7b:free	E vouezh a oa gouraouliet	Sa voix était enrouée	Et puis, il y a eu une grande fête	0.28843579184656587	0.0	308.0	5
+br2fr	undi95/toppy-m-7b:free	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Deux fois, deux fois blanche, un homme vieux et une femme jeune	0.36470001846824973	0.0	325.0	10
+br2fr	undi95/toppy-m-7b:free	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Des jeux de cartes et de dés sur une table	0.25701422417222136	0.0	310.0	5
+br2fr	undi95/toppy-m-7b:free	Kazi echu eo	C'est presque fini	Travail terminé	0.5379434434942985	0.0	300.0	3
+br2fr	undi95/toppy-m-7b:nitro	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai toujours eu envie de gagner	0.47131222158742814	2.03e-05	306.0	5
+br2fr	undi95/toppy-m-7b:nitro	Ar c'hi zo bras awalc'h	Le chien est assez grand	Au début, il y avait un bras gauche	0.15571995483025913	2.03e-05	305.0	5
+br2fr	undi95/toppy-m-7b:nitro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ensuite, il y avait une fois où j'ai répondu à des questions de langue bretonne	0.294177493275493	2.03e-05	326.0	10
+br2fr	undi95/toppy-m-7b:nitro	E vouezh a oa gouraouliet	Sa voix était enrouée	Et puis, il y a eu une grande fête	0.28843579184656587	2.03e-05	308.0	5
+br2fr	undi95/toppy-m-7b:nitro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Deux fois, deux fois blanche, un homme vieux et une femme jeune	0.36470001846824973	2.03e-05	325.0	10
+br2fr	undi95/toppy-m-7b:nitro	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Des jeux de cartes et de dés sur une table	0.25701422417222136	2.03e-05	310.0	5
+br2fr	undi95/toppy-m-7b:nitro	Kazi echu eo	C'est presque fini	Travail terminé	0.5379330599536782	2.03e-05	300.0	3
+br2fr	openrouter/auto	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677776149020215	8.324999999999999e-05	240.0	5
+br2fr	openrouter/auto	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	8.324999999999999e-05	240.0	5
+br2fr	openrouter/auto	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	N'attendez pas pour recevoir vos réponses	0.6512502716313833	8.324999999999999e-05	253.0	10
+br2fr	openrouter/auto	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	8.324999999999999e-05	242.0	5
+br2fr	openrouter/auto	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il sera noir, il sera blanc, chaque cheval aime son caractère	0.6617210335069401	8.324999999999999e-05	262.0	10
+br2fr	openrouter/auto	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose est tombé dans la poche	0.2853235869803143	8.324999999999999e-05	248.0	5
+br2fr	openrouter/auto	Kazi echu eo	C'est presque fini	C'est presque fini	0.999998984653037	8.324999999999999e-05	240.0	3
+br2fr	openai/gpt-4-1106-preview	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999990120038931	0.00384	246.0	5
+br2fr	openai/gpt-4-1106-preview	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999987526525578	0.00384	244.0	5
+br2fr	openai/gpt-4-1106-preview	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999999716328034	0.00384	260.0	10
+br2fr	openai/gpt-4-1106-preview	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.00384	246.0	5
+br2fr	openai/gpt-4-1106-preview	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'elle soit noire, qu'elle soit blanche, chaque chèvre aime son chevreau	0.969399301772403	0.00384	272.0	10
+br2fr	openai/gpt-4-1106-preview	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle agitation dans la paroisse	0.8488838227679039	0.00384	249.0	5
+br2fr	openai/gpt-4-1106-preview	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999990959908935	0.00384	244.0	3
+br2fr	openai/gpt-3.5-turbo-1106	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999990067041078	0.000292	238.0	5
+br2fr	openai/gpt-3.5-turbo-1106	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est toujours gros	0.609431011830989	0.000292	236.0	5
+br2fr	openai/gpt-3.5-turbo-1106	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne restez pas en attente, je vous donnerai les réponses	0.6878453158888977	0.000292	253.0	10
+br2fr	openai/gpt-3.5-turbo-1106	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était douce	0.717371937107453	0.000292	237.0	5
+br2fr	openai/gpt-3.5-turbo-1106	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque chèvre aime sa montagne	0.76510828300737	0.000292	256.0	10
+br2fr	openai/gpt-3.5-turbo-1106	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle est la couleur dans le sac ?	0.21620999183054973	0.000292	242.0	5
+br2fr	openai/gpt-3.5-turbo-1106	Kazi echu eo	C'est presque fini	C'est presque fini	0.999999168289857	0.000292	236.0	3
+br2fr	google/palm-2-chat-bison-32k	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.000304	244.0	5
+br2fr	google/palm-2-chat-bison-32k	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.000304	242.0	5
+br2fr	google/palm-2-chat-bison-32k	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne vous attendez pas à ce que je vous donne les réponses	0.9999987949956195	0.000304	258.0	10
+br2fr	google/palm-2-chat-bison-32k	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était rauque	0.8829817446075985	0.000304	244.0	5
+br2fr	google/palm-2-chat-bison-32k	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	0.9999989601213386	0.000304	268.0	10
+br2fr	google/palm-2-chat-bison-32k	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle pagaille dans la grange	0.7203403449880257	0.000304	247.0	5
+br2fr	google/palm-2-chat-bison-32k	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.000304	242.0	3
+br2fr	jondurbin/airoboros-l2-70b	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai besoin d'une aide	0.43670313987070397	0.0	13.0	5
+br2fr	jondurbin/airoboros-l2-70b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Mon coeur est trop lourd	0.2552194335833343	0.0	13.0	5
+br2fr	jondurbin/airoboros-l2-70b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne visitez pas encore ce lieu où sont les réponses de Dieu	0.46775391792869575	0.0	29.0	10
+br2fr	jondurbin/airoboros-l2-70b	E vouezh a oa gouraouliet	Sa voix était enrouée	C'est à vous de prendre la décision	0.1559675360310696	0.0	16.0	5
+br2fr	jondurbin/airoboros-l2-70b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Si vous dites oui, si vous dites non, le sort est toujours à l'homme	0.30920720844824934	0.0	39.0	10
+br2fr	jondurbin/airoboros-l2-70b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	La Terre vous a conté la longue histoire	0.20908899010952794	0.0	20.0	5
+br2fr	jondurbin/airoboros-l2-70b	Kazi echu eo	C'est presque fini	Tout est fini	0.6145826575250055	0.0	11.0	3
+br2fr	mistralai/mistral-7b-instruct-v0.1	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis heureux de vous avoir ici	0.3317930833401402	5.0759999999999995e-05	297.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.1	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ce n'est pas ici que vous trouverez ce que vous cherchez	0.17447769341963532	5.0759999999999995e-05	302.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.1	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Il est trop tard pour tout changer maintenant	0.19302278582423643	5.0759999999999995e-05	304.0	10
+br2fr	mistralai/mistral-7b-instruct-v0.1	E vouezh a oa gouraouliet	Sa voix était enrouée	Je ne vous en prie pas de revenir plus tard	0.1529666309994007	5.0759999999999995e-05	301.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.1	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	C'est la vie qui nous a fait ce que nous sommes	0.2869329924514018	5.0759999999999995e-05	313.0	10
+br2fr	mistralai/mistral-7b-instruct-v0.1	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Il est trop tard pour tout changer maintenant	0.24883156317468114	5.0759999999999995e-05	299.0	5
+br2fr	mistralai/mistral-7b-instruct-v0.1	Kazi echu eo	C'est presque fini	Je ne vous en prie pas de revenir plus tard	0.21954468505548802	5.0759999999999995e-05	300.0	3
+br2fr	openai/gpt-3.5-turbo-instruct	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677790076953431	0.0003995	257.0	5
+br2fr	openai/gpt-3.5-turbo-instruct	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446977963689576	0.0003995	257.0	5
+br2fr	openai/gpt-3.5-turbo-instruct	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente, je vous donnerai les réponses	0.7187189997467931	0.0003995	275.0	10
+br2fr	openai/gpt-3.5-turbo-instruct	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	1.0000000732498684	0.0003995	259.0	5
+br2fr	openai/gpt-3.5-turbo-instruct	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bleu ou blanc, chaque chien aime sa race	0.5983274080799398	0.0003995	276.0	10
+br2fr	openai/gpt-3.5-turbo-instruct	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Chaque chien a son jour	0.2516830243143909	0.0003995	261.0	5
+br2fr	openai/gpt-3.5-turbo-instruct	Kazi echu eo	C'est presque fini	C'est fini	0.6718437744623016	0.0003995	255.0	3
+br2fr	pygmalionai/mythalion-13b	C'hoant am eus da ganañ	J'ai envie de chanter	C'hoant am eus da ganañ	0.3010957802418023	0.000336375	317.0	5
+br2fr	pygmalionai/mythalion-13b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo bras awalc'h	0.281727258750511	0.000336375	314.0	5
+br2fr	pygmalionai/mythalion-13b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	0.3315556911064379	0.000336375	331.0	10
+br2fr	pygmalionai/mythalion-13b	E vouezh a oa gouraouliet	Sa voix était enrouée	E vouezh a oa gouraouliet	0.2511155784304458	0.000336375	318.0	5
+br2fr	pygmalionai/mythalion-13b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	0.32325766103653286	0.000336375	334.0	10
+br2fr	pygmalionai/mythalion-13b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pebezh tiala e-barzh ar barrouz	0.23839706259201604	0.000336375	321.0	5
+br2fr	pygmalionai/mythalion-13b	Kazi echu eo	C'est presque fini	Kazi echu eo	0.17091031680479762	0.000336375	310.0	3
+br2fr	openai/gpt-4-32k-0314	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999990503305359	0.0186	247.0	5
+br2fr	openai/gpt-4-32k-0314	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.0186	245.0	5
+br2fr	openai/gpt-4-32k-0314	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne restez pas en attente, nous vous donnerons les réponses	0.6304154652990527	0.0186	262.0	10
+br2fr	openai/gpt-4-32k-0314	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enjouée	0.7105129743572536	0.0186	248.0	5
+br2fr	openai/gpt-4-32k-0314	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il y aura du noir, il y aura du blanc, chaque fois elle aime sa porte	0.5263640891512699	0.0186	270.0	10
+br2fr	openai/gpt-4-32k-0314	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans la bataille	0.5905160554108198	0.0186	252.0	5
+br2fr	openai/gpt-4-32k-0314	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.0186	245.0	3
+br2fr	openai/gpt-3.5-turbo-16k	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677655714958863	0.0007639999999999999	242.0	5
+br2fr	openai/gpt-3.5-turbo-16k	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est très grand	0.8446772891128588	0.0007639999999999999	242.0	5
+br2fr	openai/gpt-3.5-turbo-16k	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne restez pas en attente, je vous donnerai les réponses	0.687840182673447	0.0007639999999999999	259.0	10
+br2fr	openai/gpt-3.5-turbo-16k	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999990457426158	0.0007639999999999999	244.0	5
+br2fr	openai/gpt-3.5-turbo-16k	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Sois noir, sois blanc, chaque chèvre aime sa montagne	0.7898176131687148	0.0007639999999999999	265.0	10
+br2fr	openai/gpt-3.5-turbo-16k	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelle est la couleur à l'intérieur de la poche ?	0.15315907014974636	0.0007639999999999999	253.0	5
+br2fr	openai/gpt-3.5-turbo-16k	Kazi echu eo	C'est presque fini	C'est fini maintenant	0.661374796956676	0.0007639999999999999	241.0	3
+br2fr	nousresearch/nous-hermes-llama2-13b	C'hoant am eus da ganañ	J'ai envie de chanter	Je suis en train de vouloir chanter	0.7823527429059414	0.0	17.0	5
+br2fr	nousresearch/nous-hermes-llama2-13b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chat est grand déjà	0.5911997627466398	0.0	11.0	5
+br2fr	nousresearch/nous-hermes-llama2-13b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Vous n'attendez pas encore pour offrir les réponses à vous	0.6259437156953509	0.0	29.0	10
+br2fr	nousresearch/nous-hermes-llama2-13b	E vouezh a oa gouraouliet	Sa voix était enrouée	Vôtre voix était altérée	0.6650804278203728	0.0	16.0	5
+br2fr	nousresearch/nous-hermes-llama2-13b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	C'est blanc, c'est noir, chaque ombre aimer sa propre chanson	0.5774825772096013	0.0	37.0	10
+br2fr	nousresearch/nous-hermes-llama2-13b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Tout au hasard à l'intérieur du tambour	0.3017766210700078	0.0	21.0	5
+br2fr	nousresearch/nous-hermes-llama2-13b	Kazi echu eo	C'est presque fini	C'est fini	0.6718070767752808	0.0	10.0	3
+br2fr	anthropic/claude-instant-1:beta	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de gagner	0.6006606103062804	0.000348	269.0	5
+br2fr	anthropic/claude-instant-1:beta	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.000348	267.0	5
+br2fr	anthropic/claude-instant-1:beta	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne soyez pas en attente je vous donnerai les réponses	0.7163529630540799	0.000348	284.0	10
+br2fr	anthropic/claude-instant-1:beta	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.999999054392725	0.000348	269.0	5
+br2fr	anthropic/claude-instant-1:beta	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Ce sera noir, ce sera blanc, chaque chèvre aime sa volonté	0.7379525459800087	0.000348	290.0	10
+br2fr	anthropic/claude-instant-1:beta	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel tumulte dans le quartier	0.6508322215059986	0.000348	272.0	5
+br2fr	anthropic/claude-instant-1:beta	Kazi echu eo	C'est presque fini	C'est presque fini	1.0000000234911717	0.000348	267.0	3
+br2fr	anthropic/claude-2.0	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999993293113552	0.003528	271.0	5
+br2fr	anthropic/claude-2.0	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999986661890452	0.003528	269.0	5
+br2fr	anthropic/claude-2.0	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne serais pas poli si je vous donnais les réponses	0.6406287653734681	0.003528	286.0	10
+br2fr	anthropic/claude-2.0	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999989924992311	0.003528	271.0	5
+br2fr	anthropic/claude-2.0	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque homme aime son pays	0.6699769712184855	0.003528	291.0	10
+br2fr	anthropic/claude-2.0	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose brûle dans la marmite	0.38832762835104706	0.003528	278.0	5
+br2fr	anthropic/claude-2.0	Kazi echu eo	C'est presque fini	Presque fini	0.8205524082751154	0.003528	267.0	3
+br2fr	anthropic/claude-2.0:beta	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.003528	271.0	5
+br2fr	anthropic/claude-2.0:beta	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999999518846481	0.003528	269.0	5
+br2fr	anthropic/claude-2.0:beta	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Je ne serais pas poli si je vous donnais les réponses	0.6406287653734681	0.003528	286.0	10
+br2fr	anthropic/claude-2.0:beta	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999991845533386	0.003528	271.0	5
+br2fr	anthropic/claude-2.0:beta	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Qu'il soit noir, qu'il soit blanc, chaque homme aime son pays	0.6700068451260373	0.003528	291.0	10
+br2fr	anthropic/claude-2.0:beta	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quelque chose brûle dans la marmite	0.38823552332053224	0.003528	278.0	5
+br2fr	anthropic/claude-2.0:beta	Kazi echu eo	C'est presque fini	Presque fini	0.8205146632057285	0.003528	267.0	3
+br2fr	undi95/remm-slerp-l2-13b	C'hoant am eus da ganañ	J'ai envie de chanter	C'hoant am eus da ganañ	0.30116813146255594	0.000336375	317.0	5
+br2fr	undi95/remm-slerp-l2-13b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo bras awalc'h	0.2768134093947605	0.000336375	314.0	5
+br2fr	undi95/remm-slerp-l2-13b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	0.3314471772286053	0.000336375	331.0	10
+br2fr	undi95/remm-slerp-l2-13b	E vouezh a oa gouraouliet	Sa voix était enrouée	E vouezh a oa gouraouliet	0.2511238484109021	0.000336375	318.0	5
+br2fr	undi95/remm-slerp-l2-13b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	0.32325766103653286	0.000336375	334.0	10
+br2fr	undi95/remm-slerp-l2-13b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pebezh tiala e-barzh ar barrouz	0.23901051198055334	0.000336375	321.0	5
+br2fr	undi95/remm-slerp-l2-13b	Kazi echu eo	C'est presque fini	Kazi echu eo	0.1709389975996513	0.000336375	310.0	3
+br2fr	undi95/remm-slerp-l2-13b:extended	C'hoant am eus da ganañ	J'ai envie de chanter	C'hoant am eus da ganañ	0.30124566051477886	0.000336375	317.0	5
+br2fr	undi95/remm-slerp-l2-13b:extended	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo bras awalc'h	0.2768134093947605	0.000336375	314.0	5
+br2fr	undi95/remm-slerp-l2-13b:extended	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	0.3314471772286053	0.000336375	331.0	10
+br2fr	undi95/remm-slerp-l2-13b:extended	E vouezh a oa gouraouliet	Sa voix était enrouée	E vouezh a oa gouraouliet	0.2511238484109021	0.000336375	318.0	5
+br2fr	undi95/remm-slerp-l2-13b:extended	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	0.32325766103653286	0.000336375	334.0	10
+br2fr	undi95/remm-slerp-l2-13b:extended	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pebezh tiala e-barzh ar barrouz	0.23845382532818968	0.000336375	321.0	5
+br2fr	undi95/remm-slerp-l2-13b:extended	Kazi echu eo	C'est presque fini	Kazi echu eo	0.17095277050938887	0.000336375	310.0	3
+br2fr	gryphe/mythomax-l2-13b	C'hoant am eus da ganañ	J'ai envie de chanter	C'hoant am eus da ganañ	0.3011927364220974	2.9699999999999997e-05	315.0	5
+br2fr	gryphe/mythomax-l2-13b	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo bras awalc'h	0.2767626677185289	2.9699999999999997e-05	312.0	5
+br2fr	gryphe/mythomax-l2-13b	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	0.3314819662525643	2.9699999999999997e-05	329.0	10
+br2fr	gryphe/mythomax-l2-13b	E vouezh a oa gouraouliet	Sa voix était enrouée	E vouezh a oa gouraouliet	0.2511238484109021	2.9699999999999997e-05	316.0	5
+br2fr	gryphe/mythomax-l2-13b	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	0.32330896122571007	2.9699999999999997e-05	332.0	10
+br2fr	gryphe/mythomax-l2-13b	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pebezh tiala e-barzh ar barrouz	0.23839706259201604	2.9699999999999997e-05	319.0	5
+br2fr	gryphe/mythomax-l2-13b	Kazi echu eo	C'est presque fini	Kazi echu eo	0.17093290718198095	2.9699999999999997e-05	308.0	3
+br2fr	gryphe/mythomax-l2-13b:nitro	C'hoant am eus da ganañ	J'ai envie de chanter	C'hoant am eus da ganañ	0.3011927364220974	5.9800000000000003e-05	317.0	5
+br2fr	gryphe/mythomax-l2-13b:nitro	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo bras awalc'h	0.2768134093947605	5.9800000000000003e-05	314.0	5
+br2fr	gryphe/mythomax-l2-13b:nitro	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	0.3314471772286053	5.9800000000000003e-05	331.0	10
+br2fr	gryphe/mythomax-l2-13b:nitro	E vouezh a oa gouraouliet	Sa voix était enrouée	E vouezh a oa gouraouliet	0.2511238484109021	5.9800000000000003e-05	318.0	5
+br2fr	gryphe/mythomax-l2-13b:nitro	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	0.3233158090242703	5.9800000000000003e-05	334.0	10
+br2fr	gryphe/mythomax-l2-13b:nitro	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pebezh tiala e-barzh ar barrouz	0.23841433138256884	5.9800000000000003e-05	321.0	5
+br2fr	gryphe/mythomax-l2-13b:nitro	Kazi echu eo	C'est presque fini	Kazi echu eo	0.1709389975996513	5.9800000000000003e-05	310.0	3
+br2fr	gryphe/mythomax-l2-13b:extended	C'hoant am eus da ganañ	J'ai envie de chanter	C'hoant am eus da ganañ	0.3011927364220974	0.000336375	317.0	5
+br2fr	gryphe/mythomax-l2-13b:extended	Ar c'hi zo bras awalc'h	Le chien est assez grand	Ar c'hi zo bras awalc'h	0.2768134093947605	0.000336375	314.0	5
+br2fr	gryphe/mythomax-l2-13b:extended	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Na vezit ket e gortoz e rofen ar respontoù deoc’h	0.3314751799422488	0.000336375	331.0	10
+br2fr	gryphe/mythomax-l2-13b:extended	E vouezh a oa gouraouliet	Sa voix était enrouée	E vouezh a oa gouraouliet	0.2511238484109021	0.000336375	318.0	5
+br2fr	gryphe/mythomax-l2-13b:extended	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Bezo du, bezo gwenn, pep gavr a gar he menn	0.32325766103653286	0.000336375	334.0	10
+br2fr	gryphe/mythomax-l2-13b:extended	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Pebezh tiala e-barzh ar barrouz	0.23842219175731508	0.000336375	321.0	5
+br2fr	gryphe/mythomax-l2-13b:extended	Kazi echu eo	C'est presque fini	Kazi echu eo	0.170952730516174	0.000336375	310.0	3
+br2fr	openai/gpt-4-0314	C'hoant am eus da ganañ	J'ai envie de chanter	J'ai envie de chanter	0.9999999953203514	0.009420000000000001	249.0	5
+br2fr	openai/gpt-4-0314	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est assez grand	0.9999984354075762	0.009420000000000001	247.0	5
+br2fr	openai/gpt-4-0314	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne restez pas en attente, nous vous donnerons les réponses	0.6299660746861336	0.009420000000000001	264.0	10
+br2fr	openai/gpt-4-0314	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enjouée	0.7109352707668882	0.009420000000000001	250.0	5
+br2fr	openai/gpt-4-0314	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Il y aura du noir, il y aura du blanc, chaque chèvre aime sa montagne	0.7268424337712482	0.009420000000000001	274.0	10
+br2fr	openai/gpt-4-0314	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans la bataille	0.5904210608514898	0.009420000000000001	254.0	5
+br2fr	openai/gpt-4-0314	Kazi echu eo	C'est presque fini	C'est presque fini	0.9999991275378654	0.009420000000000001	247.0	3
+br2fr	openai/gpt-3.5-turbo-0125	C'hoant am eus da ganañ	J'ai envie de chanter	Je veux chanter	0.8677634719057259	0.00017549999999999998	233.0	5
+br2fr	openai/gpt-3.5-turbo-0125	Ar c'hi zo bras awalc'h	Le chien est assez grand	Le chien est toujours grand	0.681436360133653	0.00017549999999999998	233.0	5
+br2fr	openai/gpt-3.5-turbo-0125	Na vezit ket e gortoz e rofen ar respontoù deoc’h	Ne vous attendez pas à ce que je vous donne les réponses	Ne restez pas en attente je vous donnerai les réponses	0.6829832398257731	0.00017549999999999998	249.0	10
+br2fr	openai/gpt-3.5-turbo-0125	E vouezh a oa gouraouliet	Sa voix était enrouée	Sa voix était enrouée	0.9999990188734694	0.00017549999999999998	235.0	5
+br2fr	openai/gpt-3.5-turbo-0125	Bezo du, bezo gwenn, pep gavr a gar he menn	Qu'il soit noir, qu'il soit blanc, chaque chèvre aime son chevreau	Noir, blanc, chaque chèvre aime sa montagne	0.7651459581168423	0.00017549999999999998	253.0	10
+br2fr	openai/gpt-3.5-turbo-0125	Pebezh tiala e-barzh ar barrouz	Quelle pagaille dans la paroisse	Quel désordre dans le bourg	0.7315497053871487	0.00017549999999999998	239.0	5
+br2fr	openai/gpt-3.5-turbo-0125	Kazi echu eo	C'est presque fini	C'est fini	0.6718437744623016	0.00017549999999999998	231.0	3
