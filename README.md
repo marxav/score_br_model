@@ -60,6 +60,7 @@
 
 ## Results
 * The result file related to samples_br.yaml will contain something like :
+  
 | task   | model                                         | score       |   s_rank |       price |   p_rank |
 |:-------|:----------------------------------------------|:------------|---------:|------------:|---------:|
 | br2fr  | openai/gpt-4-turbo-preview                    | 0.97 ± 0.05 |        1 | 0.00378     |      136 |
@@ -86,7 +87,9 @@
 | br2fr  | anthropic/claude-3-sonnet:beta                | 0.89 ± 0.16 |       22 | 0.002073    |      127 |
 | br2fr  | google/gemini-pro-vision                      | 0.88 ± 0.12 |       23 | 0.0001775   |       83 |
 ...
+
 * The result file related to samples_fr.yaml will contain something like :
+  
 | task   | model                      | score       |
 |:-------|:---------------------------|:------------|
 | fr2br  | gpt-4-turbo-2024-04-09     | 0.73 ± 0.18 |
