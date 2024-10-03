@@ -129,6 +129,7 @@
   * *HARM_CATEGORY_DANGEROUS_CONTENT*.
 
 ## Other information
+* Add the "virtual" '**openrouter/all**' model in the yaml file if you want to test all LLMs available at [OpenRouter.ai](https://openrouter.ai/api/v1/models)
 * Instead of using this tool, you can manually use [LMSYS](https://chat.lmsys.org) (in the "Arena side-by-side" tab) to compare the results of 2 models
   * In the parameters, set *temperature=0.0* and *top_p=0.95*
   * For the *br2fr* task, input a [prompt](https://arxiv.org/pdf/2406.06608) like:

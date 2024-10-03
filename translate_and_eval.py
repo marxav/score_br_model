@@ -9,6 +9,20 @@ from llms import anthropic, cohere, google, llama, mistral, openai, openrouter
 import google_translate
 import pandas as pd
 
+
+def is_existing_file(substring):
+
+    # Get the list of files in the current working directory
+    files_in_directory = os.listdir('.')
+
+    # Check if any file contains the substring
+    file_exists = any(substring in file and os.path.isfile(file) for file in files_in_directory)
+
+    if file_exists:
+        return True
+    else:
+        return False
+
 def save_results(config, model, task, translated_lines):
     
   output_file = get_output_file(config, model, task)
@@ -120,7 +134,7 @@ def translate(config, model, task, src_lines, verbose=False):
   dst_predic_lines, tokens, price, error = get_translation(config, model, task, src_lines, [])
   if error:
     error = True
-    return None, error
+    return None, 0, 0.0, True
 
   if verbose:
     print('n:', len(src_lines))
@@ -149,9 +163,28 @@ def translate(config, model, task, src_lines, verbose=False):
 
   return dst_predic_lines, tokens, price, False
 
-def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, price, tokens, verbose=False):
+def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, price, tokens, translation_failed, verbose=False):
 
   config, dst_target_lines = get_data(config, config.target_file)
+
+  if translation_failed:
+    result = {
+      'task': task.name,
+      'datetime': datetime.now().strftime("%Y-%m-%d_%H:%M:%S"),
+      'model': model,
+      'score_mean': 0.0,
+      'score_std': 0.0,
+      'price': price,
+      'n_tokens': tokens,
+      'src_n_words_mean': 0.0,
+      'src_n_words_std': 0.0 
+    }
+    df_result = pd.DataFrame([result])
+    print(result)
+    df_result = pd.DataFrame([result])
+    error=True
+    return None, df_result, error
+ 
   l1 = len(src_lines)
   l2 = len(dst_target_lines)
   l3 = len(dst_predic_lines)
@@ -208,7 +241,7 @@ def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, pri
         
         # calculate number of words in the source sentence (just for info)
         br_words = len(src_sentence.split(' '))
-
+        scoring_price = 0
         sample_log = {
             'task': task.name,
             'model': model,
@@ -264,8 +297,8 @@ def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, pri
   try:
     score_mean = int(df_details['score'].mean()*100)/100
     score_std = int(df_details['score'].std()*100)/100
-    price = int(df_details['price'].sum()*10000)/10000
-    tokens = df_details['n_tokens'].sum()
+    #price = int(df_details['price'].sum()*1000000)/1000000
+    #tokens = df_details['n_tokens'].sum()
     src_n_words_mean = int(df_details['src_n_words'].mean()*10)/10
     src_n_words_std = int(df_details['src_n_words'].std()*10)/10
   except:
@@ -296,7 +329,7 @@ def eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, pri
 
 # launch all the asks with each of supported models
 def translate_and_eval(config, verbose=True):
-
+  pd.set_option('display.max_rows', None)
   # prepare label for logs and results
   config, src_lines = get_data(config, config.source_file)
 
@@ -323,6 +356,10 @@ def translate_and_eval(config, verbose=True):
   # test all the translation models listed is the config
   for model in config.models:          
     print(f'  * starting model {model}:')
+
+    if '/' in model and is_existing_file(model.replace('/', '_')):
+        continue
+
     for task in config.tasks:
       print(f'  * starting task {task.name}:')
       assert(len(task.name) == 5)
@@ -349,7 +386,7 @@ def translate_and_eval(config, verbose=True):
       if config.eval:
         print(f'evaluating model:{model}...')
         config, dst_target_lines = get_data(config, config.target_file)
-        df_details, df_results, error = eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, price, tokens)
+        df_details, df_results, error = eval(config, model, task, src_lines, dst_target_lines, dst_predic_lines, price, tokens, error)
         
         df_full_detailss = pd.concat([df_full_detailss, df_details], ignore_index=True)
         df_full_results = pd.concat([df_full_results, df_results], ignore_index=True)

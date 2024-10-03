@@ -1,6 +1,106 @@
 import os
 import yaml
 
+
+import requests
+import json
+
+# Function to fetch JSON content from a URL and load it into a Python variable
+def fetch_json_from_url(url):
+    response = requests.get(url)
+    response.raise_for_status()  # Raise an exception for HTTP errors
+    data = response.json()  # Parse the JSON content
+    return data
+
+openrouter_models_pricing = {} 
+
+# Function to extract model IDs from the JSON data
+def extract_openrouter_supported_model_names(json_data, verbose=False):
+    models = []
+    for model in json_data.get('data', []):
+        id = model['id']
+        prompt = float(model['pricing']['prompt'])
+        completion = float(model['pricing']['completion'])
+        models.append(id)
+        pricing = {'in': prompt, 'out': completion}
+        openrouter_models_pricing[id] = pricing
+    if verbose:
+        print('openrouter models:', models)
+    return models
+
+def get_openrouter_price(config, model, input_tokens=0, output_tokens=0, verbose=True):
+
+    try:
+        if verbose:
+            print('openrouter model:', model)
+        pricing = openrouter_models_pricing[model]
+        i = input_tokens * pricing['in'] 
+        o = output_tokens * pricing['out']
+        price = i + o 
+        if verbose:
+            print(f'price={i}+{o}={price}')
+        return price
+    except:
+        print('ERROR: pricing not found in get_openrouter_price, model:', model)
+        return 0.0
+
+def get_openrouter_models(verbose=False):
+    # Example usage
+    url = 'https://openrouter.ai/api/v1/models'
+    try:
+        models_data = fetch_json_from_url(url)
+    except:
+        print('ERROR: fetching {url} failed')
+        models_data = None
+    if verbose:
+        print(json.dumps(models_data, indent=2))
+
+    models = extract_openrouter_supported_model_names(models_data)
+    bl_models = [
+        'meta-llama/llama-3.1-405b',
+        'mistralai/codestral-mamba',
+        'perplexity/llama-3-sonar-large-32k-online',
+        'perplexity/llama-3-sonar-large-32k-chat',
+        'perplexity/llama-3-sonar-small-32k-online',
+        'perplexity/llama-3-sonar-small-32k-chat',
+        'mancer/weaver',
+        'openai/gpt-3.5-turbo-0301',
+        'openai/gpt-3.5-turbo'
+    ]
+    #bl_models = []
+    models2 = []
+    i=0
+    for model in models:
+        i+=1
+        if model in bl_models:
+            continue
+        else:
+            models2.append(model)
+        if i==1000:
+            break
+    models=models2
+    print('nb of openrouter models:', len(models))
+    return models
+
+def get_openrouter_model(wanted_model):
+    # Example usage
+    url = 'https://openrouter.ai/api/v1/models'
+    try:
+        models_data = fetch_json_from_url(url)
+    except:
+        print('ERROR: fetching {url} failed')
+        models_data = None
+    
+    models = extract_openrouter_supported_model_names(models_data)
+    
+    for model in models:
+        
+        if model in wanted_model:
+            return model
+        
+    print(f'ERROR: model:{model} not found in openrouter list of avaible model')
+    exit(-1)
+
 # the function returns the path to Litellm package's pricing file installed locally 
 # (i.e. in the virtual environment), which is a copy of the pricing file available at
 # https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
@@ -111,6 +211,7 @@ class Config:
         self.top_p = top_p
         self.split_sentences_during_eval = split_sentences_during_eval
 
+
 # the function loads the configuration file from a yaml input file
 def load_config(args, check=True): 
     # minimum check of the input file extension
@@ -128,12 +229,26 @@ def load_config(args, check=True):
 
     filename = os.path.basename(config_file)
     directory = os.path.dirname(config_file)
+    
+    openrouter_models_all = []
 
     with open(config_file, 'r') as file:
         
         config_data = yaml.safe_load(file)
         
         models = [model for model in config_data['models']]
+        print(models)
+        for model in models:
+            # if '/' in the model name, then it's a model and model price from openrouter
+            if '/' in model and len(openrouter_models_all) == 0:
+                openrouter_models_all = get_openrouter_models()
+        for model in models:
+            if model == 'openrouter/all':
+                # add all models available at OpenRouter
+                models.remove(model)
+                models = models + openrouter_models_all
+            elif '/' in model and model not in openrouter_models_all:
+                models.append(model)            
         tasks = [TaskConfig(**task) for task in config_data['tasks']]
         if len(directory) > 0:
             source_file = directory + os.sep + config_data['source_file']
