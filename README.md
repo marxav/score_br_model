@@ -89,7 +89,7 @@
 | br2fr  | google/gemini-pro-vision                      | 0.88 ± 0.12 |       23 | 0.0001775   |       83 |
 ...
 
-* The results file of a *br2fr* task as in [samples_fr.yaml](samples_fr.yaml) will be similar to:
+* The results file of a *fr2br* task as in [samples_fr.yaml](samples_fr.yaml) will be similar to:
   
 | task   | model                                         | score       |   s_rank |       price |   p_rank |
 |:-------|:----------------------------------------------|:------------|---------:|------------:|---------:|
