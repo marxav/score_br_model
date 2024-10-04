@@ -60,7 +60,7 @@
 * python translate_and_eval.py samples_br.yaml 
 
 ## Results
-* The result file related to samples_br.yaml will contain something like :
+* The results file of a *br2fr* task as in [samples_br.yaml](samples_br.yaml) will be similar to:
   
 | task   | model                                         | score       |   s_rank |       price |   p_rank |
 |:-------|:----------------------------------------------|:------------|---------:|------------:|---------:|
@@ -89,29 +89,36 @@
 | br2fr  | google/gemini-pro-vision                      | 0.88 ± 0.12 |       23 | 0.0001775   |       83 |
 ...
 
-* The result file related to samples_fr.yaml will contain something like :
+* The results file of a *br2fr* task as in [samples_fr.yaml](samples_fr.yaml) will be similar to:
   
-| task   | model                      | score       |
-|:-------|:---------------------------|:------------|
-| fr2br  | gpt-4-turbo-2024-04-09     | 0.73 ± 0.18 |
-| fr2br  | claude-3-5-sonnet-20240620 | 0.72 ± 0.16 |
-| fr2br  | gpt-4o-2024-08-06          | 0.71 ± 0.15 |
-| fr2br  | llama-3.1-70b-versatile    | 0.7 ± 0.13  |
-| fr2br  | palm-2-chat-bison-32k      | 0.7 ± 0.19  |
-| fr2br  | google-translate           | 0.69 ± 0.14 |
-| fr2br  | claude-3-opus-20240229     | 0.68 ± 0.1  |
-| fr2br  | gemini-1.5-flash           | 0.68 ± 0.16 |
-| fr2br  | gemini-1.5-pro             | 0.67 ± 0.11 |
-| fr2br  | gpt-4o-2024-05-13          | 0.65 ± 0.19 |
-| fr2br  | mistral-large-2407         | 0.65 ± 0.14 |
-| fr2br  | llama3-70b-8192            | 0.64 ± 0.18 |
-| fr2br  | gemini-1.0-pro             | 0.63 ± 0.15 |
-| fr2br  | gpt-3.5-turbo-0125         | 0.58 ± 0.06 |
-| fr2br  | mistral-large-2402         | 0.58 ± 0.17 |
-| fr2br  | gpt-4o-mini-2024-07-18     | 0.57 ± 0.17 |
-| fr2br  | llama-3.1-8b-instant       | 0.56 ± 0.15 |
-| fr2br  | open-mistral-nemo-2407     | 0.51 ± 0.16 |
-| fr2br  | command-r-plus             | 0.5 ± 0.12  |
+| task   | model                                         | score       |   s_rank |       price |   p_rank |
+|:-------|:----------------------------------------------|:------------|---------:|------------:|---------:|
+| fr2br  | openai/gpt-4-0314                             | 0.77 ± 0.19 |        1 | 0.00984     |      137 |
+| fr2br  | openai/gpt-4-32k-0314                         | 0.77 ± 0.19 |        2 | 0.0198      |      141 |
+| fr2br  | perplexity/llama-3.1-sonar-huge-128k-online   | 0.75 ± 0.14 |        3 | 0.00106     |      111 |
+| fr2br  | openai/o1-preview-2024-09-12                  | 0.74 ± 0.19 |        4 | 0.125085    |      143 |
+| fr2br  | google/gemini-pro-1.5-exp                     | 0.73 ± 0.17 |        5 | 0           |        1 |
+| fr2br  | openai/gpt-4-1106-preview                     | 0.73 ± 0.18 |        6 | 0.00416     |      133 |
+| fr2br  | google/gemini-flash-1.5-exp                   | 0.72 ± 0.17 |        7 | 0           |        2 |
+| fr2br  | openai/gpt-4o-2024-08-06                      | 0.72 ± 0.15 |        8 | 0.001285    |      113 |
+| fr2br  | anthropic/claude-3.5-sonnet                   | 0.72 ± 0.16 |        9 | 0.002079    |      122 |
+| fr2br  | anthropic/claude-3.5-sonnet:beta              | 0.72 ± 0.16 |       10 | 0.002079    |      123 |
+| fr2br  | openai/gpt-4-turbo                            | 0.72 ± 0.18 |       11 | 0.00422     |      134 |
+| fr2br  | openai/gpt-4-vision-preview                   | 0.72 ± 0.19 |       12 | 0.00422     |      135 |
+| fr2br  | google-translate                              | 0.7 ± 0.16  |       13 | 0           |        3 |
+| fr2br  | google/palm-2-chat-bison-32k                  | 0.7 ± 0.19  |       14 | 0.000332    |       91 |
+| fr2br  | anthropic/claude-3-sonnet                     | 0.69 ± 0.16 |       15 | 0.002019    |      120 |
+| fr2br  | openai/gpt-4-turbo-preview                    | 0.69 ± 0.15 |       16 | 0.00404     |      132 |
+| fr2br  | meta-llama/llama-3.1-405b-instruct:free       | 0.68 ± 0.18 |       17 | 0           |        4 |
+| fr2br  | anthropic/claude-3-sonnet:beta                | 0.68 ± 0.16 |       18 | 0.002019    |      121 |
+| fr2br  | perplexity/llama-3.1-sonar-large-128k-chat    | 0.67 ± 0.13 |       19 | 0.000243    |       84 |
+| fr2br  | anthropic/claude-3-opus                       | 0.67 ± 0.14 |       20 | 0.010395    |      138 |
+| fr2br  | nousresearch/hermes-3-llama-3.1-405b:free     | 0.66 ± 0.17 |       21 | 0           |        5 |
+| fr2br  | nousresearch/hermes-3-llama-3.1-405b:extended | 0.66 ± 0.17 |       22 | 0           |        6 |
+| fr2br  | anthropic/claude-2.0                          | 0.66 ± 0.12 |       23 | 0.003784    |      127 |
+...
+
+* The results presented above serve as a preliminary illustration of the assessment software's functionality. However, they do not constitute a comprehensive evaluation. A rigorous assessment would require the incorporation of reference data across various language registers, utilizing a significantly larger dataset than what is provided in samples_br.txt and samples_fr.txt. Additionally, the target file (e.g., samples_fr.txt) must remain confidential, as its publication online could lead to its eventual assimilation by language models.
 
 ## More info
 * The source text to be translated must be in a *.txt file (e.g. [samples_br.txt](samples_br.txt)). 
