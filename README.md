@@ -8,7 +8,7 @@
 * The evaluation produces a proximity *score* comparing the semantic distance of a text produced by an LLM with an expected text pre-written by a human evaluator.
 * The semantic distance is based on the proximity of OpenAI embeddings. 
 * The LLMs made available by [OpenRouter](https://openrouter.ai/docs/models) can be tested. You can test each model explicitely by adding its model name (e.g. *openai/gpt-4-turbo-preview*), or test them all by using the alias model name *openrouter/all*.
-* Although [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) it is not strictly an LLM, it can be tested with the model name *google-translate*. Note that this Google Translate "LLM" can not be tested via OpenRouter.
+* Although [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) it is not strictly an LLM, it can be tested with the name *google-translate*. Note that Google Translate can not be tested via OpenRouter.
   
 ## Requirements
 * Ubuntu OS
@@ -17,6 +17,7 @@
 * A mandatory OPENAI_API_KEY (cf. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)), as an OpenAI model is used to calculate the evaluation scores.
 * A mandatory source file of your choice (e.g. [samples_br.txt](samples_br.txt))
 * An optional target file of your choice (e.g. [samples_fr.txt](samples_fr.txt)). If not provided, evaluation will not be performed.
+* An optional glossary file of your choice (e.g. [samples_gloss.txt](samples_gloss.txt)). If provided, the content will be sent to the LLM(s) to help them performing the translation.
 * a dedicated configuration file (e.g [samples_br.yaml](samples_br.yaml))
 
 ## Installation
