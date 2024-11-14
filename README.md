@@ -7,27 +7,14 @@
   * *fr2br* (French to Breton translation)
 * The evaluation produces a proximity *score* comparing the semantic distance of a text produced by an LLM with an expected text pre-written by a human evaluator.
 * The semantic distance is based on the proximity of OpenAI embeddings. 
-* The LLMs of following providers can be tested: 
-  * [Anthropic](https://docs.anthropic.com/en/docs/models-overview): e.g. *claude-3-5-sonnet-20240620*, *claude-3-haiku-20240307*, *claude-3-sonnet-20240229*, *claude-3-opus-20240229*
-  * [Cohere](https://docs.cohere.com/docs/models): e.g. *command-r-plus* 
-  * [Google](https://ai.google.dev/gemini-api/docs/models/gemini) e.g. *gemini-1.0-pro*, *gemini-1.5-flash*, *gemini-1.5-pro*, *palm-2-chat-bison-32k*
-  * [Meta](https://console.groq.com/docs/models): e.g. *llama-3.1-70b-versatile*, *llama-3.1-8b-instant*, *llama3-8b-8192*, *llama3-70b-8192*
-  * [Mistral](https://docs.mistral.ai/getting-started/models/) *open-mistral-7b*, *mistral-large-latest*
-  * [OpenAI](https://platform.openai.com/docs/models/): e.g. *gpt-3.5-turbo*, *gpt-4-turbo*, *gpt-4o*, *gpt-4o-mini-2024-07-18*
-* The LLMs made available by [OpenRouter](https://openrouter.ai/docs/models) can also be tested: e.g. *openai/gpt-4-turbo-preview*, use or *openrouter/all* to test them all.
-* Although [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) it is not strictly an LLM, it can be tested with *google-translate*
+* The LLMs made available by [OpenRouter](https://openrouter.ai/docs/models) can be tested. You can test each model explicitely by adding its model name (e.g. *openai/gpt-4-turbo-preview*), or test them all by using the alias model name *openrouter/all*.
+* Although [Google Translate](https://cloud.google.com/translate/docs/advanced/translating-text-v3) it is not strictly an LLM, it can be tested with the model name *google-translate*. Note that this Google Translate "LLM" can not be tested via OpenRouter.
   
 ## Requirements
 * Ubuntu OS
-* An OPENAI_API_KEY (cf. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys))
-* An optional GOOGLE_API_KEY (cf. [(https://ai.google.dev/gemini-api/docs/api-key](https://ai.google.dev/gemini-api/docs/api-key))
-* An optional ANTHROPIC_API_KEY (cf. [https://console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys))
-* An optional GROQ_API_KEY (cf. [https://console.groq.com/keys](https://console.groq.com/keys)) for Llama models
-* An optional MISTRAL_API_KEY (cf. [https://console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/))
-* An optional COHERE_API_KEY (cf. [https://dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys))
-* An optional OPENROUTER_API_KEY (cf. [https://openrouter.ai/keys](https://openrouter.ai/keys)) for models reachable via OpenRouter
-* An optional GOOGLE_TRANSLATION_PROJECT_ID (cf. https://console.cloud.google.com/, assign a project to Cloud Translation API)
-* Only the OPENAI_API_KEY is mandatory given it is also needed for calculating the evaluation scores.
+* A mandatory OPENROUTER_API_KEY (cf. [https://openrouter.ai/keys](https://openrouter.ai/keys)), as OpenRouter is used as an intermediary to reach all LLMs except Google Translate.
+* An optional GOOGLE_TRANSLATION_PROJECT_ID (cf. https://console.cloud.google.com/, assign a project to Cloud Translation API), which is needed if Google Tranlate "LLM" has to be evaluated.
+* A mandatory OPENAI_API_KEY (cf. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)), as an OpenAI model is used to calculate the evaluation scores.
 * A mandatory source file of your choice (e.g. [samples_br.txt](samples_br.txt))
 * An optional target file of your choice (e.g. [samples_fr.txt](samples_fr.txt)). If not provided, evaluation will not be performed.
 * a dedicated configuration file (e.g [samples_br.yaml](samples_br.yaml))
@@ -39,12 +26,7 @@
 * source env/bin/activate
 * pip install openai pandas ipykernel tabulate google-generativeai anthropic groq mistralai cohere jupyter google-cloud-translate
 * echo OPENAI_API_KEY=your-secret-key-1 >> .env
-* echo GOOGLE_API_KEY=your-secret-key-2 >> .env
-* echo ANTHROPIC_API_KEY=your-secret-key-3 >> .env
-* echo GROQ_API_KEY=your-secret-key-4 >> .env
-* echo MISTRAL_API_KEY=your-secret-key-5 >> .env
-* echo COHERE_API_KEY=your-secret-key-6 >> .env
-* echo OPENROUTER_API_KEY=your-secret-key-7 >> .env
+* echo OPENROUTER_API_KEY=your-secret-key-2 >> .env
 * echo GOOGLE_TRANSLATION_PROJECT_ID=your-secret-gt-project-id >> .env
 * to test google-translate 
  * log to https://console.cloud.google.com/ 
